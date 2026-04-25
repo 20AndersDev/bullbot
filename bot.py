@@ -139,13 +139,16 @@ def run_cycle() -> None:
                 )
                 buy(symbol, qty, sl, tp)
                 n_open += 1
-                notifier.send(embeds=[notifier.trade_embed(
-                    "KJOEP", symbol, qty, price, sl, tp, invest_pct, result.reason
+                notifier.send_trade(embeds=[notifier.buy_embed(
+                    symbol, qty, price, sl, tp, invest_pct, equity, result.reason
                 )])
 
             elif result.signal == Signal.SELL and already_in:
-                pl_pct = float(position.unrealized_plpc) * 100
-                decision = _sell_or_hold(pl_pct, result.reason)
+                pl_pct    = float(position.unrealized_plpc) * 100
+                pl_dollar = float(position.unrealized_pl)
+                avg_entry = float(position.avg_entry_price)
+                qty_held  = int(float(position.qty))
+                decision  = _sell_or_hold(pl_pct, result.reason)
                 log.info(
                     f"{symbol}: SELL-signal | P&L={pl_pct:+.2f}% | "
                     f"Beslutning={decision} | {result.reason}"
@@ -153,7 +156,10 @@ def run_cycle() -> None:
                 if decision == "SELG":
                     sell_all(symbol)
                     n_open -= 1
-                    notifier.send(embeds=[notifier.sell_embed(symbol, pl_pct, result.reason)])
+                    notifier.send_trade(embeds=[notifier.sell_embed(
+                        symbol, qty_held, avg_entry, price,
+                        pl_dollar, pl_pct, result.reason
+                    )])
 
         except Exception as e:
             log.error(f"{symbol}: feil — {e}")
