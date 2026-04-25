@@ -67,10 +67,60 @@ def is_market_open() -> bool:
     return client.get_clock().is_open
 
 
+def _load_knowledge() -> dict:
+    """Les siste knowledge-rapport frå knowledge/-mappa."""
+    import json
+    from pathlib import Path
+    reports = sorted((Path(__file__).parent / "knowledge").glob("report_*.json"), reverse=True)
+    if not reports:
+        return {}
+    try:
+        with open(reports[0], encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+
+def _build_buy_reason(technical_reason: str, symbol: str, knowledge: dict) -> str:
+    """Bygg rik grunngjeving for kjøp frå teknisk signal + knowledge."""
+    parts = [f"📈 Teknisk: {technical_reason}"]
+    sym_data = knowledge.get("per_symbol", {}).get(symbol, {})
+    rec = sym_data.get("rec", "")
+    if rec and rec not in ("N/A", "none"):
+        parts.append(f"👥 Analytikar: {rec.upper()}")
+    upside = sym_data.get("upside_pct", 0)
+    if upside and upside > 0:
+        parts.append(f"🎯 Analytikarmål: +{upside:.1f}% upside")
+    news = [n for n in sym_data.get("news", []) if n]
+    if news:
+        parts.append(f"📰 Nyheit: {news[0][:80]}")
+    mom = sym_data.get("momentum_dag_pct", 0)
+    if abs(mom) >= config.MOMENTUM_MIN_DAY_PCT:
+        parts.append(f"🚀 Dagleg momentum: {mom:+.1f}%")
+    return "\n".join(parts)
+
+
+def _build_sell_reason(technical_reason: str, symbol: str, pl_pct: float,
+                       pl_dollar: float, knowledge: dict) -> str:
+    """Bygg rik grunngjeving for sal frå teknisk signal + P&L + knowledge."""
+    pl_emoji = "✅" if pl_dollar >= 0 else "❌"
+    parts = [
+        f"{pl_emoji} P&L: {pl_pct:+.2f}% (${pl_dollar:+,.2f})",
+        f"📉 Signal: {technical_reason}",
+    ]
+    sym_data = knowledge.get("per_symbol", {}).get(symbol, {})
+    news = [n for n in sym_data.get("news", []) if n]
+    if news:
+        parts.append(f"📰 Nyheit: {news[0][:80]}")
+    return "\n".join(parts)
+
+
 def run_cycle() -> None:
     if not is_market_open():
         log.info("Markedet er stengt, venter...")
         return
+
+    knowledge = _load_knowledge()
 
     acct = get_account()
     equity = float(acct.equity)
@@ -138,10 +188,11 @@ def run_cycle() -> None:
                     f"{symbol}: KJØPER {qty} aksjer @ ~${price:.2f} "
                     f"({invest_pct:.1f}% av portefølje) | SL=${sl} TP=${tp}"
                 )
+                buy_reason = _build_buy_reason(result.reason, symbol, knowledge)
                 buy(symbol, qty, sl, tp)
                 n_open += 1
                 notifier.send_trade(embeds=[notifier.buy_embed(
-                    symbol, qty, price, sl, tp, invest_pct, equity, result.reason
+                    symbol, qty, price, sl, tp, invest_pct, equity, buy_reason
                 )])
 
             elif result.signal == Signal.SELL and already_in:
@@ -155,11 +206,13 @@ def run_cycle() -> None:
                     f"Beslutning={decision} | {result.reason}"
                 )
                 if decision == "SELG":
+                    sell_reason = _build_sell_reason(result.reason, symbol,
+                                                     pl_pct, pl_dollar, knowledge)
                     sell_all(symbol)
                     n_open -= 1
                     notifier.send_trade(embeds=[notifier.sell_embed(
                         symbol, qty_held, avg_entry, price,
-                        pl_dollar, pl_pct, result.reason
+                        pl_dollar, pl_pct, sell_reason
                     )])
 
         except Exception as e:
