@@ -61,18 +61,20 @@ def buy_embed(symbol: str, qty: int, price: float, sl: float, tp: float,
 
 def sell_embed(symbol: str, qty: int, entry_price: float, exit_price: float,
                pl_dollar: float, pl_pct: float, reason: str) -> dict:
-    ts = datetime.now(timezone.utc).strftime("%d.%m.%Y %H:%M UTC")
+    ts  = datetime.now(timezone.utc).strftime("%d.%m.%Y %H:%M UTC")
     won = pl_dollar >= 0
+    pl_display = f"{'🟢' if won else '🔴'}  ${pl_dollar:+,.2f}  ({pl_pct:+.2f}%)"
     return {
-        "title": f"{'🟢' if won else '🔴'}  SAL  {symbol}  ({pl_pct:+.2f}%)",
-        "color": _GREEN if won else _RED,
+        "title": f"🔴  SAL  {symbol}",
+        "color": _RED,
         "fields": [
-            {"name": "Aksje",       "value": symbol,                              "inline": True},
-            {"name": "Antal",       "value": f"{qty} aksjar",                     "inline": True},
-            {"name": "Utganspris",  "value": f"${exit_price:.2f}",               "inline": True},
-            {"name": "P&L",         "value": f"${pl_dollar:+,.2f}  ({pl_pct:+.2f}%)", "inline": True},
-            {"name": "Resultat",    "value": "✅ Gevinst" if won else "❌ Tap",   "inline": True},
-            {"name": "Grunn",       "value": reason,                              "inline": False},
-            {"name": "Tidspunkt",   "value": ts,                                  "inline": True},
+            {"name": "Aksje",      "value": symbol,                "inline": True},
+            {"name": "Antal",      "value": f"{qty} aksjar",       "inline": True},
+            {"name": "Salpris",    "value": f"${exit_price:.2f}",  "inline": True},
+            {"name": "Kjøpspris",  "value": f"${entry_price:.2f}", "inline": True},
+            {"name": "P&L",        "value": pl_display,            "inline": True},
+            {"name": "Resultat",   "value": "✅ Gevinst" if won else "❌ Tap", "inline": True},
+            {"name": "Grunn",      "value": reason,                "inline": False},
+            {"name": "Tidspunkt",  "value": ts,                    "inline": True},
         ],
     }
