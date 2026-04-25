@@ -1,5 +1,7 @@
 """Bullbot dagsoppsummering — sender Discord-embed."""
 import os, requests
+from dotenv import load_dotenv
+load_dotenv()
 from datetime import datetime, timezone, date
 from alpaca.trading.client import TradingClient
 from alpaca.trading.requests import GetOrdersRequest
