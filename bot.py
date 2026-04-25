@@ -10,6 +10,7 @@ import config
 import notifier
 from data.fetcher import get_bars
 from strategy.ema_rsi import analyze, Signal
+from strategy import momentum as mom_strat
 from risk.manager import position_size, stop_loss_price, take_profit_price
 from executor.alpaca_broker import (
     get_account,
@@ -165,6 +166,52 @@ def run_cycle() -> None:
             log.error(f"{symbol}: feil — {e}")
 
     log.info(f"Syklus ferdig. Opne posisjonar: {n_open}/{config.MAX_OPEN_POSITIONS}")
+
+    # ── MOMENTUM-SCAN ──────────────────────────────────────────────────────
+    if buys_allowed and n_open < config.MAX_OPEN_POSITIONS:
+        _run_momentum_scan(equity, open_positions, n_open, buys_allowed)
+
+
+def _run_momentum_scan(equity: float, open_positions: dict, n_open: int, buys_allowed: bool) -> None:
+    """Skanner watchlisten for store dagleg hopp og kjøper momentum-aksjar."""
+    import yfinance as yf
+    from alpaca.data.timeframe import TimeFrame, TimeFrameUnit
+
+    log.info("--- Momentum-scan ---")
+    for symbol in config.WATCHLIST:
+        if symbol in open_positions:
+            continue
+        if n_open >= config.MAX_OPEN_POSITIONS:
+            break
+        try:
+            # Dagsdata for % endring
+            daily = yf.Ticker(symbol).history(period="3d")[["Open","High","Low","Close","Volume"]]
+            daily.columns = [c.lower() for c in daily.columns]
+            daily.index.name = "timestamp"
+
+            # Intradag bars for RSI
+            intra = get_bars(symbol, limit=30)
+
+            result = mom_strat.analyze(daily, intra)
+
+            if result.signal != "BUY":
+                continue
+
+            log.info(f"{symbol}: MOMENTUM {result.day_change_pct:+.1f}% | RSI={result.rsi:.1f}")
+            price = float(daily["close"].iloc[-1])
+            qty   = position_size(equity, price)
+            sl    = round(price * (1 - config.MOMENTUM_STOP_LOSS), 2)
+            tp    = round(price * (1 + config.MOMENTUM_TAKE_PROFIT), 2)
+            invest_pct = qty * price / equity * 100
+
+            buy(symbol, qty, sl, tp)
+            n_open += 1
+            notifier.send_trade(embeds=[notifier.buy_embed(
+                symbol, qty, price, sl, tp, invest_pct, equity,
+                result.reason
+            )])
+        except Exception as e:
+            log.error(f"Momentum {symbol}: {e}")
 
 
 def main() -> None:

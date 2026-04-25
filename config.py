@@ -41,3 +41,9 @@ MAX_DAILY_LOSS_PCT = 0.05   # stopp nye kjøp om dagstap overstig 5%
 # Tidsramme for bars (5 minutters candles)
 BAR_TIMEFRAME = "5Min"
 BARS_LOOKBACK = 50          # antall bars å hente for indikatorberegning
+
+# Momentum/gap-strategi
+MOMENTUM_MIN_DAY_PCT  = 4.0   # kjøp om aksjen er opp > 4% i dag
+MOMENTUM_RSI_MAX      = 74    # ikkje kjøp om RSI er for høg
+MOMENTUM_STOP_LOSS    = 0.015 # 1.5% SL (tettare enn vanleg)
+MOMENTUM_TAKE_PROFIT  = 0.025 # 2.5% TP (rask exit)
