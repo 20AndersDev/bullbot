@@ -171,4 +171,8 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    import sys
+    if "--once" in sys.argv:
+        run_cycle()
+    else:
+        main()
