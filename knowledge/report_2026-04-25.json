@@ -1,0 +1,343 @@
+{
+  "dato": "2026-04-25",
+  "timestamp": "2026-04-25T13:28:44.206696+00:00",
+  "ikke_kjoep": [],
+  "per_symbol": {
+    "AAPL": {
+      "price": 271.06,
+      "pe": 28.92041,
+      "target": 297.7055,
+      "upside_pct": 9.8,
+      "pct_from_52h": -6.1,
+      "rec": "buy",
+      "news": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "MSFT": {
+      "price": 424.62,
+      "pe": 22.445658,
+      "target": 577.9991,
+      "upside_pct": 36.1,
+      "pct_from_52h": -23.6,
+      "rec": "strong_buy",
+      "news": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "NVDA": {
+      "price": 208.27,
+      "pe": 18.530712,
+      "target": 268.6148,
+      "upside_pct": 29.0,
+      "pct_from_52h": -1.8,
+      "rec": "strong_buy",
+      "news": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "AMZN": {
+      "price": 263.99,
+      "pe": 27.862535,
+      "target": 283.47656,
+      "upside_pct": 7.4,
+      "pct_from_52h": -0.2,
+      "rec": "strong_buy",
+      "news": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "META": {
+      "price": 675.03,
+      "pe": 18.719633,
+      "target": 855.1127,
+      "upside_pct": 26.7,
+      "pct_from_52h": -15.2,
+      "rec": "strong_buy",
+      "news": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "GOOGL": {
+      "price": 344.4,
+      "pe": 25.513605,
+      "target": 377.29492,
+      "upside_pct": 9.6,
+      "pct_from_52h": -1.3,
+      "rec": "strong_buy",
+      "news": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "TSLA": {
+      "price": 376.3,
+      "pe": 142.72385,
+      "target": 419.004,
+      "upside_pct": 11.3,
+      "pct_from_52h": -24.6,
+      "rec": "buy",
+      "news": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "AMD": {
+      "price": 347.81,
+      "pe": 31.595423,
+      "target": 292.3913,
+      "upside_pct": -15.9,
+      "pct_from_52h": -1.5,
+      "rec": "buy",
+      "news": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "NFLX": {
+      "price": 92.44,
+      "pe": 24.05494,
+      "target": 114.38432,
+      "upside_pct": 23.7,
+      "pct_from_52h": -31.1,
+      "rec": "buy",
+      "news": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "JPM": {
+      "price": 308.28,
+      "pe": 13.112367,
+      "target": 339.81818,
+      "upside_pct": 10.2,
+      "pct_from_52h": -8.6,
+      "rec": "buy",
+      "news": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "V": {
+      "price": 309.42,
+      "pe": 21.264664,
+      "target": 392.63916,
+      "upside_pct": 26.9,
+      "pct_from_52h": -17.6,
+      "rec": "strong_buy",
+      "news": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "CRWD": {
+      "price": 448.13,
+      "pe": 72.61094,
+      "target": 491.13568,
+      "upside_pct": 9.6,
+      "pct_from_52h": -21.0,
+      "rec": "buy",
+      "news": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "PLTR": {
+      "price": 143.09,
+      "pe": 76.82767,
+      "target": 186.4672,
+      "upside_pct": 30.3,
+      "pct_from_52h": -31.0,
+      "rec": "buy",
+      "news": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "COIN": {
+      "price": 199.77,
+      "pe": 39.205723,
+      "target": 239.94034,
+      "upside_pct": 20.1,
+      "pct_from_52h": -55.1,
+      "rec": "buy",
+      "news": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "UBER": {
+      "price": 74.64,
+      "pe": 17.388428,
+      "target": 103.46462,
+      "upside_pct": 38.6,
+      "pct_from_52h": -26.8,
+      "rec": "buy",
+      "news": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "SOFI": {
+      "price": 18.44,
+      "pe": 23.374615,
+      "target": 23.525,
+      "upside_pct": 27.6,
+      "pct_from_52h": -43.7,
+      "rec": "hold",
+      "news": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "AFRM": {
+      "price": 63.72,
+      "pe": 16.951136,
+      "target": 78.92963,
+      "upside_pct": 23.9,
+      "pct_from_52h": -36.3,
+      "rec": "buy",
+      "news": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "HOOD": {
+      "price": 84.71,
+      "pe": 31.456676,
+      "target": 101.14625,
+      "upside_pct": 19.4,
+      "pct_from_52h": -44.9,
+      "rec": "buy",
+      "news": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "RBLX": {
+      "price": 56.09,
+      "pe": -42.455437,
+      "target": 101.34114,
+      "upside_pct": 80.7,
+      "pct_from_52h": -62.8,
+      "rec": "buy",
+      "news": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "DASH": {
+      "price": 176.78,
+      "pe": 23.39932,
+      "target": 251.55238,
+      "upside_pct": 42.3,
+      "pct_from_52h": -38.1,
+      "rec": "buy",
+      "news": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "RIVN": {
+      "price": 16.52,
+      "pe": -8.508315,
+      "target": 18.16,
+      "upside_pct": 9.9,
+      "pct_from_52h": -27.2,
+      "rec": "hold",
+      "news": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "MSTR": {
+      "price": 171.02,
+      "pe": 4.7003536,
+      "target": 372.5,
+      "upside_pct": 117.8,
+      "pct_from_52h": -62.6,
+      "rec": "strong_buy",
+      "news": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "NET": {
+      "price": 207.07,
+      "pe": 143.62506,
+      "target": 231.85484,
+      "upside_pct": 12.0,
+      "pct_from_52h": -20.4,
+      "rec": "buy",
+      "news": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "SNOW": {
+      "price": 140.32,
+      "pe": 57.68504,
+      "target": 232.73701,
+      "upside_pct": 65.9,
+      "pct_from_52h": -50.0,
+      "rec": "strong_buy",
+      "news": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  }
+}
