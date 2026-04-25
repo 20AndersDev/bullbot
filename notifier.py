@@ -13,6 +13,47 @@ _GREEN = 0x2ECC71
 _RED   = 0xE74C3C
 _GOLD  = 0xF1C40F
 
+_NAMES: dict[str, str] = {
+    "AAPL": "Apple",
+    "MSFT": "Microsoft",
+    "NVDA": "NVIDIA",
+    "AMZN": "Amazon",
+    "META": "Meta",
+    "GOOGL": "Alphabet",
+    "TSLA": "Tesla",
+    "AMD": "AMD",
+    "NFLX": "Netflix",
+    "JPM": "JPMorgan Chase",
+    "V": "Visa",
+    "CRWD": "CrowdStrike",
+    "PLTR": "Palantir",
+    "COIN": "Coinbase",
+    "UBER": "Uber",
+    "SOFI": "SoFi",
+    "AFRM": "Affirm",
+    "HOOD": "Robinhood",
+    "RBLX": "Roblox",
+    "DASH": "DoorDash",
+    "RIVN": "Rivian",
+    "MSTR": "MicroStrategy",
+    "NET": "Cloudflare",
+    "SNOW": "Snowflake",
+}
+
+
+def _company_name(symbol: str) -> str:
+    if symbol in _NAMES:
+        return _NAMES[symbol]
+    try:
+        import yfinance as yf
+        name = yf.Ticker(symbol).info.get("shortName") or yf.Ticker(symbol).info.get("longName")
+        if name:
+            _NAMES[symbol] = name
+            return name
+    except Exception:
+        pass
+    return symbol
+
 
 def _post(url: str, payload: dict) -> None:
     if not url:
@@ -41,9 +82,10 @@ def send_trade(embeds: list) -> None:
 def buy_embed(symbol: str, qty: int, price: float, sl: float, tp: float,
               invest_pct: float, equity: float, reason: str) -> dict:
     invest_kr = qty * price
-    ts = datetime.now(timezone.utc).strftime("%d.%m.%Y %H:%M UTC")
+    ts   = datetime.now(timezone.utc).strftime("%d.%m.%Y %H:%M UTC")
+    name = _company_name(symbol)
     return {
-        "title": f"🟢  KJØP  {symbol}",
+        "title": f"🟢  KJØP  {symbol} — {name}",
         "color": _GREEN,
         "fields": [
             {"name": "Aksje",         "value": symbol,                          "inline": True},
@@ -61,11 +103,12 @@ def buy_embed(symbol: str, qty: int, price: float, sl: float, tp: float,
 
 def sell_embed(symbol: str, qty: int, entry_price: float, exit_price: float,
                pl_dollar: float, pl_pct: float, reason: str) -> dict:
-    ts  = datetime.now(timezone.utc).strftime("%d.%m.%Y %H:%M UTC")
-    won = pl_dollar >= 0
+    ts   = datetime.now(timezone.utc).strftime("%d.%m.%Y %H:%M UTC")
+    won  = pl_dollar >= 0
+    name = _company_name(symbol)
     pl_display = f"{'🟢' if won else '🔴'}  ${pl_dollar:+,.2f}  ({pl_pct:+.2f}%)"
     return {
-        "title": f"🔴  SAL  {symbol}",
+        "title": f"🔴  SAL  {symbol} — {name}",
         "color": _RED,
         "fields": [
             {"name": "Aksje",      "value": symbol,                "inline": True},
