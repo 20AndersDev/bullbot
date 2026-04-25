@@ -6,6 +6,7 @@ load_dotenv()
 ALPACA_API_KEY = os.getenv("ALPACA_API_KEY", "")
 ALPACA_SECRET_KEY = os.getenv("ALPACA_SECRET_KEY", "")
 PAPER = os.getenv("ALPACA_MODE", "paper") == "paper"
+DISCORD_WEBHOOK = os.getenv("DISCORD_WEBHOOK", "")
 
 # Aksjer å handle — mix av trygge store og vekstaksjar med potensiale
 WATCHLIST = [

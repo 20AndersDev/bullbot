@@ -7,6 +7,7 @@ import logging
 from alpaca.trading.client import TradingClient
 
 import config
+import notifier
 from data.fetcher import get_bars
 from strategy.ema_rsi import analyze, Signal
 from risk.manager import position_size, stop_loss_price, take_profit_price
@@ -138,6 +139,9 @@ def run_cycle() -> None:
                 )
                 buy(symbol, qty, sl, tp)
                 n_open += 1
+                notifier.send(embeds=[notifier.trade_embed(
+                    "KJOEP", symbol, qty, price, sl, tp, invest_pct, result.reason
+                )])
 
             elif result.signal == Signal.SELL and already_in:
                 pl_pct = float(position.unrealized_plpc) * 100
@@ -149,6 +153,7 @@ def run_cycle() -> None:
                 if decision == "SELG":
                     sell_all(symbol)
                     n_open -= 1
+                    notifier.send(embeds=[notifier.sell_embed(symbol, pl_pct, result.reason)])
 
         except Exception as e:
             log.error(f"{symbol}: feil — {e}")
