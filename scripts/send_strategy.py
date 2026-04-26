@@ -21,6 +21,7 @@ data = json.loads(sys.argv[1])
 sentiment    = data.get("marknad", "NOEYTRAL")
 fear_greed   = data.get("fear_greed", 0)
 vix          = data.get("vix", 0)
+portfolio    = data.get("portfolio", [])
 kjoep        = data.get("kjoep", [])
 unngaa       = data.get("unngaa", [])
 momentum     = data.get("momentum", [])
@@ -35,6 +36,39 @@ FG_ICON    = lambda s: "😱" if s < 25 else ("😨" if s < 40 else ("😐" if s
 color  = COLOR_MAP.get(sentiment, 0xF1C40F)
 icon   = SENTI_ICON.get(sentiment, "🟡")
 tittel = f"{'🌙 Kveldstrategi' if er_kveld else '🌅 Dagsstrategi'}  —  {date.today().strftime('%d.%m.%Y')}"
+
+
+def _fmt_portfolio(items: list) -> str:
+    if not items:
+        return "Ingen opne posisjonar — all kapital tilgjengeleg for nye kjøp"
+
+    compact = len(items) > 9  # kortare format ved mange posisjonar
+    lines   = []
+    for item in items:
+        sym    = item.get("symbol", "?")
+        pl     = item.get("pl_pct", 0)
+        pl_usd = item.get("pl_usd", 0)
+        qty    = item.get("qty", 0)
+        action = item.get("action", "HALD")
+        grunn  = item.get("grunn", "")
+
+        ACTION_ICON = {
+            "HALD":        "✅" if pl >= 0 else "🔶",
+            "SELG":        "🔴",
+            "VURDER SAL":  "🟠",
+            "MONITOR":     "⚠️",
+        }
+        icon   = ACTION_ICON.get(action, "➡️")
+        pl_str = f"`{pl:+.1f}%`  ${pl_usd:+,.0f}"
+
+        if compact:
+            lines.append(f"{icon} **{sym}** {pl_str}  →  {action}")
+        else:
+            lines.append(f"{icon} **{sym}** {qty} stk  {pl_str}  →  **{action}**")
+            if grunn:
+                lines.append(f"  ↳ {grunn[:80]}")
+
+    return "\n".join(lines)
 
 
 def _fmt_kjoep(items: list) -> str:
@@ -148,9 +182,15 @@ fields = [
         "value":  f"**{vix:.1f}**",
         "inline": True,
     },
+    # Portefølje-vurdering
+    {
+        "name":   f"📁 Nåverande portefølje ({len(portfolio)} posisjonar)",
+        "value":  _fmt_portfolio(portfolio),
+        "inline": False,
+    },
     # Kjøpsliste
     {
-        "name":   f"🛒 Kjøp i dag ({len(kjoep)})",
+        "name":   f"🛒 Nye kjøpskandidatar ({len(kjoep)})",
         "value":  _fmt_kjoep(kjoep),
         "inline": False,
     },

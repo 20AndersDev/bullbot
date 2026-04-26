@@ -256,6 +256,68 @@ def _build_grunn(rec: str, upside: float, sb: int, mom: float,
     return " | ".join(parts)
 
 
+def _alpaca_portfolio(per_symbol: dict, upcoming: list, scores: dict) -> list:
+    """Hentar nåverande posisjonar frå Alpaca og vurderer kvar enkelt."""
+    try:
+        from alpaca.trading.client import TradingClient
+        tc = TradingClient(
+            os.getenv("ALPACA_API_KEY", ""),
+            os.getenv("ALPACA_SECRET_KEY", ""),
+            paper=True,
+        )
+        positions = tc.get_all_positions()
+    except Exception as e:
+        print(f"  Alpaca portfolio: {e}")
+        return []
+
+    result = []
+    for p in positions:
+        sym    = p.symbol
+        pl_pct = float(p.unrealized_plpc) * 100
+        pl_usd = float(p.unrealized_pl)
+        qty    = int(float(p.qty))
+        d      = per_symbol.get(sym, {})
+        rec    = d.get("rec", "").lower()
+        upside = d.get("upside_pct", 0)
+        news   = d.get("news", [])
+        score  = scores.get(sym, 0)
+
+        if sym in upcoming:
+            action = "SELG"
+            grunn  = "Earnings snart — unngå kvartalssurprise-risiko"
+        elif pl_pct >= 5 and score < 0:
+            action = "VURDER SAL"
+            grunn  = f"God gevinst ({pl_pct:.1f}%) men svak score — sikre noko av gevinsten"
+        elif pl_pct >= 0 and ("strong_buy" in rec or "buy" in rec):
+            action = "HALD"
+            g_parts = [f"{rec.replace('_',' ').upper()}"]
+            if upside > 5:
+                g_parts.append(f"+{upside:.0f}% analytikarmål")
+            if news:
+                g_parts.append(f'"{news[0][:40]}"')
+            grunn = " | ".join(g_parts)
+        elif pl_pct <= -1.5:
+            action = "MONITOR"
+            grunn  = "Nærmar seg stop-loss — følg nøye"
+        elif pl_pct >= 0:
+            action = "HALD"
+            grunn  = "Stabil posisjon — ingen klart exit-signal"
+        else:
+            action = "HALD"
+            grunn  = "Ventar på betring eller stop-loss-utløysing"
+
+        result.append({
+            "symbol": sym,
+            "qty":    qty,
+            "pl_pct": round(pl_pct, 2),
+            "pl_usd": round(pl_usd, 2),
+            "action": action,
+            "grunn":  grunn,
+        })
+
+    return sorted(result, key=lambda x: x["pl_pct"], reverse=True)
+
+
 def _generate_strategy(knowledge: dict, per_symbol: dict,
                         momentum_candidates: list, upcoming: list,
                         reddit_data: dict, upcoming_dates: dict = None) -> dict:
@@ -423,10 +485,20 @@ def _generate_strategy(knowledge: dict, per_symbol: dict,
     if top_radar:
         note_parts.append(f"Reddit: {', '.join(top_radar)}")
 
+    # Portefølje-vurdering frå Alpaca
+    print("\n=== NÅVERANDE PORTEFOLJE ===")
+    portfolio = _alpaca_portfolio(per_symbol, upcoming, scores)
+    for item in portfolio:
+        bar = "▲" if item["pl_pct"] >= 0 else "▼"
+        print(f"  {bar} {item['symbol']}: {item['pl_pct']:+.1f}%  →  {item['action']}")
+    if not portfolio:
+        print("  Ingen opne posisjonar")
+
     return {
         "marknad":      market,
         "fear_greed":   fg,
         "vix":          vix,
+        "portfolio":    portfolio,
         "kjoep":        kjoep,
         "unngaa":       unngaa,
         "momentum":     momentum,
