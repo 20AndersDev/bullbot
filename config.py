@@ -1,4 +1,5 @@
-import os
+import os, json
+from pathlib import Path
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -10,8 +11,13 @@ DISCORD_WEBHOOK          = os.getenv("DISCORD_WEBHOOK", "")
 DISCORD_TRADE_WEBHOOK    = os.getenv("DISCORD_TRADE_WEBHOOK", "")
 DISCORD_STRATEGY_WEBHOOK = os.getenv("DISCORD_STRATEGY_WEBHOOK", "")
 
-# 100 aksjar å overvake — berre dei beste signalane gjev kjøp
-WATCHLIST = [
+# Les watchlist frå watchlist.json om han finst, elles bruk hardkoda liste
+_wl_file = Path(__file__).parent / "watchlist.json"
+if _wl_file.exists():
+    WATCHLIST = json.loads(_wl_file.read_text()).get("symbols", [])
+else:
+    # Fallback — 100 aksjar på tvers av alle sektorar
+    WATCHLIST = [
     # ── Mega-cap (stabil base) ───────────────────────────────────────────────
     "AAPL", "MSFT", "NVDA", "AMZN", "META", "GOOGL",
     "ORCL", "AVGO", "CRM", "ADBE",
@@ -64,7 +70,7 @@ WATCHLIST = [
 
     # ── Globalt vekst ────────────────────────────────────────────────────────
     "SE", "GRAB", "GLBE", "PTON",
-]
+    ]
 
 # Strategi-parametere
 EMA_FAST = 9
