@@ -14,30 +14,59 @@ _RED   = 0xE74C3C
 _GOLD  = 0xF1C40F
 
 _NAMES: dict[str, str] = {
-    "AAPL": "Apple",
-    "MSFT": "Microsoft",
-    "NVDA": "NVIDIA",
-    "AMZN": "Amazon",
-    "META": "Meta",
-    "GOOGL": "Alphabet",
-    "TSLA": "Tesla",
-    "AMD": "AMD",
-    "NFLX": "Netflix",
-    "JPM": "JPMorgan Chase",
-    "V": "Visa",
-    "CRWD": "CrowdStrike",
-    "PLTR": "Palantir",
-    "COIN": "Coinbase",
-    "UBER": "Uber",
-    "SOFI": "SoFi",
-    "AFRM": "Affirm",
-    "HOOD": "Robinhood",
-    "RBLX": "Roblox",
-    "DASH": "DoorDash",
-    "RIVN": "Rivian",
-    "MSTR": "MicroStrategy",
-    "NET": "Cloudflare",
-    "SNOW": "Snowflake",
+    # Mega-cap
+    "AAPL": "Apple", "MSFT": "Microsoft", "NVDA": "NVIDIA",
+    "AMZN": "Amazon", "META": "Meta", "GOOGL": "Alphabet",
+    "ORCL": "Oracle", "AVGO": "Broadcom", "CRM": "Salesforce", "ADBE": "Adobe",
+    # Halvleiarar
+    "AMD": "AMD", "QCOM": "Qualcomm", "MU": "Micron Technology",
+    "SMCI": "Super Micro Computer", "ARM": "ARM Holdings",
+    "AMAT": "Applied Materials", "LRCX": "Lam Research",
+    "MRVL": "Marvell Technology", "ON": "ON Semiconductor",
+    "TSM": "Taiwan Semiconductor", "WOLF": "Wolfspeed",
+    # AI / Cloud
+    "PLTR": "Palantir", "NOW": "ServiceNow", "DDOG": "Datadog",
+    "MDB": "MongoDB", "SNOW": "Snowflake", "NET": "Cloudflare",
+    "GTLB": "GitLab", "PATH": "UiPath", "BILL": "Bill.com",
+    "ZM": "Zoom", "TWLO": "Twilio", "AI": "C3.ai",
+    # Cybersikkerheit
+    "CRWD": "CrowdStrike", "PANW": "Palo Alto Networks",
+    "ZS": "Zscaler", "OKTA": "Okta", "FTNT": "Fortinet",
+    "S": "SentinelOne",
+    # Fintech
+    "V": "Visa", "SQ": "Block", "PYPL": "PayPal", "COIN": "Coinbase",
+    "SOFI": "SoFi", "AFRM": "Affirm", "HOOD": "Robinhood",
+    "MELI": "MercadoLibre", "NU": "Nubank", "UPST": "Upstart",
+    # Bank
+    "JPM": "JPMorgan Chase", "GS": "Goldman Sachs",
+    "MS": "Morgan Stanley", "BAC": "Bank of America", "BLK": "BlackRock",
+    # Strøyming / Media
+    "NFLX": "Netflix", "SPOT": "Spotify", "ROKU": "Roku", "DIS": "Disney",
+    # E-handel / Consumer
+    "SHOP": "Shopify", "ETSY": "Etsy", "CHWY": "Chewy",
+    "PINS": "Pinterest", "SNAP": "Snap", "APP": "AppLovin",
+    "DUOL": "Duolingo", "TOST": "Toast",
+    # Transport
+    "UBER": "Uber", "LYFT": "Lyft", "DASH": "DoorDash",
+    # Livsstil
+    "ABNB": "Airbnb", "DKNG": "DraftKings", "CELH": "Celsius Holdings",
+    # EV / Energi
+    "TSLA": "Tesla", "RIVN": "Rivian", "LCID": "Lucid Motors",
+    "NIO": "NIO", "XPEV": "XPeng", "LI": "Li Auto",
+    "PLUG": "Plug Power", "ENPH": "Enphase Energy", "SEDG": "SolarEdge",
+    # Krypto
+    "MSTR": "MicroStrategy", "MARA": "Marathon Digital",
+    "RIOT": "Riot Platforms", "CLSK": "CleanSpark", "HUT": "Hut 8",
+    # Gaming
+    "RBLX": "Roblox", "U": "Unity Software",
+    # Rom / Quantum
+    "RKLB": "Rocket Lab", "LUNR": "Intuitive Machines", "IONQ": "IonQ",
+    # Helse / Biotech
+    "MRNA": "Moderna", "HIMS": "Hims & Hers",
+    "TDOC": "Teladoc", "BNTX": "BioNTech", "DOCS": "Doximity",
+    # Globalt vekst
+    "SE": "Sea Limited", "GRAB": "Grab", "GLBE": "Global-E Online",
+    "PTON": "Peloton",
 }
 
 

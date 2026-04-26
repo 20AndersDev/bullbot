@@ -10,16 +10,60 @@ DISCORD_WEBHOOK          = os.getenv("DISCORD_WEBHOOK", "")
 DISCORD_TRADE_WEBHOOK    = os.getenv("DISCORD_TRADE_WEBHOOK", "")
 DISCORD_STRATEGY_WEBHOOK = os.getenv("DISCORD_STRATEGY_WEBHOOK", "")
 
-# Aksjer å handle — mix av trygge store og vekstaksjar med potensiale
+# 100 aksjar å overvake — berre dei beste signalane gjev kjøp
 WATCHLIST = [
-    # Mega-cap (stabil base)
+    # ── Mega-cap (stabil base) ───────────────────────────────────────────────
     "AAPL", "MSFT", "NVDA", "AMZN", "META", "GOOGL",
-    # Stor-cap vekst
-    "TSLA", "AMD", "NFLX", "JPM", "V",
-    # Mid-cap vekst / høgt potensiale
-    "CRWD", "PLTR", "COIN", "UBER", "SOFI", "AFRM",
-    # Mindre / høgare risiko / høgare potensiale
-    "HOOD", "RBLX", "DASH", "RIVN", "MSTR", "NET", "SNOW",
+    "ORCL", "AVGO", "CRM", "ADBE",
+
+    # ── Halvleiarar / Chip ───────────────────────────────────────────────────
+    "AMD", "QCOM", "MU", "SMCI", "ARM",
+    "AMAT", "LRCX", "MRVL", "ON", "TSM", "WOLF",
+
+    # ── AI / Cloud / SaaS ────────────────────────────────────────────────────
+    "PLTR", "NOW", "DDOG", "MDB", "SNOW",
+    "NET", "GTLB", "PATH", "BILL", "ZM", "TWLO", "AI",
+
+    # ── Cybersikkerheit ──────────────────────────────────────────────────────
+    "CRWD", "PANW", "ZS", "OKTA", "FTNT", "S",
+
+    # ── Fintech / Betalingar ─────────────────────────────────────────────────
+    "V", "SQ", "PYPL", "COIN", "SOFI",
+    "AFRM", "HOOD", "MELI", "NU", "UPST",
+
+    # ── Bank / Investering ───────────────────────────────────────────────────
+    "JPM", "GS", "MS", "BAC", "BLK",
+
+    # ── Strøyming / Media ────────────────────────────────────────────────────
+    "NFLX", "SPOT", "ROKU", "DIS",
+
+    # ── E-handel / Consumer Tech ─────────────────────────────────────────────
+    "SHOP", "ETSY", "CHWY", "PINS", "SNAP", "APP", "DUOL", "TOST",
+
+    # ── Transport / Mobilitet ────────────────────────────────────────────────
+    "UBER", "LYFT", "DASH",
+
+    # ── Reise / Livsstil ─────────────────────────────────────────────────────
+    "ABNB", "DKNG", "CELH",
+
+    # ── EV / Rein energi ─────────────────────────────────────────────────────
+    "TSLA", "RIVN", "LCID", "NIO", "XPEV", "LI",
+    "PLUG", "ENPH", "SEDG",
+
+    # ── Krypto-relatert ──────────────────────────────────────────────────────
+    "MSTR", "MARA", "RIOT", "CLSK", "HUT",
+
+    # ── Gaming / Metaverse ───────────────────────────────────────────────────
+    "RBLX", "U",
+
+    # ── Rom / Quantum computing ──────────────────────────────────────────────
+    "RKLB", "LUNR", "IONQ",
+
+    # ── Helse / Biotech ──────────────────────────────────────────────────────
+    "MRNA", "HIMS", "TDOC", "BNTX", "DOCS",
+
+    # ── Globalt vekst ────────────────────────────────────────────────────────
+    "SE", "GRAB", "GLBE", "PTON",
 ]
 
 # Strategi-parametere
