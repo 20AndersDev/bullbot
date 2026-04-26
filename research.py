@@ -12,9 +12,6 @@ from collections import Counter  # noqa: F401  (kept for possible future use)
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
-subprocess.check_call([sys.executable, "-m", "pip", "install", "-q",
-                       "yfinance", "requests", "python-dotenv"])
-
 from dotenv import load_dotenv
 load_dotenv()
 
