@@ -263,7 +263,7 @@ def _alpaca_portfolio(per_symbol: dict, upcoming: list, scores: dict) -> list:
         tc = TradingClient(
             os.getenv("ALPACA_API_KEY", ""),
             os.getenv("ALPACA_SECRET_KEY", ""),
-            paper=True,
+            paper=os.getenv("ALPACA_MODE", "paper").lower() in ("paper", "true", "1"),
         )
         positions = tc.get_all_positions()
     except Exception as e:

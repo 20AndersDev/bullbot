@@ -16,6 +16,8 @@ load_dotenv()
 
 import yfinance as yf
 import requests
+sys.path.insert(0, str(Path(__file__).parent.parent))
+import config
 
 # ── KONFIGURASJON ─────────────────────────────────────────────────────────
 BASE_DIR       = Path(__file__).parent.parent
@@ -81,8 +83,8 @@ def score_sym(sym: str) -> float:
     if d.get("finnhub_strong_buy", 0) >= 8: s += 1
 
     mom = d.get("momentum_dag_pct", 0)
-    if mom >= 4:    s += 2
-    elif mom <= -4: s -= 1
+    if mom >= config.MOMENTUM_MIN_DAY_PCT:    s += 2
+    elif mom <= -config.MOMENTUM_MIN_DAY_PCT: s -= 1
 
     r = d.get("reddit", {})
     if r.get("buy", 0) >= 2:       s += 1

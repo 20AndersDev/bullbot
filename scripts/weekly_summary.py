@@ -7,8 +7,9 @@ from alpaca.trading.client import TradingClient
 from alpaca.trading.requests import GetOrdersRequest, GetPortfolioHistoryRequest
 from alpaca.trading.enums import QueryOrderStatus
 
+import config
 DISCORD = os.environ["DISCORD_WEBHOOK"]
-tc = TradingClient(os.environ["ALPACA_API_KEY"], os.environ["ALPACA_SECRET_KEY"], paper=True)
+tc = TradingClient(os.environ["ALPACA_API_KEY"], os.environ["ALPACA_SECRET_KEY"], paper=config.PAPER)
 
 acct   = tc.get_account()
 equity = float(acct.equity)

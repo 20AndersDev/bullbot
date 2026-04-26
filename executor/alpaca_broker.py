@@ -50,14 +50,7 @@ def buy(symbol: str, qty: int, stop_loss: float, take_profit: float) -> None:
 
 
 def sell_all(symbol: str) -> None:
-    """Lukk hele posisjonen for et symbol med markedsordre."""
-    order = MarketOrderRequest(
-        symbol=symbol,
-        qty=None,      # None = hele posisjonen via fractional support
-        side=OrderSide.SELL,
-        time_in_force=TimeInForce.DAY,
-    )
-    # Alpaca støtter close_position direkte
+    """Lukk heile posisjonen for eit symbol via Alpaca close_position."""
     _client().close_position(symbol)
 
 

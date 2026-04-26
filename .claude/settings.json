@@ -14,7 +14,8 @@
       "Bash(git commit *)",
       "Bash(git pull *)",
       "Bash(git stash *)",
-      "Bash(python -c \"import config; print\\(f'Watchlist: {len\\(config.WATCHLIST\\)} aksjar'\\); print\\(config.WATCHLIST[:10], '...'\\)\")"
+      "Bash(python -c \"import config; print\\(f'Watchlist: {len\\(config.WATCHLIST\\)} aksjar'\\); print\\(config.WATCHLIST[:10], '...'\\)\")",
+      "Bash(python -c \"import config, bot, notifier; print\\('Alle filer importerer OK'\\)\")"
     ]
   }
 }

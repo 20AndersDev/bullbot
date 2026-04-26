@@ -282,8 +282,9 @@ def run_cycle() -> None:
                 avg_entry = float(position.avg_entry_price)
                 qty_held  = int(float(position.qty))
 
-                # Trailing stop brukar siste 12 bars (~1 time med 5-min candles)
-                recent_high = float(bars["close"].tail(12).max())
+                # Trailing stop: siste 12 bars (~1 time) eller det som finst
+                lookback    = min(12, len(bars))
+                recent_high = float(bars["close"].tail(lookback).max())
                 tech_sell   = result.signal == Signal.SELL
 
                 decision, sell_note = _sell_decision(

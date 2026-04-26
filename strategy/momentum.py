@@ -28,7 +28,7 @@ def analyze(bars_daily: pd.DataFrame, bars_intraday: pd.DataFrame) -> MomentumRe
     curr_price = float(bars_daily["close"].iloc[-1])
     day_chg    = (curr_price / prev_close - 1) * 100
 
-    rsi_series = ta.rsi(bars_intraday["close"], length=14) if len(bars_intraday) >= 15 else None
+    rsi_series = ta.rsi(bars_intraday["close"], length=config.RSI_PERIOD) if len(bars_intraday) >= config.RSI_PERIOD + 1 else None
     rsi = float(rsi_series.iloc[-1]) if rsi_series is not None else 50.0
 
     if day_chg >= config.MOMENTUM_MIN_DAY_PCT and rsi < config.MOMENTUM_RSI_MAX:

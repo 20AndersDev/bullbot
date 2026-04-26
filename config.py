@@ -6,7 +6,7 @@ load_dotenv()
 
 ALPACA_API_KEY = os.getenv("ALPACA_API_KEY", "")
 ALPACA_SECRET_KEY = os.getenv("ALPACA_SECRET_KEY", "")
-PAPER = os.getenv("ALPACA_MODE", "paper") == "paper"
+PAPER = os.getenv("ALPACA_MODE", "paper").lower() in ("paper", "true", "1")
 DISCORD_WEBHOOK           = os.getenv("DISCORD_WEBHOOK", "")
 DISCORD_TRADE_WEBHOOK     = os.getenv("DISCORD_TRADE_WEBHOOK", "")
 DISCORD_STRATEGY_WEBHOOK  = os.getenv("DISCORD_STRATEGY_WEBHOOK", "")
