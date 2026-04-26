@@ -79,9 +79,6 @@
     "NIO",
     "XPEV",
     "LI",
-    "PLUG",
-    "ENPH",
-    "SEDG",
     "MSTR",
     "MARA",
     "RIOT",
@@ -100,17 +97,19 @@
     "SE",
     "GRAB",
     "GLBE",
-    "PTON"
+    "PTON",
+    "TTD",
+    "WDAY",
+    "ISRG"
   ],
-  "removed": [],
+  "removed": [
+    "PLUG",
+    "ENPH",
+    "SEDG"
+  ],
   "added": [
-    "APPF",
-    "AMBA",
-    "NEM",
-    "SIMO",
-    "MXL",
-    "RMBS",
-    "TTMI",
-    "SYNA"
+    "TTD",
+    "WDAY",
+    "ISRG"
   ]
 }

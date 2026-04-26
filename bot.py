@@ -31,6 +31,17 @@ log = logging.getLogger("bullbot")
 # Guardrail-funksjonar
 # ---------------------------------------------------------------------------
 
+def _sector_count(symbol: str, open_positions: dict) -> int:
+    """Tel kor mange opne posisjonar vi har i same sektor som symbol."""
+    sector = config.SECTOR_MAP.get(symbol, "other")
+    if sector == "other":
+        return 0
+    return sum(
+        1 for sym in open_positions
+        if config.SECTOR_MAP.get(sym, "other") == sector
+    )
+
+
 def _daily_loss_exceeded(equity: float, last_equity: float) -> bool:
     """Returner True om dagstapet overstig MAX_DAILY_LOSS_PCT."""
     if last_equity <= 0:
@@ -246,6 +257,12 @@ def run_cycle() -> None:
             if result.signal == Signal.BUY and not already_in and buys_allowed:
                 if n_open >= config.MAX_OPEN_POSITIONS:
                     log.info(f"{symbol}: maks posisjoner nådd ({config.MAX_OPEN_POSITIONS})")
+                    continue
+
+                sector     = config.SECTOR_MAP.get(symbol, "other")
+                sec_count  = _sector_count(symbol, open_positions)
+                if sector != "other" and sec_count >= config.MAX_SECTOR_POSITIONS:
+                    log.info(f"{symbol}: sektorgrense nådd ({sector}: {sec_count}/{config.MAX_SECTOR_POSITIONS})")
                     continue
 
                 conviction     = _conviction_score(symbol, knowledge, result.reason)

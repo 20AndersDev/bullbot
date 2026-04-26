@@ -64,6 +64,8 @@ _NAMES: dict[str, str] = {
     # Helse / Biotech
     "MRNA": "Moderna", "HIMS": "Hims & Hers",
     "TDOC": "Teladoc", "BNTX": "BioNTech", "DOCS": "Doximity",
+    # Ad-tech / Enterprise SaaS / MedTech
+    "TTD": "The Trade Desk", "WDAY": "Workday", "ISRG": "Intuitive Surgical",
     # Globalt vekst
     "SE": "Sea Limited", "GRAB": "Grab", "GLBE": "Global-E Online",
     "PTON": "Peloton",

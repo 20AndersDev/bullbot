@@ -53,9 +53,11 @@ else:
     # ── Reise / Livsstil ─────────────────────────────────────────────────────
     "ABNB", "DKNG", "CELH",
 
-    # ── EV / Rein energi ─────────────────────────────────────────────────────
+    # ── Elektriske køyretøy ───────────────────────────────────────────────────
     "TSLA", "RIVN", "LCID", "NIO", "XPEV", "LI",
-    "PLUG", "ENPH", "SEDG",
+
+    # ── Ad-tech / Enterprise SaaS / MedTech ──────────────────────────────────
+    "TTD", "WDAY", "ISRG",
 
     # ── Krypto-relatert ──────────────────────────────────────────────────────
     "MSTR", "MARA", "RIOT", "CLSK", "HUT",
@@ -72,6 +74,54 @@ else:
     # ── Globalt vekst ────────────────────────────────────────────────────────
     "SE", "GRAB", "GLBE", "PTON",
     ]
+
+# Sektorkarting for diversifisering — ukjende symbol får "other"
+SECTOR_MAP: dict = {
+    # Mega-cap tech
+    "AAPL": "mega_cap",  "MSFT": "mega_cap",  "NVDA": "mega_cap",
+    "AMZN": "mega_cap",  "META": "mega_cap",  "GOOGL": "mega_cap",
+    "ORCL": "mega_cap",  "AVGO": "mega_cap",  "CRM": "mega_cap",  "ADBE": "mega_cap",
+    # Halvleiarar
+    "AMD":  "chips",  "QCOM": "chips",  "MU":   "chips",  "SMCI": "chips", "ARM":  "chips",
+    "AMAT": "chips",  "LRCX": "chips",  "MRVL": "chips",  "ON":   "chips", "TSM":  "chips", "WOLF": "chips",
+    # AI / Cloud / SaaS
+    "PLTR": "ai_cloud", "NOW":  "ai_cloud", "DDOG": "ai_cloud", "MDB":  "ai_cloud",
+    "SNOW": "ai_cloud", "NET":  "ai_cloud", "GTLB": "ai_cloud", "PATH": "ai_cloud",
+    "BILL": "ai_cloud", "ZM":   "ai_cloud", "TWLO": "ai_cloud", "AI":   "ai_cloud",
+    "WDAY": "ai_cloud", "HUBS": "ai_cloud",
+    # Cybersikkerheit
+    "CRWD": "cyber", "PANW": "cyber", "ZS": "cyber", "OKTA": "cyber", "FTNT": "cyber", "S": "cyber",
+    # Fintech / Betalingar
+    "V":    "fintech", "SQ":   "fintech", "PYPL": "fintech", "COIN": "fintech", "SOFI": "fintech",
+    "AFRM": "fintech", "HOOD": "fintech", "MELI": "fintech", "NU":   "fintech", "UPST": "fintech",
+    # Bank / Investering
+    "JPM": "banking", "GS": "banking", "MS": "banking", "BAC": "banking", "BLK": "banking",
+    # Strøyming / Media
+    "NFLX": "media", "SPOT": "media", "ROKU": "media", "DIS": "media",
+    # E-handel / Annonsering / Consumer
+    "SHOP": "consumer", "ETSY": "consumer", "CHWY": "consumer", "PINS": "consumer",
+    "SNAP": "consumer", "APP":  "consumer", "DUOL": "consumer", "TOST": "consumer",
+    "TTD":  "consumer",
+    # Transport
+    "UBER": "transport", "LYFT": "transport", "DASH": "transport",
+    # Livsstil
+    "ABNB": "lifestyle", "DKNG": "lifestyle", "CELH": "lifestyle",
+    # Elektriske køyretøy
+    "TSLA": "ev", "RIVN": "ev", "LCID": "ev", "NIO": "ev", "XPEV": "ev", "LI": "ev",
+    # Krypto-relatert
+    "MSTR": "crypto", "MARA": "crypto", "RIOT": "crypto", "CLSK": "crypto", "HUT": "crypto",
+    # Gaming
+    "RBLX": "gaming", "U": "gaming",
+    # Rom / Quantum
+    "RKLB": "space", "LUNR": "space", "IONQ": "space",
+    # Helse / Biotech / MedTech
+    "MRNA": "health", "HIMS": "health", "TDOC": "health",
+    "BNTX": "health", "DOCS": "health", "ISRG": "health",
+    # Globalt vekst
+    "SE": "global", "GRAB": "global", "GLBE": "global", "PTON": "global",
+}
+
+MAX_SECTOR_POSITIONS = 3   # maks opne posisjonar per sektor samstundes
 
 # Strategi-parametere
 EMA_FAST = 9
