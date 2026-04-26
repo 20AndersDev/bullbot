@@ -242,7 +242,7 @@ print("Committed og push til GitHub")
 
 
 # ── DISCORD-NOTIFIKASJON ──────────────────────────────────────────────────
-discord_url = os.environ.get("DISCORD_WEBHOOK", "")
+discord_url = os.environ.get("DISCORD_WATCHLIST_WEBHOOK", "") or os.environ.get("DISCORD_WEBHOOK", "")
 if not discord_url:
     sys.exit(0)
 
