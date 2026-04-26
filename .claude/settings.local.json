@@ -2,7 +2,14 @@
   "permissions": {
     "allow": [
       "Skill(schedule)",
-      "Skill(schedule:*)"
+      "Skill(schedule:*)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(python scripts/daily_summary.py)",
+      "Bash(pip install *)",
+      "Bash(git commit -m 'Fix: load_dotenv\\(\\) i scripts for lokal testing *)",
+      "Bash(python scripts/weekly_summary.py)"
     ]
   }
 }

@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c ' *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git check-ignore *)",
+      "Bash(python research.py --commit)",
+      "Bash(python research.py)",
+      "Bash(python scripts/send_strategy.py '{\"marknad\":\"BULLISH\",\"fear_greed\":66,\"vix\":18.7,\"kjoep\":[{\"symbol\":\"NVDA\",\"rec\":\"STRONG_BUY\",\"upside_pct\":29.0,\"grunn\":\"konsensus STRONG BUY | +29% analytikarmål | 24 SB-analytik. | momentum +4.3%\",\"hald\":\"3-7 dagar\",\"score\":9.0},{\"symbol\":\"AMD\",\"rec\":\"BUY\",\"upside_pct\":0,\"grunn\":\"analytikar: BUY | momentum +13.9% | WSB x14\",\"hald\":\"1-3 dagar \\(momentum\\)\",\"score\":7.0}],\"unngaa\":[{\"symbol\":\"MSFT\",\"grunn\":\"earnings snart — ventar på kvartalsrapport\"},{\"symbol\":\"META\",\"grunn\":\"earnings snart — ventar på kvartalsrapport\"}],\"momentum\":[{\"symbol\":\"AMD\",\"day_pct\":13.9,\"grunn\":\"Intradag hopp +13.9% — kortsiktig momentum-handel\",\"hald\":\"1-2 dagar\"}],\"marknadsnote\":\"Fed Funds: 3.64%  |  10Y: 4.34%\",\"er_kveld\":false}')",
+      "Bash(python -c \"import config; print\\(f'MAX_OPEN_POSITIONS: {config.MAX_OPEN_POSITIONS}'\\); print\\(f'MAX_POSITION_PCT: {config.MAX_POSITION_PCT*100:.0f}%'\\)\")",
+      "Bash(python -c \"from risk.manager import position_size; eq=100000; price=200; qty=position_size\\(eq,price\\); print\\(f'Eks: NVDA @ \\\\${price} → {qty} aksjar = \\\\${qty*price:,.0f} \\({qty*price/eq*100:.1f}% av \\\\${eq:,}\\)'\\)\")",
+      "Bash(python -c \"from risk.manager import position_size; eq=100000; price=200; qty=position_size\\(eq,price\\); print\\('NVDA @', price, '->', qty, 'aksjar =', qty*price, '\\(' + str\\(round\\(qty*price/eq*100,1\\)\\) + '% av 100k\\)'\\)\")",
+      "Bash(python -c \"import bot; print\\('bot.py: OK'\\)\")"
+    ]
+  }
+}

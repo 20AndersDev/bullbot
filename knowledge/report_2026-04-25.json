@@ -1,6 +1,29 @@
 {
   "dato": "2026-04-25",
-  "timestamp": "2026-04-25T13:28:44.206696+00:00",
+  "timestamp": "2026-04-25T14:00:10.169945+00:00",
+  "fear_greed": {
+    "score": 66.0285714285714,
+    "rating": "greed"
+  },
+  "vix": 18.709999084472656,
+  "spy": {
+    "price": 713.9400024414062,
+    "day_pct": 0.7749297960024215,
+    "week_pct": 0.7365436214676446
+  },
+  "market_news": [
+    "As mass layoffs threaten jobs, here are 4 smart moves to protect yourself",
+    "\u2018We are not close\u2019: My brother says our mother left no estate when she died. How on earth can I trust him?",
+    "Looking to get an EV for the first time? How to avoid making a huge financial mistake.",
+    "Apple, Best Buy and Lululemon\u2019s new CEOs signal a generational shift, as companies navigate a more chaotic world",
+    "How Intel\u2019s CEO brought the storied company back from the brink",
+    "Big Four accounting chooses AI over humans, cuts benefits & hiring",
+    "Nvidia stock clinches record close, pushing market cap over $5 trillion once again",
+    "Software's comeback bid is fading as chip stocks smash records: Chart of the Day",
+    "\u2018We will not survive\u2019: Toyota, Honda and Ford CEOs issue chilling warning about China \u2014 and it could hit your portfolio",
+    "CNN\u2019s data chief admits US stocks are up \u2018like a rocket\u2019 under Trump \u2014 suggests Democrats don\u2019t want to talk about it"
+  ],
+  "momentum_kandidatar": [],
   "ikke_kjoep": [],
   "per_symbol": {
     "AAPL": {
@@ -11,11 +34,13 @@
       "pct_from_52h": -6.1,
       "rec": "buy",
       "news": [
-        "",
-        "",
-        "",
-        ""
-      ]
+        "Elon Musk vs. Sam Altman, Mag 7 earnings, Fed meeting: What to Watch",
+        "Dow Jones Futures: Apple, Amazon, Google Lead Earnings Wave For AI-Led Stock Market",
+        "Stock Market Week Ahead: Hyperscaler Blitz, Federal Reserve Transition",
+        "Alphabet Next: Google Cloud Says 75% of Customers Use AI as Pichai Targets $175B-$185B CapEx",
+        "Apple Inc. (AAPL) Appointed John Ternus as CEO"
+      ],
+      "momentum_dag_pct": 0.0
     },
     "MSFT": {
       "price": 424.62,
@@ -25,11 +50,13 @@
       "pct_from_52h": -23.6,
       "rec": "strong_buy",
       "news": [
-        "",
-        "",
-        "",
-        ""
-      ]
+        "Elon Musk vs. Sam Altman, Mag 7 earnings, Fed meeting: What to Watch",
+        "Crypto latest: Michael Saylor says crypto 'winter' is 'over'",
+        "Dow Jones Futures: Apple, Amazon, Google Lead Earnings Wave For AI-Led Stock Market",
+        "Here's How Much Microsoft Stock Is Expected to Move After Earnings",
+        "Stock Market Week Ahead: Hyperscaler Blitz, Federal Reserve Transition"
+      ],
+      "momentum_dag_pct": 0.0
     },
     "NVDA": {
       "price": 208.27,
@@ -39,11 +66,13 @@
       "pct_from_52h": -1.8,
       "rec": "strong_buy",
       "news": [
-        "",
-        "",
-        "",
-        ""
-      ]
+        "VAST Data CEO discusses AI startup's new $30B valuation",
+        "Are Intel's impressive earnings a precursor to AMD's?",
+        "Oklo stock on pace to close out the week with gains. Here's why.",
+        "The SpaceX IPO Could Make Millionaires. Here's What Investors Need to Know.",
+        "Is Nvidia Stock Still a Buy After Its Incredible 1,100% Run? Here's the Honest Answer."
+      ],
+      "momentum_dag_pct": 0.0
     },
     "AMZN": {
       "price": 263.99,
@@ -53,11 +82,13 @@
       "pct_from_52h": -0.2,
       "rec": "strong_buy",
       "news": [
-        "",
-        "",
-        "",
-        ""
-      ]
+        "Elon Musk vs. Sam Altman, Mag 7 earnings, Fed meeting: What to Watch",
+        "Intel stock soars on Q1 earnings beat, strong outlook",
+        "Law Professor Says, 'Salaries Are For Suckers' And Subject To High Taxes. That's Why Jeff Bezos Has A Salary Of Only Around $82,000 Since 1998",
+        "Dow Jones Futures: Apple, Amazon, Google Lead Earnings Wave For AI-Led Stock Market",
+        "The Best Stocks to Buy With $10,000 Right Now"
+      ],
+      "momentum_dag_pct": 0.0
     },
     "META": {
       "price": 675.03,
@@ -67,11 +98,13 @@
       "pct_from_52h": -15.2,
       "rec": "strong_buy",
       "news": [
-        "",
-        "",
-        "",
-        ""
-      ]
+        "Elon Musk vs. Sam Altman, Mag 7 earnings, Fed meeting: What to Watch",
+        "Crypto latest: Michael Saylor says crypto 'winter' is 'over'",
+        "Dow Jones Futures: Apple, Amazon, Google Lead Earnings Wave For AI-Led Stock Market",
+        "Stock Market Week Ahead: Hyperscaler Blitz, Federal Reserve Transition",
+        "Meet the Biggest Threat to Nvidia in AI Chips. It's Not AMD, Intel, or Broadcom."
+      ],
+      "momentum_dag_pct": 0.0
     },
     "GOOGL": {
       "price": 344.4,
@@ -81,11 +114,13 @@
       "pct_from_52h": -1.3,
       "rec": "strong_buy",
       "news": [
-        "",
-        "",
-        "",
-        ""
-      ]
+        "Nvidia stock clinches record close, pushing market cap over $5 trillion once again",
+        "Nvidia market cap back above $5T, Alphabet to invest $40B in Anthropic",
+        "Why Congress Can\u2019t Stop Loading Up on These 3 Stocks in 2026",
+        "Dow Jones Futures: Apple, Amazon, Google Lead Earnings Wave For AI-Led Stock Market",
+        "Alphabet's Google Could Supercharge This Artificial Intelligence (AI) Stock That Has Soared 78% in 2026. Here's Why You Should Buy It Hand Over Fist Before It Is Too Late."
+      ],
+      "momentum_dag_pct": 0.0
     },
     "TSLA": {
       "price": 376.3,
@@ -95,11 +130,13 @@
       "pct_from_52h": -24.6,
       "rec": "buy",
       "news": [
-        "",
-        "",
-        "",
-        ""
-      ]
+        "Thanks to high gas prices, interest in EVs is soaring",
+        "What's next for Tesla",
+        "\u2018We will not survive\u2019: Toyota, Honda and Ford CEOs issue chilling warning about China \u2014 and it could hit your portfolio",
+        "PG&E Tesla Cybertruck Partnership Tests Vehicle To Grid Future For Investors",
+        "Is Tesla\u2019s New Lower-Priced SUV a Good Investment for Retirees?"
+      ],
+      "momentum_dag_pct": 0.0
     },
     "AMD": {
       "price": 347.81,
@@ -109,11 +146,13 @@
       "pct_from_52h": -1.5,
       "rec": "buy",
       "news": [
-        "",
-        "",
-        "",
-        ""
-      ]
+        "Software, semis, & BofA's 'perfect portfolio': Charts of the Day",
+        "Are Intel's impressive earnings a precursor to AMD's?",
+        "Taiwan Semiconductor, Walmart Lead Five Stocks Near Buy Points Without This Big Risk",
+        "AMD (AMD) Shares Skyrocket, What You Need To Know",
+        "DA Davidson analyst resets AMD stock price target for 2026"
+      ],
+      "momentum_dag_pct": 0.0
     },
     "NFLX": {
       "price": 92.44,
@@ -123,11 +162,13 @@
       "pct_from_52h": -31.1,
       "rec": "buy",
       "news": [
-        "",
-        "",
-        "",
-        ""
-      ]
+        "How Netflix Could Perform in a Mild vs. a Severe Recession",
+        "Netflix Pitches \u2018Buyback-and-Chill\u2019 Strategy",
+        "Warner Bros. stock edges lower after Paramount sale gets approved",
+        "Hims Stock Falls as It Pivots From GLP-1 Compounding. Why the \u2018Netflix\u2019 Argument Is Failing.",
+        "Warner Bros Shareholders Approve $110 Billion Paramount Skydance Merger"
+      ],
+      "momentum_dag_pct": 0.0
     },
     "JPM": {
       "price": 308.28,
@@ -137,11 +178,13 @@
       "pct_from_52h": -8.6,
       "rec": "buy",
       "news": [
-        "",
-        "",
-        "",
-        ""
-      ]
+        "Iran\u2019s Araghchi Holds Pakistan Meetings With US Talks in Limbo",
+        "JPMorgan Chase Insiders Sold US$149m Of Shares Suggesting Hesitancy",
+        "AI Chip Surge Elevates Taiwan, Korea in Global Equity Rankings",
+        "Why The Story Around Ares Commercial Real Estate (ACRE) Is Shifting With Mixed Analyst Targets",
+        "\u2018The Jig Is Up\u2019: 70% Crash Marks Quick End to Avis Short Squeeze"
+      ],
+      "momentum_dag_pct": 0.0
     },
     "V": {
       "price": 309.42,
@@ -151,11 +194,13 @@
       "pct_from_52h": -17.6,
       "rec": "strong_buy",
       "news": [
-        "",
-        "",
-        "",
-        ""
-      ]
+        ".2 Financials Stocks for Long-Term Investors and 1 We Brush Off",
+        "North Point Sells Out of $7.5 Million Gentex Position in Q1",
+        "Visa Inc. (V): Investors Treating Valuation as Multi-Year Entry Opportunity",
+        "Visa and Mastercard: Still the Widest Moats in Financial Services?",
+        "MasterCard (MA) Reports Next Week: Wall Street Expects Earnings Growth"
+      ],
+      "momentum_dag_pct": 0.0
     },
     "CRWD": {
       "price": 448.13,
@@ -165,11 +210,13 @@
       "pct_from_52h": -21.0,
       "rec": "buy",
       "news": [
-        "",
-        "",
-        "",
-        ""
-      ]
+        "1 Unpopular Stock That Should Get More Attention and 2 We Brush Off",
+        "CrowdStrike Holdings (CRWD) Registers a Bigger Fall Than the Market: Important Facts to Note",
+        "Accenture Deepens Applied AI Push With Google Cloud Robotics And Security",
+        "4 Financial Pros Offer 5 Stocks, 3 ETFs to Play the Software Bust",
+        "KeyBanc Sees AI Saving the Day for CrowdStrike Stock Despite Broad Wall Street Panic. Who\u2019s Right?"
+      ],
+      "momentum_dag_pct": 0.0
     },
     "PLTR": {
       "price": 143.09,
@@ -179,11 +226,13 @@
       "pct_from_52h": -31.0,
       "rec": "buy",
       "news": [
-        "",
-        "",
-        "",
-        ""
-      ]
+        "Is the AI Gold Rush Still On? A Historical Look at Amazon's AWS Offers a Compellingly Clear Answer.",
+        "Palantir is reportedly helping the IRS investigate financial crimes",
+        "Why Palantir Stock Is Slumping in 2026\u2014and Why It Could Bounce Back",
+        "Kalshi Taps Pyth Network To Settle Bets On Gold, Oil, Wheat And More",
+        "One AI Stock Outpacing NVIDIA & Palantir - Why It's a Better Buy"
+      ],
+      "momentum_dag_pct": 0.0
     },
     "COIN": {
       "price": 199.77,
@@ -193,11 +242,13 @@
       "pct_from_52h": -55.1,
       "rec": "buy",
       "news": [
-        "",
-        "",
-        "",
-        ""
-      ]
+        "U.S. Regulator Sues New York State for Prediction Markets Crackdown",
+        "Insider Trading Scandals Compound Prediction Market Pressures; Two Stocks Downgraded",
+        "Coinbase Global, Inc. (COIN) Registers a Bigger Fall Than the Market: Important Facts to Note",
+        "Blockchain Capital Seeks $700 Million for New Venture and Token Funds",
+        "Bitcoin Price Falls From 11-Week High. Why Ethereum, XRP, Cryptos Are Dropping."
+      ],
+      "momentum_dag_pct": 0.0
     },
     "UBER": {
       "price": 74.64,
@@ -207,11 +258,13 @@
       "pct_from_52h": -26.8,
       "rec": "buy",
       "news": [
-        "",
-        "",
-        "",
-        ""
-      ]
+        "Why Lucid Group (LCID) Is Down 14.4% After CEO Change And Major Uber Robotaxi Deal",
+        "Stocks making big moves this week: Dell, Chewy, Lucid, DigitalOcean, and DXP",
+        "Uber And Block Expand Payments Tie Up As Valuation Draws Attention",
+        "Uber and Joby Aviation Confirm Air Taxis Launch in Dubai by 2026 -- Time to Buy?",
+        "Must-Buy Stocks to Take Advantage of the Gig Economy's Popularity"
+      ],
+      "momentum_dag_pct": 0.0
     },
     "SOFI": {
       "price": 18.44,
@@ -221,11 +274,13 @@
       "pct_from_52h": -43.7,
       "rec": "hold",
       "news": [
-        "",
-        "",
-        "",
-        ""
-      ]
+        "Unveiling SoFi Technologies (SOFI) Q1 Outlook: Wall Street Estimates for Key Metrics",
+        "HELOC and home equity loan rates today, April 24, 2026: With price growth slowing, lenders are getting creative",
+        "PLTR vs. SOFI: Which High-Growth Tech Stock is the Better Buy Now?",
+        "SoFi Expands HELOC And XRP Offerings As Valuation Premium Persists",
+        "SoFi Technologies, Inc. (SOFI) Outpaces Stock Market Gains: What You Should Know"
+      ],
+      "momentum_dag_pct": 0.0
     },
     "AFRM": {
       "price": 63.72,
@@ -235,11 +290,13 @@
       "pct_from_52h": -36.3,
       "rec": "buy",
       "news": [
-        "",
-        "",
-        "",
-        ""
-      ]
+        "Affirm Holdings (AFRM) Outperforms Broader Market: What You Need to Know",
+        "Here's Why Affirm Holdings (AFRM) Fell More Than Broader Market",
+        "Shifting Narrative For Affirm Holdings (AFRM) As Valuation Resets And Partnerships Expand",
+        "Airbnb upgraded, Zscaler downgraded: Wall Street's top analyst calls",
+        "Here Are Wednesday\u2019s Top Wall Street Analyst Research Calls: Abbott Laboratories, Airbnb, Biogen, Cava Group, GitLab, Halliburton, Qualcomm, Seagate, Toast, and More"
+      ],
+      "momentum_dag_pct": 0.0
     },
     "HOOD": {
       "price": 84.71,
@@ -249,11 +306,13 @@
       "pct_from_52h": -44.9,
       "rec": "buy",
       "news": [
-        "",
-        "",
-        "",
-        ""
-      ]
+        "Robinhood app lets everyday Americans buy into OpenAI, but Bank of America warns there are no 'rules to protect them'",
+        "Does Robinhood (HOOD) Really Democratize AI Investing With Its OpenAI Stake And Singapore Expansion?",
+        "Insider Trading Scandals Compound Prediction Market Pressures; Two Stocks Downgraded",
+        "Wisconsin Sues Kalshi, Robinhood, Coinbase, Polymarket, Crypto.com For Violating Gambling Ban",
+        "Wisconsin Sues Prediction Markets Over Sports Betting Contracts"
+      ],
+      "momentum_dag_pct": 0.0
     },
     "RBLX": {
       "price": 56.09,
@@ -263,11 +322,13 @@
       "pct_from_52h": -62.8,
       "rec": "buy",
       "news": [
-        "",
-        "",
-        "",
-        ""
-      ]
+        "Roblox Kids And Select Redefine Safety And Growth Prospects For Investors",
+        "Earnings Preview: Roblox (RBLX) Q1 Earnings Expected to Decline",
+        "Goldman Trims Roblox\u2019s Target to $125 but Keeps the Buy Rating: Is the Engagement Story Still Intact?",
+        "Is It Worth Investing in Roblox (RBLX) Based on Wall Street's Bullish Views?",
+        "Roblox (RBLX) Declined in Q1 Due to Investors\u2019 Concerns"
+      ],
+      "momentum_dag_pct": 0.0
     },
     "DASH": {
       "price": 176.78,
@@ -277,11 +338,13 @@
       "pct_from_52h": -38.1,
       "rec": "buy",
       "news": [
-        "",
-        "",
-        "",
-        ""
-      ]
+        "Must-Buy Stocks to Take Advantage of the Gig Economy's Popularity",
+        "2 Cash-Producing Stocks for Long-Term Investors and 1 That Underwhelm",
+        "DoorDash Tests Stablecoin Payouts To Reshape Gig Worker Economics",
+        "Alphabet Stock Gains 2.1% After Unveiling New AI Inference Chip",
+        "OGIG Surges 8.4% on Oracle, DoorDash Gains"
+      ],
+      "momentum_dag_pct": 0.0
     },
     "RIVN": {
       "price": 16.52,
@@ -291,11 +354,13 @@
       "pct_from_52h": -27.2,
       "rec": "hold",
       "news": [
-        "",
-        "",
-        "",
-        ""
-      ]
+        "\u2018We will not survive\u2019: Toyota, Honda and Ford CEOs issue chilling warning about China \u2014 and it could hit your portfolio",
+        "Rivian Automotive (RIVN) Stock Dips While Market Gains: Key Facts",
+        "Is Rivian\u2019s R2 The Pivot That Could Reprice The Stock?",
+        "Rivian Just Hit a New Production Milestone. Does That Make RIVN Stock a Buy?",
+        "Rivian Automotive, Inc. (RIVN) Is a Trending Stock: Facts to Know Before Betting on It"
+      ],
+      "momentum_dag_pct": 0.0
     },
     "MSTR": {
       "price": 171.02,
@@ -305,11 +370,13 @@
       "pct_from_52h": -62.6,
       "rec": "strong_buy",
       "news": [
-        "",
-        "",
-        "",
-        ""
-      ]
+        "Bitcoin\u2019s Stealth Rally Has Traders Setting Sights on $80,000",
+        "Bitcoin Price Outshines Gold Again, Powered By Strategy",
+        "Crypto Has Another Positive Week As Investor Sentiment Improves",
+        "Bitcoin ETFs rake in $1.9 billion",
+        "Digital Sovereignty: Fireside Chat with Alpha Compute CEO Brittany Kaiser"
+      ],
+      "momentum_dag_pct": 0.0
     },
     "NET": {
       "price": 207.07,
@@ -319,11 +386,13 @@
       "pct_from_52h": -20.4,
       "rec": "buy",
       "news": [
-        "",
-        "",
-        "",
-        ""
-      ]
+        "Cloudflare (NET) Exceeds Market Returns: Some Facts to Consider",
+        "Tech Edge Interviewing Executives at Pax8 Beyond 2026 in Salt Lake City",
+        "Cloudflare (NET) Falls More Steeply Than Broader Market: What Investors Need to Know",
+        "April 2026's High Growth Companies With Insider Influence",
+        "From the stage to the future: Where are Startup Battlefield\u2019s alumni now?"
+      ],
+      "momentum_dag_pct": 0.0
     },
     "SNOW": {
       "price": 140.32,
@@ -333,11 +402,13 @@
       "pct_from_52h": -50.0,
       "rec": "strong_buy",
       "news": [
-        "",
-        "",
-        "",
-        ""
-      ]
+        "No Respite For Snowflake (SNOW) As AI Fears Continue Driving The Stock Down",
+        "Snowflake Inc. (SNOW) Sees a More Significant Dip Than Broader Market: Some Facts to Know",
+        "Snowflake (SNOW) Unveils Major Updates to Snowflake Intelligence, Cortex Code",
+        "Snowflake (SNOW) Seen as Long-Term Winner Despite Recent Stock Weakness",
+        "How Subscribers Quadrupled Their Money On This 'Buy the Dip' Play"
+      ],
+      "momentum_dag_pct": 0.0
     }
   }
 }

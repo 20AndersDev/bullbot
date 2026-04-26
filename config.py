@@ -29,14 +29,17 @@ RSI_PERIOD = 14
 RSI_BUY_MAX = 65     # ikke kjøp hvis RSI er over dette
 RSI_SELL_MIN = 72    # selg hvis RSI er over dette (overkjøpt exit)
 
-# Risikostyring — 10 posisjonar à maks 10% = potensielt 100% investert
-RISK_PER_TRADE = 0.02       # 2% av portefølje per trade
+# Risikostyring — opptil 20 posisjonar, storleik styrt av overtydingsscore (0-10)
+#   conviction=0  → ~2% per posisjon
+#   conviction=5  → ~6% per posisjon
+#   conviction=10 → 10% per posisjon (hardt tak)
 STOP_LOSS_PCT = 0.02        # 2% stop loss
 TAKE_PROFIT_PCT = 0.04      # 4% take profit (2:1 R/R)
-MAX_OPEN_POSITIONS = 10
+MAX_OPEN_POSITIONS = 20
 
 # Guardrails
-MAX_POSITION_PCT = 0.10     # aldri meir enn 10% av portefølje i éin aksje
+MAX_POSITION_PCT = 0.10     # hardt tak: aldri meir enn 10% av portefølje i éin aksje
+MIN_POSITION_PCT = 0.02     # minste posisjon: 2% (ikkje verdt bryet under)
 MAX_DAILY_LOSS_PCT = 0.05   # stopp nye kjøp om dagstap overstig 5%
 
 # Tidsramme for bars (5 minutters candles)

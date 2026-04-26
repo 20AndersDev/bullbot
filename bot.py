@@ -43,19 +43,34 @@ def _position_too_large(market_value: float, equity: float) -> bool:
     return (market_value / equity) > config.MAX_POSITION_PCT
 
 
-def _sell_or_hold(pl_pct: float, reason: str) -> str:
+def _sell_decision(pl_pct: float, price: float, recent_high: float,
+                   rsi: float, tech_sell: bool) -> tuple:
     """
-    Avgjør om vi skal selge eller halde basert på urealisert P&L.
+    Avgjer om vi skal selje basert på trailing stop og teknisk signal.
 
-    P&L >= 3%:  Selg alltid — sikre gevinst
-    P&L 1-3%:   Selg på EMA-kryss, hald på RSI-exit åleine
-    P&L < 1%:   Hald — stop-loss-ordren tek seg av nedsida
+    Returnerer (decision, grunn) der decision er "SELG" eller "HALD".
+
+    Logikk:
+    - Trailing stop: om prisen fell 2% frå nyleg topp OG vi har gevinst → SELG
+    - Teknisk SELL + RSI overkjøpt → SELG (kursen er sannsynleg på veg ned)
+    - Teknisk SELL men framleis i pluss → HALD (let vinnaren løpe)
+    - Tap + teknisk SELL → SELG (kutt tapet)
     """
-    if pl_pct >= 3.0:
-        return "SELG"
-    if pl_pct >= 1.0:
-        return "SELG" if "krysset" in reason else "HALD"
-    return "HALD"
+    drawdown_from_high = (recent_high - price) / recent_high * 100
+
+    if pl_pct > 0.5 and drawdown_from_high >= 2.0:
+        return "SELG", f"trailing stop — fall {drawdown_from_high:.1f}% frå topp ${recent_high:.2f}"
+
+    if tech_sell and rsi > config.RSI_SELL_MIN:
+        return "SELG", f"EMA-kryss + RSI overkjøpt ({rsi:.1f})"
+
+    if tech_sell and pl_pct < -0.5:
+        return "SELG", f"teknisk SELL på tap ({pl_pct:+.2f}%) — kuttar tap"
+
+    if tech_sell and pl_pct > 0:
+        return "HALD", f"teknisk svakt men let vinnaren løpe (P&L={pl_pct:+.2f}%)"
+
+    return "HALD", ""
 
 
 # ---------------------------------------------------------------------------
@@ -100,6 +115,59 @@ def _build_buy_reason(technical_reason: str, symbol: str, knowledge: dict) -> st
     return "\n".join(parts)
 
 
+def _conviction_score(symbol: str, knowledge: dict, technical_reason: str = "") -> float:
+    """
+    Berekn overtydingsscore (0–10) for eit kjøp.
+    Skalaen styrer kor stor posisjon vi tek (2%–10% av portefølja).
+
+    Prioritet 1: bruk score frå dagens strategi om tilgjengeleg.
+    Prioritet 2: bygg score frå per_symbol-data.
+    """
+    # Hent ferdigrekna score frå dagsstrategi
+    for item in knowledge.get("strategi", {}).get("kjoep", []):
+        if isinstance(item, dict) and item.get("symbol") == symbol:
+            return min(10.0, float(item.get("score", 5.0)))
+
+    # Fallback: bygg score frå per_symbol
+    d     = knowledge.get("per_symbol", {}).get(symbol, {})
+    score = 5.0
+
+    rec = str(d.get("rec", "")).lower()
+    if "strong_buy" in rec:
+        score += 2.0
+    elif "buy" in rec:
+        score += 1.0
+    elif "sell" in rec or "underperform" in rec:
+        score -= 2.0
+
+    upside = d.get("upside_pct", 0)
+    if upside > 20:
+        score += 1.5
+    elif upside > 10:
+        score += 0.75
+    elif upside < -5:
+        score -= 1.0
+
+    sb = d.get("finnhub_strong_buy", 0)
+    if sb >= 10:
+        score += 1.0
+    elif sb >= 5:
+        score += 0.5
+
+    reddit = d.get("reddit", {})
+    r_buy  = reddit.get("buy", 0)
+    if r_buy >= 3:
+        score += 1.0
+    elif r_buy >= 1:
+        score += 0.5
+
+    mom = d.get("momentum_dag_pct", 0)
+    if abs(mom) >= config.MOMENTUM_MIN_DAY_PCT:
+        score += 1.0
+
+    return max(0.0, min(10.0, score))
+
+
 def _build_sell_reason(technical_reason: str, symbol: str, pl_pct: float,
                        pl_dollar: float, knowledge: dict) -> str:
     """Bygg rik grunngjeving for sal frå teknisk signal + P&L + knowledge."""
@@ -123,11 +191,12 @@ def run_cycle() -> None:
     knowledge = _load_knowledge()
 
     acct = get_account()
-    equity = float(acct.equity)
-    last_equity = float(acct.last_equity)
+    equity        = float(acct.equity)
+    last_equity   = float(acct.last_equity)
+    buying_power  = float(acct.buying_power)
 
     daily_pl_pct = (equity - last_equity) / last_equity * 100 if last_equity > 0 else 0
-    log.info(f"Porteføljeverdi: ${equity:,.2f} | Dag P&L: {daily_pl_pct:+.2f}%")
+    log.info(f"Porteføljeverdi: ${equity:,.2f} | Dag P&L: {daily_pl_pct:+.2f}% | Buying power: ${buying_power:,.2f}")
 
     # Guardrail 1: dagleg tapgrense
     buys_allowed = True
@@ -179,35 +248,57 @@ def run_cycle() -> None:
                     log.info(f"{symbol}: maks posisjoner nådd ({config.MAX_OPEN_POSITIONS})")
                     continue
 
-                qty = position_size(equity, price)
-                invest_pct = qty * price / equity * 100
-                sl = stop_loss_price(price)
-                tp = take_profit_price(price)
+                conviction     = _conviction_score(symbol, knowledge, result.reason)
+                qty            = position_size(equity, price, conviction)
+                invest_amount  = qty * price
+                invest_pct     = invest_amount / equity * 100
+                sl             = stop_loss_price(price)
+                tp             = take_profit_price(price)
+
+                # Sjekk at det finst nok buying power
+                if invest_amount > buying_power:
+                    log.info(
+                        f"{symbol}: ikkje nok buying power "
+                        f"(treng ${invest_amount:,.0f}, har ${buying_power:,.0f})"
+                    )
+                    continue
 
                 log.info(
                     f"{symbol}: KJØPER {qty} aksjer @ ~${price:.2f} "
-                    f"({invest_pct:.1f}% av portefølje) | SL=${sl} TP=${tp}"
+                    f"({invest_pct:.1f}% av portefølje, conviction={conviction:.1f}) "
+                    f"| SL=${sl} TP=${tp}"
                 )
                 buy_reason = _build_buy_reason(result.reason, symbol, knowledge)
                 buy(symbol, qty, sl, tp)
+                buying_power -= invest_amount
                 n_open += 1
                 notifier.send_trade(embeds=[notifier.buy_embed(
                     symbol, qty, price, sl, tp, invest_pct, equity, buy_reason
                 )])
 
-            elif result.signal == Signal.SELL and already_in:
+            if already_in:
                 pl_pct    = float(position.unrealized_plpc) * 100
                 pl_dollar = float(position.unrealized_pl)
                 avg_entry = float(position.avg_entry_price)
                 qty_held  = int(float(position.qty))
-                decision  = _sell_or_hold(pl_pct, result.reason)
+
+                # Trailing stop brukar siste 12 bars (~1 time med 5-min candles)
+                recent_high = float(bars["close"].tail(12).max())
+                tech_sell   = result.signal == Signal.SELL
+
+                decision, sell_note = _sell_decision(
+                    pl_pct, price, recent_high, result.rsi, tech_sell
+                )
                 log.info(
-                    f"{symbol}: SELL-signal | P&L={pl_pct:+.2f}% | "
-                    f"Beslutning={decision} | {result.reason}"
+                    f"{symbol}: {decision} | P&L={pl_pct:+.2f}% | "
+                    f"RSI={result.rsi:.1f} | topp=${recent_high:.2f} | "
+                    + (sell_note or result.reason)
                 )
                 if decision == "SELG":
-                    sell_reason = _build_sell_reason(result.reason, symbol,
-                                                     pl_pct, pl_dollar, knowledge)
+                    full_reason = result.reason + (f" | {sell_note}" if sell_note else "")
+                    sell_reason = _build_sell_reason(
+                        full_reason, symbol, pl_pct, pl_dollar, knowledge
+                    )
                     sell_all(symbol)
                     n_open -= 1
                     notifier.send_trade(embeds=[notifier.sell_embed(
@@ -222,13 +313,13 @@ def run_cycle() -> None:
 
     # ── MOMENTUM-SCAN ──────────────────────────────────────────────────────
     if buys_allowed and n_open < config.MAX_OPEN_POSITIONS:
-        _run_momentum_scan(equity, open_positions, n_open, buys_allowed)
+        _run_momentum_scan(equity, open_positions, n_open, buys_allowed, buying_power)
 
 
-def _run_momentum_scan(equity: float, open_positions: dict, n_open: int, buys_allowed: bool) -> None:
+def _run_momentum_scan(equity: float, open_positions: dict, n_open: int,
+                       buys_allowed: bool, buying_power: float = 0) -> None:
     """Skanner watchlisten for store dagleg hopp og kjøper momentum-aksjar."""
     import yfinance as yf
-    from alpaca.data.timeframe import TimeFrame, TimeFrameUnit
 
     log.info("--- Momentum-scan ---")
     for symbol in config.WATCHLIST:
@@ -237,27 +328,32 @@ def _run_momentum_scan(equity: float, open_positions: dict, n_open: int, buys_al
         if n_open >= config.MAX_OPEN_POSITIONS:
             break
         try:
-            # Dagsdata for % endring
             daily = yf.Ticker(symbol).history(period="3d")[["Open","High","Low","Close","Volume"]]
             daily.columns = [c.lower() for c in daily.columns]
             daily.index.name = "timestamp"
 
-            # Intradag bars for RSI
-            intra = get_bars(symbol, limit=30)
-
+            intra  = get_bars(symbol, limit=30)
             result = mom_strat.analyze(daily, intra)
 
             if result.signal != "BUY":
                 continue
 
             log.info(f"{symbol}: MOMENTUM {result.day_change_pct:+.1f}% | RSI={result.rsi:.1f}")
-            price = float(daily["close"].iloc[-1])
-            qty   = position_size(equity, price)
-            sl    = round(price * (1 - config.MOMENTUM_STOP_LOSS), 2)
-            tp    = round(price * (1 + config.MOMENTUM_TAKE_PROFIT), 2)
-            invest_pct = qty * price / equity * 100
+            price      = float(daily["close"].iloc[-1])
+            # Conviction skalerer med styrken på hoppet, maks 8 (momentum = kortsiktig)
+            conviction = min(8.0, 5.0 + abs(result.day_change_pct) * 0.25)
+            qty           = position_size(equity, price, conviction)
+            invest_amount = qty * price
+            invest_pct    = invest_amount / equity * 100
+            sl            = round(price * (1 - config.MOMENTUM_STOP_LOSS), 2)
+            tp            = round(price * (1 + config.MOMENTUM_TAKE_PROFIT), 2)
+
+            if invest_amount > buying_power:
+                log.info(f"{symbol}: ikkje nok buying power for momentum-kjøp")
+                break  # resten vil heller ikkje ha nok
 
             buy(symbol, qty, sl, tp)
+            buying_power -= invest_amount
             n_open += 1
             notifier.send_trade(embeds=[notifier.buy_embed(
                 symbol, qty, price, sl, tp, invest_pct, equity,
