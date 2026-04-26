@@ -711,9 +711,22 @@ print(f"Ikkje kjøp: {upcoming}")
 
 # ── GIT COMMIT ────────────────────────────────────────────────────────────────
 if "--commit" in sys.argv:
+    import subprocess as _sp
     os.system('git config user.email "bullbot-routine@noreply"')
     os.system('git config user.name "Bullbot Routine"')
     os.system("git add knowledge/")
     os.system(f'git commit -m "research: dagleg rapport {date.today()}"')
-    os.system("git push")
-    print("Committed og push til repo.")
+
+    token = os.getenv("GITHUB_TOKEN", "")
+    if token:
+        raw = _sp.check_output(["git", "remote", "get-url", "origin"], text=True).strip()
+        # Inject token into HTTPS URL: https://TOKEN@github.com/...
+        auth_url = re.sub(r"https://([^@]*@)?", f"https://{token}@", raw)
+        ret = _sp.run(["git", "push", auth_url], capture_output=True, text=True)
+        if ret.returncode != 0:
+            print(f"Git push feila: {ret.stderr.strip()}")
+        else:
+            print("Committed og push til repo.")
+    else:
+        print("GITHUB_TOKEN ikkje sett — hoppar over push.")
+        print("Legg til GITHUB_TOKEN=ghp_... i .env for automatisk push.")
