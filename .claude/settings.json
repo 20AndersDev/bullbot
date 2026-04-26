@@ -10,7 +10,8 @@
       "Bash(python -c \"import config; print\\(f'MAX_OPEN_POSITIONS: {config.MAX_OPEN_POSITIONS}'\\); print\\(f'MAX_POSITION_PCT: {config.MAX_POSITION_PCT*100:.0f}%'\\)\")",
       "Bash(python -c \"from risk.manager import position_size; eq=100000; price=200; qty=position_size\\(eq,price\\); print\\(f'Eks: NVDA @ \\\\${price} → {qty} aksjar = \\\\${qty*price:,.0f} \\({qty*price/eq*100:.1f}% av \\\\${eq:,}\\)'\\)\")",
       "Bash(python -c \"from risk.manager import position_size; eq=100000; price=200; qty=position_size\\(eq,price\\); print\\('NVDA @', price, '->', qty, 'aksjar =', qty*price, '\\(' + str\\(round\\(qty*price/eq*100,1\\)\\) + '% av 100k\\)'\\)\")",
-      "Bash(python -c \"import bot; print\\('bot.py: OK'\\)\")"
+      "Bash(python -c \"import bot; print\\('bot.py: OK'\\)\")",
+      "Bash(git commit *)"
     ]
   }
 }
