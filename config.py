@@ -121,8 +121,6 @@ SECTOR_MAP: dict = {
     "SE": "global", "GRAB": "global", "GLBE": "global", "PTON": "global",
 }
 
-MAX_SECTOR_POSITIONS = 3   # maks opne posisjonar per sektor samstundes
-
 # Strategi-parametere
 EMA_FAST = 9
 EMA_SLOW = 21

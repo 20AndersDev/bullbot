@@ -259,11 +259,12 @@ def run_cycle() -> None:
                     log.info(f"{symbol}: maks posisjoner nådd ({config.MAX_OPEN_POSITIONS})")
                     continue
 
-                sector     = config.SECTOR_MAP.get(symbol, "other")
-                sec_count  = _sector_count(symbol, open_positions)
-                if sector != "other" and sec_count >= config.MAX_SECTOR_POSITIONS:
-                    log.info(f"{symbol}: sektorgrense nådd ({sector}: {sec_count}/{config.MAX_SECTOR_POSITIONS})")
-                    continue
+                sector    = config.SECTOR_MAP.get(symbol, "other")
+                sec_count = _sector_count(symbol, open_positions)
+                if n_open > 0 and sector != "other":
+                    sec_pct = (sec_count + 1) / (n_open + 1) * 100
+                    if sec_pct > 50:
+                        log.warning(f"{symbol}: høg sektorkonsentrasjon ({sector}: {sec_count+1}/{n_open+1} = {sec_pct:.0f}%) — kjøper likevel")
 
                 conviction     = _conviction_score(symbol, knowledge, result.reason)
                 qty            = position_size(equity, price, conviction)
