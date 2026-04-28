@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-26",
+  "updated": "2026-04-28",
   "symbols": [
     "AAPL",
     "MSFT",
@@ -102,14 +102,15 @@
     "WDAY",
     "ISRG"
   ],
-  "removed": [
-    "PLUG",
-    "ENPH",
-    "SEDG"
-  ],
+  "removed": [],
   "added": [
-    "TTD",
-    "WDAY",
-    "ISRG"
+    "RVMD",
+    "OMCL",
+    "CVLT",
+    "HRI",
+    "LFST",
+    "GLXY",
+    "SEI",
+    "KNSA"
   ]
 }
