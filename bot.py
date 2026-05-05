@@ -4,10 +4,38 @@ Kjør: python bot.py
 """
 import time
 import logging
+import json
+from datetime import datetime
+from pathlib import Path
 from alpaca.trading.client import TradingClient
 
 import config
 import notifier
+
+_COOLDOWN_FILE = Path(__file__).parent / "data" / "cooldown.json"
+_COOLDOWN_DAYS = 3
+
+
+def _load_cooldown() -> dict:
+    try:
+        with open(_COOLDOWN_FILE, encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+
+def _save_cooldown(symbol: str, cooldown: dict) -> None:
+    cooldown[symbol] = datetime.now().strftime("%Y-%m-%d")
+    _COOLDOWN_FILE.parent.mkdir(exist_ok=True)
+    with open(_COOLDOWN_FILE, "w", encoding="utf-8") as f:
+        json.dump(cooldown, f, indent=2)
+
+
+def _in_cooldown(symbol: str, cooldown: dict) -> bool:
+    if symbol not in cooldown:
+        return False
+    sold_date = datetime.strptime(cooldown[symbol], "%Y-%m-%d")
+    return (datetime.now() - sold_date).days < _COOLDOWN_DAYS
 from data.fetcher import get_bars
 from strategy.ema_rsi import analyze, Signal
 from strategy import momentum as mom_strat
@@ -59,21 +87,28 @@ def _sell_decision(pl_pct: float, price: float, recent_high: float,
     """
     Avgjer om vi skal selje basert på trailing stop og teknisk signal.
 
-    Returnerer (decision, grunn) der decision er "SELG" eller "HALD".
+    Trailing stop er gradert etter gevinst:
+      < +5%:  2% trail, 12-bar topp
+      +5-15%: 3% trail, 24-bar topp
+      +15%+:  5% trail, 48-bar topp
 
-    Logikk:
-    - Trailing stop: om prisen fell 2% frå nyleg topp OG vi har gevinst → SELG
-    - Teknisk SELL + RSI overkjøpt → SELG (kursen er sannsynleg på veg ned)
-    - Teknisk SELL men framleis i pluss → HALD (let vinnaren løpe)
-    - Tap + teknisk SELL → SELG (kutt tapet)
+    Små gevinstar (+0.5–+5%) vert seld ved svakt signal for å frigjere kapital.
+    Berre store vinnerar (+5%+) får "let løpe"-vern.
     """
     drawdown_from_high = (recent_high - price) / recent_high * 100
 
     if pl_pct < -(config.STOP_LOSS_PCT * 100):
         return "SELG", f"hard stop-loss ({pl_pct:+.2f}%) — ingen signal kravd"
 
-    if pl_pct > 0.5 and drawdown_from_high >= 2.0:
-        return "SELG", f"trailing stop — fall {drawdown_from_high:.1f}% frå topp ${recent_high:.2f}"
+    if pl_pct >= 15:
+        trail_pct = 5.0
+    elif pl_pct >= 5:
+        trail_pct = 3.0
+    else:
+        trail_pct = 2.0
+
+    if pl_pct > 0.5 and drawdown_from_high >= trail_pct:
+        return "SELG", f"trailing stop {trail_pct:.0f}% — fall {drawdown_from_high:.1f}% frå topp ${recent_high:.2f}"
 
     if tech_sell and rsi > config.RSI_SELL_MIN:
         return "SELG", f"EMA-kryss + RSI overkjøpt ({rsi:.1f})"
@@ -81,8 +116,11 @@ def _sell_decision(pl_pct: float, price: float, recent_high: float,
     if tech_sell and pl_pct < -0.5:
         return "SELG", f"teknisk SELL på tap ({pl_pct:+.2f}%) — kuttar tap"
 
-    if tech_sell and pl_pct > 0:
-        return "HALD", f"teknisk svakt men let vinnaren løpe (P&L={pl_pct:+.2f}%)"
+    if tech_sell and 0 < pl_pct <= 5:
+        return "SELG", f"liten gevinst ({pl_pct:+.2f}%) + svakt signal — frigjerer kapital"
+
+    if tech_sell and pl_pct > 5:
+        return "HALD", f"let stor vinnar løpe (P&L={pl_pct:+.2f}%)"
 
     return "HALD", ""
 
@@ -203,11 +241,12 @@ def run_cycle() -> None:
         return
 
     knowledge = _load_knowledge()
+    cooldown  = _load_cooldown()
 
     acct = get_account()
     equity        = float(acct.equity)
     last_equity   = float(acct.last_equity)
-    buying_power  = float(acct.non_marginable_buying_power)
+    buying_power  = max(0.0, float(acct.cash))
 
     daily_pl_pct = (equity - last_equity) / last_equity * 100 if last_equity > 0 else 0
     log.info(f"Porteføljeverdi: ${equity:,.2f} | Dag P&L: {daily_pl_pct:+.2f}% | Buying power: ${buying_power:,.2f}")
@@ -262,6 +301,10 @@ def run_cycle() -> None:
                     log.info(f"{symbol}: maks posisjoner nådd ({config.MAX_OPEN_POSITIONS})")
                     continue
 
+                if _in_cooldown(symbol, cooldown):
+                    log.info(f"{symbol}: cooldown etter sal — ventar {_COOLDOWN_DAYS} dagar")
+                    continue
+
                 sector    = config.SECTOR_MAP.get(symbol, "other")
                 sec_count = _sector_count(symbol, open_positions)
                 if n_open > 0 and sector != "other":
@@ -303,8 +346,13 @@ def run_cycle() -> None:
                 avg_entry = float(position.avg_entry_price)
                 qty_held  = int(float(position.qty))
 
-                # Trailing stop: siste 12 bars (~1 time) eller det som finst
-                lookback    = min(12, len(bars))
+                # Gradert lookback: store vinnerar treng lengre vindauge
+                if pl_pct >= 15:
+                    lookback = min(48, len(bars))
+                elif pl_pct >= 5:
+                    lookback = min(24, len(bars))
+                else:
+                    lookback = min(12, len(bars))
                 recent_high = float(bars["close"].tail(lookback).max())
                 tech_sell   = result.signal == Signal.SELL
 
@@ -322,6 +370,7 @@ def run_cycle() -> None:
                         full_reason, symbol, pl_pct, pl_dollar, knowledge
                     )
                     sell_all(symbol)
+                    _save_cooldown(symbol, cooldown)
                     n_open -= 1
                     notifier.send_trade(embeds=[notifier.sell_embed(
                         symbol, qty_held, avg_entry, price,
