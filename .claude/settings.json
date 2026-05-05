@@ -17,7 +17,9 @@
       "Bash(python -c \"import config; print\\(f'Watchlist: {len\\(config.WATCHLIST\\)} aksjar'\\); print\\(config.WATCHLIST[:10], '...'\\)\")",
       "Bash(python -c \"import config, bot, notifier; print\\('Alle filer importerer OK'\\)\")",
       "Bash(python -c \"import config, bot; print\\('OK'\\); s = config.SECTOR_MAP; print\\(f'Sektorar: {len\\(set\\(s.values\\(\\)\\)\\)} \\({sorted\\(set\\(s.values\\(\\)\\)\\)}\\)'\\)\")",
-      "Bash(python -c \"import config, bot; print\\('OK'\\)\")"
+      "Bash(python -c \"import config, bot; print\\('OK'\\)\")",
+      "Bash(python -c \"import config; print\\(f'STOP_LOSS_PCT = {config.STOP_LOSS_PCT} → hard stop ved {config.STOP_LOSS_PCT*100:.0f}% tap'\\)\")",
+      "Bash(python -c \"import config; print\\('STOP_LOSS_PCT =', config.STOP_LOSS_PCT, '= hard stop ved', config.STOP_LOSS_PCT*100, 'pst'\\)\")"
     ]
   }
 }

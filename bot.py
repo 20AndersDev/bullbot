@@ -69,6 +69,9 @@ def _sell_decision(pl_pct: float, price: float, recent_high: float,
     """
     drawdown_from_high = (recent_high - price) / recent_high * 100
 
+    if pl_pct < -(config.STOP_LOSS_PCT * 100):
+        return "SELG", f"hard stop-loss ({pl_pct:+.2f}%) — ingen signal kravd"
+
     if pl_pct > 0.5 and drawdown_from_high >= 2.0:
         return "SELG", f"trailing stop — fall {drawdown_from_high:.1f}% frå topp ${recent_high:.2f}"
 
@@ -204,7 +207,7 @@ def run_cycle() -> None:
     acct = get_account()
     equity        = float(acct.equity)
     last_equity   = float(acct.last_equity)
-    buying_power  = float(acct.buying_power)
+    buying_power  = float(acct.non_marginable_buying_power)
 
     daily_pl_pct = (equity - last_equity) / last_equity * 100 if last_equity > 0 else 0
     log.info(f"Porteføljeverdi: ${equity:,.2f} | Dag P&L: {daily_pl_pct:+.2f}% | Buying power: ${buying_power:,.2f}")
