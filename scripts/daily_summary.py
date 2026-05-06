@@ -17,7 +17,15 @@ last_eq = float(acct.last_equity)
 pl      = equity - last_eq
 pl_pct  = pl / last_eq * 100 if last_eq else 0
 cash    = float(acct.cash)
-bp      = float(acct.buying_power)
+
+from alpaca.trading.requests import GetPortfolioHistoryRequest
+try:
+    hist       = tc.get_portfolio_history(GetPortfolioHistoryRequest(period="1M", timeframe="1D"))
+    start_eq   = next((v for v in hist.equity if v and v > 0), None)
+    total_pl   = equity - start_eq if start_eq else 0
+    total_pct  = total_pl / start_eq * 100 if start_eq else 0
+except Exception:
+    total_pl = total_pct = 0
 
 today  = date.today()
 start  = datetime.combine(today, datetime.min.time()).replace(tzinfo=timezone.utc)
@@ -26,78 +34,39 @@ filled = [o for o in orders if o.status.value == "filled"]
 buys   = [o for o in filled if o.side.value == "buy"]
 sells  = [o for o in filled if o.side.value == "sell"]
 
-positions = tc.get_all_positions()
-upl = sum(float(p.unrealized_pl) for p in positions)
+positions = list(tc.get_all_positions())
+upl       = sum(float(p.unrealized_pl) for p in positions)
+sorted_pos = sorted(positions, key=lambda x: float(x.unrealized_plpc), reverse=True)
 
-# Ordrar med emoji-farge
-ord_lines = []
-for o in filled[:15]:
-    is_buy = o.side.value == "buy"
-    icon   = "🟢" if is_buy else "🔴"
-    label  = "KJØP" if is_buy else " SAL"
-    price  = float(o.filled_avg_price) if o.filled_avg_price else 0
-    ord_lines.append(f"{icon} `{label}` **{o.symbol}** × {o.qty} @ ${price:.2f}")
+def _pos_line(p):
+    pct    = float(p.unrealized_plpc) * 100
+    pl_usd = float(p.unrealized_pl)
+    icon   = "▲" if pct >= 0 else "▼"
+    return f"{icon} **{p.symbol}**  `{pct:+.2f}%`  (${pl_usd:+,.0f})"
 
-# Posisjonar sortert etter P&L (beste øvst)
-pos_lines = []
-for p in sorted(positions, key=lambda x: float(x.unrealized_plpc), reverse=True):
-    pct     = float(p.unrealized_plpc) * 100
-    pl_usd  = float(p.unrealized_pl)
-    bar     = "▲" if pct >= 0 else "▼"
-    pos_lines.append(
-        f"{bar} **{p.symbol}** {p.qty} stk  `{pct:+.2f}%`  (${pl_usd:+,.0f})"
-    )
+top3  = "\n".join(_pos_line(p) for p in sorted_pos[:3])  if sorted_pos else "—"
+bot3  = "\n".join(_pos_line(p) for p in sorted_pos[-3:]) if len(sorted_pos) >= 3 else "—"
 
 pl_icon  = "📈" if pl >= 0 else "📉"
 upl_icon = "💹" if upl >= 0 else "🔻"
+res_txt  = "POSITIV DAG" if pl >= 0 else "NEGATIV DAG"
 
 fields = [
-    # Tre inline topprader
-    {
-        "name":   "💰 Porteføljeverdi",
-        "value":  f"**${equity:,.2f}**",
-        "inline": True,
-    },
-    {
-        "name":   f"{pl_icon} Dag P&L",
-        "value":  f"**${pl:+,.2f}**\n`{pl_pct:+.2f}%`",
-        "inline": True,
-    },
-    {
-        "name":   f"{upl_icon} Urealisert P&L",
-        "value":  f"**${upl:+,.2f}**",
-        "inline": True,
-    },
-    # Ordrar
-    {
-        "name":   f"📋 Dagens ordrar  ({len(filled)} totalt  |  {len(buys)} kjøp  {len(sells)} sal)",
-        "value":  "\n".join(ord_lines) or "Ingen ordrar i dag",
-        "inline": False,
-    },
-    # Posisjonar
-    {
-        "name":   f"📁 Opne posisjonar ({len(positions)})",
-        "value":  "\n".join(pos_lines) or "Ingen opne posisjonar",
-        "inline": False,
-    },
-    # Cash / buying power inline
-    {
-        "name":   "💵 Cash",
-        "value":  f"${cash:,.2f}",
-        "inline": True,
-    },
-    {
-        "name":   "⚡ Buying Power",
-        "value":  f"${bp:,.2f}",
-        "inline": True,
-    },
+    {"name": "💰 Porteføljeverdi",          "value": f"**${equity:,.2f}**",                        "inline": True},
+    {"name": f"{pl_icon} Dag P&L",          "value": f"**${pl:+,.2f}**  `{pl_pct:+.2f}%`",      "inline": True},
+    {"name": "🚀 Total P&L",               "value": f"**${total_pl:+,.2f}**  `{total_pct:+.2f}%`", "inline": True},
+    {"name": "🏆 Beste aksjar i dag",       "value": top3,                                     "inline": False},
+    {"name": "📉 Svakaste aksjar i dag",    "value": bot3,                                     "inline": False},
+    {"name": "🔄 Handel i dag",
+     "value": f"{len(buys)} kjøp  |  {len(sells)} sal  |  {len(filled)} totalt",              "inline": True},
+    {"name": "💵 Tilgjengeleg cash",        "value": f"${cash:,.2f}",                          "inline": True},
 ]
 
 embed = {
-    "title":  f"📊 Bullbot Dagsoppsummering  —  {today.strftime('%d.%m.%Y')}",
+    "title":  f"{'📈' if pl >= 0 else '📉'} {res_txt}  —  {today.strftime('%d.%m.%Y')}",
     "color":  0x2ECC71 if pl >= 0 else 0xE74C3C,
     "fields": fields,
-    "footer": {"text": f"Bullbot  •  {today.strftime('%A %d. %B %Y')}"},
+    "footer": {"text": f"Bullbot  •  {today.strftime('%A %d. %B %Y')}  •  {len(positions)} opne posisjonar"},
 }
 
 resp = requests.post(DISCORD, json={"embeds": [embed]}, timeout=10)
