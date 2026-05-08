@@ -211,7 +211,7 @@ to_add = [(sym, grunn) for sym, sc, grunn, detail in validated[:ADD_MAX]]
 remove_set = {sym for sym, _, _ in to_remove}
 add_syms   = [sym for sym, _ in to_add]
 
-new_watchlist = [sym for sym in current if sym not in remove_set] + add_syms
+new_watchlist = add_syms + [sym for sym in current if sym not in remove_set]
 new_watchlist  = list(dict.fromkeys(new_watchlist))   # fjern duplikat, bevar rekkefølge
 new_watchlist  = new_watchlist[:MAX_SIZE]             # hardt tak
 
@@ -237,10 +237,14 @@ print(f"\nwatchlist.json oppdatert: {WATCHLIST_FILE}")
 # Git commit
 os.system("git config user.email 'bullbot-routine@noreply'")
 os.system("git config user.name 'Bullbot Routine'")
+os.system("git remote set-url origin https://$GITHUB_TOKEN@github.com/20AndersDev/bullbot.git")
 os.system("git add watchlist.json")
-os.system(f'git commit -m "watchlist: oppdatert {date.today()} (+{len(add_syms)} -{len(remove_set)})"')
-os.system("git push")
-print("Committed og push til GitHub")
+rc_commit = os.system(f'git commit -m "watchlist: oppdatert {date.today()} (+{len(add_syms)} -{len(remove_set)})"')
+rc_push   = os.system("git push")
+if rc_commit == 0 and rc_push == 0:
+    print("Committed og push til GitHub OK")
+else:
+    print(f"Git feil — commit={rc_commit} push={rc_push}")
 
 
 # ── DISCORD-NOTIFIKASJON ──────────────────────────────────────────────────
