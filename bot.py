@@ -347,7 +347,8 @@ def run_cycle() -> None:
                 f"{symbol} | {result.signal.value:4s} | "
                 f"EMA{config.EMA_FAST}={result.ema_fast:.2f} "
                 f"EMA{config.EMA_SLOW}={result.ema_slow:.2f} "
-                f"RSI={result.rsi:.1f} | {result.reason}"
+                f"RSI={result.rsi:.1f} MACD={result.macd_hist:+.4f} "
+                f"Vol={result.vol_ratio:.1f}x | {result.reason}"
             )
 
             position = open_positions.get(symbol)
