@@ -18,16 +18,18 @@ if len(sys.argv) < 2:
 
 data = json.loads(sys.argv[1])
 
-sentiment    = data.get("marknad", "NOEYTRAL")
-fear_greed   = data.get("fear_greed", 0)
-vix          = data.get("vix", 0)
-portfolio    = data.get("portfolio", [])
-kjoep        = data.get("kjoep", [])
-unngaa       = data.get("unngaa", [])
-momentum     = data.get("momentum", [])
-reddit_radar = data.get("reddit_radar", [])
-note         = data.get("marknadsnote", "")
-er_kveld     = data.get("er_kveld", False)
+sentiment     = data.get("marknad", "NOEYTRAL")
+fear_greed    = data.get("fear_greed", 0)
+vix           = data.get("vix", 0)
+portfolio     = data.get("portfolio", [])
+kjoep         = data.get("kjoep", [])
+unngaa        = data.get("unngaa", [])
+momentum      = data.get("momentum", [])
+reddit_radar  = data.get("reddit_radar", [])
+note          = data.get("marknadsnote", "")
+er_kveld      = data.get("er_kveld", False)
+topp_sektorar = data.get("topp_sektorar", [])
+svake_sektorar = data.get("svake_sektorar", [])
 
 COLOR_MAP  = {"BULLISH": 0x2ECC71, "BEARISH": 0xE74C3C, "NOEYTRAL": 0xF1C40F}
 SENTI_ICON = {"BULLISH": "🟢", "BEARISH": "🔴", "NOEYTRAL": "🟡"}
@@ -165,6 +167,26 @@ def _fmt_reddit(items: list) -> str:
     return "\n".join(lines)
 
 
+def _fmt_sektorar(topp: list, svake: list) -> str:
+    if not topp:
+        return "Ingen sektordata"
+    lines = []
+    medal = ["🥇", "🥈", "🥉"]
+    for i, s in enumerate(topp):
+        icon  = medal[i] if i < 3 else "📊"
+        aksjar = ", ".join(s.get("aksjar", [])[:3])
+        lines.append(
+            f"{icon} **{s['namn']}** `{s['score']:+.1f}` "
+            f"(1V {s['w1_pct']:+.1f}%  1M {s['m1_pct']:+.1f}%)"
+            + (f"\n  ↳ {aksjar}" if aksjar else "")
+        )
+    if svake:
+        lines.append("")
+        for s in svake:
+            lines.append(f"⚠️ Svak: **{s['namn']}** `{s['score']:+.1f}`")
+    return "\n".join(lines)
+
+
 fields = [
     # Tre inline-felt øvst: sentiment, F&G, VIX
     {
@@ -181,6 +203,12 @@ fields = [
         "name":   "📊 VIX",
         "value":  f"**{vix:.1f}**",
         "inline": True,
+    },
+    # Sektoranalyse
+    {
+        "name":   "🏦 Sektorar — topp og botn",
+        "value":  _fmt_sektorar(topp_sektorar, svake_sektorar),
+        "inline": False,
     },
     # Portefølje-vurdering
     {

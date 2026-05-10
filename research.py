@@ -318,6 +318,84 @@ def _alpaca_portfolio(per_symbol: dict, upcoming: list, scores: dict) -> list:
     return sorted(result, key=lambda x: x["pl_pct"], reverse=True)
 
 
+# Sektor-ETF kart — grøn energi (XLU, ICLN, TAN) er bevisst ekskludert
+_SEKTOR_ETF = {
+    "Teknologi":          "XLK",
+    "Finans":             "XLF",
+    "Helse":              "XLV",
+    "Konsum (syklisk)":   "XLY",
+    "Konsum (defensiv)":  "XLP",
+    "Energi (olje/gass)": "XLE",
+    "Industri":           "XLI",
+    "Materialar":         "XLB",
+    "Kommunikasjon":      "XLC",
+    "Eigedom":            "XLRE",
+    "Krypto-relatert":    "BITO",
+}
+
+_SEKTOR_AKSJAR = {
+    "XLK":  ["NVDA", "MSFT", "AAPL", "AVGO", "AMD", "QCOM", "ARM", "MU"],
+    "XLF":  ["JPM", "GS", "MS", "BLK", "V", "MA", "COIN", "HOOD"],
+    "XLV":  ["LLY", "UNH", "ISRG", "ABBV", "MRNA", "HIMS", "TDOC"],
+    "XLY":  ["AMZN", "TSLA", "BKNG", "ABNB", "SHOP", "ETSY", "DUOL"],
+    "XLP":  ["WMT", "COST", "PG", "KO", "CELH"],
+    "XLE":  ["XOM", "CVX", "COP", "SLB", "EOG"],
+    "XLI":  ["CAT", "GE", "RTX", "DE", "UPS", "RKLB"],
+    "XLB":  ["FCX", "NEM", "LIN", "APD", "ALB"],
+    "XLC":  ["META", "GOOGL", "NFLX", "SNAP", "PINS", "SPOT"],
+    "XLRE": ["EQIX", "AMT", "PLD", "SPG"],
+    "BITO": ["MSTR", "COIN", "RIOT", "MARA", "HUT", "CLSK"],
+}
+
+
+def _scan_sectors() -> list:
+    """
+    Scorar kvar sektor basert på ETF-momentum (1V, 1M, 3M).
+    Returnerer liste sortert etter score (beste øvst).
+    Score = 0.5*w1 + 0.3*m1 + 0.2*m3 (vekta mot kortsiktig)
+    """
+    print("\n=== SEKTORANALYSE ===")
+    results = []
+    etfs = list(_SEKTOR_ETF.values())
+    try:
+        data = yf.download(etfs, period="3mo", auto_adjust=True, progress=False)["Close"]
+    except Exception as e:
+        print(f"  Sektordata: N/A ({e})")
+        return []
+
+    for namn, etf in _SEKTOR_ETF.items():
+        try:
+            hist = data[etf].dropna()
+            if len(hist) < 5:
+                continue
+            p_now = float(hist.iloc[-1])
+            p_1w  = float(hist.iloc[-6])  if len(hist) >= 6  else p_now
+            p_1m  = float(hist.iloc[-22]) if len(hist) >= 22 else float(hist.iloc[0])
+            p_3m  = float(hist.iloc[0])
+
+            w1 = (p_now / p_1w - 1) * 100
+            m1 = (p_now / p_1m - 1) * 100
+            m3 = (p_now / p_3m - 1) * 100
+            score = 0.5 * w1 + 0.3 * m1 + 0.2 * m3
+
+            top_sym = _SEKTOR_AKSJAR.get(etf, [])[:4]
+            results.append({
+                "namn":    namn,
+                "etf":     etf,
+                "score":   round(score, 2),
+                "w1_pct":  round(w1, 2),
+                "m1_pct":  round(m1, 2),
+                "m3_pct":  round(m3, 2),
+                "aksjar":  top_sym,
+            })
+            trend = "+" if score > 0 else ""
+            print(f"  {namn:22s} {etf}: score={trend}{score:.1f}  1V={w1:+.1f}%  1M={m1:+.1f}%")
+        except Exception as e:
+            print(f"  {namn}: {e}")
+
+    return sorted(results, key=lambda x: x["score"], reverse=True)
+
+
 def _generate_strategy(knowledge: dict, per_symbol: dict,
                         momentum_candidates: list, upcoming: list,
                         reddit_data: dict, upcoming_dates: dict = None) -> dict:
@@ -494,6 +572,10 @@ def _generate_strategy(knowledge: dict, per_symbol: dict,
     if not portfolio:
         print("  Ingen opne posisjonar")
 
+    sektorar     = knowledge.get("sektorar", [])
+    topp_sekt    = sektorar[:3] if sektorar else []
+    bunn_sekt    = sektorar[-2:] if len(sektorar) >= 5 else []
+
     return {
         "marknad":      market,
         "fear_greed":   fg,
@@ -505,6 +587,8 @@ def _generate_strategy(knowledge: dict, per_symbol: dict,
         "reddit_radar": reddit_radar,
         "marknadsnote": "  |  ".join(note_parts[:3]),
         "er_kveld":     datetime.now(timezone.utc).hour >= 20,
+        "topp_sektorar": topp_sekt,
+        "svake_sektorar": bunn_sekt,
     }
 
 
@@ -745,6 +829,11 @@ for sym in config.WATCHLIST:
         print(f"{sym}: feil — {e}")
 
 knowledge["per_symbol"] = per_symbol
+
+
+# ── SEKTORANALYSE ─────────────────────────────────────────────────────────────
+sektorar = _scan_sectors()
+knowledge["sektorar"] = sektorar
 
 
 # ── STRATEGI ──────────────────────────────────────────────────────────────────

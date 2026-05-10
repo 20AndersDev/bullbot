@@ -217,6 +217,14 @@ def _conviction_score(symbol: str, knowledge: dict, technical_reason: str = "") 
     if abs(mom) >= config.MOMENTUM_MIN_DAY_PCT:
         score += 1.0
 
+    # Sektorboost: symbol i topp-sektor → høgare conviction
+    for sekt in knowledge.get("sektorar", [])[:3]:
+        if symbol in sekt.get("aksjar", []):
+            boost = min(1.5, sekt.get("score", 0) * 0.15)
+            if boost > 0:
+                score += boost
+            break
+
     return max(0.0, min(10.0, score))
 
 
