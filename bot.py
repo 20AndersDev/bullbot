@@ -140,48 +140,48 @@ def _position_too_large(market_value: float, equity: float) -> bool:
 def _sell_decision(pl_pct: float, price: float, recent_high: float,
                    rsi: float, tech_sell: bool) -> tuple:
     """
-    Avgjer om vi skal selje basert på trailing stop og teknisk signal.
+    Trailing stop startar IKKJE før +4% — let small-cap runners puste.
 
-    Trailing stop er gradert etter gevinst:
-      < +5%:  2% trail, 12-bar topp
-      +5-15%: 3% trail, 24-bar topp
+    Nivå:
+      +4–8%:  3% trail, 12-bar topp
+      +8–15%: 4% trail, 24-bar topp
       +15%+:  5% trail, 48-bar topp
 
-    Små gevinstar (+0.5–+5%) vert seld ved svakt signal for å frigjere kapital.
-    Berre store vinnerar (+5%+) får "let løpe"-vern.
+    Under +4%: berre hard stop-loss og tap-kutt.
+    Ingen trailing på < +4% — hindrar for tidleg exit på potensielle runners.
     """
     drawdown_from_high = (recent_high - price) / recent_high * 100
 
+    # Hard stop — alltid
     if pl_pct < -(config.STOP_LOSS_PCT * 100):
         return "SELG", f"hard stop-loss ({pl_pct:+.2f}%) — ingen signal kravd"
 
+    # Trailing stop — startar IKKJE før +4%
     if pl_pct >= 15:
         trail_pct = 5.0
-    elif pl_pct >= 5:
+    elif pl_pct >= 8:
+        trail_pct = 4.0
+    elif pl_pct >= 4:
         trail_pct = 3.0
     else:
-        trail_pct = 2.0
+        trail_pct = None  # ingen trailing på < +4%
 
-    if pl_pct > 0.5 and drawdown_from_high >= trail_pct:
+    if trail_pct and drawdown_from_high >= trail_pct:
         return "SELG", f"trailing stop {trail_pct:.0f}% — fall {drawdown_from_high:.1f}% frå topp ${recent_high:.2f}"
 
-    # Standalone RSI: ekstremt overkjøpt uansett EMA
-    if rsi > 78 and pl_pct > 0:
-        return "SELG", f"RSI ekstremt overkjøpt ({rsi:.1f}) — ta gevinst"
+    # RSI ekstremt overkjøpt — berre sel om allereie god gevinst (+5%+)
+    if rsi > 80 and pl_pct >= 5:
+        return "SELG", f"RSI ekstremt overkjøpt ({rsi:.1f}) ved gevinst {pl_pct:+.1f}%"
 
-    # EMA-kryss + moderat RSI (senka frå 72 til 68)
-    if tech_sell and rsi > config.RSI_SELL_MIN:
-        return "SELG", f"EMA-kryss + RSI overkjøpt ({rsi:.1f})"
+    # EMA-kryss + RSI bekreftar reversering
+    if tech_sell and rsi > config.RSI_SELL_MIN and pl_pct >= 5:
+        return "SELG", f"EMA-kryss + RSI overkjøpt ({rsi:.1f}) — ta gevinst"
 
+    # Kutt tap på teknisk signal
     if tech_sell and pl_pct < -0.5:
         return "SELG", f"teknisk SELL på tap ({pl_pct:+.2f}%) — kuttar tap"
 
-    if tech_sell and 0 < pl_pct <= 5:
-        return "SELG", f"liten gevinst ({pl_pct:+.2f}%) + svakt signal — frigjerer kapital"
-
-    if tech_sell and pl_pct > 5:
-        return "HALD", f"let stor vinnar løpe (P&L={pl_pct:+.2f}%)"
-
+    # Alt anna: HALD — let posisjonen løpe
     return "HALD", ""
 
 
