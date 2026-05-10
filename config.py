@@ -128,13 +128,13 @@ RSI_PERIOD = 14
 RSI_BUY_MAX = 65     # ikke kjøp hvis RSI er over dette
 RSI_SELL_MIN = 72    # selg hvis RSI er over dette (overkjøpt exit)
 
-# Risikostyring — opptil 20 posisjonar, storleik styrt av overtydingsscore (0-10)
+# Risikostyring — opptil 10 posisjonar, storleik styrt av overtydingsscore (0-10)
 #   conviction=0  → ~2% per posisjon
 #   conviction=5  → ~6% per posisjon
 #   conviction=10 → 10% per posisjon (hardt tak)
 STOP_LOSS_PCT = 0.02        # 2% stop loss
 TAKE_PROFIT_PCT = 0.04      # 4% take profit (2:1 R/R)
-MAX_OPEN_POSITIONS = 20
+MAX_OPEN_POSITIONS = 10
 
 # Guardrails
 MAX_POSITION_PCT = 0.10     # hardt tak: aldri meir enn 10% av portefølje i éin aksje
