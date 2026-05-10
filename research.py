@@ -396,6 +396,116 @@ def _scan_sectors() -> list:
     return sorted(results, key=lambda x: x["score"], reverse=True)
 
 
+def _analyze_trends(lookback: int = 7) -> dict:
+    """
+    Les siste N rapportar og identifiserer trendar over tid.
+
+    Returnerer:
+      trending_up:   symbol med 3+ dagar konsistent positivt signal
+      trending_down: symbol med 3+ dagar konsistent negativt signal
+      sektor_trend:  sektorar med konsistent positiv/negativ score-retning
+      streak:        {symbol: antal dagar med same retning}
+    """
+    kd      = Path(__file__).parent / "knowledge"
+    reports = sorted(kd.glob("report_*.json"), reverse=True)[:lookback]
+    if len(reports) < 2:
+        return {"trending_up": [], "trending_down": [], "sektor_trend": [], "streak": {}}
+
+    loaded = []
+    for r in reports:
+        try:
+            with open(r, encoding="utf-8") as f:
+                loaded.append(json.load(f))
+        except Exception:
+            pass
+
+    # ── Aksjetrendar ──────────────────────────────────────────────────────────
+    sym_signals: dict = {}   # symbol → [+1/-1/0 per dag, nyaste fyrst]
+
+    for rapport in loaded:
+        ps = rapport.get("per_symbol", {})
+        for sym, d in ps.items():
+            if sym not in sym_signals:
+                sym_signals[sym] = []
+            rec    = str(d.get("rec", "")).lower()
+            upside = d.get("upside_pct", 0)
+            mom    = d.get("momentum_dag_pct", 0)
+            score  = 0
+            if "strong_buy" in rec:
+                score += 2
+            elif "buy" in rec:
+                score += 1
+            elif "sell" in rec or "underperform" in rec:
+                score -= 2
+            if upside > 10:
+                score += 1
+            elif upside < -5:
+                score -= 1
+            if mom >= 4.0:
+                score += 1
+            elif mom <= -4.0:
+                score -= 1
+            sym_signals[sym].append(1 if score > 0 else (-1 if score < 0 else 0))
+
+    trending_up   = []
+    trending_down = []
+    streak        = {}
+    MIN_DAYS      = 3
+
+    for sym, signals in sym_signals.items():
+        if len(signals) < MIN_DAYS:
+            continue
+        recent = signals[:MIN_DAYS]
+        days_up   = sum(1 for s in recent if s > 0)
+        days_down = sum(1 for s in recent if s < 0)
+        if days_up == MIN_DAYS:
+            trending_up.append(sym)
+            streak[sym] = sum(1 for s in signals if s > 0)
+        elif days_down == MIN_DAYS:
+            trending_down.append(sym)
+            streak[sym] = -sum(1 for s in signals if s < 0)
+
+    # ── Sektortrendar ─────────────────────────────────────────────────────────
+    sektor_scores: dict = {}  # namn → [score per dag, nyaste fyrst]
+
+    for rapport in loaded:
+        for s in rapport.get("sektorar", []):
+            namn = s.get("namn", "")
+            if namn not in sektor_scores:
+                sektor_scores[namn] = []
+            sektor_scores[namn].append(s.get("score", 0))
+
+    sektor_trend = []
+    for namn, scores in sektor_scores.items():
+        if len(scores) < 3:
+            continue
+        recent3 = scores[:3]
+        if all(s > 0 for s in recent3):
+            retning = "opp"
+            snitt   = sum(recent3) / 3
+        elif all(s < 0 for s in recent3):
+            retning = "ned"
+            snitt   = sum(recent3) / 3
+        else:
+            continue
+        sektor_trend.append({"namn": namn, "retning": retning, "snitt_score": round(snitt, 2)})
+
+    sektor_trend.sort(key=lambda x: abs(x["snitt_score"]), reverse=True)
+
+    print(f"\n=== TRENDANALYSE ({len(loaded)} rapportar) ===")
+    print(f"  Trending up ({len(trending_up)}):   {trending_up[:8]}")
+    print(f"  Trending down ({len(trending_down)}): {trending_down[:8]}")
+    for st in sektor_trend[:5]:
+        print(f"  Sektor {st['namn']}: {st['retning']} (snitt {st['snitt_score']:+.1f})")
+
+    return {
+        "trending_up":   trending_up,
+        "trending_down": trending_down,
+        "sektor_trend":  sektor_trend,
+        "streak":        streak,
+    }
+
+
 def _generate_strategy(knowledge: dict, per_symbol: dict,
                         momentum_candidates: list, upcoming: list,
                         reddit_data: dict, upcoming_dates: dict = None) -> dict:
@@ -472,6 +582,18 @@ def _generate_strategy(knowledge: dict, per_symbol: dict,
 
         if market == "BEARISH":
             s -= 1
+
+        # Trend-boost: symbol med 3+ dagar konsistent positiv signal
+        trendar    = knowledge.get("trendar", {})
+        trend_up   = trendar.get("trending_up", [])
+        trend_down = trendar.get("trending_down", [])
+        streak_map = trendar.get("streak", {})
+        if sym in trend_up:
+            days = streak_map.get(sym, 3)
+            boost = min(2.0, days * 0.4)
+            s += boost; rp.append(f"trending opp {days}d")
+        elif sym in trend_down:
+            s -= 1.5; rp.append("trending ned 3+ dagar")
 
         scores[sym]      = round(s, 1)
         neg_reasons[sym] = ", ".join(rp) if rp else "låg score"
@@ -587,8 +709,11 @@ def _generate_strategy(knowledge: dict, per_symbol: dict,
         "reddit_radar": reddit_radar,
         "marknadsnote": "  |  ".join(note_parts[:3]),
         "er_kveld":     datetime.now(timezone.utc).hour >= 20,
-        "topp_sektorar": topp_sekt,
+        "topp_sektorar":  topp_sekt,
         "svake_sektorar": bunn_sekt,
+        "trending_up":    knowledge.get("trendar", {}).get("trending_up", [])[:6],
+        "trending_down":  knowledge.get("trendar", {}).get("trending_down", [])[:6],
+        "sektor_trend":   knowledge.get("trendar", {}).get("sektor_trend", [])[:4],
     }
 
 
@@ -834,6 +959,11 @@ knowledge["per_symbol"] = per_symbol
 # ── SEKTORANALYSE ─────────────────────────────────────────────────────────────
 sektorar = _scan_sectors()
 knowledge["sektorar"] = sektorar
+
+
+# ── TRENDANALYSE (historiske rapportar) ───────────────────────────────────────
+trendar = _analyze_trends(lookback=7)
+knowledge["trendar"] = trendar
 
 
 # ── STRATEGI ──────────────────────────────────────────────────────────────────

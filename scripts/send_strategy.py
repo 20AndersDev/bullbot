@@ -28,8 +28,11 @@ momentum      = data.get("momentum", [])
 reddit_radar  = data.get("reddit_radar", [])
 note          = data.get("marknadsnote", "")
 er_kveld      = data.get("er_kveld", False)
-topp_sektorar = data.get("topp_sektorar", [])
+topp_sektorar  = data.get("topp_sektorar", [])
 svake_sektorar = data.get("svake_sektorar", [])
+trending_up    = data.get("trending_up", [])
+trending_down  = data.get("trending_down", [])
+sektor_trend   = data.get("sektor_trend", [])
 
 COLOR_MAP  = {"BULLISH": 0x2ECC71, "BEARISH": 0xE74C3C, "NOEYTRAL": 0xF1C40F}
 SENTI_ICON = {"BULLISH": "🟢", "BEARISH": "🔴", "NOEYTRAL": "🟡"}
@@ -202,6 +205,17 @@ fields = [
     {
         "name":   "📊 VIX",
         "value":  f"**{vix:.1f}**",
+        "inline": True,
+    },
+    # Trendanalyse
+    {
+        "name":  "📈 Trending opp (3+ dagar)",
+        "value": ", ".join(f"**{s}**" for s in trending_up) or "Ingen",
+        "inline": True,
+    },
+    {
+        "name":  "📉 Trending ned (3+ dagar)",
+        "value": ", ".join(f"**{s}**" for s in trending_down) or "Ingen",
         "inline": True,
     },
     # Sektoranalyse
