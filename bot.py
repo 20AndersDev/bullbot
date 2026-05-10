@@ -5,6 +5,7 @@ Kjør: python bot.py
 import time
 import logging
 import json
+import math
 from datetime import datetime
 from pathlib import Path
 from alpaca.trading.client import TradingClient
@@ -320,10 +321,16 @@ def run_cycle() -> None:
                     if sec_pct > 50:
                         log.warning(f"{symbol}: høg sektorkonsentrasjon ({sector}: {sec_count+1}/{n_open+1} = {sec_pct:.0f}%) — kjøper likevel")
 
-                conviction     = _conviction_score(symbol, knowledge, result.reason)
-                qty            = position_size(equity, price, conviction)
-                invest_amount  = qty * price
-                invest_pct     = invest_amount / equity * 100
+                conviction      = _conviction_score(symbol, knowledge, result.reason)
+                conviction_qty  = position_size(equity, price, conviction)
+                # Fullinvestert: fordel tilgjengeleg cash jamnt på ledige slot
+                remaining_slots = max(1, config.MAX_OPEN_POSITIONS - n_open)
+                deploy_qty      = math.floor(buying_power / remaining_slots / price)
+                cap_qty         = math.floor(equity * config.MAX_POSITION_PCT / price)
+                qty             = min(max(conviction_qty, deploy_qty), cap_qty)
+                qty             = max(qty, 1)
+                invest_amount   = qty * price
+                invest_pct      = invest_amount / equity * 100
                 sl             = stop_loss_price(price)
                 tp             = take_profit_price(price)
 
