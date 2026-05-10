@@ -126,7 +126,7 @@ EMA_FAST = 9
 EMA_SLOW = 21
 RSI_PERIOD = 14
 RSI_BUY_MAX = 65     # ikke kjøp hvis RSI er over dette
-RSI_SELL_MIN = 72    # selg hvis RSI er over dette (overkjøpt exit)
+RSI_SELL_MIN = 68    # selg om EMA-kryss + RSI over dette (senka frå 72)
 
 # Risikostyring — opptil 15 posisjonar, storleik styrt av overtydingsscore (0-10)
 #   conviction=0  → ~2% per posisjon

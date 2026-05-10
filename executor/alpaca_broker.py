@@ -54,5 +54,18 @@ def sell_all(symbol: str) -> None:
     _client().close_position(symbol)
 
 
+def sell_partial(symbol: str, qty: int) -> None:
+    """Sel eit gitt antal aksjar (partiell lukking)."""
+    from alpaca.trading.requests import MarketOrderRequest
+    from alpaca.trading.enums import OrderSide, TimeInForce
+    order = MarketOrderRequest(
+        symbol=symbol,
+        qty=qty,
+        side=OrderSide.SELL,
+        time_in_force=TimeInForce.DAY,
+    )
+    _client().submit_order(order)
+
+
 def cancel_all_orders() -> None:
     _client().cancel_orders()

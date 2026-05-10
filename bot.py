@@ -37,6 +37,59 @@ def _in_cooldown(symbol: str, cooldown: dict) -> bool:
         return False
     sold_date = datetime.strptime(cooldown[symbol], "%Y-%m-%d")
     return (datetime.now() - sold_date).days < _COOLDOWN_DAYS
+
+
+_ENTRY_FILE   = Path(__file__).parent / "data" / "positions_opened.json"
+_PARTIAL_FILE = Path(__file__).parent / "data" / "partial_sold.json"
+_STALE_DAYS  = 5     # sel etter 5 børsdagar
+_STALE_MAX_PL = 3.0  # berre sel om under +3% gevinst
+
+
+def _load_entries() -> dict:
+    try:
+        with open(_ENTRY_FILE, encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+
+def _save_entry(symbol: str, entries: dict) -> None:
+    entries[symbol] = datetime.now().strftime("%Y-%m-%d")
+    _ENTRY_FILE.parent.mkdir(exist_ok=True)
+    with open(_ENTRY_FILE, "w", encoding="utf-8") as f:
+        json.dump(entries, f, indent=2)
+
+
+def _remove_entry(symbol: str, entries: dict) -> None:
+    entries.pop(symbol, None)
+    with open(_ENTRY_FILE, "w", encoding="utf-8") as f:
+        json.dump(entries, f, indent=2)
+
+
+def _load_partial() -> dict:
+    try:
+        with open(_PARTIAL_FILE, encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+
+def _save_partial(symbol: str, pct: int, partial: dict) -> None:
+    partial[symbol] = pct
+    _PARTIAL_FILE.parent.mkdir(exist_ok=True)
+    with open(_PARTIAL_FILE, "w", encoding="utf-8") as f:
+        json.dump(partial, f, indent=2)
+
+
+def _is_stale(symbol: str, pl_pct: float, entries: dict) -> bool:
+    if symbol not in entries:
+        return False
+    if pl_pct >= _STALE_MAX_PL:
+        return False
+    entry_date = datetime.strptime(entries[symbol], "%Y-%m-%d")
+    return (datetime.now() - entry_date).days >= _STALE_DAYS
+
+
 from data.fetcher import get_bars
 from strategy.ema_rsi import analyze, Signal
 from strategy import momentum as mom_strat
@@ -46,6 +99,7 @@ from executor.alpaca_broker import (
     get_open_positions,
     buy,
     sell_all,
+    sell_partial,
 )
 
 logging.basicConfig(
@@ -111,6 +165,11 @@ def _sell_decision(pl_pct: float, price: float, recent_high: float,
     if pl_pct > 0.5 and drawdown_from_high >= trail_pct:
         return "SELG", f"trailing stop {trail_pct:.0f}% — fall {drawdown_from_high:.1f}% frå topp ${recent_high:.2f}"
 
+    # Standalone RSI: ekstremt overkjøpt uansett EMA
+    if rsi > 78 and pl_pct > 0:
+        return "SELG", f"RSI ekstremt overkjøpt ({rsi:.1f}) — ta gevinst"
+
+    # EMA-kryss + moderat RSI (senka frå 72 til 68)
     if tech_sell and rsi > config.RSI_SELL_MIN:
         return "SELG", f"EMA-kryss + RSI overkjøpt ({rsi:.1f})"
 
@@ -251,6 +310,8 @@ def run_cycle() -> None:
 
     knowledge = _load_knowledge()
     cooldown  = _load_cooldown()
+    entries   = _load_entries()
+    partial   = _load_partial()
 
     acct = get_account()
     equity        = float(acct.equity)
@@ -349,6 +410,7 @@ def run_cycle() -> None:
                 )
                 buy_reason = _build_buy_reason(result.reason, symbol, knowledge)
                 buy(symbol, qty, sl, tp)
+                _save_entry(symbol, entries)
                 buying_power -= invest_amount
                 n_open += 1
                 notifier.send_trade(embeds=[notifier.buy_embed(
@@ -371,9 +433,38 @@ def run_cycle() -> None:
                 recent_high = float(bars["close"].tail(lookback).max())
                 tech_sell   = result.signal == Signal.SELL
 
-                decision, sell_note = _sell_decision(
-                    pl_pct, price, recent_high, result.rsi, tech_sell
-                )
+                # Partialsalg: sikre gevinst på store vinnerar (ein gong per nivå)
+                already_partial = partial.get(symbol, 0)
+                if pl_pct >= 35 and already_partial < 75 and qty_held >= 2:
+                    partial_qty = max(1, qty_held * 3 // 4)
+                    sell_partial(symbol, partial_qty)
+                    _save_partial(symbol, 75, partial)
+                    log.info(f"{symbol}: DELSELG 75% ({partial_qty} aksjar) — P&L={pl_pct:+.2f}%")
+                    notifier.send_trade(embeds=[notifier.sell_embed(
+                        symbol, partial_qty, avg_entry, price,
+                        pl_dollar * 0.75, pl_pct,
+                        f"Partialsalg 75% — sikrar gevinst ved +{pl_pct:.0f}%"
+                    )])
+                elif pl_pct >= 20 and already_partial < 50 and qty_held >= 2:
+                    partial_qty = max(1, qty_held // 2)
+                    sell_partial(symbol, partial_qty)
+                    _save_partial(symbol, 50, partial)
+                    log.info(f"{symbol}: DELSELG 50% ({partial_qty} aksjar) — P&L={pl_pct:+.2f}%")
+                    notifier.send_trade(embeds=[notifier.sell_embed(
+                        symbol, partial_qty, avg_entry, price,
+                        pl_dollar * 0.5, pl_pct,
+                        f"Partialsalg 50% — sikrar gevinst ved +{pl_pct:.0f}%"
+                    )])
+
+                # Tidsbasert exit: stagnerande posisjon etter 5 dagar < +3%
+                if _is_stale(symbol, pl_pct, entries):
+                    decision   = "SELG"
+                    sell_note  = f"stagnant {entries.get(symbol)} — {pl_pct:+.2f}% etter {_STALE_DAYS}d"
+                else:
+                    decision, sell_note = _sell_decision(
+                        pl_pct, price, recent_high, result.rsi, tech_sell
+                    )
+
                 log.info(
                     f"{symbol}: {decision} | P&L={pl_pct:+.2f}% | "
                     f"RSI={result.rsi:.1f} | topp=${recent_high:.2f} | "
@@ -386,6 +477,8 @@ def run_cycle() -> None:
                     )
                     sell_all(symbol)
                     _save_cooldown(symbol, cooldown)
+                    _remove_entry(symbol, entries)
+                    partial.pop(symbol, None)
                     n_open -= 1
                     notifier.send_trade(embeds=[notifier.sell_embed(
                         symbol, qty_held, avg_entry, price,
@@ -466,6 +559,11 @@ def main() -> None:
 if __name__ == "__main__":
     import sys
     if "--once" in sys.argv:
+        run_cycle()
+    elif "--twice" in sys.argv:
+        run_cycle()
+        log.info("Ventar 30 min til neste syklus...")
+        time.sleep(1800)
         run_cycle()
     else:
         main()
