@@ -141,9 +141,9 @@ MAX_POSITION_PCT = 0.10     # hardt tak: aldri meir enn 10% av portefølje i éi
 MIN_POSITION_PCT = 0.02     # minste posisjon: 2% (ikkje verdt bryet under)
 MAX_DAILY_LOSS_PCT = 0.05   # stopp nye kjøp om dagstap overstig 5%
 
-# Tidsramme for bars (5 minutters candles)
-BAR_TIMEFRAME = "5Min"
-BARS_LOOKBACK = 50          # antall bars å hente for indikatorberegning
+# Tidsramme for bars (15 minutters candles — betre signal/støy)
+BAR_TIMEFRAME = "15Min"
+BARS_LOOKBACK = 50          # 50 x 15min = ~12.5t historikk
 
 # Momentum/gap-strategi
 MOMENTUM_MIN_DAY_PCT  = 4.0   # kjøp om aksjen er opp > 4% i dag
