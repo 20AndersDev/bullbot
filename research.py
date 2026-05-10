@@ -525,6 +525,11 @@ def _generate_strategy(knowledge: dict, per_symbol: dict,
     scores:      dict = {}
     neg_reasons: dict = {}
 
+    trendar    = knowledge.get("trendar", {})
+    trend_up   = trendar.get("trending_up", [])
+    trend_down = trendar.get("trending_down", [])
+    streak_map = trendar.get("streak", {})
+
     for sym, d in per_symbol.items():
         s  = 0.0
         rp = []
@@ -584,10 +589,6 @@ def _generate_strategy(knowledge: dict, per_symbol: dict,
             s -= 1
 
         # Trend-boost: symbol med 3+ dagar konsistent positiv signal
-        trendar    = knowledge.get("trendar", {})
-        trend_up   = trendar.get("trending_up", [])
-        trend_down = trendar.get("trending_down", [])
-        streak_map = trendar.get("streak", {})
         if sym in trend_up:
             days = streak_map.get(sym, 3)
             boost = min(2.0, days * 0.4)

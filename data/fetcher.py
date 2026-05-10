@@ -7,8 +7,14 @@ from alpaca.data.timeframe import TimeFrame, TimeFrameUnit
 import config
 
 
+_client_cache: StockHistoricalDataClient | None = None
+
+
 def _make_client() -> StockHistoricalDataClient:
-    return StockHistoricalDataClient(config.ALPACA_API_KEY, config.ALPACA_SECRET_KEY)
+    global _client_cache
+    if _client_cache is None:
+        _client_cache = StockHistoricalDataClient(config.ALPACA_API_KEY, config.ALPACA_SECRET_KEY)
+    return _client_cache
 
 
 _BAR_MINUTES = {"1Min": 1, "5Min": 5, "15Min": 15, "1Hour": 60, "1Day": 1440}

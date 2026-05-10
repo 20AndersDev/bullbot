@@ -14,80 +14,69 @@ import config
 import notifier
 
 _COOLDOWN_FILE = Path(__file__).parent / "data" / "cooldown.json"
+_ENTRY_FILE    = Path(__file__).parent / "data" / "positions_opened.json"
+_PARTIAL_FILE  = Path(__file__).parent / "data" / "partial_sold.json"
 _COOLDOWN_DAYS = 3
+_STALE_DAYS    = 5
+_STALE_MAX_PL  = 3.0
 
 
-def _load_cooldown() -> dict:
+def _load_json(filepath: Path) -> dict:
     try:
-        with open(_COOLDOWN_FILE, encoding="utf-8") as f:
+        with open(filepath, encoding="utf-8") as f:
             return json.load(f)
     except Exception:
         return {}
 
 
+def _save_json(filepath: Path, data: dict) -> None:
+    filepath.parent.mkdir(exist_ok=True)
+    with open(filepath, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2)
+
+
+def _load_cooldown() -> dict:
+    return _load_json(_COOLDOWN_FILE)
+
+
 def _save_cooldown(symbol: str, cooldown: dict) -> None:
     cooldown[symbol] = datetime.now().strftime("%Y-%m-%d")
-    _COOLDOWN_FILE.parent.mkdir(exist_ok=True)
-    with open(_COOLDOWN_FILE, "w", encoding="utf-8") as f:
-        json.dump(cooldown, f, indent=2)
+    _save_json(_COOLDOWN_FILE, cooldown)
 
 
 def _in_cooldown(symbol: str, cooldown: dict) -> bool:
     if symbol not in cooldown:
         return False
-    sold_date = datetime.strptime(cooldown[symbol], "%Y-%m-%d")
-    return (datetime.now() - sold_date).days < _COOLDOWN_DAYS
-
-
-_ENTRY_FILE   = Path(__file__).parent / "data" / "positions_opened.json"
-_PARTIAL_FILE = Path(__file__).parent / "data" / "partial_sold.json"
-_STALE_DAYS  = 5     # sel etter 5 børsdagar
-_STALE_MAX_PL = 3.0  # berre sel om under +3% gevinst
+    return (datetime.now() - datetime.strptime(cooldown[symbol], "%Y-%m-%d")).days < _COOLDOWN_DAYS
 
 
 def _load_entries() -> dict:
-    try:
-        with open(_ENTRY_FILE, encoding="utf-8") as f:
-            return json.load(f)
-    except Exception:
-        return {}
+    return _load_json(_ENTRY_FILE)
 
 
 def _save_entry(symbol: str, entries: dict) -> None:
     entries[symbol] = datetime.now().strftime("%Y-%m-%d")
-    _ENTRY_FILE.parent.mkdir(exist_ok=True)
-    with open(_ENTRY_FILE, "w", encoding="utf-8") as f:
-        json.dump(entries, f, indent=2)
+    _save_json(_ENTRY_FILE, entries)
 
 
 def _remove_entry(symbol: str, entries: dict) -> None:
     entries.pop(symbol, None)
-    with open(_ENTRY_FILE, "w", encoding="utf-8") as f:
-        json.dump(entries, f, indent=2)
+    _save_json(_ENTRY_FILE, entries)
 
 
 def _load_partial() -> dict:
-    try:
-        with open(_PARTIAL_FILE, encoding="utf-8") as f:
-            return json.load(f)
-    except Exception:
-        return {}
+    return _load_json(_PARTIAL_FILE)
 
 
 def _save_partial(symbol: str, pct: int, partial: dict) -> None:
     partial[symbol] = pct
-    _PARTIAL_FILE.parent.mkdir(exist_ok=True)
-    with open(_PARTIAL_FILE, "w", encoding="utf-8") as f:
-        json.dump(partial, f, indent=2)
+    _save_json(_PARTIAL_FILE, partial)
 
 
 def _is_stale(symbol: str, pl_pct: float, entries: dict) -> bool:
-    if symbol not in entries:
+    if symbol not in entries or pl_pct >= _STALE_MAX_PL:
         return False
-    if pl_pct >= _STALE_MAX_PL:
-        return False
-    entry_date = datetime.strptime(entries[symbol], "%Y-%m-%d")
-    return (datetime.now() - entry_date).days >= _STALE_DAYS
+    return (datetime.now() - datetime.strptime(entries[symbol], "%Y-%m-%d")).days >= _STALE_DAYS
 
 
 from data.fetcher import get_bars

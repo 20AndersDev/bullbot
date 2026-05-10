@@ -56,8 +56,6 @@ def sell_all(symbol: str) -> None:
 
 def sell_partial(symbol: str, qty: int) -> None:
     """Sel eit gitt antal aksjar (partiell lukking)."""
-    from alpaca.trading.requests import MarketOrderRequest
-    from alpaca.trading.enums import OrderSide, TimeInForce
     order = MarketOrderRequest(
         symbol=symbol,
         qty=qty,

@@ -24,7 +24,7 @@ def macd(series: pd.Series, fast: int = 12, slow: int = 26, signal: int = 9):
     """MACD = EMA(fast) - EMA(slow). Histogram = MACD - Signal line."""
     if series is None or len(series) < slow + signal:
         return None
-    macd_line   = series.ewm(span=fast, adjust=False).mean() - series.ewm(span=slow, adjust=False).mean()
+    macd_line   = ema(series, fast) - ema(series, slow)
     signal_line = macd_line.ewm(span=signal, adjust=False).mean()
     histogram   = macd_line - signal_line
     col_m = f"MACD_{fast}_{slow}_{signal}"
