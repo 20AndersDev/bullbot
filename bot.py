@@ -423,18 +423,22 @@ def run_cycle() -> None:
                 recent_high = float(bars["close"].tail(lookback).max())
                 tech_sell   = result.signal == Signal.SELL
 
-                # Partialsalg: sikre gevinst på store vinnerar (ein gong per nivå)
+                # Gevinstsikring: 50% ved +20%, heilt ut ved +35%
                 already_partial = partial.get(symbol, 0)
-                if pl_pct >= 35 and already_partial < 75 and qty_held >= 2:
-                    partial_qty = max(1, qty_held * 3 // 4)
-                    sell_partial(symbol, partial_qty)
-                    _save_partial(symbol, 75, partial)
-                    log.info(f"{symbol}: DELSELG 75% ({partial_qty} aksjar) — P&L={pl_pct:+.2f}%")
+                if pl_pct >= 35 and already_partial < 100:
+                    # Sel alt — ingen stub-posisjonar att
+                    sell_all(symbol)
+                    _save_cooldown(symbol, cooldown)
+                    _remove_entry(symbol, entries)
+                    partial.pop(symbol, None)
+                    n_open -= 1
+                    log.info(f"{symbol}: FULLSALG ved +{pl_pct:.0f}% — gevinst sikra")
                     notifier.send_trade(embeds=[notifier.sell_embed(
-                        symbol, partial_qty, avg_entry, price,
-                        pl_dollar * 0.75, pl_pct,
-                        f"Partialsalg 75% — sikrar gevinst ved +{pl_pct:.0f}%"
+                        symbol, qty_held, avg_entry, price,
+                        pl_dollar, pl_pct,
+                        f"Fullsalg ved +{pl_pct:.0f}% — gevinst sikra"
                     )])
+                    continue
                 elif pl_pct >= 20 and already_partial < 50 and qty_held >= 2:
                     partial_qty = max(1, qty_held // 2)
                     sell_partial(symbol, partial_qty)
