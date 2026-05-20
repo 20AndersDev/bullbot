@@ -2550,5 +2550,15 @@
         "snitt_score": -1.59
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "NU",
+      "grunn": "STRONG_BUY fr\u00e5 21 analytikerar | +59% analytikarm\u00e5l ($19.49) | fwd PE 10.57 | omsetningsvekst +44% | profittmargin 42% | n\u00e6r 52V-botnen | digital neobank Latin-Amerika"
+    },
+    {
+      "symbol": "AGYS",
+      "grunn": "BUY med +62% analytikarm\u00e5l ($128) | hospitality-tech (POS/SaaS) | PE 24.75 | +12.5% i dag etter sterk rapport | lite dekning (5 analytikarar) \u2014 h\u00f8g risiko/h\u00f8g avkastning"
+    }
+  ]
 }
