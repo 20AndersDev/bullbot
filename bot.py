@@ -441,6 +441,21 @@ def run_cycle() -> None:
                     continue
                 elif pl_pct >= 20 and already_partial < 50 and qty_held >= 2:
                     partial_qty = max(1, qty_held // 2)
+                    remaining   = qty_held - partial_qty
+                    if remaining < 2:
+                        # For lite att etter 50% — sel alt for å unngå stub
+                        sell_all(symbol)
+                        _save_cooldown(symbol, cooldown)
+                        _remove_entry(symbol, entries)
+                        partial.pop(symbol, None)
+                        n_open -= 1
+                        log.info(f"{symbol}: FULLSALG ved +{pl_pct:.0f}% (stub-unngåing)")
+                        notifier.send_trade(embeds=[notifier.sell_embed(
+                            symbol, qty_held, avg_entry, price,
+                            pl_dollar, pl_pct,
+                            f"Fullsalg ved +{pl_pct:.0f}% — for få aksjar att"
+                        )])
+                        continue
                     sell_partial(symbol, partial_qty)
                     _save_partial(symbol, 50, partial)
                     log.info(f"{symbol}: DELSELG 50% ({partial_qty} aksjar) — P&L={pl_pct:+.2f}%")
