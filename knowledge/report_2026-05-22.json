@@ -2624,5 +2624,19 @@
         "snitt_score": -2.15
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "QBTS",
+      "grunn": "D-Wave Quantum +33% i dag, STRONG BUY, +37% analytikarm\u00e5l \u2014 quantum computing rally"
+    },
+    {
+      "symbol": "RGTI",
+      "grunn": "Rigetti Computing +31% i dag, BUY, +33% analytikarm\u00e5l \u2014 f\u00f8lgjer quantum-sektoren"
+    },
+    {
+      "symbol": "APLD",
+      "grunn": "Applied Digital +22% i dag, STRONG BUY \u2014 AI/HPC infrastruktur, datasenterseksjon i vekst"
+    }
+  ]
 }
