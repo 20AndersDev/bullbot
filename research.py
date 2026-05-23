@@ -318,6 +318,130 @@ def _alpaca_portfolio(per_symbol: dict, upcoming: list, scores: dict) -> list:
     return sorted(result, key=lambda x: x["pl_pct"], reverse=True)
 
 
+# Politikarar kjent for god track record i aksjemarknaden (vekt > 1.0)
+_POLITIKAR_VEKTAR: dict[str, float] = {
+    "nancy pelosi":     2.0,
+    "austin scott":     1.5,
+    "michael mccaul":   1.5,
+    "daniel goldman":   1.3,
+    "tommy tuberville": 1.4,
+    "mark warner":      1.2,
+    "josh gottheimer":  1.2,
+    "marjorie taylor greene": 1.1,
+    "ro khanna":        1.1,
+}
+
+
+def _amount_score(amount_str: str) -> float:
+    s = amount_str.lower()
+    if "1,000,001" in s or "over $1,000,000" in s:
+        return 3.5
+    if "500,001" in s:
+        return 3.0
+    if "250,001" in s:
+        return 2.5
+    if "100,001" in s:
+        return 2.0
+    if "50,001" in s:
+        return 1.5
+    if "15,001" in s:
+        return 1.0
+    return 0.5
+
+
+def _scan_politician_trades(days_back: int = 60) -> dict:
+    """
+    Hentar kongresshandlar (STOCK Act) frå House og Senate Stock Watcher.
+    Returnerer dict: symbol -> {score, trades: [{rep, amount, date, days_ago}]}
+
+    Kjelde: offentlege S3-bucketer vedlikehalde av housestockwatcher.com
+    """
+    cutoff = date.today() - timedelta(days=days_back)
+    result: dict = {}
+
+    def _parse_date(date_str: str):
+        for fmt in ("%Y-%m-%d", "%m/%d/%Y"):
+            try:
+                return datetime.strptime(date_str[:10], fmt).date()
+            except ValueError:
+                pass
+        return None
+
+    def _process(trades: list, name_field: str) -> int:
+        count = 0
+        for t in trades:
+            ticker = (t.get("ticker") or "").upper().strip()
+            if not ticker or ticker in ("--", "N/A", ""):
+                continue
+            if ticker not in config.WATCHLIST:
+                continue
+            trade_type = (t.get("type") or "").lower()
+            if "purchase" not in trade_type and "buy" not in trade_type:
+                continue
+            trade_date = _parse_date(t.get("transaction_date", ""))
+            if trade_date is None or trade_date < cutoff:
+                continue
+
+            rep = (t.get(name_field) or "").strip()
+            rep_lower = rep.lower()
+            weight = next(
+                (w for k, w in _POLITIKAR_VEKTAR.items() if k in rep_lower),
+                0.8,
+            )
+            amount  = t.get("amount", "$1,001 - $15,000")
+            amt_sc  = _amount_score(amount)
+            days_ago = (date.today() - trade_date).days
+            recency = 1.5 if days_ago <= 14 else (1.2 if days_ago <= 30 else 1.0)
+            score   = weight * amt_sc * recency
+
+            if ticker not in result:
+                result[ticker] = {"score": 0.0, "trades": []}
+            result[ticker]["score"] = round(result[ticker]["score"] + score, 2)
+            result[ticker]["trades"].append({
+                "rep":     rep,
+                "amount":  amount,
+                "date":    str(trade_date),
+                "days_ago": days_ago,
+            })
+            count += 1
+        return count
+
+    print("\n=== POLITIKAR-HANDLER (STOCK Act) ===")
+    for url, name_field, label in [
+        (
+            "https://house-stock-watcher-data.s3-us-west-2.amazonaws.com/data/all_transactions.json",
+            "representative",
+            "House",
+        ),
+        (
+            "https://senate-stock-watcher-data.s3-us-west-2.amazonaws.com/aggregate/all_transactions.json",
+            "senator",
+            "Senate",
+        ),
+    ]:
+        try:
+            r = SESSION.get(url, timeout=20)
+            trades = r.json()
+            n = _process(trades, name_field)
+            print(f"  {label}: {n} relevante kjøp funne (av {len(trades)} total)")
+        except Exception as e:
+            print(f"  {label} Stock Watcher: {e}")
+
+    # Sorter trades nyaste fyrst per symbol
+    for sym in result:
+        result[sym]["trades"].sort(key=lambda x: x["days_ago"])
+
+    if result:
+        sorted_pol = sorted(result.items(), key=lambda x: x[1]["score"], reverse=True)
+        for sym, d in sorted_pol[:8]:
+            top = d["trades"][0]
+            print(f"  {sym}: score={d['score']:.1f}  ({top['rep']}, {top['amount']}, {top['days_ago']}d sidan)")
+    else:
+        print("  Ingen watchlist-aksjar i kongresshandlar siste 60 dagar")
+
+    return result
+
+
 # Sektor-ETF kart — grøn energi (XLU, ICLN, TAN) er bevisst ekskludert
 _SEKTOR_ETF = {
     "Teknologi":          "XLK",
@@ -529,6 +653,7 @@ def _generate_strategy(knowledge: dict, per_symbol: dict,
     trend_up   = trendar.get("trending_up", [])
     trend_down = trendar.get("trending_down", [])
     streak_map = trendar.get("streak", {})
+    pol_data   = knowledge.get("politikar_handler", {})
 
     for sym, d in per_symbol.items():
         s  = 0.0
@@ -595,6 +720,14 @@ def _generate_strategy(knowledge: dict, per_symbol: dict,
             s += boost; rp.append(f"trending opp {days}d")
         elif sym in trend_down:
             s -= 1.5; rp.append("trending ned 3+ dagar")
+
+        # Politikar-kjøp (STOCK Act): kongressmedlemmar med god track record
+        pol = pol_data.get(sym)
+        if pol and pol["score"] > 0:
+            pol_boost = min(2.0, pol["score"] * 0.25)
+            s += pol_boost
+            top = pol["trades"][0] if pol["trades"] else {}
+            rp.append(f"politikar kjøp: {top.get('rep','?')} ({top.get('days_ago','?')}d)")
 
         scores[sym]      = round(s, 1)
         neg_reasons[sym] = ", ".join(rp) if rp else "låg score"
@@ -965,6 +1098,11 @@ knowledge["sektorar"] = sektorar
 # ── TRENDANALYSE (historiske rapportar) ───────────────────────────────────────
 trendar = _analyze_trends(lookback=7)
 knowledge["trendar"] = trendar
+
+
+# ── POLITIKAR-HANDLER (STOCK Act) ────────────────────────────────────────────
+pol_trades = _scan_politician_trades(days_back=60)
+knowledge["politikar_handler"] = pol_trades
 
 
 # ── STRATEGI ──────────────────────────────────────────────────────────────────
