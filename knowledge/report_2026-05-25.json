@@ -2709,5 +2709,15 @@
         "snitt_score": 2.33
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "RGTI",
+      "grunn": "Rigetti Computing +19.9% i dag | BUY-rating | +11% analytikarm\u00e5l | quantum-sektor i sterk vekst saman med IONQ"
+    },
+    {
+      "symbol": "QBTS",
+      "grunn": "D-Wave Quantum +14.2% i dag | STRONG_BUY | +20% analytikarm\u00e5l | quantum-momentum saman med RGTI"
+    }
+  ]
 }
