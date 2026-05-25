@@ -1,6 +1,14 @@
 {
-  "updated": "2026-04-28",
+  "updated": "2026-05-25",
   "symbols": [
+    "QBTS",
+    "INFQ",
+    "RGTI",
+    "DELL",
+    "RDW",
+    "NTAP",
+    "EL",
+    "VOYG",
     "AAPL",
     "MSFT",
     "NVDA",
@@ -92,25 +100,17 @@
     "MRNA",
     "HIMS",
     "TDOC",
-    "BNTX",
-    "DOCS",
-    "SE",
-    "GRAB",
-    "GLBE",
-    "PTON",
-    "TTD",
-    "WDAY",
-    "ISRG"
+    "BNTX"
   ],
   "removed": [],
   "added": [
-    "RVMD",
-    "OMCL",
-    "CVLT",
-    "HRI",
-    "LFST",
-    "GLXY",
-    "SEI",
-    "KNSA"
+    "QBTS",
+    "INFQ",
+    "RGTI",
+    "DELL",
+    "RDW",
+    "NTAP",
+    "EL",
+    "VOYG"
   ]
 }
