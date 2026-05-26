@@ -1,6 +1,14 @@
 {
-  "updated": "2026-05-25",
+  "updated": "2026-05-26",
   "symbols": [
+    "FUTU",
+    "XNDU",
+    "ARXS",
+    "AMPX",
+    "TE",
+    "ACMR",
+    "JOYY",
+    "MOD",
     "QBTS",
     "INFQ",
     "RGTI",
@@ -92,25 +100,17 @@
     "RIOT",
     "CLSK",
     "HUT",
-    "RBLX",
-    "U",
-    "RKLB",
-    "LUNR",
-    "IONQ",
-    "MRNA",
-    "HIMS",
-    "TDOC",
-    "BNTX"
+    "RBLX"
   ],
   "removed": [],
   "added": [
-    "QBTS",
-    "INFQ",
-    "RGTI",
-    "DELL",
-    "RDW",
-    "NTAP",
-    "EL",
-    "VOYG"
+    "FUTU",
+    "XNDU",
+    "ARXS",
+    "AMPX",
+    "TE",
+    "ACMR",
+    "JOYY",
+    "MOD"
   ]
 }
