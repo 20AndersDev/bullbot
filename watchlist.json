@@ -1,6 +1,14 @@
 {
-  "updated": "2026-05-26",
+  "updated": "2026-06-02",
   "symbols": [
+    "SMTC",
+    "LEGN",
+    "UEC",
+    "VIAV",
+    "SIMO",
+    "HPE",
+    "COHR",
+    "STM",
     "FUTU",
     "XNDU",
     "ARXS",
@@ -92,25 +100,17 @@
     "TSLA",
     "RIVN",
     "LCID",
-    "NIO",
-    "XPEV",
-    "LI",
-    "MSTR",
-    "MARA",
-    "RIOT",
-    "CLSK",
-    "HUT",
-    "RBLX"
+    "NIO"
   ],
   "removed": [],
   "added": [
-    "FUTU",
-    "XNDU",
-    "ARXS",
-    "AMPX",
-    "TE",
-    "ACMR",
-    "JOYY",
-    "MOD"
+    "SMTC",
+    "LEGN",
+    "UEC",
+    "VIAV",
+    "SIMO",
+    "HPE",
+    "COHR",
+    "STM"
   ]
 }
