@@ -2891,5 +2891,25 @@
         "snitt_score": 0.72
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "HPE",
+      "pris": 56.15,
+      "dag_pct": 19.52,
+      "rec": "buy",
+      "analysts": 19,
+      "grunn": "Stor earnings-beat 2026-06-02: AI-server-etterspurnad boostar HPE sine infrastrukturtal. Aksjen hoppa +19.5% p\u00e5 h\u00f8gt volum. Analytikarm\u00e5l er utdaterte (pre-earnings), forventa oppdatering. Kortsiktig momentum-handel 1-3 dagar."
+    },
+    {
+      "symbol": "COHR",
+      "pris": 426.89,
+      "dag_pct": 17.66,
+      "rec": "buy",
+      "target": 380.62,
+      "analysts": 21,
+      "pe": 203.28,
+      "grunn": "Coherent Corp lager optiske transceivars brukt i AI-datasenter. +17.7% i dag p\u00e5 sterke utsikter for 800G/1.6T optikk-etterspurnad. Analytikarm\u00e5l noko under noverande kurs, men fundamental AI-infrastruktur-trend er sterk. Hald 1-2 veker."
+    }
+  ]
 }
