@@ -2906,5 +2906,15 @@
         "snitt_score": -2.05
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "ABVX",
+      "grunn": "STRONG_BUY konsensus | +71.6% analytikarm\u00e5l | +24.3% dag-gevinst (klinisk katalysator) | Healthcare/Biotech | mcap ~$7.2B"
+    },
+    {
+      "symbol": "TGTX",
+      "grunn": "BUY konsensus | +19.7% analytikarm\u00e5l | +9.5% dag-gevinst | Healthcare | mcap ~$6.1B | TG Therapeutics MS-behandling"
+    }
+  ]
 }
