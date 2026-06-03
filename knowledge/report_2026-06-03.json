@@ -2888,5 +2888,23 @@
         "snitt_score": -1.26
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "COHR",
+      "pris": 426.89,
+      "rec": "BUY",
+      "analytik": 21,
+      "grunn": "Nvidia AI optics-deal annonsert i dag \u2014 Jensen Huang seier bruk optikk i AI-infra. +17.6% men katalysator kan drive vidare oppjustering av analytikarm\u00e5l.",
+      "hald": "3-7 dagar (katalysator-swing)"
+    },
+    {
+      "symbol": "HPE",
+      "pris": 56.15,
+      "rec": "BUY",
+      "analytik": 19,
+      "grunn": "Hewlett Packard Enterprise, +19.5% etter sterk Q2 og omprofilering som AI-infrastruktur-play. Analytikarm\u00e5l utdaterte \u2014 revisjon ventar.",
+      "hald": "1-2 veker (post-earnings re-rating)"
+    }
+  ]
 }
