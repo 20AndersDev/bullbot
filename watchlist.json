@@ -1,6 +1,14 @@
 {
-  "updated": "2026-06-02",
+  "updated": "2026-06-03",
   "symbols": [
+    "ABVX",
+    "MMED",
+    "PRAX",
+    "MDGL",
+    "APGE",
+    "SYRE",
+    "NN",
+    "NBIX",
     "SMTC",
     "LEGN",
     "UEC",
@@ -92,25 +100,17 @@
     "DUOL",
     "TOST",
     "UBER",
-    "LYFT",
-    "DASH",
-    "ABNB",
-    "DKNG",
-    "CELH",
-    "TSLA",
-    "RIVN",
-    "LCID",
-    "NIO"
+    "LYFT"
   ],
   "removed": [],
   "added": [
-    "SMTC",
-    "LEGN",
-    "UEC",
-    "VIAV",
-    "SIMO",
-    "HPE",
-    "COHR",
-    "STM"
+    "ABVX",
+    "MMED",
+    "PRAX",
+    "MDGL",
+    "APGE",
+    "SYRE",
+    "NN",
+    "NBIX"
   ]
 }
