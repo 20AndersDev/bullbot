@@ -16,6 +16,7 @@ import notifier
 _COOLDOWN_FILE = Path(__file__).parent / "data" / "cooldown.json"
 _ENTRY_FILE    = Path(__file__).parent / "data" / "positions_opened.json"
 _PARTIAL_FILE  = Path(__file__).parent / "data" / "partial_sold.json"
+_DIP_FILE      = Path(__file__).parent / "data" / "dip_positions.json"
 _COOLDOWN_DAYS = 3
 _STALE_DAYS    = 5
 _STALE_MAX_PL  = 3.0
@@ -79,9 +80,24 @@ def _is_stale(symbol: str, pl_pct: float, entries: dict) -> bool:
     return (datetime.now() - datetime.strptime(entries[symbol], "%Y-%m-%d")).days >= _STALE_DAYS
 
 
+def _load_dips() -> dict:
+    return _load_json(_DIP_FILE)
+
+
+def _save_dip(symbol: str, dips: dict) -> None:
+    dips[symbol] = datetime.now().strftime("%Y-%m-%d")
+    _save_json(_DIP_FILE, dips)
+
+
+def _remove_dip(symbol: str, dips: dict) -> None:
+    dips.pop(symbol, None)
+    _save_json(_DIP_FILE, dips)
+
+
 from data.fetcher import get_bars
 from strategy.ema_rsi import analyze, Signal
 from strategy import momentum as mom_strat
+from strategy import dipbuy as dip_strat
 from risk.manager import position_size, stop_loss_price, take_profit_price
 from executor.alpaca_broker import (
     get_account,
@@ -301,6 +317,7 @@ def run_cycle() -> None:
     cooldown  = _load_cooldown()
     entries   = _load_entries()
     partial   = _load_partial()
+    dips      = _load_dips()
 
     acct = get_account()
     equity        = float(acct.equity)
@@ -321,6 +338,13 @@ def run_cycle() -> None:
 
     open_positions = get_open_positions()
     n_open = len(open_positions)
+
+    # Rydd dip-register: bracket (target/stop) kan ha lukka posisjonar server-side
+    for sym in list(dips):
+        if sym not in open_positions:
+            log.info(f"{sym}: dip-posisjon lukka av bracket (target/stop) — set cooldown")
+            _save_cooldown(sym, cooldown)
+            _remove_dip(sym, dips)
 
     for symbol in config.WATCHLIST:
         try:
@@ -383,7 +407,7 @@ def run_cycle() -> None:
                 invest_amount   = qty * price
                 invest_pct      = invest_amount / equity * 100
                 sl             = stop_loss_price(price)
-                tp             = take_profit_price(price)
+                tp             = take_profit_price(price)  # ref-mål for embed; OTO set ingen fast TP
 
                 # Sjekk at det finst nok buying power
                 if invest_amount > buying_power:
@@ -396,16 +420,25 @@ def run_cycle() -> None:
                 log.info(
                     f"{symbol}: KJØPER {qty} aksjer @ ~${price:.2f} "
                     f"({invest_pct:.1f}% av portefølje, conviction={conviction:.1f}) "
-                    f"| SL=${sl} TP=${tp}"
+                    f"| SL=${sl} (OTO — trailing styrer exit, ref-mål ${tp})"
                 )
                 buy_reason = _build_buy_reason(result.reason, symbol, knowledge)
-                buy(symbol, qty, sl, tp)
+                buy(symbol, qty, sl)  # OTO: berre stop-loss, trailing-logikk styrer exit
                 _save_entry(symbol, entries)
                 buying_power -= invest_amount
                 n_open += 1
                 notifier.send_trade(embeds=[notifier.buy_embed(
                     symbol, qty, price, sl, tp, invest_pct, equity, buy_reason
                 )])
+
+            # Dip-posisjonar: bracket styrer exit (target/stop). Hopp over stale/partial/trailing.
+            if already_in and symbol in dips:
+                pl_pct = float(position.unrealized_plpc) * 100
+                log.info(
+                    f"{symbol}: dip-posisjon | P&L={pl_pct:+.2f}% — bracket styrer exit "
+                    f"(target +{config.DIPBUY_TARGET_PCT*100:.0f}% / stop -{config.DIPBUY_STOP_LOSS*100:.0f}%), ingen stale/trailing"
+                )
+                continue
 
             if already_in:
                 pl_pct    = float(position.unrealized_plpc) * 100
@@ -503,6 +536,10 @@ def run_cycle() -> None:
     if buys_allowed and n_open < config.MAX_OPEN_POSITIONS:
         _run_momentum_scan(equity, open_positions, n_open, buys_allowed, buying_power)
 
+    # ── DIP-SCAN (mega-cap mean-reversion, hald til target) ─────────────────
+    if buys_allowed and n_open < config.MAX_OPEN_POSITIONS:
+        _run_dip_scan(equity, open_positions, n_open, buying_power, dips, cooldown)
+
 
 def _run_momentum_scan(equity: float, open_positions: dict, n_open: int,
                        buys_allowed: bool, buying_power: float = 0) -> None:
@@ -549,6 +586,68 @@ def _run_momentum_scan(equity: float, open_positions: dict, n_open: int,
             )])
         except Exception as e:
             log.error(f"Momentum {symbol}: {e}")
+
+
+def _run_dip_scan(equity: float, open_positions: dict, n_open: int,
+                  buying_power: float, dips: dict, cooldown: dict) -> None:
+    """Skanner mega-cap for oversold dropp og kjøper mean-reversion (hald til target).
+
+    Dip-posisjonar får breiare stop + recovery-target via bracket og handterast
+    IKKJE av standard exit-logikk (sjå skip i run_cycle).
+    """
+    import yfinance as yf
+
+    log.info("--- Dip-scan (mega-cap mean-reversion) ---")
+    for symbol in config.WATCHLIST:
+        if config.SECTOR_MAP.get(symbol) != "mega_cap":
+            continue
+        if symbol in open_positions or symbol in dips:
+            continue
+        if _in_cooldown(symbol, cooldown):
+            continue
+        if n_open >= config.MAX_OPEN_POSITIONS:
+            break
+        try:
+            daily = yf.Ticker(symbol).history(period="5d")[["Open","High","Low","Close","Volume"]]
+            daily.columns = [c.lower() for c in daily.columns]
+            daily.index.name = "timestamp"
+
+            intra  = get_bars(symbol, limit=30)
+            result = dip_strat.analyze(daily, intra)
+
+            if result.signal != "BUY":
+                continue
+
+            log.info(f"{symbol}: DIP {result.drop_pct:+.1f}% | RSI={result.rsi:.1f}")
+            price          = float(daily["close"].iloc[-1])
+            # Større fall = sterkare mean-reversion-case, men cap conviction (kvalitet, ikkje jakt)
+            conviction     = min(7.0, 5.0 + abs(result.drop_pct) * 0.1)
+            conviction_qty = position_size(equity, price, conviction)
+            cap_qty        = math.floor(equity * config.MAX_POSITION_PCT / price)
+            qty            = max(1, min(conviction_qty, cap_qty))
+            invest_amount  = qty * price
+            invest_pct     = invest_amount / equity * 100
+            sl             = round(price * (1 - config.DIPBUY_STOP_LOSS), 2)
+            tp             = round(price * (1 + config.DIPBUY_TARGET_PCT), 2)
+
+            if invest_amount > buying_power:
+                log.info(f"{symbol}: ikkje nok buying power for dip-kjøp")
+                break  # resten vil heller ikkje ha nok
+
+            buy(symbol, qty, sl, tp)
+            _save_dip(symbol, dips)
+            buying_power -= invest_amount
+            n_open += 1
+            log.info(
+                f"{symbol}: DIP-KJØP {qty} aksjer @ ~${price:.2f} "
+                f"({invest_pct:.1f}%, conviction={conviction:.1f}) | SL=${sl} target=${tp}"
+            )
+            notifier.send_trade(embeds=[notifier.buy_embed(
+                symbol, qty, price, sl, tp, invest_pct, equity,
+                f"💧 Dip-buy (hald til +{config.DIPBUY_TARGET_PCT*100:.0f}%): {result.reason}"
+            )])
+        except Exception as e:
+            log.error(f"Dip {symbol}: {e}")
 
 
 def main() -> None:

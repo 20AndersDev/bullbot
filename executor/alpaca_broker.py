@@ -35,17 +35,32 @@ def open_position_count() -> int:
     return len(get_open_positions())
 
 
-def buy(symbol: str, qty: int, stop_loss: float, take_profit: float) -> None:
-    """Kjøp med bracket-ordre (stop loss + take profit i én ordre)."""
-    order = MarketOrderRequest(
-        symbol=symbol,
-        qty=qty,
-        side=OrderSide.BUY,
-        time_in_force=TimeInForce.DAY,
-        order_class=OrderClass.BRACKET,
-        stop_loss=StopLossRequest(stop_price=round(stop_loss, 2)),
-        take_profit=TakeProfitRequest(limit_price=round(take_profit, 2)),
-    )
+def buy(symbol: str, qty: int, stop_loss: float, take_profit: float | None = None) -> None:
+    """Kjøp med stop-loss.
+
+    take_profit=None  → OTO-ordre: berre hard stop-loss server-side, INGA fast take-profit.
+                        Exit styrast av trailing-logikken i bot.py (let vinnarar løpe).
+    take_profit satt  → BRACKET-ordre: stop-loss + fast take-profit (rask exit / hald-til-target).
+    """
+    if take_profit is None:
+        order = MarketOrderRequest(
+            symbol=symbol,
+            qty=qty,
+            side=OrderSide.BUY,
+            time_in_force=TimeInForce.DAY,
+            order_class=OrderClass.OTO,
+            stop_loss=StopLossRequest(stop_price=round(stop_loss, 2)),
+        )
+    else:
+        order = MarketOrderRequest(
+            symbol=symbol,
+            qty=qty,
+            side=OrderSide.BUY,
+            time_in_force=TimeInForce.DAY,
+            order_class=OrderClass.BRACKET,
+            stop_loss=StopLossRequest(stop_price=round(stop_loss, 2)),
+            take_profit=TakeProfitRequest(limit_price=round(take_profit, 2)),
+        )
     _client().submit_order(order)
 
 

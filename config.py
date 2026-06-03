@@ -82,8 +82,10 @@ SECTOR_MAP: dict = {
     "AMZN": "mega_cap",  "META": "mega_cap",  "GOOGL": "mega_cap",
     "ORCL": "mega_cap",  "AVGO": "mega_cap",  "CRM": "mega_cap",  "ADBE": "mega_cap",
     # Halvleiarar
-    "AMD":  "chips",  "QCOM": "chips",  "MU":   "chips",  "SMCI": "chips", "ARM":  "chips",
+    "AMD":  "chips",  "QCOM": "chips",  "SMCI": "chips", "ARM":  "chips",
     "AMAT": "chips",  "LRCX": "chips",  "MRVL": "chips",  "ON":   "chips", "TSM":  "chips", "WOLF": "chips",
+    # Minne / Lagring (NAND/DRAM) — korrelert syklisk sektor
+    "MU":   "memory", "SNDK": "memory",
     # AI / Cloud / SaaS
     "PLTR": "ai_cloud", "NOW":  "ai_cloud", "DDOG": "ai_cloud", "MDB":  "ai_cloud",
     "SNOW": "ai_cloud", "NET":  "ai_cloud", "GTLB": "ai_cloud", "PATH": "ai_cloud",
@@ -150,3 +152,12 @@ MOMENTUM_MIN_DAY_PCT  = 4.0   # kjøp om aksjen er opp > 4% i dag
 MOMENTUM_RSI_MAX      = 74    # ikkje kjøp om RSI er for høg
 MOMENTUM_STOP_LOSS    = 0.015 # 1.5% SL (tettare enn vanleg)
 MOMENTUM_TAKE_PROFIT  = 0.025 # 2.5% TP (rask exit)
+
+# Dip-buy / mean-reversion (berre mega-cap)
+# Store kvalitetsselskap som fell mykje på 1-2 dagar hentar seg ofte inn att.
+# Kjøp på oversold dropp, HALD til recovery-target eller hard stop (ingen stale/trailing).
+DIPBUY_MIN_DROP_PCT  = 5.0    # kjøp om mega-cap er ned >= 5% over vindauget
+DIPBUY_LOOKBACK_DAYS = 2      # vindauge for fallet (1-2 dagar)
+DIPBUY_RSI_MAX       = 35     # berre om RSI oversold (mean-reversion sannsynleg)
+DIPBUY_STOP_LOSS     = 0.06   # 6% stop — breiare, gjev recovery rom
+DIPBUY_TARGET_PCT    = 0.08   # +8% recovery-target → ut
