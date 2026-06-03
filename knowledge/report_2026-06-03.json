@@ -1,35 +1,37 @@
 {
   "dato": "2026-06-03",
-  "timestamp": "2026-06-03T12:13:03.360762+00:00",
+  "timestamp": "2026-06-03T20:11:30.188383+00:00",
   "fear_greed": {
-    "score": 56.9714285714286,
-    "rating": "greed"
+    "score": 54.0571428571429,
+    "rating": "neutral"
   },
-  "vix": 16.049999237060547,
+  "vix": 16.010000228881836,
   "spy": {
-    "price": 759.5700073242188,
-    "day_pct": 0.13579103629497435,
-    "week_pct": 1.2139201402915578
+    "price": 754.1300048828125,
+    "day_pct": -0.7161950036139619,
+    "week_pct": -0.06228077369868634
   },
   "macro": {
     "fedfunds": 3.63,
-    "dgs10": 4.47
+    "dgs10": 4.47,
+    "cpiaucsl": 332.407,
+    "unrate": 4.3
   },
   "market_news": [
     "Global fashion retailer closing all stores after 33 years",
-    "Tech stocks today: Google stock falls on plans to raise $80 billion, Nvidia CEO blesses Marvell stock",
-    "Dow Jones Futures Fall, Oil Prices Rise As Trump Sets New Hormuz Target Date; Palo Alto, Marvell Are Early Movers",
-    "Meta, Microsoft, Amazon, and Alphabet are about to spend a shocking amount of money to dominate the AI era",
-    "Bitcoin and ethereum prices today, June 3, 2026: BTC opens below $67,000; ETH opens below $2,000",
-    "Trump says Iran has agreed to not have a nuclear weapon - Reuters",
-    "Norwegian teen, hired by Swedish crime group used by Iran, planned UK murder, London court told - Reuters",
-    "Israel intercepts 'hostile aircraft' that crossed from Lebanon, military says - Reuters",
-    "Gulf tensions escalate as Iran hits Kuwait, US strikes near Hormuz - Reuters",
-    "One killed in Iranian attack on Kuwait, airport terminal damaged - Reuters",
-    "European shares head for negative open as White House proposes fresh tariffs on EU"
+    "It\u2019s No Longer Doom and Gloom for These 3 \u2018AI Doom\u2019 Stocks",
+    "My mom is on Social Security and needs assisted living, but can\u2019t afford any non-Medicaid options. What else can we do?",
+    "Factbox-China's carmakers expand their presence in Europe",
+    "Invest Like Warren Buffett and Buy Wide-Moat Stocks Via This ETF Ahead of a Major Market Shift",
+    "Senate GOP strips up to $1B for Trump ballroom security from immigration enforcement bill",
+    "As Honeywell Aerospace readies for its standalone debut, its CEO is forecasting big growth",
+    "Albanians protest over Kushner-linked luxury resort on pristine coastline - Reuters",
+    "Historic stock rally faces key test",
+    "What's behind Palo Alto's earnings sell-off \u2014 and how to proceed",
+    "Hezbollah launches rockets at Israel, testing U.S.-mediated deal - Reuters"
   ],
   "av_sentiment": {
-    "score": 0.1689,
+    "score": 0.13,
     "direction": "BULLISH"
   },
   "reddit": {},
@@ -47,189 +49,169 @@
   },
   "momentum_kandidatar": [
     {
-      "symbol": "SMTC",
-      "day_pct": 11.4
-    },
-    {
-      "symbol": "LEGN",
-      "day_pct": 42.2
-    },
-    {
       "symbol": "UEC",
-      "day_pct": 13.6
+      "day_pct": -8.9
     },
     {
-      "symbol": "VIAV",
-      "day_pct": 11.3
-    },
-    {
-      "symbol": "SIMO",
-      "day_pct": 12.4
-    },
-    {
-      "symbol": "HPE",
-      "day_pct": 19.5
-    },
-    {
-      "symbol": "COHR",
-      "day_pct": 17.6
-    },
-    {
-      "symbol": "STM",
-      "day_pct": 15.2
+      "symbol": "FUTU",
+      "day_pct": -5.6
     },
     {
       "symbol": "XNDU",
-      "day_pct": 5.2
+      "day_pct": -12.6
     },
     {
       "symbol": "AMPX",
-      "day_pct": 5.3
+      "day_pct": -5.2
     },
     {
       "symbol": "TE",
-      "day_pct": 15.7
+      "day_pct": -4.4
     },
     {
-      "symbol": "ACMR",
-      "day_pct": 12.0
-    },
-    {
-      "symbol": "MOD",
-      "day_pct": 6.4
+      "symbol": "QBTS",
+      "day_pct": -8.0
     },
     {
       "symbol": "INFQ",
-      "day_pct": 12.3
+      "day_pct": -12.4
     },
     {
       "symbol": "RGTI",
-      "day_pct": 4.9
+      "day_pct": -10.4
     },
     {
-      "symbol": "DELL",
-      "day_pct": -6.6
+      "symbol": "RDW",
+      "day_pct": -9.5
     },
     {
       "symbol": "VOYG",
-      "day_pct": 5.2
+      "day_pct": -10.1
     },
     {
-      "symbol": "MSFT",
-      "day_pct": -4.2
+      "symbol": "META",
+      "day_pct": 4.2
     },
     {
-      "symbol": "AVGO",
-      "day_pct": 4.7
-    },
-    {
-      "symbol": "CRM",
-      "day_pct": -4.2
-    },
-    {
-      "symbol": "ADBE",
-      "day_pct": -4.3
-    },
-    {
-      "symbol": "QCOM",
-      "day_pct": 5.2
-    },
-    {
-      "symbol": "SMCI",
-      "day_pct": 7.0
-    },
-    {
-      "symbol": "AMAT",
-      "day_pct": 7.0
-    },
-    {
-      "symbol": "LRCX",
-      "day_pct": 5.5
-    },
-    {
-      "symbol": "MRVL",
-      "day_pct": 32.5
-    },
-    {
-      "symbol": "ON",
-      "day_pct": 6.4
-    },
-    {
-      "symbol": "WOLF",
-      "day_pct": 15.3
-    },
-    {
-      "symbol": "PLTR",
-      "day_pct": -5.3
-    },
-    {
-      "symbol": "NOW",
-      "day_pct": -6.0
-    },
-    {
-      "symbol": "SNOW",
-      "day_pct": -6.8
-    },
-    {
-      "symbol": "GTLB",
+      "symbol": "ORCL",
       "day_pct": -5.8
     },
     {
-      "symbol": "PATH",
+      "symbol": "CRM",
+      "day_pct": -5.0
+    },
+    {
+      "symbol": "AMD",
+      "day_pct": 4.0
+    },
+    {
+      "symbol": "SMCI",
+      "day_pct": -5.5
+    },
+    {
+      "symbol": "ON",
+      "day_pct": 4.1
+    },
+    {
+      "symbol": "PLTR",
+      "day_pct": -6.6
+    },
+    {
+      "symbol": "NOW",
+      "day_pct": -7.6
+    },
+    {
+      "symbol": "DDOG",
       "day_pct": -7.0
     },
     {
+      "symbol": "MDB",
+      "day_pct": -7.6
+    },
+    {
+      "symbol": "SNOW",
+      "day_pct": -7.6
+    },
+    {
+      "symbol": "PATH",
+      "day_pct": -4.2
+    },
+    {
+      "symbol": "BILL",
+      "day_pct": -8.6
+    },
+    {
+      "symbol": "ZM",
+      "day_pct": -5.1
+    },
+    {
       "symbol": "AI",
-      "day_pct": -4.9
+      "day_pct": -4.2
+    },
+    {
+      "symbol": "PANW",
+      "day_pct": -5.6
     },
     {
       "symbol": "ZS",
-      "day_pct": -7.4
-    },
-    {
-      "symbol": "COIN",
-      "day_pct": -4.7
-    },
-    {
-      "symbol": "SOFI",
-      "day_pct": -4.5
-    },
-    {
-      "symbol": "NU",
-      "day_pct": -8.2
-    },
-    {
-      "symbol": "SHOP",
-      "day_pct": -5.7
-    },
-    {
-      "symbol": "DUOL",
       "day_pct": -6.8
     },
     {
+      "symbol": "OKTA",
+      "day_pct": -7.9
+    },
+    {
+      "symbol": "S",
+      "day_pct": -6.2
+    },
+    {
+      "symbol": "PYPL",
+      "day_pct": -4.3
+    },
+    {
+      "symbol": "COIN",
+      "day_pct": -6.2
+    },
+    {
+      "symbol": "SOFI",
+      "day_pct": -6.0
+    },
+    {
+      "symbol": "AFRM",
+      "day_pct": -6.7
+    },
+    {
+      "symbol": "HOOD",
+      "day_pct": -6.0
+    },
+    {
+      "symbol": "UPST",
+      "day_pct": -6.5
+    },
+    {
+      "symbol": "APP",
+      "day_pct": -5.7
+    },
+    {
       "symbol": "TOST",
-      "day_pct": -5.0
+      "day_pct": -4.9
     },
     {
-      "symbol": "LYFT",
-      "day_pct": -5.0
-    },
-    {
-      "symbol": "DASH",
-      "day_pct": -4.8
+      "symbol": "RIVN",
+      "day_pct": 5.7
     },
     {
       "symbol": "LCID",
-      "day_pct": -7.2
+      "day_pct": -7.3
     }
   ],
   "per_symbol": {
     "SMTC": {
-      "price": 166.63,
-      "pe": 42.883873,
+      "price": 163.5,
+      "pe": 42.078335,
       "target": 204.83333,
-      "upside_pct": 22.9,
-      "pct_from_52h": -3.3,
+      "upside_pct": 25.3,
+      "pct_from_52h": -5.1,
       "rec": "strong_buy",
       "news": [
         "Why Semtech (SMTC) Stock Is Trading Up Today",
@@ -238,160 +220,160 @@
         "Nvidia Continues to Be the Core Engine of AI, Says Analyst. Plus, Walmart and 4 More Stocks.",
         "AI hardware CEO sounds alarm on major demand problem"
       ],
-      "momentum_dag_pct": 11.4,
+      "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 5,
       "reddit": {}
     },
     "LEGN": {
-      "price": 36.28,
-      "pe": 27.17603,
+      "price": 35.98,
+      "pe": 26.95131,
       "target": 55.39467,
-      "upside_pct": 52.7,
-      "pct_from_52h": -19.9,
+      "upside_pct": 54.0,
+      "pct_from_52h": -20.6,
       "rec": "buy",
       "news": [
+        "Legend surges on early data for \u2018in vivo\u2019 lymphoma cell therapy",
         "Legend Biotech (LEGN) Soars 42% on Promising Cancer Therapy Results",
         "Legend's Cancer-Fighter Notches Elusive 100% Success Rate; What's Next?",
         "Legend Stock Surges After Blood- Cancer Drug Shrinks Tumors in Study",
-        "ASCO 2026: Mixed SCLC result for Legend\u2019s LB2102, Novartis expedites manufacture",
-        "Legend Biotech CARVYKTI Data And Adoption Trends Meet Depressed Share Price"
+        "ASCO 2026: Mixed SCLC result for Legend\u2019s LB2102, Novartis expedites manufacture"
       ],
-      "momentum_dag_pct": 42.2,
+      "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 7,
       "reddit": {}
     },
     "UEC": {
-      "price": 15.44,
-      "pe": -926.2147,
+      "price": 14.06,
+      "pe": -843.43134,
       "target": 19.16667,
-      "upside_pct": 24.1,
-      "pct_from_52h": -24.1,
+      "upside_pct": 36.3,
+      "pct_from_52h": -30.9,
       "rec": "strong_buy",
       "news": [
+        "Wall Street Bulls Look Optimistic About Uranium Energy (UEC): Should You Buy?",
         "Nuclear Stocks Jump on Multibillion-Dollar Uranium Growth Project",
+        "Cameco Surges 101% in a Year: Buy, Sell or Hold the Stock?",
         "Why Uranium Energy Stock Jumped 11% on Tuesday",
-        "Intapp And 2 Additional Stocks That May Be Priced Below Estimated Value",
-        "3 Stocks Estimated To Be Trading Up To 49.6% Below Their Intrinsic Value",
-        "3 Nuclear Energy Stocks That Are Quietly Becoming the Trades of the Year"
+        "Intapp And 2 Additional Stocks That May Be Priced Below Estimated Value"
       ],
-      "momentum_dag_pct": 13.6,
+      "momentum_dag_pct": -8.9,
       "finnhub_strong_buy": 1,
       "reddit": {}
     },
     "VIAV": {
-      "price": 52.88,
-      "pe": 41.303467,
+      "price": 52.42,
+      "pe": 40.944168,
       "target": 64.42857,
-      "upside_pct": 21.8,
-      "pct_from_52h": -12.5,
+      "upside_pct": 22.9,
+      "pct_from_52h": -13.3,
       "rec": "strong_buy",
       "news": [
+        "Can Viavi's Latest Precision Timing Innovation Boost Future Profits?",
         "Viavi Targets AI Data Centers And Defense With New Timing Module",
         "VIAV Stock Rises 430.7% in a Year: How to Play the Stock",
         "Keysight Stock Rises 113.2% in the Past Year: How to Play the Stock",
-        "VIAVI Solutions (VIAV): A $500 Million Stock Offering, Debt Payoff, and a New AI Security Testing Tool",
-        "Why Is Viavi Solutions (VIAV) Down 7.5% Since Last Earnings Report?"
+        "VIAVI Solutions (VIAV): A $500 Million Stock Offering, Debt Payoff, and a New AI Security Testing Tool"
       ],
-      "momentum_dag_pct": 11.3,
+      "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 5,
       "reddit": {}
     },
     "SIMO": {
-      "price": 301.27,
-      "pe": 31.151188,
+      "price": 306.57,
+      "pe": 31.699207,
       "target": 256.7,
-      "upside_pct": -14.8,
-      "pct_from_52h": -0.7,
+      "upside_pct": -16.3,
+      "pct_from_52h": -2.5,
       "rec": "strong_buy",
       "news": [
+        "Silicon Motion Rides High on Organic Growth: Reason to Buy the Stock?",
         "Can Silicon Motion's Latest SSD Controller for AI PCs Stoke Growth?",
         "Asian Equities Traded in the US as American Depositary Receipts Rise Sharply in Tuesday Trading",
         "How to Boost Your Portfolio with Top Computer and Technology Stocks Set to Beat Earnings",
-        "How The Investment Story For Silicon Motion Technology (NasdaqGS:SIMO) Is Evolving Now",
-        "Looking for Earnings Beat? Buy These 5 Top-Ranked Stocks"
+        "How The Investment Story For Silicon Motion Technology (NasdaqGS:SIMO) Is Evolving Now"
       ],
-      "momentum_dag_pct": 12.4,
+      "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 5,
       "reddit": {}
     },
     "HPE": {
-      "price": 56.15,
-      "pe": 13.882915,
+      "price": 55.165,
+      "pe": 13.739796,
       "target": 29.91895,
-      "upside_pct": -46.7,
-      "pct_from_52h": -12.6,
+      "upside_pct": -45.8,
+      "pct_from_52h": -14.1,
       "rec": "buy",
       "news": [
         "HPE stock explodes for one simple reason: It's finally seen as an AI play",
-        "Marvell stock among the gainers in latest AI trade upswing",
-        "Why a massive Nvidia stock rally may be just getting started",
-        "Had You Invested $1,000 in HPE a Decade Ago, Here\u2019s What You\u2019d Have Now",
-        "Why Did MRVL, AVGO, HPE Stocks Climb To 52-Week Highs Today?"
+        "HPE stock soars on record backlog, booming AI server business",
+        "ANET Rises 33.8% in a YTD: Is There More Room for the Stock to Grow?",
+        "Stocks making big moves yesterday: Shopify, Hewlett Packard Enterprise, Flex, Fluence Energy, and Corning",
+        "The AI Boom is Even Bigger than We Thought"
       ],
-      "momentum_dag_pct": 19.5,
+      "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 5,
       "reddit": {}
     },
     "COHR": {
-      "price": 426.89,
-      "pe": 52.73059,
+      "price": 417.52,
+      "pe": 51.57318,
       "target": 380.61707,
-      "upside_pct": -10.8,
-      "pct_from_52h": -1.6,
+      "upside_pct": -8.8,
+      "pct_from_52h": -5.1,
       "rec": "buy",
       "news": [
+        "When Nvidia's CEO Speaks, This Stock Listens",
+        "What's Happening With Coherent Stock?",
         "Why Coherent (COHR) Is Up 11.9% After Nvidia\u2019s AI Optics Deal And Equity Investment",
         "LITE, COHR, GLW Stocks Surge After Nvidia CEO Calls For Using \u2018Optics Where You Must'",
-        "Coherent (COHR) Hits Record High on Marvell Skyrocket Ride",
-        "Why Corning (GLW) Stock Is Trading Up Today",
-        "Why Coherent (COHR) Stock Is Up Today"
+        "Coherent (COHR) Hits Record High on Marvell Skyrocket Ride"
       ],
-      "momentum_dag_pct": 17.6,
+      "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 7,
       "reddit": {}
     },
     "STM": {
-      "price": 79.51,
-      "pe": 32.504803,
+      "price": 79.71,
+      "pe": 32.586567,
       "target": 57.44286,
-      "upside_pct": -27.8,
-      "pct_from_52h": -1.3,
+      "upside_pct": -27.9,
+      "pct_from_52h": -2.1,
       "rec": "buy",
       "news": [
-        "STMicroelectronics (STM) Moves 15.2% Higher: Will This Strength Last?",
-        "Mizuho Raises Price Target on STMicroelectronics (STM) Amid AI and Satellite Growth Opportunities",
-        "Quantum startup Quobly raises $133 million in funding round",
-        "STMicro (STM) Hits Fresh Peak as Firm Doubles Revenue Outlook",
-        "Sector Update: Tech Stocks Gain Late Afternoon"
+        "Quobly raises \u20ac130 million in Series A led by STMicroelectronics, SEALSQ",
+        "Marvell, AMD Rally, Lead Chip Stocks To Record High",
+        "STM Raises Data Center Outlook: Can AI Infrastructure Drive Growth?",
+        "Company News for Jun 3, 2026",
+        "STMicroelectronics (STM) Moves 15.2% Higher: Will This Strength Last?"
       ],
-      "momentum_dag_pct": 15.2,
+      "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 6,
       "reddit": {}
     },
     "FUTU": {
-      "price": 101.97,
-      "pe": 8.262266,
-      "target": 174.20549,
-      "upside_pct": 70.8,
-      "pct_from_52h": -49.7,
+      "price": 96.22,
+      "pe": 7.7963643,
+      "target": 174.19882,
+      "upside_pct": 81.0,
+      "pct_from_52h": -52.5,
       "rec": "strong_buy",
       "news": [
+        "China Expands Outbound Investment Rules After $807 Billion Left the Country",
+        "Moomoo sees retail investors maturing as AI tools reshape platform strategy",
         "China Expands Outbound Investment Rules to Cover Individuals",
         "XP vs. FUTU: Which Stock Is the Better Value Option?",
-        "Futu Holdings (FUTU) Downgraded by Goldman Sachs Amid Regulatory Crackdown in China",
-        "Futu Holdings Ltd (FUTU) Q1 2026 Earnings Call Highlights: Robust Revenue Growth Amid ...",
-        "Futu Q1 Earnings Call Highlights"
+        "Futu Holdings (FUTU) Downgraded by Goldman Sachs Amid Regulatory Crackdown in China"
       ],
-      "momentum_dag_pct": 0.0,
+      "momentum_dag_pct": -5.6,
       "finnhub_strong_buy": 12,
       "reddit": {}
     },
     "XNDU": {
-      "price": 16.93,
-      "pe": -13.708502,
+      "price": 14.8,
+      "pe": -11.983806,
       "target": 44.0,
-      "upside_pct": 159.9,
-      "pct_from_52h": -60.1,
+      "upside_pct": 197.3,
+      "pct_from_52h": -65.1,
       "rec": "none",
       "news": [
         "Is Xanadu Quantum Technologies (TSX:XNDU) Overvalued After Recent Share Price Volatility And High P/B Ratio",
@@ -400,16 +382,16 @@
         "Why Xanadu Quantum Technologies Stock Is Soaring This Week",
         "Xanadu (XNDU) Soars 17% as Quantum Sector Heats Up"
       ],
-      "momentum_dag_pct": 5.2,
+      "momentum_dag_pct": -12.6,
       "finnhub_strong_buy": 2,
       "reddit": {}
     },
     "ARXS": {
-      "price": 42.84,
-      "pe": 46.376186,
+      "price": 41.33,
+      "pe": 44.741547,
       "target": 50.8,
-      "upside_pct": 18.6,
-      "pct_from_52h": -12.0,
+      "upside_pct": 22.9,
+      "pct_from_52h": -15.1,
       "rec": "strong_buy",
       "news": [
         "Dear Future Applied Aerospace & Defense Stock Investors, Mark Your Calendars for June 3",
@@ -423,11 +405,11 @@
       "reddit": {}
     },
     "AMPX": {
-      "price": 22.91,
-      "pe": 395.0,
+      "price": 21.72,
+      "pe": 374.48276,
       "target": 22.125,
-      "upside_pct": -3.4,
-      "pct_from_52h": -5.4,
+      "upside_pct": 1.9,
+      "pct_from_52h": -10.3,
       "rec": "strong_buy",
       "news": [
         "Amprius (AMPX) Q1 2026 Earnings Transcript",
@@ -436,34 +418,34 @@
         "Amprius (AMPX) Soars as Battery Market Poised for 51% Growth",
         "Amprius Technologies (AMPX) Shares Slip After Short Seller Raises Red Flags"
       ],
-      "momentum_dag_pct": 5.3,
+      "momentum_dag_pct": -5.2,
       "finnhub_strong_buy": 4,
       "reddit": {}
     },
     "TE": {
-      "price": 12.04,
-      "pe": 31.684212,
+      "price": 11.51,
+      "pe": 30.289474,
       "target": 9.1,
-      "upside_pct": -24.4,
-      "pct_from_52h": -1.7,
+      "upside_pct": -20.9,
+      "pct_from_52h": -7.0,
       "rec": "strong_buy",
       "news": [
+        "T1 Energy (TE) Is Up 15.2% After Trina Stake Cut Eases US Policy Concerns",
+        "Exchange-Traded Funds, Equity Futures Mixed Pre-Bell Wednesday Amid Fresh Economic Signals",
         "T1 Energy (TE) Soars to 4-Year High as Chinese Investors Dispose of Stake",
         "T1 Energy (TE) Powers to 3-Year High on Strong Q2 Hopes",
-        "A Look At T1 Energy (TE) Valuation As New Leveraged ETF Launches And Solar Expansion Plans Advance",
-        "T1 Energy Inc. (TE): Leopold Aschenbrenner Reveals New Bet",
-        "T1 Energy (TE) Surges 42% as Analyst \u2018Bullish\u2019 Despite Short-Seller Claims"
+        "A Look At T1 Energy (TE) Valuation As New Leveraged ETF Launches And Solar Expansion Plans Advance"
       ],
-      "momentum_dag_pct": 15.7,
+      "momentum_dag_pct": -4.4,
       "finnhub_strong_buy": 4,
       "reddit": {}
     },
     "ACMR": {
-      "price": 91.92,
-      "pe": 40.792957,
+      "price": 88.86,
+      "pe": 39.43497,
       "target": 85.05714,
-      "upside_pct": -7.5,
-      "pct_from_52h": -2.4,
+      "upside_pct": -4.3,
+      "pct_from_52h": -5.7,
       "rec": "strong_buy",
       "news": [
         "ACM Research (ACMR) Is Up 6.3% After Hong Kong Secondary Listing Plan - What's Changed",
@@ -472,16 +454,16 @@
         "Why a Fund Walked Away From This $20 Million China Logistics Bet After a 24% Stock Drop",
         "Semiconductor Push is a Major Catalyst for ACM Research"
       ],
-      "momentum_dag_pct": 12.0,
+      "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 3,
       "reddit": {}
     },
     "JOYY": {
-      "price": 68.71,
-      "pe": 10.878755,
+      "price": 66.96,
+      "pe": 10.60168,
       "target": 80.01429,
-      "upside_pct": 16.5,
-      "pct_from_52h": -3.2,
+      "upside_pct": 19.5,
+      "pct_from_52h": -5.6,
       "rec": "strong_buy",
       "news": [
         "Asian Equities Traded in US as ADRs Fall in Wednesday Trading",
@@ -495,155 +477,155 @@
       "reddit": {}
     },
     "MOD": {
-      "price": 306.89,
-      "pe": 27.041698,
+      "price": 301.55,
+      "pe": 26.57116,
       "target": 340.85715,
-      "upside_pct": 11.1,
-      "pct_from_52h": -5.1,
+      "upside_pct": 13.0,
+      "pct_from_52h": -6.7,
       "rec": "strong_buy",
       "news": [
+        "Investors Heavily Search Modine Manufacturing Company (MOD): Here is What You Need to Know",
         "Generac Joins Data Center Fracas; Soars On Generator Deal With AI Hyperscaler",
         "Does MOD's Q4 Strength and $4B AI Data Center Deal Make It a Buy?",
         "Why The Modine (MOD) Investment Story Is Shifting With Data Center Deals And New Guidance",
-        "Major data center supplier CEO just explained growing AI problem",
-        "Modine Manufacturing Co (MOD) Q4 2026 Earnings Call Highlights: Record Revenue and Strategic ..."
+        "Major data center supplier CEO just explained growing AI problem"
       ],
-      "momentum_dag_pct": 6.4,
+      "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 4,
       "reddit": {}
     },
     "QBTS": {
-      "price": 29.91,
-      "pe": -77.75496,
+      "price": 27.51,
+      "pe": -71.51585,
       "target": 35.172,
-      "upside_pct": 17.6,
-      "pct_from_52h": -36.0,
+      "upside_pct": 27.9,
+      "pct_from_52h": -41.2,
       "rec": "strong_buy",
       "news": [
+        "Rigetti's Quantum Ambitions Face Valuation Risks: Buy, Hold or Sell?",
+        "Should You Buy, Hold or Sell QUBT Stock Amid Quantum Boom?",
         "D-Wave Seeks to Leverage IBM\u2019s Quantum Foundry. $100 Million in Federal Funding Will Help.",
         "Rigetti Gains From Potential $100 Million U.S. Quantum R&D Backing",
-        "D-Wave Quantum Draws US$2b Federal Backing What It Means For Investors",
-        "D-Wave Stock Releases Gate-Model Road Map. What That Means and Why It Matters.",
-        "IBM Stock Notches Highest Close on Record. This Time It\u2019s Not About Quantum."
+        "How the Latest Federal Contract Boosts D-Wave's Prospects"
       ],
-      "momentum_dag_pct": 0.0,
+      "momentum_dag_pct": -8.0,
       "finnhub_strong_buy": 5,
       "reddit": {}
     },
     "INFQ": {
-      "price": 19.87,
-      "pe": -131.89513,
+      "price": 17.405,
+      "pe": -115.5327,
       "target": 21.0,
-      "upside_pct": 5.7,
-      "pct_from_52h": -6.6,
+      "upside_pct": 20.7,
+      "pct_from_52h": -18.2,
       "rec": "strong_buy",
       "news": [
+        "An Infleqtion Director Sold 50,000 Company Shares. Here's What That Means for Investors.",
         "D-Wave Seeks to Leverage IBM\u2019s Quantum Foundry. $100 Million in Federal Funding Will Help.",
         "Infleqtion\u2019s CHIPS Funding And Quantum Deals Test Investment Thesis",
         "Quantum Computing Inc. and Infleqtion CEOs on the future of quantum technology",
-        "Assessing Infleqtion (INFQ) Valuation After Strong Recent Share Price Momentum",
-        "D-Wave Stock Releases Gate-Model Road Map. What That Means and Why It Matters."
+        "Assessing Infleqtion (INFQ) Valuation After Strong Recent Share Price Momentum"
       ],
-      "momentum_dag_pct": 12.3,
+      "momentum_dag_pct": -12.4,
       "finnhub_strong_buy": 4,
       "reddit": {}
     },
     "RGTI": {
-      "price": 26.88,
-      "pe": -132.19888,
+      "price": 24.095,
+      "pe": -118.501945,
       "target": 29.2425,
-      "upside_pct": 8.8,
-      "pct_from_52h": -53.8,
+      "upside_pct": 21.4,
+      "pct_from_52h": -58.6,
       "rec": "none",
       "news": [
+        "Rigetti's Quantum Ambitions Face Valuation Risks: Buy, Hold or Sell?",
         "6 IPOs to Watch This Week Ahead of the SpaceX Main Event",
         "D-Wave Seeks to Leverage IBM\u2019s Quantum Foundry. $100 Million in Federal Funding Will Help.",
         "Rigetti Gains From Potential $100 Million U.S. Quantum R&D Backing",
-        "Wall Street Bulls Look Optimistic About Rigetti Computing (RGTI): Should You Buy?",
-        "Rigetti\u2019s CHIPS Act Funding And 108 Qubit Launch Test Investor Patience"
+        "Wall Street Bulls Look Optimistic About Rigetti Computing (RGTI): Should You Buy?"
       ],
-      "momentum_dag_pct": 4.9,
+      "momentum_dag_pct": -10.4,
       "finnhub_strong_buy": 3,
       "reddit": {}
     },
     "DELL": {
-      "price": 435.31,
-      "pe": 20.405521,
+      "price": 421.19,
+      "pe": 19.743635,
       "target": 469.45456,
-      "upside_pct": 7.8,
-      "pct_from_52h": -7.3,
+      "upside_pct": 11.5,
+      "pct_from_52h": -10.3,
       "rec": "buy",
       "news": [
-        "HPE stock explodes for one simple reason: It's finally seen as an AI play",
-        "As HPE surges on Q2 earnings, are we seeing the start of AI mania?",
-        "Why the epic Dell stock price surge isn't over, Goldman Sachs says",
-        "Dell\u2019s $10b DoD Deal Adds Support To AI Infrastructure Story",
-        "IPG Photonics, MACOM, and Amkor Shares Skyrocket, What You Need To Know"
+        "Tech ETF inflows surge and defy AI concentration risks",
+        "HPE stock soars on record backlog, booming AI server business",
+        "Move Over, Magnificent 7. Traders Are Flocking to SanDisk, Marvell, Micron, and the Parabolic 7",
+        "President Donald Trump owns roughly $5M in surging AI stock",
+        "Nvidia Shakes Up PC Market With Its Surprise Entry"
       ],
-      "momentum_dag_pct": -6.6,
+      "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 8,
       "reddit": {}
     },
     "RDW": {
-      "price": 20.58,
-      "pe": -50.19512,
+      "price": 18.62,
+      "pe": -45.414635,
       "target": 15.66667,
-      "upside_pct": -23.9,
-      "pct_from_52h": -22.7,
+      "upside_pct": -15.9,
+      "pct_from_52h": -30.1,
       "rec": "buy",
       "news": [
+        "Redwire Stock Rises 235.2% in 6 Months: What Should Investors Do?",
         "ASTS, RKLB, LUNR, RDW Slip As SpaceX IPO Terms Buzz Grows \u2014 Retail Stays Mostly Bullish As Analyst Maps Bear Case",
         "Unusual Machines (UMAC) Notches All-Time High on Govt Funding Buzz",
         "Blue Origin To Fly Again This Year, CEO Says. Space Stocks Jump On NASA Update.",
-        "The SpaceX IPO Is Whipping Space Stocks Into a Frenzy",
-        "Stocks making big moves yesterday: Everpure, Nvidia, AMC Entertainment, Redwire, and MGM Resorts"
+        "The SpaceX IPO Is Whipping Space Stocks Into a Frenzy"
       ],
-      "momentum_dag_pct": 0.0,
+      "momentum_dag_pct": -9.5,
       "finnhub_strong_buy": 2,
       "reddit": {}
     },
     "NTAP": {
-      "price": 175.64,
-      "pe": 17.813711,
+      "price": 181.08,
+      "pe": 18.365446,
       "target": 163.06667,
-      "upside_pct": -7.2,
-      "pct_from_52h": -8.9,
+      "upside_pct": -9.9,
+      "pct_from_52h": -6.1,
       "rec": "buy",
       "news": [
+        "TDC vs. NTAP: Which Stock Is the Better Value Option?",
+        "Here is What to Know Beyond Why NetApp, Inc. (NTAP) is a Trending Stock",
         "Why NetApp (NTAP) Is Up 26.4% After Raising AI-Led Fiscal 2027 Margin And EPS Outlook",
         "Is It Too Late To Consider NetApp (NTAP) After Its Recent Share Price Surge",
-        "NetApp Q4 Earnings Call Highlights AI Demand and 2027 Outlook",
-        "Stock Market Today, June 1: Hewlett Packard Enterprise Jumps After Beating Revenue and Earnings Forecasts",
-        "SanDisk Stock Near $1,700: Two Risks That Could Break the Momentum"
+        "NetApp Q4 Earnings Call Highlights AI Demand and 2027 Outlook"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 3,
       "reddit": {}
     },
     "EL": {
-      "price": 83.41,
-      "pe": 26.23971,
+      "price": 82.06,
+      "pe": 25.815016,
       "target": 95.43478,
-      "upside_pct": 14.4,
-      "pct_from_52h": -31.4,
+      "upside_pct": 16.3,
+      "pct_from_52h": -32.5,
       "rec": "buy",
       "news": [
+        "Top Wide-Moat Stocks to Buy for Steady Long-Term Returns",
         "Est\u00e9e Lauder open to deals after Puig talks collapse over price \u2013 report",
         "Ulta Beauty vs. The Est\u00e9e Lauder Companies: Which Consumer Stock Is a Better Buy in 2026?",
         "3 Reasons EL is Risky and 1 Stock to Buy Instead",
-        "Jim Cramer Discusses the Analyst Price Target Cut for Ulta Beauty",
-        "Can EL's Beauty Reimagined Strategy Revive Long-Term Growth?"
+        "Jim Cramer Discusses the Analyst Price Target Cut for Ulta Beauty"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 7,
       "reddit": {}
     },
     "VOYG": {
-      "price": 49.95,
-      "pe": -38.612877,
+      "price": 44.93,
+      "pe": -34.73226,
       "target": 41.7,
-      "upside_pct": -16.5,
-      "pct_from_52h": -32.5,
+      "upside_pct": -7.2,
+      "pct_from_52h": -39.2,
       "rec": "buy",
       "news": [
         "Blue Origin To Fly Again This Year, CEO Says. Space Stocks Jump On NASA Update.",
@@ -652,376 +634,376 @@
         "Voyager Technologies to Gain From Astrobotic Deal, NASA Moon Work, Wedbush Says",
         "'Rockets are hard': Elon Musk responds to Jeff Bezos' rocket explosion as his own SpaceX glides to a $1.8T IPO"
       ],
-      "momentum_dag_pct": 5.2,
+      "momentum_dag_pct": -10.1,
       "finnhub_strong_buy": 7,
       "reddit": {}
     },
     "AAPL": {
-      "price": 315.2,
-      "pe": 32.80627,
+      "price": 310.26,
+      "pe": 32.29211,
       "target": 310.507,
-      "upside_pct": -1.5,
-      "pct_from_52h": -0.1,
+      "upside_pct": 0.1,
+      "pct_from_52h": -2.1,
       "rec": "buy",
       "news": [
-        "Apple Stock, Google And More Lure Investors In Frothy Market. How To Stay Grounded.",
-        "Why Apple Stock Soared 15% in May",
-        "Congressman Looking For Dividends? Taylor Ditches 2 Magnificent Seven Stocks For Blue Chips",
-        "Warren Buffett's Successor, Greg Abel, Has More Than 28% of Berkshire Hathaway's $330 Billion Portfolio Invested in 2 AI Titans",
-        "Apple agrees to submit India financials in long-pending antitrust case"
+        "Apple's new feature takes the pain out of splitting the check",
+        "Apple CEO Tim Cook explains why he's stepping down",
+        "Sector Update: Tech Stocks Mixed Late Afternoon",
+        "Big Tech Puts Stock Market Win Streak in Peril",
+        "Is PayPal the Ultimate Asymmetric Fintech Bet at 8x Earnings?"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 14,
       "reddit": {}
     },
     "MSFT": {
-      "price": 441.31,
-      "pe": 22.815702,
+      "price": 427.34,
+      "pe": 22.093454,
       "target": 560.8915,
-      "upside_pct": 27.1,
-      "pct_from_52h": -20.5,
+      "upside_pct": 31.3,
+      "pct_from_52h": -23.1,
       "rec": "strong_buy",
       "news": [
-        "Meta, Microsoft, Amazon, and Alphabet are about to spend a shocking amount of money to dominate the AI era",
         "Microsoft debuts in-house AI models as it looks to ease reliance on OpenAI",
-        "Better AI Stock to Buy: Alphabet vs. Microsoft. (The Winner Might Surprise You)",
-        "Over 900 Holdings, but Still up 40%. This Schwab ETF Kills Two Birds With One Stone.",
-        "Microsoft Unveils New Quantum Chip. What It Means for the Stock."
+        "Trump signs executive order scaling back AI review requirements",
+        "Market Chatter: Adobe Considers Two Internal Candidates, Explores AI Outsiders for CEO Position",
+        "Big Tech Puts Stock Market Win Streak in Peril",
+        "Tech ETFs to Buy as NVIDIA Sets Foot Into PC Market via New AI Chip"
       ],
-      "momentum_dag_pct": -4.2,
+      "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 23,
       "reddit": {}
     },
     "NVDA": {
-      "price": 222.82,
-      "pe": 17.641829,
+      "price": 214.75,
+      "pe": 17.002884,
       "target": 296.81033,
-      "upside_pct": 33.2,
-      "pct_from_52h": -5.8,
+      "upside_pct": 38.2,
+      "pct_from_52h": -9.2,
       "rec": "strong_buy",
       "news": [
-        "Beyond Nvidia: Trading the next wave of AI infrastructure",
+        "Marvell stock extends gains after a 32% pop as Nvidia CEO calls chipmaker 'the next trillion-dollar company'",
         "Portfolio manager explains why Sanmina Corp. is a good buy",
-        "Jensen Huang explains why Marvell is the next trillion-dollar company",
-        "Why a massive Nvidia stock rally may be just getting started",
-        "Marvell Surges After Nvidia CEO Calls It the Next Trillion-Dollar Company"
+        "2 Artificial Intelligence (AI) Stocks Poised to Win Big From Anthropic's IPO",
+        "Warren Buffett's Successor, Greg Abel, Just Plowed $10 Billion into this Magnificent Artificial Intelligence (AI) Stock",
+        "Here's Billionaire Stanley Druckenmiller's Top Holding (Hint: It's Not Alphabet or Nvidia)"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 24,
       "reddit": {}
     },
     "AMZN": {
-      "price": 256.52,
-      "pe": 26.006178,
+      "price": 250.02,
+      "pe": 25.347204,
       "target": 312.7934,
-      "upside_pct": 21.9,
-      "pct_from_52h": -7.9,
+      "upside_pct": 25.1,
+      "pct_from_52h": -10.2,
       "rec": "strong_buy",
       "news": [
+        "Marvell stock extends gains after a 32% pop as Nvidia CEO calls chipmaker 'the next trillion-dollar company'",
         "Meta, Microsoft, Amazon, and Alphabet are about to spend a shocking amount of money to dominate the AI era",
-        "SpaceX, OpenAI & Anthropic IPOs: Investors should ask one question",
-        "Jim Cramer admits he was wrong about Amazon \u2014 now calls its AI chips a real threat to Nvidia",
-        "Microsoft Unveils New Quantum Chip. What It Means for the Stock.",
-        "Private infra, real estate capital to play larger financing role in AI data center boom, Goldman says"
+        "Exclusive-Uber's commitment to self-driving startup Nuro is close to $500 million, sources say",
+        "Amazon scores big win at NLRB over whether it\u2019s a joint employer with DSPs",
+        "Big Tech Puts Stock Market Win Streak in Peril"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 22,
       "reddit": {}
     },
     "META": {
-      "price": 597.63,
-      "pe": 16.52641,
+      "price": 622.98,
+      "pe": 17.227419,
       "target": 826.74713,
-      "upside_pct": 38.3,
-      "pct_from_52h": -24.9,
+      "upside_pct": 32.7,
+      "pct_from_52h": -21.8,
       "rec": "strong_buy",
       "news": [
+        "Broadcom stock hovers at all-time highs ahead of earnings",
         "Meta, Microsoft, Amazon, and Alphabet are about to spend a shocking amount of money to dominate the AI era",
-        "SpaceX, OpenAI & Anthropic IPOs: Investors should ask one question",
-        "Meta Fails to Overturn EU Gatekeeper Status for Messenger as Court Delivers Mixed Ruling (META)",
-        "Is Meta's AI Spending Spree Reckless or Genius?",
-        "Analysis-AI building boom ripples through inflation-hit Treasury market"
+        "Sector Update: Tech Stocks Mixed Late Afternoon",
+        "Meta Enters Enterprise AI With Business Agent",
+        "Meta mercifully spun out VR fitness game Supernatural instead of just killing it"
       ],
-      "momentum_dag_pct": 0.0,
+      "momentum_dag_pct": 4.2,
       "finnhub_strong_buy": 22,
       "reddit": {}
     },
     "GOOGL": {
-      "price": 361.85,
-      "pe": 24.96347,
+      "price": 358.99,
+      "pe": 24.805008,
       "target": 429.9666,
-      "upside_pct": 18.8,
-      "pct_from_52h": -11.4,
+      "upside_pct": 19.8,
+      "pct_from_52h": -12.1,
       "rec": "strong_buy",
       "news": [
-        "Tech stocks today: Google stock falls on plans to raise $80 billion, Nvidia CEO blesses Marvell stock",
+        "Broadcom stock hovers at all-time highs ahead of earnings",
+        "Alphabet's $80 billion stock sale shows how expensive AI is getting: Chart of the Day",
         "Stock market today: Dow, S&P 500, Nasdaq build on records as investors eye AI boom, US-Iran tensions",
-        "How Google is funding its AI push",
-        "Dow Jones Futures Fall, Oil Prices Rise As Trump Sets New Hormuz Target Date; Palo Alto, Marvell Are Early Movers",
-        "Apple Stock, Google And More Lure Investors In Frothy Market. How To Stay Grounded."
+        "Here's Billionaire Stanley Druckenmiller's Top Holding (Hint: It's Not Alphabet or Nvidia)",
+        "Sector Update: Tech Stocks Mixed Late Afternoon"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 19,
       "reddit": {}
     },
     "ORCL": {
-      "price": 244.58,
-      "pe": 30.376423,
+      "price": 230.475,
+      "pe": 28.624605,
       "target": 244.02513,
-      "upside_pct": -0.2,
-      "pct_from_52h": -29.3,
+      "upside_pct": 5.9,
+      "pct_from_52h": -33.3,
       "rec": "buy",
       "news": [
-        "3 Stocks That May Be Priced Below Their Estimated Worth In June 2026",
-        "Analysis-Software stocks bounce back - now comes the hard part",
-        "Analysis-AI building boom ripples through inflation-hit Treasury market",
-        "Google Sends a Clear Signal \u2014 Heard on the Street Tuesday Recap",
-        "Wall Street Dumped This Magnificent ETF, but It's Making a Roaring Comeback With a 40% Gain Since April 10"
+        "5-star analyst resets Oracle stock price target",
+        "Alphabet\u2019s $85 Billion Stock Deal Could Open Faucet for Big Tech Offerings",
+        "Extreme Networks And 2 Other Stocks That Could Be Trading Below Their Estimated Value",
+        "Stock Market Today, June 3: Stocks Slip at Midday on Fresh Geopolitical Tensions",
+        "Buy, Hold, or Sell: Is Oracle Stock a Buy at $245?"
       ],
-      "momentum_dag_pct": 0.0,
+      "momentum_dag_pct": -5.8,
       "finnhub_strong_buy": 17,
       "reddit": {}
     },
     "AVGO": {
-      "price": 481.57,
-      "pe": 25.959724,
+      "price": 479.23,
+      "pe": 25.909927,
       "target": 485.7178,
-      "upside_pct": 0.9,
-      "pct_from_52h": -1.5,
+      "upside_pct": 1.4,
+      "pct_from_52h": -3.2,
       "rec": "strong_buy",
       "news": [
-        "What's moving markets: June 3",
-        "Apple Stock, Google And More Lure Investors In Frothy Market. How To Stay Grounded.",
-        "Stocks Mostly Down Pre-Bell as Traders Assess Latest Middle East Developments",
-        "Rising Crude Prices Cap Wall Street Pre-Bell; Asia Up, Europe Off",
-        "Stocks to Watch: Marvell, GameStop, GitLab, Macy\u2019s"
+        "Broadcom stock hovers at all-time highs ahead of earnings",
+        "Move Over, Magnificent 7. Traders Are Flocking to SanDisk, Marvell, Micron, and the Parabolic 7",
+        "Equities Fall Intraday, Oil Jumps Amid Renewed Middle East Tensions",
+        "Texas Instruments Stock's Rally Is Asking One Big Question",
+        "HSBC massively revamps Broadcom's stock price target"
       ],
-      "momentum_dag_pct": 4.7,
+      "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 17,
       "reddit": {}
     },
     "CRM": {
-      "price": 200.84,
-      "pe": 12.923568,
+      "price": 190.71,
+      "pe": 12.271728,
       "target": 255.27208,
-      "upside_pct": 27.1,
-      "pct_from_52h": -27.4,
+      "upside_pct": 33.9,
+      "pct_from_52h": -31.1,
       "rec": "buy",
       "news": [
-        "The Top 5 Analyst Questions From Salesforce\u2019s Q1 Earnings Call",
-        "The 'Lifeboat Effect': Money Moving From Seat To Stack",
-        "Stock Indexes Post New Record Highs Amid AI Enthusiasm",
-        "Salesforce just beat estimates, one analyst still sees more pain",
-        "FedEx Freight Starts Trading Independently. FDXF Stock Is Poised to Win, But It Faces a Key Amazon Threat."
+        "Salesforce vs. Braze: Which Technology Stock Is a Better Buy in 2026?",
+        "Equities Fall Intraday, Oil Jumps Amid Renewed Middle East Tensions",
+        "Atlassian's AI Momentum Builds: Is Rovo the Next Growth Pillar?",
+        "Salesforce's Agentforce ARR Tops $1B: Can It Fuel More Growth for CRM?",
+        "Is There Now an Opportunity in Salesforce (CRM) After Recent Share Price Volatility"
       ],
-      "momentum_dag_pct": -4.2,
+      "momentum_dag_pct": -5.0,
       "finnhub_strong_buy": 12,
       "reddit": {}
     },
     "ADBE": {
-      "price": 262.11,
-      "pe": 9.93365,
+      "price": 256.24,
+      "pe": 9.7111845,
       "target": 327.2847,
-      "upside_pct": 24.9,
-      "pct_from_52h": -37.8,
+      "upside_pct": 27.7,
+      "pct_from_52h": -39.2,
       "rec": "hold",
       "news": [
-        "Stock Indexes Post New Record Highs Amid AI Enthusiasm",
-        "Will Adobe (ADBE) Beat Estimates Again in Its Next Earnings Report?",
-        "Stocks Push Higher on US Labor Market Strength and AI Spending",
-        "Software ETF sees record retail buying as AI concerns ease",
-        "Retail investors fuel record buying in US software ETF as AI trade broadens"
+        "Sector Update: Tech Stocks Mixed Late Afternoon",
+        "Market Chatter: Adobe Considers Two Internal Candidates, Explores AI Outsiders for CEO Position",
+        "ADBE or CDNS: Which Is the Better Value Stock Right Now?",
+        "Adobe considering two internal executives for CEO position",
+        "Bet on 5 Top-Ranked Stocks With Rising P/E for a Strong Portfolio"
       ],
-      "momentum_dag_pct": -4.3,
+      "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 10,
       "reddit": {}
     },
     "AMD": {
-      "price": 521.54,
-      "pe": 40.09061,
+      "price": 542.52,
+      "pe": 41.70334,
       "target": 479.77084,
-      "upside_pct": -8.0,
-      "pct_from_52h": -1.1,
+      "upside_pct": -11.6,
+      "pct_from_52h": -0.7,
       "rec": "strong_buy",
       "news": [
-        "Why a massive Nvidia stock rally may be just getting started",
-        "AI Chips Today - ABB Expands NVIDIA Partnership to Boost AI Data Centers",
-        "AMD Helios Rack Platform Puts AI Data Center Ambitions Against Nvidia",
-        "Why Semtech (SMTC) Stock Is Trading Up Today",
-        "3 Overvalued AI Stocks I Would Stay Far Away From"
+        "Stock Market Today: War Fears Put S&P Streak In Danger; Broadcom Hits Highs Ahead Of Earnings (Live Coverage)",
+        "Move Over, Magnificent 7. Traders Are Flocking to SanDisk, Marvell, Micron, and the Parabolic 7",
+        "Intel Surges 192.5% Year to Date: Should You Bet on the Stock?",
+        "Nvidia Shakes Up PC Market With Its Surprise Entry",
+        "Intel Stock Jumps After 5-Day Losing Streak. Markets Get a Reminder of Its CPU Strength."
       ],
-      "momentum_dag_pct": 0.0,
+      "momentum_dag_pct": 4.0,
       "finnhub_strong_buy": 14,
       "reddit": {}
     },
     "QCOM": {
-      "price": 240.84,
-      "pe": 22.643488,
+      "price": 250.01,
+      "pe": 23.50564,
       "target": 177.09677,
-      "upside_pct": -26.5,
-      "pct_from_52h": -7.3,
+      "upside_pct": -29.2,
+      "pct_from_52h": -3.8,
       "rec": "hold",
       "news": [
-        "Why a massive Nvidia stock rally may be just getting started",
-        "Nvidia\u2019s RTX Spark AI PC Superchip Launch Might Change The Case For Investing In QUALCOMM (QCOM)",
-        "Stock Indexes Post New Record Highs Amid AI Enthusiasm",
-        "Analyst Spots Major AI Winners as Nvidia, Intel, and Marvell Shine at Computex",
-        "Why Is The US Stock Market Up Today?"
+        "ARM Shares Surge 270% in 2026: Buy, Hold, or Wait for a Pullback?",
+        "2 Mega-Cap Stocks to Own for Decades and 1 We Question",
+        "Can AVGO Stock Live Up To Its Multiple?",
+        "Qualcomm Plagued by Margin Woes, Demand Softness: Time to Rethink?",
+        "Lattice (LSCC) Up 23.8% Since Last Earnings Report: Can It Continue?"
       ],
-      "momentum_dag_pct": 5.2,
+      "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 4,
       "reddit": {}
     },
     "MU": {
-      "price": 1064.1,
-      "pe": 10.022625,
+      "price": 1079.57,
+      "pe": 10.168334,
       "target": 726.225,
-      "upside_pct": -31.8,
-      "pct_from_52h": -1.2,
+      "upside_pct": -32.7,
+      "pct_from_52h": -0.9,
       "rec": "strong_buy",
       "news": [
-        "Beyond Nvidia: Trading the next wave of AI infrastructure",
-        "AI Chips Today - ABB Expands NVIDIA Partnership to Boost AI Data Centers",
-        "Nvidia CEO Pitches \u2018Insane\u2019 AI Returns to Billionaire Families",
-        "2 Factors To Remember When Investing in Micron Stock",
-        "Zacks.com featured highlights include Micron, Credo and Teradyne"
+        "Marvell stock extends gains after a 32% pop as Nvidia CEO calls chipmaker 'the next trillion-dollar company'",
+        "Micron Just Reached a $1 Trillion Market Cap. Is It Too Late to Buy the Stock?",
+        "Move Over, Magnificent 7. Traders Are Flocking to SanDisk, Marvell, Micron, and the Parabolic 7",
+        "Micron Stock Keeps Rising But Chinese Memory-Chip Makers Are Closing the Gap",
+        "Should You Buy Micron Stock Before June 24? History Has a Clear Answer."
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 18,
       "reddit": {}
     },
     "SMCI": {
-      "price": 50.17,
-      "pe": 15.481795,
+      "price": 47.42,
+      "pe": 14.633182,
       "target": 37.625,
-      "upside_pct": -25.0,
-      "pct_from_52h": -19.5,
+      "upside_pct": -20.7,
+      "pct_from_52h": -24.0,
       "rec": "hold",
       "news": [
+        "Super Micro Computer Sinks 9%, Gorilla Technology Tumbles 20% Despite $2 Billion India AI Infrastructure Deal",
         "GRRR Stock Slides Premarket Despite A $2B AI Deal With Supermicro \u2014 Here's Why",
         "AMD Helios Rack Platform Puts AI Data Center Ambitions Against Nvidia",
         "IPG Photonics, MACOM, and Amkor Shares Skyrocket, What You Need To Know",
-        "Himax, FormFactor, and Vishay Intertechnology Shares Skyrocket, What You Need To Know",
-        "Why Semtech (SMTC) Stock Is Trading Up Today"
+        "Himax, FormFactor, and Vishay Intertechnology Shares Skyrocket, What You Need To Know"
       ],
-      "momentum_dag_pct": 7.0,
+      "momentum_dag_pct": -5.5,
       "finnhub_strong_buy": 4,
       "reddit": {}
     },
     "ARM": {
-      "price": 402.71,
-      "pe": 131.62306,
+      "price": 411.83,
+      "pe": 134.60388,
       "target": 241.18973,
-      "upside_pct": -40.1,
-      "pct_from_52h": -5.9,
+      "upside_pct": -41.4,
+      "pct_from_52h": -3.8,
       "rec": "buy",
       "news": [
-        "Why a massive Nvidia stock rally may be just getting started",
-        "Arm vs. NVIDIA: Which Semiconductor Stock Belongs in Your 10-Year Portfolio?",
-        "Why Arm Stock Skyrocketed 68% in May",
-        "SoftBank CEO doubles down on AI, stock market message for 2026",
-        "Arm's $15 Billion AI Chip Target May Arrive Early"
+        "Nvidia Shakes Up PC Market With Its Surprise Entry",
+        "ARM Shares Surge 270% in 2026: Buy, Hold, or Wait for a Pullback?",
+        "SpaceX Is About to IPO. History Says a 55% Stock Drop Could Be Coming Next.",
+        "FTC Probe Puts Arm Licensing Model And AI Growth Story Under Review",
+        "Arm vs. NVIDIA: Which Semiconductor Stock Belongs in Your 10-Year Portfolio?"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 5,
       "reddit": {}
     },
     "AMAT": {
-      "price": 490.05,
-      "pe": 30.306723,
+      "price": 500.77,
+      "pe": 30.969692,
       "target": 511.16666,
-      "upside_pct": 4.3,
-      "pct_from_52h": -0.3,
+      "upside_pct": 2.1,
+      "pct_from_52h": -1.5,
       "rec": "strong_buy",
       "news": [
+        "AXTI's Capacity Expansion: Will It Cement AI Supply-Chain Leadership?",
+        "Will Strong Cash Flows Support Lam Research's Buyback Strategy Ahead?",
         "Applied Materials and Photronics Stocks Trade Up, What You Need To Know",
         "Stock Indexes Post New Record Highs Amid AI Enthusiasm",
-        "Stocks Push Higher on US Labor Market Strength and AI Spending",
-        "Stocks Pressured by Uncertainty of US-Iran Ceasefire Prospects",
-        "Applied Materials: The AI Stock That Wins No Matter Which Chip Wins"
+        "Stocks Push Higher on US Labor Market Strength and AI Spending"
       ],
-      "momentum_dag_pct": 7.0,
+      "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 12,
       "reddit": {}
     },
     "LRCX": {
-      "price": 334.41,
-      "pe": 42.104774,
+      "price": 343.71,
+      "pe": 43.275715,
       "target": 313.6875,
-      "upside_pct": -6.2,
-      "pct_from_52h": -0.3,
+      "upside_pct": -8.7,
+      "pct_from_52h": -0.7,
       "rec": "buy",
       "news": [
+        "Will Strong Cash Flows Support Lam Research's Buyback Strategy Ahead?",
+        "Top Wide-Moat Stocks to Buy for Steady Long-Term Returns",
         "Why Lam Research (LRCX) Stock Is Trading Up Today",
         "Stock Indexes Post New Record Highs Amid AI Enthusiasm",
-        "Stocks Push Higher on US Labor Market Strength and AI Spending",
-        "Stocks Pressured by Uncertainty of US-Iran Ceasefire Prospects",
-        "AI Power Boards and SiC Grid to Aid Navitas Semiconductor's Prospects"
+        "Stocks Push Higher on US Labor Market Strength and AI Spending"
       ],
-      "momentum_dag_pct": 5.5,
+      "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 10,
       "reddit": {}
     },
     "MRVL": {
-      "price": 290.79,
-      "pe": 47.574177,
+      "price": 301.65,
+      "pe": 49.002167,
       "target": 222.55122,
-      "upside_pct": -23.5,
-      "pct_from_52h": -0.2,
+      "upside_pct": -26.2,
+      "pct_from_52h": -6.9,
       "rec": "strong_buy",
       "news": [
-        "Tech stocks today: Google stock falls on plans to raise $80 billion, Nvidia CEO blesses Marvell stock",
-        "Marvell stock among the gainers in latest AI trade upswing",
-        "Marvell Surges After Nvidia CEO Calls It the Next Trillion-Dollar Company",
-        "Stocks Mostly Down Pre-Bell as Traders Assess Latest Middle East Developments",
-        "Nvidia Is Boosting a Bunch of Other Stocks But Can\u2019t Turbo Charge Its Own"
+        "Bitcoin dropped below $70K. So how are crypto traders feeling?",
+        "Marvell stock extends gains after a 32% pop as Nvidia CEO calls chipmaker 'the next trillion-dollar company'",
+        "Stock Market Today: War Fears Put S&P Streak In Danger; Broadcom Hits Highs Ahead Of Earnings (Live Coverage)",
+        "Move Over, Magnificent 7. Traders Are Flocking to SanDisk, Marvell, Micron, and the Parabolic 7",
+        "Jensen Huang Just Called This the Next Trillion-Dollar AI Chip Stock"
       ],
-      "momentum_dag_pct": 32.5,
+      "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 13,
       "reddit": {}
     },
     "ON": {
-      "price": 128.64,
-      "pe": 30.159662,
+      "price": 133.93,
+      "pe": 31.3999,
       "target": 105.44828,
-      "upside_pct": -18.0,
-      "pct_from_52h": -1.4,
+      "upside_pct": -21.3,
+      "pct_from_52h": -0.7,
       "rec": "buy",
       "news": [
+        "Texas Instruments Stock's Rally Is Asking One Big Question",
+        "Why Is ON Semiconductor Corp. (ON) Up 25.3% Since Last Earnings Report?",
+        "Here's How Much You'd Have If You Invested $1000 in ON Semiconductor Corp. a Decade Ago",
         "New ON Semiconductor 2X ETFs Arrive As Valuation Looks Stretched",
-        "Amtech, onsemi, and Nova Shares Are Soaring, What You Need To Know",
-        "Stock Indexes Post New Record Highs Amid AI Enthusiasm",
-        "Stocks Push Higher on US Labor Market Strength and AI Spending",
-        "This SpaceX-Linked Chip Stock Is Surging. Data Center Revenue Could Double in 2027."
+        "Amtech, onsemi, and Nova Shares Are Soaring, What You Need To Know"
       ],
-      "momentum_dag_pct": 6.4,
+      "momentum_dag_pct": 4.1,
       "finnhub_strong_buy": 5,
       "reddit": {}
     },
     "TSM": {
-      "price": 446.69,
-      "pe": 22.887545,
+      "price": 437.115,
+      "pe": 22.396938,
       "target": 467.84027,
-      "upside_pct": 4.7,
-      "pct_from_52h": -0.6,
+      "upside_pct": 7.0,
+      "pct_from_52h": -2.9,
       "rec": "strong_buy",
       "news": [
-        "Fresh AI Buzz Powers Taiwan Stocks Even Higher",
-        "Nvidia CEO Pitches \u2018Insane\u2019 AI Returns to Billionaire Families",
-        "Bernstein and BofA Remain Bullish on TSMC (TSM) Amid AI and Advanced Node Leadership",
-        "TSMC (TSM) Beats Stock Market Upswing: What Investors Need to Know",
-        "Advanced Micro Devices Sees Agentic AI Doubling CPU Opportunity as MI450 Nears"
+        "Tech ETFs to Buy as NVIDIA Sets Foot Into PC Market via New AI Chip",
+        "Warren Buffett Bought the World\u2019s Most Dominant AI Company \u2014\u00a0Then Sold It Within 6 Months",
+        "Taiwan Semiconductor Manufacturing (TSM) Sits at the Absolute Center of the AI Compute Supply Chain",
+        "Taiwan Semiconductor Manufacturing (TSM) Surged on Long-Term Trends",
+        "What Makes Taiwan Semiconductor Manufacturing Company Limited (TSM) Brown Advisory Global Leaders Strategy\u2019s Leading Contributor"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 11,
       "reddit": {}
     },
     "WOLF": {
-      "price": 61.06,
-      "pe": -12.1998005,
+      "price": 61.67,
+      "pe": -12.321677,
       "target": 40.0,
-      "upside_pct": -34.5,
-      "pct_from_52h": -24.4,
+      "upside_pct": -35.1,
+      "pct_from_52h": -23.7,
       "rec": "hold",
       "news": [
         "T1 Energy (TE) Powers to 3-Year High on Strong Q2 Hopes",
@@ -1030,70 +1012,70 @@
         "After a 13% Selloff, Wolfspeed Now Trades at Steep Discounts. Don\u2019t Be Fooled into Buying the Dip.",
         "A Giant Short Squeeze Could Be Brewing in Wolfspeed Stock"
       ],
-      "momentum_dag_pct": 15.3,
+      "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 0,
       "reddit": {}
     },
     "PLTR": {
-      "price": 152.17,
-      "pe": 73.36039,
+      "price": 142.2,
+      "pe": 68.55391,
       "target": 183.7289,
-      "upside_pct": 20.7,
-      "pct_from_52h": -26.7,
+      "upside_pct": 29.2,
+      "pct_from_52h": -31.5,
       "rec": "buy",
       "news": [
-        "High Growth Tech Stocks To Watch In US June 2026",
-        "Platform Shift Rewrites Software Models",
-        "Palantir Stock Has Stalled. Now Some Investors Want to Probe Its Human Rights Policies.",
-        "The 'Lifeboat Effect': Money Moving From Seat To Stack",
-        "Palantir Faces UK Privacy Backlash What It Means For NHS Contract Risk"
+        "Palantir Investors Vote Down Human Rights Proposals. Why Insiders Prevailed.",
+        "Palantir Shares Sink After Michael Burry Calls It a 'Sand Castle'",
+        "Why Palantir Stock Is Sinking Today",
+        "Palantir, Axon, Crowdstrike, and Cloudflare: New age defense stocks",
+        "Why Is Palantir Technologies (PLTR) Up 12% Since Last Earnings Report?"
       ],
-      "momentum_dag_pct": -5.3,
+      "momentum_dag_pct": -6.6,
       "finnhub_strong_buy": 12,
       "reddit": {}
     },
     "NOW": {
-      "price": 127.65,
-      "pe": 25.394445,
+      "price": 117.92,
+      "pe": 23.458776,
       "target": 141.86295,
-      "upside_pct": 11.1,
-      "pct_from_52h": -39.6,
+      "upside_pct": 20.3,
+      "pct_from_52h": -44.2,
       "rec": "strong_buy",
       "news": [
-        "Why a massive Nvidia stock rally may be just getting started",
-        "Wall Street Dumped This Magnificent ETF, but It's Making a Roaring Comeback With a 40% Gain Since April 10",
-        "Domo, Q2 Holdings, and The Trade Desk Stocks Trade Down, What You Need To Know",
-        "Freshworks, Sprinklr, and Braze Shares Are Falling, What You Need To Know",
-        "Why Shopify (SHOP) Stock Is Down Today"
+        "ServiceNow Deepens Everbridge xMatters AI Ties In Critical Workflows",
+        "ServiceNow vs Palantir: Which Enterprise AI Stock Belongs in a Retirement Portfolio?",
+        "Dell Stock Just Soared 47%. 3 Reasons Investors Are Celebrating.",
+        "Why ServiceNow Stock Skyrocketed 41% in May",
+        "Wall Street Dumped This Magnificent ETF, but It's Making a Roaring Comeback With a 40% Gain Since April 10"
       ],
-      "momentum_dag_pct": -6.0,
+      "momentum_dag_pct": -7.6,
       "finnhub_strong_buy": 15,
       "reddit": {}
     },
     "DDOG": {
-      "price": 269.13,
-      "pe": 94.560974,
+      "price": 250.33,
+      "pe": 87.955444,
       "target": 225.33856,
-      "upside_pct": -16.3,
-      "pct_from_52h": -3.4,
+      "upside_pct": -10.0,
+      "pct_from_52h": -10.2,
       "rec": "strong_buy",
       "news": [
-        "Stock Indexes Post New Record Highs Amid AI Enthusiasm",
-        "Stocks Push Higher on US Labor Market Strength and AI Spending",
-        "Stocks Pressured by Uncertainty of US-Iran Ceasefire Prospects",
-        "Datadog FedRAMP High Win Puts Government Growth Story In Focus",
-        "Datadog (DDOG) Shares Skyrocket, What You Need To Know"
+        "Stock Market Today: War Fears Put S&P Streak In Danger; Broadcom Hits Highs Ahead Of Earnings (Live Coverage)",
+        "1 Unpopular Stock That Should Get More Attention and 2 We Avoid",
+        "Investors Heavily Search Datadog, Inc. (DDOG): Here is What You Need to Know",
+        "These 2 AI Software Stocks Are Through the Roof. Dan Ives Says There\u2019s Still Time to Buy.",
+        "Stock Indexes Post New Record Highs Amid AI Enthusiasm"
       ],
-      "momentum_dag_pct": 0.0,
+      "momentum_dag_pct": -7.0,
       "finnhub_strong_buy": 18,
       "reddit": {}
     },
     "MDB": {
-      "price": 398.46,
-      "pe": 54.316223,
+      "price": 368.32,
+      "pe": 50.20768,
       "target": 387.18445,
-      "upside_pct": -2.8,
-      "pct_from_52h": -10.4,
+      "upside_pct": 5.1,
+      "pct_from_52h": -17.2,
       "rec": "buy",
       "news": [
         "The 'Lifeboat Effect': Money Moving From Seat To Stack",
@@ -1102,142 +1084,142 @@
         "US Stock Market Today: S&P 500 Futures Edge Higher On Strong Global Manufacturing Data",
         "MongoDB (MDB) Soars 20.4% as UBS Raises PT by Double-Digits"
       ],
-      "momentum_dag_pct": 0.0,
+      "momentum_dag_pct": -7.6,
       "finnhub_strong_buy": 14,
       "reddit": {}
     },
     "SNOW": {
-      "price": 261.14,
-      "pe": 99.98584,
+      "price": 241.24,
+      "pe": 92.366486,
       "target": 281.305,
-      "upside_pct": 7.7,
-      "pct_from_52h": -8.4,
+      "upside_pct": 16.6,
+      "pct_from_52h": -15.4,
       "rec": "strong_buy",
       "news": [
-        "Snowflake CEO after mind-blowing stock gain: Our investments are coming together",
-        "AI must 'accelerate the core' of your business: Snowflake CEO",
+        "A Stock\u2019s Most Important Phrase Is No Longer \u201cBeat Estimates\u201d \u2014 It\u2019s These 3 Words",
+        "These 2 AI Software Stocks Are Through the Roof. Dan Ives Says There\u2019s Still Time to Buy.",
         "The 5 Most Interesting Analyst Questions From Snowflake\u2019s Q1 Earnings Call",
         "The 'Lifeboat Effect': Money Moving From Seat To Stack",
         "SoundHound AI (SOUN) Valuation In Focus As Snowflake Sentiment And LivePerson Deal Shape Growth Story"
       ],
-      "momentum_dag_pct": -6.8,
+      "momentum_dag_pct": -7.6,
       "finnhub_strong_buy": 16,
       "reddit": {}
     },
     "NET": {
-      "price": 272.66,
-      "pe": 178.7782,
+      "price": 265.4799,
+      "pe": 174.07033,
       "target": 234.17741,
-      "upside_pct": -14.1,
-      "pct_from_52h": -0.7,
+      "upside_pct": -11.8,
+      "pct_from_52h": -3.3,
       "rec": "buy",
       "news": [
+        "Palantir, Axon, Crowdstrike, and Cloudflare: New age defense stocks",
         "The 'Lifeboat Effect': Money Moving From Seat To Stack",
         "Stocks Push Higher on US Labor Market Strength and AI Spending",
         "Software stocks whipsaw amid AI fears, as Anthropic IPO looms",
-        "Why Is Cloudflare (NET) Stock Soaring Today",
-        "From the stage to the future: Where are Startup Battlefield\u2019s alumni now?"
+        "Why Is Cloudflare (NET) Stock Soaring Today"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 10,
       "reddit": {}
     },
     "GTLB": {
-      "price": 31.82,
-      "pe": 32.437943,
+      "price": 30.93,
+      "pe": 29.975288,
       "target": 30.30435,
-      "upside_pct": -4.8,
-      "pct_from_52h": -39.3,
+      "upside_pct": -2.0,
+      "pct_from_52h": -41.0,
       "rec": "hold",
       "news": [
-        "GitLab (GTLB) Valuation Check After Earnings Beat Restructuring And AI Platform Updates",
-        "GitLab Shares Slide Despite Strong Results, Higher Profit Forecast and Restructuring Plans (GTLB)",
-        "Stocks to Watch: Marvell, GameStop, GitLab, Macy\u2019s",
-        "GitLab Raises Guidance on AI Business Momentum. The Stock Falls.",
-        "GitLab Inc (GTLB) Q1 2027 Earnings Call Highlights: Strong Revenue Growth Amid Market Challenges"
+        "GTLB Q1 Deep Dive: AI Strategy, Workforce Restructuring, and Shifting Monetization Shape Outlook",
+        "Stocks to Watch: KKR, GameStop, GitLab, Universal Music",
+        "GitLab Shares Down Despite Q1 Earnings Beat, Revenues Up Y/Y",
+        "GitLab shares fall on workforce reduction plan as Q1 results top estimates",
+        "Gitlab Growth Needs Stronger Revenue Signals, Morgan Stanley Says"
       ],
-      "momentum_dag_pct": -5.8,
+      "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 6,
       "reddit": {}
     },
     "PATH": {
-      "price": 12.18,
-      "pe": 13.428591,
+      "price": 11.67,
+      "pe": 12.86631,
       "target": 13.31125,
-      "upside_pct": 9.3,
-      "pct_from_52h": -38.6,
+      "upside_pct": 14.1,
+      "pct_from_52h": -41.2,
       "rec": "hold",
       "news": [
+        "Is UiPath Stock a Buy as Revenue Accelerates?",
         "UiPath (PATH) Is Up 19.9% After First GAAP Profit And Higher 2027 Guidance - Has The Bull Case Changed?",
         "Stock Market Today, June 1: Stock Market Today, June 1: UiPath Rises After Strong Q1 Results and Raised Outlook",
         "UiPath, Inc. (PATH) Is a Trending Stock: Facts to Know Before Betting on It",
-        "BofA Retains an \u201cUnderperform\u201d Rating on  UiPath, Inc. (PATH)",
-        "Morgan Stanley slashes targets on 3 software stocks after earnings"
+        "BofA Retains an \u201cUnderperform\u201d Rating on  UiPath, Inc. (PATH)"
       ],
-      "momentum_dag_pct": -7.0,
+      "momentum_dag_pct": -4.2,
       "finnhub_strong_buy": 2,
       "reddit": {}
     },
     "BILL": {
-      "price": 38.47,
-      "pe": 11.606368,
+      "price": 35.18,
+      "pe": 10.613777,
       "target": 55.09524,
-      "upside_pct": 43.2,
-      "pct_from_52h": -32.8,
+      "upside_pct": 56.6,
+      "pct_from_52h": -38.5,
       "rec": "buy",
       "news": [
+        "Does BILL (BILL) Unifying Product, Payments, and AI Signal a New Phase of Strategic Focus?",
+        "Wall Street Analysts Think BILL Holdings (BILL) Could Surge 42.47%: Read This Before Placing a Bet",
         "Finance and HR Software Stocks Q1 Results: Benchmarking BILL (NYSE:BILL)",
         "Nvidia Continues to Be the Core Engine of AI, Says Analyst. Plus, Walmart and 4 More Stocks.",
-        "BILL or PLTR: Which Is the Better Value Stock Right Now?",
-        "Block Stock Gains 24.9% in Past 3 Months: Will It Continue to Rise?",
-        "Agentforce to Boost Salesforce's Subscription Revenue Growth in Q1"
+        "BILL or PLTR: Which Is the Better Value Stock Right Now?"
       ],
-      "momentum_dag_pct": 0.0,
+      "momentum_dag_pct": -8.6,
       "finnhub_strong_buy": 7,
       "reddit": {}
     },
     "ZM": {
-      "price": 111.88,
-      "pe": 17.762619,
+      "price": 106.2,
+      "pe": 16.860836,
       "target": 112.92308,
-      "upside_pct": 0.9,
-      "pct_from_52h": -2.5,
+      "upside_pct": 6.3,
+      "pct_from_52h": -7.4,
       "rec": "buy",
       "news": [
+        "SpaceX Is About to IPO. History Says a 55% Stock Drop Could Be Coming Next.",
         "2 Reasons Why Zoom Stock Popped 10%",
         "Evaluating Zoom\u2019s (ZM) Event-Driven Trade",
         "There May Be Underlying Issues With The Quality Of Zoom Communications' (NASDAQ:ZM) Earnings",
-        "Is Zoom Stock A Buy After The Anthropic IPO Hype?",
-        "Why Zoom Stock Is a Big Winner From Anthropic\u2019s IPO Filing"
+        "Is Zoom Stock A Buy After The Anthropic IPO Hype?"
       ],
-      "momentum_dag_pct": 0.0,
+      "momentum_dag_pct": -5.1,
       "finnhub_strong_buy": 10,
       "reddit": {}
     },
     "TWLO": {
-      "price": 229.3,
-      "pe": 34.74074,
+      "price": 227.09,
+      "pe": 34.405907,
       "target": 195.445,
-      "upside_pct": -14.8,
-      "pct_from_52h": -0.9,
+      "upside_pct": -13.9,
+      "pct_from_52h": -1.8,
       "rec": "buy",
       "news": [
+        "Wall Street Bulls Look Optimistic About Twilio (TWLO): Should You Buy?",
         "Twilio (TWLO) Hits 4-Year High as This Analyst Repeats Bullish Call",
         "A Look At Twilio (TWLO) Valuation After AI Update And Upgraded Profitability Guidance",
         "1 Profitable Stock with Impressive Fundamentals and 2 We Question",
-        "Twilio, IBD Stock Of The Day, Pounces On AI Voice Opportunity",
-        "Why Twilio Stock Jumped 20% Today"
+        "Twilio, IBD Stock Of The Day, Pounces On AI Voice Opportunity"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 11,
       "reddit": {}
     },
     "AI": {
-      "price": 11.18,
-      "pe": -13.311901,
+      "price": 10.7105,
+      "pe": -12.752872,
       "target": 8.81818,
-      "upside_pct": -21.1,
-      "pct_from_52h": -62.9,
+      "upside_pct": -17.7,
+      "pct_from_52h": -64.4,
       "rec": "none",
       "news": [
         "Digital Tools for Big IPOs: Computershare\u2019s Issuer Services North America CEO Ann Bowering, Live at Nasdaq",
@@ -1246,106 +1228,106 @@
         "Palantir's AI Infrastructure Momentum: Is PLTR Stock Still a Buy?",
         "Forget C3.ai: Buy This Unstoppable Artificial Intelligence Security Anchor Under $20 Instead"
       ],
-      "momentum_dag_pct": -4.9,
+      "momentum_dag_pct": -4.2,
       "finnhub_strong_buy": 1,
       "reddit": {}
     },
     "CRWD": {
-      "price": 768.95,
-      "pe": 124.608246,
+      "price": 747.61,
+      "pe": 121.18446,
       "target": 564.2384,
-      "upside_pct": -26.6,
-      "pct_from_52h": -2.1,
+      "upside_pct": -24.5,
+      "pct_from_52h": -4.8,
       "rec": "buy",
       "news": [
         "What's moving markets: June 3",
-        "Stocks Mostly Down Pre-Bell as Traders Assess Latest Middle East Developments",
-        "Rising Crude Prices Cap Wall Street Pre-Bell; Asia Up, Europe Off",
-        "Stocks to Watch: Marvell, GameStop, GitLab, Macy\u2019s",
-        "The 'Lifeboat Effect': Money Moving From Seat To Stack"
+        "Equities Fall Intraday, Oil Jumps Amid Renewed Middle East Tensions",
+        "Palantir, Axon, Crowdstrike, and Cloudflare: New age defense stocks",
+        "Dell Stock Just Soared 47%. 3 Reasons Investors Are Celebrating.",
+        "Palo Alto Networks Just Had a Monster Quarter. So Why Is Wall Street Nervous?"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 12,
       "reddit": {}
     },
     "PANW": {
-      "price": 297.18,
-      "pe": 74.57447,
+      "price": 280.43,
+      "pe": 68.71634,
       "target": 234.48,
-      "upside_pct": -21.1,
-      "pct_from_52h": -1.9,
+      "upside_pct": -16.4,
+      "pct_from_52h": -7.4,
       "rec": "buy",
       "news": [
-        "Stock Market Today: Dow Falls Amid Latest Trump Comments On Iran; Palo Alto Slides On Earnings (Live Coverage)",
-        "Dow Jones Futures Fall, Oil Prices Rise As Trump Sets New Hormuz Target Date; Palo Alto, Marvell Are Early Movers",
-        "Palo Alto Says AI Cyber Threat Is Redefining the Industry After Q3 Beat",
-        "PANW Q1 Deep Dive: AI-Driven Demand Fuels Growth, Margin Pressures Emerge",
-        "US Equity Futures Mixed Pre-Bell as US, Iran Continue Military Strikes in Middle East"
+        "Stock Market Today: War Fears Put S&P Streak In Danger; Broadcom Hits Highs Ahead Of Earnings (Live Coverage)",
+        "Sector Update: Tech Stocks Mixed Wednesday Afternoon",
+        "Palo Alto Networks Q3 Earnings and Revenues Surpass Estimates",
+        "Top Midday Stories: Alphabet Upsizes Equity Capital Raise to $84.75 Billion; SpaceX Planning $135 a Share IPO",
+        "Macy's Lifts Sales Outlook; GameStop Collectibles Business | Stock Movers"
       ],
-      "momentum_dag_pct": 0.0,
+      "momentum_dag_pct": -5.6,
       "finnhub_strong_buy": 15,
       "reddit": {}
     },
     "ZS": {
-      "price": 144.15,
-      "pe": 31.349903,
+      "price": 134.37,
+      "pe": 29.222939,
       "target": 194.89667,
-      "upside_pct": 35.2,
-      "pct_from_52h": -57.2,
+      "upside_pct": 45.0,
+      "pct_from_52h": -60.1,
       "rec": "buy",
       "news": [
         "The 'Lifeboat Effect': Money Moving From Seat To Stack",
+        "FTSE 100 Live: Index falls but outperforms others, B&M and defensives in demand",
         "Identity-Based AI Attacks: SlashID CEO & Co-Founder Vincenzo Iozzo, Live at Nasdaq",
         "3 Growth Companies With High Insider Ownership And Up To 114% Earnings Growth",
-        "Stocks Push Higher on US Labor Market Strength and AI Spending",
-        "Wall Street Analysts Think Zscaler (ZS) Could Surge 25.28%: Read This Before Placing a Bet"
+        "Stocks Push Higher on US Labor Market Strength and AI Spending"
       ],
-      "momentum_dag_pct": -7.4,
-      "finnhub_strong_buy": 0,
+      "momentum_dag_pct": -6.8,
+      "finnhub_strong_buy": 15,
       "reddit": {}
     },
     "OKTA": {
-      "price": 135.32,
-      "pe": 31.647953,
+      "price": 124.65,
+      "pe": 29.152506,
       "target": 117.31636,
-      "upside_pct": -13.3,
-      "pct_from_52h": -4.9,
+      "upside_pct": -5.9,
+      "pct_from_52h": -12.4,
       "rec": "buy",
       "news": [
-        "Palo Alto Earnings Just Proved AI Skeptics Wrong About Cybersecurity",
         "Our Okta Stock Pick is Up 63%. Why We See More Upside Ahead.",
+        "Palo Alto Earnings Just Proved AI Skeptics Wrong About Cybersecurity",
         "The $18 expense report and the defunded intern programs: symbols of corporate America\u2019s dysfunction",
         "Identity-Based AI Attacks: SlashID CEO & Co-Founder Vincenzo Iozzo, Live at Nasdaq",
         "Is It Too Late To Consider Okta (OKTA) After Its Recent Price Surge?"
       ],
-      "momentum_dag_pct": 0.0,
-      "finnhub_strong_buy": 0,
+      "momentum_dag_pct": -7.9,
+      "finnhub_strong_buy": 12,
       "reddit": {}
     },
     "FTNT": {
-      "price": 148.86,
-      "pe": 43.45123,
+      "price": 146.48,
+      "pe": 42.756523,
       "target": 107.86111,
-      "upside_pct": -27.5,
-      "pct_from_52h": -0.1,
+      "upside_pct": -26.4,
+      "pct_from_52h": -1.7,
       "rec": "hold",
       "news": [
+        "FTNT Jumps 87.5% YTD on AI Security Push: Buy, Sell or Hold the Stock?",
+        "Palo Alto Networks Just Had a Monster Quarter. So Why Is Wall Street Nervous?",
         "Stocks Push Higher on US Labor Market Strength and AI Spending",
         "10 Overvalued Stocks Are Ticking Time Bombs In Your Portfolio",
-        "Fortinet vs. CrowdStrike: What Comparing Revenue Trends Tells Investors",
-        "Stocks Rally on Easing Geopolitical Tensions and AI Enthusiasm",
-        "Stock Indexes Rally to Record Highs on Peace Deal Hopes and AI Spending"
+        "Fortinet vs. CrowdStrike: What Comparing Revenue Trends Tells Investors"
       ],
       "momentum_dag_pct": 0.0,
-      "finnhub_strong_buy": 0,
+      "finnhub_strong_buy": 6,
       "reddit": {}
     },
     "S": {
-      "price": 17.35,
-      "pe": 35.083107,
+      "price": 16.28,
+      "pe": 32.919483,
       "target": 19.33333,
-      "upside_pct": 11.4,
-      "pct_from_52h": -18.9,
+      "upside_pct": 18.8,
+      "pct_from_52h": -23.9,
       "rec": "buy",
       "news": [
         "Rosenblatt Reiterates Buy Rating on SentinelOne (S) After Strong Fiscal Q1 Results",
@@ -1354,23 +1336,23 @@
         "1 Growth Stock Down 78% to Buy on the Dip, According to Wall Street",
         "Street Calls of the Week"
       ],
-      "momentum_dag_pct": 0.0,
+      "momentum_dag_pct": -6.2,
       "finnhub_strong_buy": 12,
       "reddit": {}
     },
     "V": {
-      "price": 317.32,
-      "pe": 21.37919,
+      "price": 313.66,
+      "pe": 21.119469,
       "target": 398.74313,
-      "upside_pct": 25.7,
-      "pct_from_52h": -15.5,
+      "upside_pct": 27.1,
+      "pct_from_52h": -16.5,
       "rec": "strong_buy",
       "news": [
-        "3 Outstanding Dividend Stocks to Buy on the Dip and Hold for 10 Years",
-        "Top 20 global payment companies\u2019 revenue rises 8% in 2025 as scale still wins: GlobalData",
-        "Berkshire Hathaway Made Some Major Portfolio Moves, but This One Was a Head-Scratcher. How Should Investors Take It?",
-        "Visa\u2019s Expanded AI-Powered Receivables Hub Might Change The Case For Investing In Visa (V)",
-        "Western Union, Visa, PayPal, Meta: why major payments giants are racing to Solana"
+        "Stripe, Visa, Mastercard close to new stablecoin platform",
+        "Mastercard Adds Stablecoin Settlement for 24/7 Card Payments",
+        "Financial Services Roundup: Market Talk",
+        "Visa Down 14% in a Year, But the Disruption Thesis Weakens: Buy Now?",
+        "Best Buy quietly stocks a surprising new product on its shelves"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 11,
@@ -1395,101 +1377,101 @@
       "reddit": {}
     },
     "PYPL": {
-      "price": 44.53,
-      "pe": 7.734609,
+      "price": 42.61,
+      "pe": 7.4011164,
       "target": 51.34971,
-      "upside_pct": 15.3,
-      "pct_from_52h": -44.0,
+      "upside_pct": 20.5,
+      "pct_from_52h": -46.4,
       "rec": "hold",
       "news": [
-        "This Small-Cap Fintech Stock Is Crushing PayPal, SoFi, Klarna In 2026: Analyst Says Rally Isn't Over Yet",
-        "Western Union, Visa, PayPal, Meta: why major payments giants are racing to Solana",
-        "Apple Plans iPhone Bill Splitting as PayPal, Block Pare Gains",
-        "Palantir, XAI, PayPal, and Robinhood stock analysis",
-        "Investors Heavily Search PayPal Holdings, Inc. (PYPL): Here is What You Need to Know"
+        "Apple's new feature takes the pain out of splitting the check",
+        "Is PayPal the Ultimate Asymmetric Fintech Bet at 8x Earnings?",
+        "PayPal Bets On AI Agentic Commerce With Hey Savi And Debenhams",
+        "3 Profitable Stocks That Fall Short",
+        "MoneyGram Brings 80+ Years of Remittance Infrastructure to Stablecoins With MGUSD Launch"
       ],
-      "momentum_dag_pct": 0.0,
+      "momentum_dag_pct": -4.3,
       "finnhub_strong_buy": 4,
       "reddit": {}
     },
     "COIN": {
-      "price": 173.99,
-      "pe": 34.89095,
+      "price": 163.22,
+      "pe": 32.731197,
       "target": 230.60233,
-      "upside_pct": 32.5,
-      "pct_from_52h": -60.9,
+      "upside_pct": 41.3,
+      "pct_from_52h": -63.3,
       "rec": "buy",
       "news": [
+        "Move Over AI: Jeff Bezos and NVIDIA Are Quietly Backing a New Breakthrough Industry",
+        "Visa And Mastercard Collaborate On New Stablecoin Platform",
         "Digital Tools for Big IPOs: Computershare\u2019s Issuer Services North America CEO Ann Bowering, Live at Nasdaq",
         "Stock Indexes Post New Record Highs Amid AI Enthusiasm",
-        "Coinbase, Kalshi's New Crypto Futures Send These Stocks Sprawling",
-        "Coinbase Global to Unlock U.S. Crypto Derivatives Opportunity?",
-        "Coinbase Founder\u2019s Longevity Startup Triples in Value"
+        "Coinbase, Kalshi's New Crypto Futures Send These Stocks Sprawling"
       ],
-      "momentum_dag_pct": -4.7,
+      "momentum_dag_pct": -6.2,
       "finnhub_strong_buy": 11,
       "reddit": {}
     },
     "SOFI": {
-      "price": 17.74,
-      "pe": 22.736593,
+      "price": 16.68,
+      "pe": 21.378038,
       "target": 21.0,
-      "upside_pct": 18.4,
-      "pct_from_52h": -45.8,
+      "upside_pct": 25.9,
+      "pct_from_52h": -49.0,
       "rec": "hold",
       "news": [
+        "The best personal loans for June 2026",
         "SoFi offering an AI financial coach: How customers can use it",
-        "Better Fintech Stock for Growth Investors: Nu Holdings vs. SoFi",
-        "HOOD vs SOFI vs BULL: Which Brokerage Has The Most Upside As PDT Rules End?",
-        "This Small-Cap Fintech Stock Is Crushing PayPal, SoFi, Klarna In 2026: Analyst Says Rally Isn't Over Yet",
-        "SoFi\u2019s S&P 500 Eligibility Puts Valuation And Momentum In Focus"
+        "Mastercard Adds Stablecoin Settlement for 24/7 Card Payments",
+        "Mastercard Expands Stablecoin Settlement Hours With Polygon",
+        "Better Fintech Stock for Growth Investors: Nu Holdings vs. SoFi"
       ],
-      "momentum_dag_pct": -4.5,
+      "momentum_dag_pct": -6.0,
       "finnhub_strong_buy": 6,
       "reddit": {}
     },
     "AFRM": {
-      "price": 71.01,
-      "pe": 18.801033,
+      "price": 66.27,
+      "pe": 17.546041,
       "target": 83.15185,
-      "upside_pct": 17.1,
-      "pct_from_52h": -29.0,
+      "upside_pct": 25.5,
+      "pct_from_52h": -33.7,
       "rec": "buy",
       "news": [
+        "Affirm CFO Says Bank Charter Would Diversify Funding, Not Turn It Into a Bank",
+        "Here is What to Know Beyond Why Affirm Holdings, Inc. (AFRM) is a Trending Stock",
         "Is PGY Stock a Buy After Q1 Results and Higher 2026 Outlook?",
         "What's Happening With SOFI Stock?",
-        "Why Affirm (AFRM) Stock Is Up Today",
-        "2 Reasons to Sell AFRM and 1 Stock to Buy Instead",
-        "Is Trending Stock Affirm Holdings, Inc. (AFRM) a Buy Now?"
+        "Why Affirm (AFRM) Stock Is Up Today"
       ],
-      "momentum_dag_pct": 0.0,
+      "momentum_dag_pct": -6.7,
       "finnhub_strong_buy": 8,
       "reddit": {}
     },
     "HOOD": {
-      "price": 88.16,
-      "pe": 32.135777,
+      "price": 82.85,
+      "pe": 30.200191,
       "target": 98.77125,
-      "upside_pct": 12.0,
-      "pct_from_52h": -42.7,
+      "upside_pct": 19.2,
+      "pct_from_52h": -46.2,
       "rec": "buy",
       "news": [
+        "Robinhood\u2019s TradePMR to Lower Rates on Margin, Securities-Backed Lending in July",
+        "Robinhood Wants to Do More Business With Advisors. Referrals, AI, and IPOs Are Part of the Plan.",
         "Robinhood, TradePMR Launch RIA Referral Program",
         "HOOD vs SOFI vs BULL: Which Brokerage Has The Most Upside As PDT Rules End?",
-        "Should You Double Down on Bitcoin After the Dip?",
-        "Robinhood CEO launches bold agentic AI trading feature",
-        "News of the day: Trump tariff shake-up, automatic tax-filing, a technical recession, Robinhood comes to Canada, Metro CEO to retire and much more"
+        "SpaceX IPO Pumps Rocket Fuel into Thematic Space ETFs"
       ],
-      "momentum_dag_pct": 0.0,
+      "momentum_dag_pct": -6.0,
       "finnhub_strong_buy": 8,
       "reddit": {}
     },
     "MELI": {
-      "price": 1672.83,
-      "pe": 28.223652,
+      "price": 1638.54,
+      "pe": 27.645119,
       "target": 2216.9583,
-      "upside_pct": 32.5,
-      "pct_from_52h": -36.8,
+      "upside_pct": 35.3,
+      "pct_from_52h": -38.1,
       "rec": "buy",
       "news": [
         "Intapp And 2 Additional Stocks That May Be Priced Below Estimated Value",
@@ -1503,227 +1485,227 @@
       "reddit": {}
     },
     "NU": {
-      "price": 11.93,
-      "pe": 10.256454,
+      "price": 11.63,
+      "pe": 9.998539,
       "target": 19.38571,
-      "upside_pct": 62.5,
-      "pct_from_52h": -37.1,
+      "upside_pct": 66.7,
+      "pct_from_52h": -38.7,
       "rec": "strong_buy",
       "news": [
+        "Is It Too Soon to Call a Bottom on Nu Holdings Stock?",
         "Better Fintech Stock for Growth Investors: Nu Holdings vs. SoFi",
         "Stock Indexes Post New Record Highs Amid AI Enthusiasm",
         "Nubank swipes Visa vet for CFO amid US push",
-        "Stocks Push Higher on US Labor Market Strength and AI Spending",
-        "Nu Holdings Shares Down 22% As It Names New CFO For US Push"
+        "Stocks Push Higher on US Labor Market Strength and AI Spending"
       ],
-      "momentum_dag_pct": -8.2,
+      "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 6,
       "reddit": {}
     },
     "UPST": {
-      "price": 32.39,
-      "pe": 9.424657,
+      "price": 30.29,
+      "pe": 8.813611,
       "target": 40.2,
-      "upside_pct": 24.1,
-      "pct_from_52h": -62.9,
+      "upside_pct": 32.7,
+      "pct_from_52h": -65.3,
       "rec": "buy",
       "news": [
+        "Top Growth Companies With Significant Insider Stakes June 2026",
         "Spotlight On AppLovin And 2 More Growth Stocks With Significant Insider Stakes",
         "3 Growth Companies With High Insider Ownership And Up To 114% Earnings Growth",
         "Is PGY Stock a Buy After Q1 Results and Higher 2026 Outlook?",
-        "2 Value Stocks Worth Your Attention and 1 We Find Risky",
-        "3 Growth Companies With High Insider Ownership Expecting 67% Earnings Growth"
+        "2 Value Stocks Worth Your Attention and 1 We Find Risky"
       ],
-      "momentum_dag_pct": 0.0,
+      "momentum_dag_pct": -6.5,
       "finnhub_strong_buy": 4,
       "reddit": {}
     },
     "JPM": {
-      "price": 300.96,
-      "pe": 12.778673,
+      "price": 300.9,
+      "pe": 12.776126,
       "target": 342.1905,
       "upside_pct": 13.7,
       "pct_from_52h": -10.8,
       "rec": "buy",
       "news": [
-        "SpaceX Seeks $135 a Share for $75 Billion IPO, Reuters Says",
-        "JPMorgan Chase & Co. (JPM) Exceeds Market Returns: Some Facts to Consider",
-        "Alphabet $80 Billion Equity Sale Set to Break Fundraising Record",
-        "JPMorgan Weighs US$20b Deal While Expanding In Europe And Crypto Debate",
-        "Dear Future Quantinuum Stock Investors, Mark Your Calendars for June 3"
+        "Sector Update: Financial Stocks Decline Late Afternoon",
+        "Market Chatter: Morgan Stanley to Open Wealth Platforms to External AI Agents",
+        "Sector Update: Financial Stocks Decline Wednesday Afternoon",
+        "America\u2019s Data-Center Build-Out Is Falling Way Behind Schedule",
+        "JP Morgan raises ASML estimates as chipmaker signals it can supply far more EUV tools than previously guided"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 3,
       "reddit": {}
     },
     "GS": {
-      "price": 1064.58,
-      "pe": 16.28087,
+      "price": 1044.04,
+      "pe": 15.966749,
       "target": 947.6,
-      "upside_pct": -11.0,
-      "pct_from_52h": -0.9,
+      "upside_pct": -9.2,
+      "pct_from_52h": -2.8,
       "rec": "hold",
       "news": [
         "Best CD rates today, Wednesday, June 3, 2026: Earn up to 4% APY",
-        "Apple Stock, Google And More Lure Investors In Frothy Market. How To Stay Grounded.",
+        "Sector Update: Financial Stocks Decline Late Afternoon",
         "Oil Extends Gain as US-Iran Clashes Cloud Outlook for Peace Deal",
-        "The Zacks Analyst Blog Highlights Chevron, The Goldman Sachs and Philip Morris",
-        "Goldman Sachs Sees NVIDIA at $285: Can the Stock Get There in June?"
+        "SpaceX Targets $75 Billion IPO at Up to $1.8 Trillion Valuation",
+        "Market Chatter: Morgan Stanley to Open Wealth Platforms to External AI Agents"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 6,
       "reddit": {}
     },
     "MS": {
-      "price": 214.98,
-      "pe": 16.927904,
+      "price": 210.176,
+      "pe": 16.54963,
       "target": 203.2857,
-      "upside_pct": -5.4,
-      "pct_from_52h": -0.9,
+      "upside_pct": -3.3,
+      "pct_from_52h": -3.2,
       "rec": "none",
       "news": [
-        "SpaceX Seeks $135 a Share for $75 Billion IPO, Reuters Says",
-        "Morgan Stanley resets Monster stock price target after earnings",
-        "Sector Update: Financial Stocks Advance Late Afternoon",
-        "Sector Update: Financial Stocks Advance Tuesday Afternoon",
-        "Alphabet $80 Billion Equity Sale Set to Break Fundraising Record"
+        "Sector Update: Financial Stocks Decline Late Afternoon",
+        "Market Chatter: Morgan Stanley to Open Wealth Platforms to External AI Agents",
+        "This Asset Manager Initiated a $7.7 Million Sprott Position. Is the Precious Metals Rally Just Getting Started?",
+        "Anthropic said to pick Morgan Stanley and Goldman to lead IPO",
+        "Sector Update: Financial Stocks Decline Wednesday Afternoon"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 8,
       "reddit": {}
     },
     "BAC": {
-      "price": 52.48,
-      "pe": 10.39319,
+      "price": 52.42,
+      "pe": 10.381308,
       "target": 63.15909,
-      "upside_pct": 20.3,
-      "pct_from_52h": -8.8,
+      "upside_pct": 20.5,
+      "pct_from_52h": -8.9,
       "rec": "strong_buy",
       "news": [
-        "Why Reddit (RDDT) Is Up 16.9% After Strong Earnings And New AI Data Partnerships",
-        "Is Bank of America (BAC) Still Attractive After Its Strong Multi Year Share Price Run?",
-        "SpaceX Seeks $135 a Share for $75 Billion IPO, Reuters Says",
-        "Mobia Medical poised for commercial expansion, BofA says in initial coverage",
-        "FedEx Freight initiated at \u2018Buy\u2019 by Bank of America on margin expansion potential"
+        "Is Evercore Well-Positioned to Sustain Its Capital Return Strategy?",
+        "Bank CEOs Press Mamdani to Get More New York Housing Built",
+        "SpaceX Targets $75 Billion in IPO at $135 Per Share",
+        "Does Bank of America's Deposit Franchise Power Earnings Growth?",
+        "Bank of America to hire nearly 4,000 summer interns and campus recruits"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 7,
       "reddit": {}
     },
     "BLK": {
-      "price": 1018.96,
-      "pe": 16.801981,
+      "price": 991.43,
+      "pe": 16.34803,
       "target": 1251.25,
-      "upside_pct": 22.8,
-      "pct_from_52h": -16.5,
+      "upside_pct": 26.2,
+      "pct_from_52h": -18.7,
       "rec": "buy",
       "news": [
+        "Tech ETF inflows surge and defy AI concentration risks",
+        "Vanguard\u2019s VOO Hits $1 Trillion of Assets in ETF Industry First",
+        "'The world is choosing Texas': Is 'Y'All Street' taking over as the new financial capital of America?",
         "Blackstone Stock: Is BX Underperforming the Financial Sector?",
-        "Sector Update: Financial Stocks Advance Late Afternoon",
-        "Sector Update: Financial Stocks Advance Tuesday Afternoon",
-        "BlackRock Future Builders RFP Links Skilled Trades Philanthropy And Client Relations",
-        "Sector Update: Financial Stocks Softer Late Afternoon"
+        "Sector Update: Financial Stocks Advance Late Afternoon"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 4,
       "reddit": {}
     },
     "NFLX": {
-      "price": 83.33,
-      "pe": 21.692047,
+      "price": 81.52,
+      "pe": 21.220877,
       "target": 114.555,
-      "upside_pct": 37.5,
-      "pct_from_52h": -37.9,
+      "upside_pct": 40.5,
+      "pct_from_52h": -39.2,
       "rec": "buy",
       "news": [
-        "If You'd Invested $10,000 in Netflix Stock 10 Years Ago, Here's How Much You'd Have Today",
-        "NFLX Stock Reverses Course Overnight: Retail Shrugs Off Outgoing Chairman\u2019s Sale As \u2018Routine\u2019",
-        "Netflix (NFLX) Stock Falls Amid Market Uptick: What Investors Need to Know",
-        "Why Did Netflix Stock Fall Even Though the Business Kept Growing?",
-        "A Look At Netflix (NFLX) Valuation As Live Content And Franchise Deals Broaden Its Business Model"
+        "Netflix Stock Is on Track for Its Longest Losing Streak Since 2022",
+        "Amid the Artificial Intelligence (AI) Bonanza, Investors Might be Overlooking a Big Opportunity to Buy Netflix Stock",
+        "Amazon Stock's High-Altitude Problem",
+        "Is Netflix\u2019s Live Breakfast Club Bet Reshaping the Investment Case for Netflix (NFLX)?",
+        "Meta vs. Netflix: Which One Deserves Your Retirement Capital Today?"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 16,
       "reddit": {}
     },
     "SPOT": {
-      "price": 501.5,
-      "pe": 27.20968,
-      "target": 609.33875,
-      "upside_pct": 21.5,
-      "pct_from_52h": -36.1,
+      "price": 487.95,
+      "pe": 26.474504,
+      "target": 608.6318,
+      "upside_pct": 24.7,
+      "pct_from_52h": -37.8,
       "rec": "buy",
       "news": [
+        "Spotify Stock Will Trade at This Price In a Year",
         "Universal Music Group Rejects Bill Ackman\u2019s Offer as Too Low",
         "Meta Platforms (META) Up 3.8% Since Last Earnings Report: Can It Continue?",
         "Why Spotify Technology (SPOT) Is Up 5.5% After Launching Paid AI Remixes And Superfan Tools",
-        "Spotify Tests Superfan Tickets And Narrated Articles To Deepen Engagement",
-        "Why Is Spotify (SPOT) Up 15.6% Since Last Earnings Report?"
+        "Spotify Tests Superfan Tickets And Narrated Articles To Deepen Engagement"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 13,
       "reddit": {}
     },
     "ROKU": {
-      "price": 127.12,
-      "pe": 35.96355,
+      "price": 122.2,
+      "pe": 34.571632,
       "target": 145.2963,
-      "upside_pct": 14.3,
-      "pct_from_52h": -4.8,
+      "upside_pct": 18.9,
+      "pct_from_52h": -8.4,
       "rec": "strong_buy",
       "news": [
+        "Andrew Left Guilty On 13 Counts As Short-Seller Risk Rises",
         "How Andrew Left used social media to move stocks",
         "Is It Worth Investing in Roku (ROKU) Based on Wall Street's Bullish Views?",
         "Forget Roku: This Stock Is a Far Better Value for Long-Term Investors",
-        "Andrew Left Found Guilty in Case That Spooked Short Sellers",
-        "Cathie Wood favorite tech stock still down 73% from all-time highs"
+        "Andrew Left Found Guilty in Case That Spooked Short Sellers"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 12,
       "reddit": {}
     },
     "DIS": {
-      "price": 101.41,
-      "pe": 13.531257,
+      "price": 99.465,
+      "pe": 13.271731,
       "target": 129.4931,
-      "upside_pct": 27.7,
-      "pct_from_52h": -18.7,
+      "upside_pct": 30.2,
+      "pct_from_52h": -20.2,
       "rec": "strong_buy",
       "news": [
+        "AT&T Teams Up With Disney and Pixar on Toy Story 5 Promotional Campaign (T)",
+        "Here's Why Walt Disney (DIS) is a Strong Momentum Stock",
         "A Look At Disney (DIS) Valuation As Shares Struggle And Streaming And Experiences Drive New Growth Hopes",
         "Family Offices Bypass Private Equity and Go Direct",
-        "Is The Walt Disney Company (DIS) One of the Best Inexpensive Stocks to Invest in Right Now?",
-        "The Walt Disney Company (DIS) is Attracting Investor Attention: Here is What You Should Know",
-        "Forget Roku: This Stock Is a Far Better Value for Long-Term Investors"
+        "Is The Walt Disney Company (DIS) One of the Best Inexpensive Stocks to Invest in Right Now?"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 11,
       "reddit": {}
     },
     "SHOP": {
-      "price": 117.01,
-      "pe": 50.18012,
+      "price": 112.94,
+      "pe": 48.43469,
       "target": 150.11111,
-      "upside_pct": 28.3,
-      "pct_from_52h": -35.8,
+      "upside_pct": 32.9,
+      "pct_from_52h": -38.0,
       "rec": "buy",
       "news": [
-        "Affirm vs. Klarna: Which Technology Stock Is a Better Buy in 2026?",
-        "Why Shopify (SHOP) Stock Is Down Today",
-        "Shopify Board Approves Expanding Share Repurchase Program to US$5 Billion",
-        "Stock Market Today, June 2: Marvell and Hewlett Packard Boost Markets at Midday",
-        "Reddit Expands Partnership With Shopify: Will it Boost Ad Revenue?"
+        "Meta Enters Enterprise AI With Business Agent",
+        "Is PayPal the Ultimate Asymmetric Fintech Bet at 8x Earnings?",
+        "META Forays Into Enterprise AI With New Global Business Agent",
+        "Stocks making big moves yesterday: Shopify, Hewlett Packard Enterprise, Flex, Fluence Energy, and Corning",
+        "Shopify scrutinized as Canadian man pleads guilty to selling materials intended for self-harm on the e-commerce platform"
       ],
-      "momentum_dag_pct": -5.7,
+      "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 10,
       "reddit": {}
     },
     "ETSY": {
-      "price": 69.73,
-      "pe": 10.654163,
+      "price": 67.045,
+      "pe": 10.2439165,
       "target": 72.28,
-      "upside_pct": 3.7,
-      "pct_from_52h": -8.9,
+      "upside_pct": 7.8,
+      "pct_from_52h": -12.4,
       "rec": "hold",
       "news": [
         "Is Etsy's (ETSY) AI-Fueled Discovery Changing Its Marketplace Economics More Than Investors Expect?",
@@ -1737,101 +1719,101 @@
       "reddit": {}
     },
     "CHWY": {
-      "price": 21.47,
-      "pe": 10.946542,
+      "price": 21.05,
+      "pe": 10.817005,
       "target": 39.85,
-      "upside_pct": 85.6,
-      "pct_from_52h": -55.8,
+      "upside_pct": 89.3,
+      "pct_from_52h": -56.7,
       "rec": "buy",
       "news": [
+        "Chewy (CHWY) Earnings Expected to Grow: What to Know Ahead of Next Week's Release",
         "Down 50% and Still Dominant: The 1 Growth Stock Worth Buying Right Now",
         "PetMed (PETS) Reports Q4 Loss, Beats Revenue Estimates",
         "Chewy (CHWY) Q4 2025 Earnings Transcript",
-        "How The Chewy (CHWY) Story Is Shifting As Targets Fall And Execution Risks Rise",
-        "GameStop Ups Its Stake in eBay Further. Ryan Cohen Must Be Betting on Another Meme Stock Surge."
+        "How The Chewy (CHWY) Story Is Shifting As Targets Fall And Execution Risks Rise"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 12,
       "reddit": {}
     },
     "PINS": {
-      "price": 20.87,
-      "pe": 9.286121,
+      "price": 20.685,
+      "pe": 9.203805,
       "target": 27.72,
-      "upside_pct": 32.8,
-      "pct_from_52h": -47.7,
+      "upside_pct": 34.0,
+      "pct_from_52h": -48.2,
       "rec": "buy",
       "news": [
+        "Reddit  Surges 43.1% in the Past Year: Buy, Sell, or Hold the Stock?",
+        "Why Is Pinterest (PINS) Down 6.3% Since Last Earnings Report?",
+        "Can META Stock Compound Its Way Higher?",
         "Is Pinterest (PINS) The Best Stock to Buy On The Dip?",
-        "Why Pinterest (PINS) Stock Is Trading Up Today",
-        "Forget the Magnificent Seven: This Unjustly Cheap Social Media Dynamo Trades at a 47% Discount to History",
-        "This Tiny Social Media Stock May Deserve a Second Chance",
-        "3 Cash-Heavy Stocks Worth Your Attention"
+        "Why Pinterest (PINS) Stock Is Trading Up Today"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 7,
       "reddit": {}
     },
     "SNAP": {
-      "price": 5.76,
-      "pe": 7.774119,
+      "price": 5.73,
+      "pe": 7.7336283,
       "target": 7.62639,
-      "upside_pct": 32.4,
-      "pct_from_52h": -44.7,
+      "upside_pct": 33.1,
+      "pct_from_52h": -45.0,
       "rec": "hold",
       "news": [
+        "Reddit  Surges 43.1% in the Past Year: Buy, Sell, or Hold the Stock?",
+        "Can META Stock Compound Its Way Higher?",
         "Reddit Expands Partnership With Shopify: Will it Boost Ad Revenue?",
         "A Look At Snap (SNAP) Valuation After Meta Hires Key Content Partnerships Executive",
-        "Meta hires Snap director of global content partnerships",
-        "Meta, TikTok, Snap, and YouTube settle school lawsuit for $27M",
-        "Reddit vs. Snap: What Do Their Revenue Trends Tell Investors?"
+        "Meta hires Snap director of global content partnerships"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 3,
       "reddit": {}
     },
     "APP": {
-      "price": 605.63,
-      "pe": 27.621117,
+      "price": 570.83,
+      "pe": 26.033985,
       "target": 648.1,
-      "upside_pct": 7.0,
-      "pct_from_52h": -18.8,
+      "upside_pct": 13.5,
+      "pct_from_52h": -23.4,
       "rec": "strong_buy",
       "news": [
-        "High Growth Tech Stocks To Watch In US June 2026",
-        "3 Stocks That May Be Priced Below Their Estimated Worth In June 2026",
-        "Spotlight On AppLovin And 2 More Growth Stocks With Significant Insider Stakes",
-        "3 Growth Companies With High Insider Ownership And Up To 114% Earnings Growth",
-        "Is AppLovin Stock Outperforming the Dow?"
+        "AppLovin Slides 15% YTD: Is the Stock a Buying Opportunity?",
+        "Top Growth Companies With Significant Insider Stakes June 2026",
+        "2 Mega-Cap Stocks to Own for Decades and 1 We Question",
+        "Why AppLovin Rallied in May",
+        "High Growth Tech Stocks To Watch In US June 2026"
       ],
-      "momentum_dag_pct": 0.0,
+      "momentum_dag_pct": -5.7,
       "finnhub_strong_buy": 10,
       "reddit": {}
     },
     "DUOL": {
-      "price": 109.95,
-      "pe": 13.86799,
+      "price": 107.4,
+      "pe": 13.546359,
       "target": 104.54824,
-      "upside_pct": -4.9,
-      "pct_from_52h": -79.7,
+      "upside_pct": -2.7,
+      "pct_from_52h": -80.1,
       "rec": "hold",
       "news": [
+        "Duolingo (DUOL) Up 5.7% Since Last Earnings Report: Can It Continue?",
+        "Duolingo, Inc. (DUOL) Is a Trending Stock: Facts to Know Before Betting on It",
         "Duolingo Is One of the Most Interesting AI Plays Nobody's Talking About",
         "Does Duolingo\u2019s AI-Driven, User-First Shift Reframe the Bull Case For Duolingo (DUOL)?",
-        "Duolingo, Inc. (DUOL) is Attracting Investor Attention: Here is What You Should Know",
-        "I Bought This Growth Stock When Everyone Else Was Selling, and It's Starting to Pay Off",
-        "The Death Of The Billable Hour \u2014 How AI Is Killing Traditional Ad Agency Pricing"
+        "Duolingo, Inc. (DUOL) is Attracting Investor Attention: Here is What You Should Know"
       ],
-      "momentum_dag_pct": -6.8,
+      "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 3,
       "reddit": {}
     },
     "TOST": {
-      "price": 26.35,
-      "pe": 15.517891,
+      "price": 25.07,
+      "pe": 14.764081,
       "target": 33.96,
-      "upside_pct": 28.9,
-      "pct_from_52h": -46.9,
+      "upside_pct": 35.5,
+      "pct_from_52h": -49.5,
       "rec": "buy",
       "news": [
         "How The Toast (TOST) Investment Story Is Evolving Without New Analyst Guidance",
@@ -1840,33 +1822,33 @@
         "Toast, Inc. (TOST) is Attracting Investor Attention: Here is What You Should Know",
         "Block's Square Adds Magnolia Soap: Will This Boost Franchise Growth?"
       ],
-      "momentum_dag_pct": -5.0,
+      "momentum_dag_pct": -4.9,
       "finnhub_strong_buy": 7,
       "reddit": {}
     },
     "UBER": {
-      "price": 71.62,
-      "pe": 16.388004,
+      "price": 71.69,
+      "pe": 16.404022,
       "target": 104.4512,
-      "upside_pct": 45.8,
-      "pct_from_52h": -29.8,
+      "upside_pct": 45.7,
+      "pct_from_52h": -29.7,
       "rec": "strong_buy",
       "news": [
-        "DA Davidson Reaffirms Buy Rating on Uber Technologies (UBER) Following Delivery Hero Acquisition Interest",
-        "Uber riders are accidentally leaving some wacky items behind",
-        "Squishmallows, dentures, and an \u2018I Heart Hot Dads\u2019 bag: Uber has found thousands of items left in robotaxis",
-        "S&P 500, Nasdaq, Dow Rise To Record Highs As Strong Tech Gains Outpower US-Iran War Uncertainty \u2014 MSFT, UBER, MRVL, HPE, MSTR Stocks In Focus",
-        "Serve Robotics Expands Into Laundry Delivery"
+        "Exclusive-Uber's commitment to self-driving startup Nuro is close to $500 million, sources say",
+        "Uber layoffs: HR and workplace division cut 23%",
+        "Uber Reportedly Slashes Many Senior Roles In People Division \u2013 Retail Calls The Cuts Aggressive",
+        "Is Uber's Spanish Robotaxi Foray With WeRide a Growth Catalyst?",
+        "DA Davidson Reaffirms Buy Rating on Uber Technologies (UBER) Following Delivery Hero Acquisition Interest"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 17,
       "reddit": {}
     },
     "LYFT": {
-      "price": 14.11,
-      "pe": 6.949848,
+      "price": 14.09,
+      "pe": 6.9399977,
       "target": 18.79333,
-      "upside_pct": 33.2,
+      "upside_pct": 33.4,
       "pct_from_52h": -44.8,
       "rec": "hold",
       "news": [
@@ -1876,16 +1858,16 @@
         "Waymo's Solution After Cutting A Ride Short? Take Uber Or Lyft: Report",
         "More Drivers Are Joining the High-Miles Club. This Stock Could Pull Ahead."
       ],
-      "momentum_dag_pct": -5.0,
+      "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 6,
       "reddit": {}
     },
     "DASH": {
-      "price": 156.95,
-      "pe": 20.161213,
+      "price": 154.58,
+      "pe": 19.856771,
       "target": 245.9857,
-      "upside_pct": 56.7,
-      "pct_from_52h": -45.0,
+      "upside_pct": 59.1,
+      "pct_from_52h": -45.9,
       "rec": "buy",
       "news": [
         "Pizza Hut has a $100 million AI problem",
@@ -1894,16 +1876,16 @@
         "Dollar Tree (DLTR) Is Up 22.6% After Raising Guidance And Expanding Its Value Convenience Strategy \u2013 Has The Bull Case Changed?",
         "Uber Technologies vs. DoorDash: Which Technology Stock Is a Better Buy in 2026?"
       ],
-      "momentum_dag_pct": -4.8,
+      "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 14,
       "reddit": {}
     },
     "ABNB": {
-      "price": 134.35,
-      "pe": 22.225275,
+      "price": 133.59,
+      "pe": 22.099548,
       "target": 156.51389,
-      "upside_pct": 16.5,
-      "pct_from_52h": -8.8,
+      "upside_pct": 17.2,
+      "pct_from_52h": -9.3,
       "rec": "buy",
       "news": [
         "Is Airbnb Stock Underperforming the S&P 500?",
@@ -1917,29 +1899,29 @@
       "reddit": {}
     },
     "DKNG": {
-      "price": 25.3,
-      "pe": 14.77424,
+      "price": 25.11,
+      "pe": 14.663288,
       "target": 34.71143,
-      "upside_pct": 37.2,
-      "pct_from_52h": -48.1,
+      "upside_pct": 38.2,
+      "pct_from_52h": -48.5,
       "rec": "buy",
       "news": [
         "Why NBA Finals & World Cup timing is great for DraftKings, FanDuel",
+        "Is DraftKings Inc. (DKNG) One of the Top Sin Stocks to Buy?",
+        "Software Slump of 2026: Is AI Cannibalizing Traditional Tech?",
         "Trump Turns From Iran to Tariffs as Stock Market\u2019s Record Rally Faces Test",
-        "Prediction Markets Crushed Sportsbooks. Exchanges Could Be Next.",
-        "DraftKings Inc. (DKNG) is Attracting Investor Attention: Here is What You Should Know",
-        "Is DraftKings\u2019 Prediction-Market Pivot and CFO Role Shift Altering The Investment Case For DraftKings (DKNG)?"
+        "Prediction Markets Crushed Sportsbooks. Exchanges Could Be Next."
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 10,
       "reddit": {}
     },
     "CELH": {
-      "price": 30.54,
-      "pe": 15.040186,
+      "price": 30.01,
+      "pe": 14.779174,
       "target": 61.4,
-      "upside_pct": 101.0,
-      "pct_from_52h": -54.2,
+      "upside_pct": 104.6,
+      "pct_from_52h": -55.0,
       "rec": "buy",
       "news": [
         "PepsiCo vs. Celsius: Which Consumer Goods Stock Is a Better Buy in 2026?",
@@ -1953,72 +1935,72 @@
       "reddit": {}
     },
     "TSLA": {
-      "price": 423.74,
-      "pe": 168.84157,
+      "price": 423.7,
+      "pe": 168.82564,
       "target": 411.8878,
       "upside_pct": -2.8,
       "pct_from_52h": -15.1,
       "rec": "buy",
       "news": [
-        "The SpaceX IPO: 3 of the Biggest Risks to Consider",
-        "Tesla Gets A Rival To Its Robotics Business, As Sales In China Eye A Recovery",
-        "Billionaire Tim Draper uses AI to screen million-dollar ideas \u2014 how you can use the same tech to pick stocks like a pro",
-        "Tesla Investors Finally Get A Benchmark For The Musk Premium",
-        "Tesla Faces China FSD Lawsuit As Robotics And Valuation Risks Grow"
+        "Used Cybertrucks are in demand, but that won't move Tesla stock",
+        "Tesla\u2019s Japan Bet Pays Off \u2014 1,996 Vehicle Registrations Mark 182% Jump In May",
+        "Exclusive-Uber's commitment to self-driving startup Nuro is close to $500 million, sources say",
+        "Tesla launches robotaxi service in Austin, accelerating autonomous vehicle push AI",
+        "Big Tech Puts Stock Market Win Streak in Peril"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 9,
       "reddit": {}
     },
     "RIVN": {
-      "price": 17.29,
-      "pe": -9.147036,
+      "price": 18.27,
+      "pe": -9.665491,
       "target": 18.15385,
-      "upside_pct": 5.0,
-      "pct_from_52h": -23.8,
+      "upside_pct": -0.6,
+      "pct_from_52h": -19.5,
       "rec": "hold",
       "news": [
-        "Rivian just achieved something Tesla has long dominated",
-        "Lucid vs. Rivian Automotive: Which EV Maker is Winning the Revenue Race?",
-        "RIVN Stock Surges For 8th Straight Day: Rivian\u2019s Rival To Tesla Model Y Nears June 9 Delivery Kickoff",
-        "Rivian Automotive (RIVN): One of the Best Jeff Bezos Stocks to Buy",
-        "Q1 Rundown: Rivian (NASDAQ:RIVN) Vs Other Automobile Manufacturing Stocks"
+        "Exclusive-Uber's commitment to self-driving startup Nuro is close to $500 million, sources say",
+        "RIVN Stock Eyes 10th Straight Day Of Gains \u2014 CFO Teases More Licensing Deals Ahead Of R2 Deliveries",
+        "Tesla Has Been Selling the World's Most Efficient EVs for Years, But Rivian May Have Just Unseated It",
+        "Is It Time To Reassess Rivian (RIVN) After Its Recent 20% Weekly Price Jump",
+        "Rivian just achieved something Tesla has long dominated"
       ],
-      "momentum_dag_pct": 0.0,
+      "momentum_dag_pct": 5.7,
       "finnhub_strong_buy": 5,
       "reddit": {}
     },
     "LCID": {
-      "price": 6.17,
-      "pe": -1.3200686,
+      "price": 5.72,
+      "pe": -1.2237912,
       "target": 8.4,
-      "upside_pct": 36.1,
-      "pct_from_52h": -81.7,
+      "upside_pct": 46.9,
+      "pct_from_52h": -83.0,
       "rec": "hold",
       "news": [
+        "Exclusive-Uber's commitment to self-driving startup Nuro is close to $500 million, sources say",
         "Rolls-Royce updates Spectre EV \u2014 one of the few luxury EVs performing well",
         "Lucid vs. Rivian Automotive: Which EV Maker is Winning the Revenue Race?",
         "3 Cash-Burning Stocks That Concern Us",
-        "Stock Market Today, May 29: Rivian Automotive Jumps on R2 SUV Launch Confirmation",
-        "Q1 Earnings Roundup: Lucid (NASDAQ:LCID) And The Rest Of The Automobile Manufacturing Segment"
+        "Stock Market Today, May 29: Rivian Automotive Jumps on R2 SUV Launch Confirmation"
       ],
-      "momentum_dag_pct": -7.2,
+      "momentum_dag_pct": -7.3,
       "finnhub_strong_buy": 1,
       "reddit": {}
     },
     "NIO": {
-      "price": 6.01,
-      "pe": 44.17516,
-      "target": 6.952991,
-      "upside_pct": 15.7,
-      "pct_from_52h": -25.1,
+      "price": 5.77,
+      "pe": 42.41109,
+      "target": 6.952478,
+      "upside_pct": 20.5,
+      "pct_from_52h": -28.1,
       "rec": "buy",
       "news": [
+        "How Nio Is Proving It's a Top Auto Stock Despite Brutal the Price War",
+        "BYD Taps A State-Backed Company To Help Compete With Tesla In China",
         "Weighing NIO (NIO) After 70% One-Year Surge And Mixed Valuation Signals",
         "NIO Stock\u2019s Short Interest Hits 32-Month Low \u2013 Here\u2019s Why Investors Are Bullish On The EV-Maker\u2019s Growth Prospects",
-        "Can NIO Meet Its Q2 Target After a 62.3% Y/Y Delivery Jump in May?",
-        "Nio Stock Charges Into June: New Flagship SUV Draws 17-Week Delivery Queue Just Days After Launch",
-        "Samsung discusses autonomous-driving chip supply with BYD\u00a0\u2013 report"
+        "Can NIO Meet Its Q2 Target After a 62.3% Y/Y Delivery Jump in May?"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 6,
@@ -2029,10 +2011,10 @@
     {
       "namn": "Teknologi",
       "etf": "XLK",
-      "score": 19.13,
-      "w1_pct": 7.06,
-      "m1_pct": 22.45,
-      "m3_pct": 44.33,
+      "score": 17.61,
+      "w1_pct": 6.39,
+      "m1_pct": 21.08,
+      "m3_pct": 40.48,
       "aksjar": [
         "NVDA",
         "MSFT",
@@ -2041,26 +2023,12 @@
       ]
     },
     {
-      "namn": "Materialar",
-      "etf": "XLB",
-      "score": 0.55,
-      "w1_pct": 1.04,
-      "m1_pct": 0.33,
-      "m3_pct": -0.37,
-      "aksjar": [
-        "FCX",
-        "NEM",
-        "LIN",
-        "APD"
-      ]
-    },
-    {
       "namn": "Energi (olje/gass)",
       "etf": "XLE",
-      "score": 0.28,
-      "w1_pct": 0.19,
-      "m1_pct": -1.51,
-      "m3_pct": 3.22,
+      "score": 2.26,
+      "w1_pct": 3.08,
+      "m1_pct": -1.09,
+      "m3_pct": 5.23,
       "aksjar": [
         "XOM",
         "CVX",
@@ -2069,12 +2037,26 @@
       ]
     },
     {
+      "namn": "Materialar",
+      "etf": "XLB",
+      "score": 0.97,
+      "w1_pct": 0.85,
+      "m1_pct": 1.91,
+      "m3_pct": -0.15,
+      "aksjar": [
+        "FCX",
+        "NEM",
+        "LIN",
+        "APD"
+      ]
+    },
+    {
       "namn": "Industri",
       "etf": "XLI",
-      "score": 0.1,
-      "w1_pct": -0.06,
-      "m1_pct": 0.71,
-      "m3_pct": -0.43,
+      "score": 0.29,
+      "w1_pct": -0.15,
+      "m1_pct": 1.78,
+      "m3_pct": -0.82,
       "aksjar": [
         "CAT",
         "GE",
@@ -2083,40 +2065,12 @@
       ]
     },
     {
-      "namn": "Finans",
-      "etf": "XLF",
-      "score": -0.44,
-      "w1_pct": -0.75,
-      "m1_pct": -0.89,
-      "m3_pct": 1.0,
-      "aksjar": [
-        "JPM",
-        "GS",
-        "MS",
-        "BLK"
-      ]
-    },
-    {
-      "namn": "Konsum (syklisk)",
-      "etf": "XLY",
-      "score": -0.44,
-      "w1_pct": -1.56,
-      "m1_pct": -0.88,
-      "m3_pct": 3.03,
-      "aksjar": [
-        "AMZN",
-        "TSLA",
-        "BKNG",
-        "ABNB"
-      ]
-    },
-    {
       "namn": "Helse",
       "etf": "XLV",
-      "score": -1.7,
-      "w1_pct": -1.42,
-      "m1_pct": 0.85,
-      "m3_pct": -6.21,
+      "score": -0.99,
+      "w1_pct": -0.86,
+      "m1_pct": 1.92,
+      "m3_pct": -5.69,
       "aksjar": [
         "LLY",
         "UNH",
@@ -2125,12 +2079,26 @@
       ]
     },
     {
+      "namn": "Finans",
+      "etf": "XLF",
+      "score": -1.09,
+      "w1_pct": -1.07,
+      "m1_pct": -1.38,
+      "m3_pct": -0.72,
+      "aksjar": [
+        "JPM",
+        "GS",
+        "MS",
+        "BLK"
+      ]
+    },
+    {
       "namn": "Eigedom",
       "etf": "XLRE",
-      "score": -1.89,
-      "w1_pct": -2.73,
-      "m1_pct": -1.87,
-      "m3_pct": 0.19,
+      "score": -1.63,
+      "w1_pct": -2.52,
+      "m1_pct": -1.3,
+      "m3_pct": 0.09,
       "aksjar": [
         "EQIX",
         "AMT",
@@ -2139,26 +2107,26 @@
       ]
     },
     {
-      "namn": "Kommunikasjon",
-      "etf": "XLC",
-      "score": -2.35,
-      "w1_pct": -1.71,
-      "m1_pct": -2.7,
-      "m3_pct": -3.41,
+      "namn": "Konsum (syklisk)",
+      "etf": "XLY",
+      "score": -2.12,
+      "w1_pct": -3.95,
+      "m1_pct": -0.83,
+      "m3_pct": 0.51,
       "aksjar": [
-        "META",
-        "GOOGL",
-        "NFLX",
-        "SNAP"
+        "AMZN",
+        "TSLA",
+        "BKNG",
+        "ABNB"
       ]
     },
     {
       "namn": "Konsum (defensiv)",
       "etf": "XLP",
-      "score": -3.15,
-      "w1_pct": -2.15,
-      "m1_pct": -2.78,
-      "m3_pct": -6.21,
+      "score": -2.96,
+      "w1_pct": -2.86,
+      "m1_pct": -1.65,
+      "m3_pct": -5.2,
       "aksjar": [
         "WMT",
         "COST",
@@ -2167,12 +2135,26 @@
       ]
     },
     {
+      "namn": "Kommunikasjon",
+      "etf": "XLC",
+      "score": -3.88,
+      "w1_pct": -3.57,
+      "m1_pct": -3.44,
+      "m3_pct": -5.32,
+      "aksjar": [
+        "META",
+        "GOOGL",
+        "NFLX",
+        "SNAP"
+      ]
+    },
+    {
       "namn": "Krypto-relatert",
       "etf": "BITO",
-      "score": -10.49,
-      "w1_pct": -11.45,
-      "m1_pct": -14.5,
-      "m3_pct": -2.1,
+      "score": -14.2,
+      "w1_pct": -12.71,
+      "m1_pct": -18.61,
+      "m3_pct": -11.3,
       "aksjar": [
         "MSTR",
         "COIN",
@@ -2183,6 +2165,14 @@
   ],
   "trendar": {
     "trending_up": [
+      "FUTU",
+      "XNDU",
+      "ARXS",
+      "AMPX",
+      "TE",
+      "ACMR",
+      "JOYY",
+      "MOD",
       "QBTS",
       "INFQ",
       "RGTI",
@@ -2261,30 +2251,59 @@
       "ISRG"
     ],
     "trending_down": [
+      "GS",
       "MRNA"
     ],
     "sektor_trend": [
       {
         "namn": "Teknologi",
         "retning": "opp",
-        "snitt_score": 17.59
+        "snitt_score": 19.14
+      },
+      {
+        "namn": "Krypto-relatert",
+        "retning": "ned",
+        "snitt_score": -8.5
       },
       {
         "namn": "Konsum (defensiv)",
         "retning": "ned",
-        "snitt_score": -3.16
+        "snitt_score": -3.38
+      },
+      {
+        "namn": "Eigedom",
+        "retning": "ned",
+        "snitt_score": -2.05
       },
       {
         "namn": "Kommunikasjon",
         "retning": "ned",
-        "snitt_score": -1.26
+        "snitt_score": -1.72
+      },
+      {
+        "namn": "Helse",
+        "retning": "ned",
+        "snitt_score": -1.67
+      },
+      {
+        "namn": "Finans",
+        "retning": "ned",
+        "snitt_score": -0.53
       }
     ],
     "streak": {
-      "QBTS": 3,
-      "INFQ": 3,
-      "RGTI": 3,
-      "EL": 3,
+      "FUTU": 3,
+      "XNDU": 3,
+      "ARXS": 3,
+      "AMPX": 3,
+      "TE": 3,
+      "ACMR": 3,
+      "JOYY": 3,
+      "MOD": 3,
+      "QBTS": 4,
+      "INFQ": 4,
+      "RGTI": 4,
+      "EL": 4,
       "AAPL": 7,
       "MSFT": 7,
       "NVDA": 7,
@@ -2318,6 +2337,7 @@
       "NU": 7,
       "UPST": 7,
       "JPM": 7,
+      "GS": -3,
       "BAC": 7,
       "BLK": 7,
       "NFLX": 7,
@@ -2336,157 +2356,165 @@
       "DKNG": 7,
       "CELH": 7,
       "NIO": 7,
-      "XPEV": 7,
-      "LI": 7,
-      "MSTR": 7,
-      "MARA": 7,
-      "RIOT": 7,
-      "HUT": 7,
-      "RBLX": 7,
-      "U": 5,
-      "RKLB": 4,
-      "IONQ": 5,
+      "XPEV": 6,
+      "LI": 6,
+      "MSTR": 6,
+      "MARA": 6,
+      "RIOT": 6,
+      "HUT": 6,
+      "RBLX": 6,
+      "U": 4,
+      "RKLB": 3,
+      "IONQ": 4,
       "MRNA": -4,
-      "HIMS": 5,
-      "TDOC": 5,
-      "BNTX": 5,
-      "DOCS": 4,
-      "SE": 4,
-      "GRAB": 4,
-      "GLBE": 4,
-      "PTON": 4,
-      "TTD": 4,
-      "WDAY": 4,
-      "ISRG": 4
+      "HIMS": 4,
+      "TDOC": 4,
+      "BNTX": 4,
+      "DOCS": 3,
+      "SE": 3,
+      "GRAB": 3,
+      "GLBE": 3,
+      "PTON": 3,
+      "TTD": 3,
+      "WDAY": 3,
+      "ISRG": 3
     }
   },
   "politikar_handler": {},
   "strategi": {
     "marknad": "NOEYTRAL",
-    "fear_greed": 56.9714285714286,
-    "vix": 16.049999237060547,
+    "fear_greed": 54.0571428571429,
+    "vix": 16.010000228881836,
     "portfolio": [
-      {
-        "symbol": "GLBE",
-        "qty": 273,
-        "pl_pct": 14.31,
-        "pl_usd": 1138.41,
-        "action": "HALD",
-        "grunn": "Stabil posisjon \u2014 ingen klart exit-signal"
-      },
       {
         "symbol": "AMAT",
         "qty": 26,
-        "pl_pct": 7.56,
-        "pl_usd": 899.34,
+        "pl_pct": 9.53,
+        "pl_usd": 1133.6,
         "action": "HALD",
-        "grunn": "STRONG BUY | \"Applied Materials and Photronics Stocks \""
+        "grunn": "STRONG BUY | \"AXTI's Capacity Expansion: Will It Cemen\""
+      },
+      {
+        "symbol": "GLBE",
+        "qty": 273,
+        "pl_pct": 9.13,
+        "pl_usd": 726.18,
+        "action": "HALD",
+        "grunn": "Stabil posisjon \u2014 ingen klart exit-signal"
       },
       {
         "symbol": "LRCX",
         "qty": 31,
-        "pl_pct": 6.12,
-        "pl_usd": 600.78,
+        "pl_pct": 8.62,
+        "pl_usd": 846.3,
         "action": "HALD",
-        "grunn": "BUY | \"Why Lam Research (LRCX) Stock Is Trading\""
+        "grunn": "BUY | \"Will Strong Cash Flows Support Lam Resea\""
       },
       {
         "symbol": "MU",
         "qty": 9,
-        "pl_pct": 5.28,
-        "pl_usd": 487.01,
+        "pl_pct": 5.0,
+        "pl_usd": 460.82,
         "action": "HALD",
-        "grunn": "STRONG BUY | \"Beyond Nvidia: Trading the next wave of \""
+        "grunn": "STRONG BUY | \"Marvell stock extends gains after a 32% \""
       },
       {
         "symbol": "GS",
         "qty": 8,
-        "pl_pct": 4.99,
-        "pl_usd": 402.16,
+        "pl_pct": 3.41,
+        "pl_usd": 274.32,
         "action": "HALD",
         "grunn": "Stabil posisjon \u2014 ingen klart exit-signal"
       },
       {
-        "symbol": "ACMR",
-        "qty": 118,
-        "pl_pct": 2.86,
-        "pl_usd": 305.62,
+        "symbol": "JPM",
+        "qty": 33,
+        "pl_pct": 0.46,
+        "pl_usd": 45.6,
         "action": "HALD",
-        "grunn": "STRONG BUY | \"ACM Research (ACMR) Is Up 6.3% After Hon\""
+        "grunn": "BUY | +14% analytikarm\u00e5l | \"Sector Update: Financial Stocks Decline \""
+      },
+      {
+        "symbol": "ON",
+        "qty": 67,
+        "pl_pct": 0.2,
+        "pl_usd": 18.09,
+        "action": "HALD",
+        "grunn": "BUY | \"Texas Instruments Stock's Rally Is Askin\""
+      },
+      {
+        "symbol": "ABNB",
+        "qty": 76,
+        "pl_pct": -0.03,
+        "pl_usd": -3.04,
+        "action": "HALD",
+        "grunn": "Ventar p\u00e5 betring eller stop-loss-utl\u00f8ysing"
       },
       {
         "symbol": "MOD",
         "qty": 30,
-        "pl_pct": 2.54,
-        "pl_usd": 230.1,
-        "action": "HALD",
-        "grunn": "STRONG BUY | +11% analytikarm\u00e5l | \"Generac Joins Data Center Fracas; Soars \""
-      },
-      {
-        "symbol": "QBTS",
-        "qty": 419,
-        "pl_pct": 1.62,
-        "pl_usd": 198.34,
-        "action": "HALD",
-        "grunn": "STRONG BUY | +18% analytikarm\u00e5l | \"D-Wave Seeks to Leverage IBM\u2019s Quantum F\""
-      },
-      {
-        "symbol": "JPM",
-        "qty": 33,
-        "pl_pct": -0.32,
-        "pl_usd": -31.95,
+        "pl_pct": -0.16,
+        "pl_usd": -14.7,
         "action": "HALD",
         "grunn": "Ventar p\u00e5 betring eller stop-loss-utl\u00f8ysing"
       },
       {
-        "symbol": "V",
-        "qty": 33,
-        "pl_pct": -1.05,
-        "pl_usd": -111.54,
+        "symbol": "META",
+        "qty": 14,
+        "pl_pct": -0.22,
+        "pl_usd": -18.9,
         "action": "HALD",
         "grunn": "Ventar p\u00e5 betring eller stop-loss-utl\u00f8ysing"
       },
       {
-        "symbol": "MSFT",
-        "qty": 19,
-        "pl_pct": -1.07,
-        "pl_usd": -90.63,
+        "symbol": "QCOM",
+        "qty": 36,
+        "pl_pct": -0.52,
+        "pl_usd": -47.08,
         "action": "HALD",
         "grunn": "Ventar p\u00e5 betring eller stop-loss-utl\u00f8ysing"
+      },
+      {
+        "symbol": "ACMR",
+        "qty": 118,
+        "pl_pct": -1.81,
+        "pl_usd": -193.52,
+        "action": "MONITOR",
+        "grunn": "N\u00e6rmar seg stop-loss \u2014 f\u00f8lg n\u00f8ye"
       },
       {
         "symbol": "BNTX",
         "qty": 113,
-        "pl_pct": -2.63,
-        "pl_usd": -272.33,
+        "pl_pct": -3.34,
+        "pl_usd": -345.78,
         "action": "MONITOR",
         "grunn": "N\u00e6rmar seg stop-loss \u2014 f\u00f8lg n\u00f8ye"
       }
     ],
     "kjoep": [
       {
-        "symbol": "SMTC",
+        "symbol": "META",
         "rec": "STRONG_BUY",
-        "upside_pct": 22.9,
-        "grunn": "konsensus STRONG BUY | +23% analytikarm\u00e5l | 5 SB-analytik. | momentum +11.4%",
+        "upside_pct": 32.7,
+        "grunn": "konsensus STRONG BUY | +33% analytikarm\u00e5l | 22 SB-analytik. | momentum +4.2%",
         "hald": "1-3 dagar (momentum)",
-        "score": 8.0,
+        "score": 10.0,
         "pre_earnings": false
       },
       {
-        "symbol": "VIAV",
+        "symbol": "MSFT",
         "rec": "STRONG_BUY",
-        "upside_pct": 21.8,
-        "grunn": "konsensus STRONG BUY | +22% analytikarm\u00e5l | 5 SB-analytik. | momentum +11.3%",
-        "hald": "1-3 dagar (momentum)",
+        "upside_pct": 31.3,
+        "grunn": "konsensus STRONG BUY | +31% analytikarm\u00e5l | 23 SB-analytik. | \"Microsoft debuts in-house AI models as it loo\"",
+        "hald": "1-3 veker (fundamentalt)",
         "score": 8.0,
         "pre_earnings": false
       },
       {
         "symbol": "NVDA",
         "rec": "STRONG_BUY",
-        "upside_pct": 33.2,
-        "grunn": "konsensus STRONG BUY | +33% analytikarm\u00e5l | 24 SB-analytik. | \"Beyond Nvidia: Trading the next wave of AI in\"",
+        "upside_pct": 38.2,
+        "grunn": "konsensus STRONG BUY | +38% analytikarm\u00e5l | 24 SB-analytik. | \"Marvell stock extends gains after a 32% pop a\"",
         "hald": "1-3 veker (fundamentalt)",
         "score": 8.0,
         "pre_earnings": false
@@ -2494,35 +2522,43 @@
       {
         "symbol": "AMZN",
         "rec": "STRONG_BUY",
-        "upside_pct": 21.9,
-        "grunn": "konsensus STRONG BUY | +22% analytikarm\u00e5l | 22 SB-analytik. | \"Meta, Microsoft, Amazon, and Alphabet are abo\"",
+        "upside_pct": 25.1,
+        "grunn": "konsensus STRONG BUY | +25% analytikarm\u00e5l | 22 SB-analytik. | \"Marvell stock extends gains after a 32% pop a\"",
         "hald": "1-3 veker (fundamentalt)",
         "score": 8.0,
         "pre_earnings": false
       },
       {
-        "symbol": "META",
+        "symbol": "V",
         "rec": "STRONG_BUY",
-        "upside_pct": 38.3,
-        "grunn": "konsensus STRONG BUY | +38% analytikarm\u00e5l | 22 SB-analytik. | \"Meta, Microsoft, Amazon, and Alphabet are abo\"",
+        "upside_pct": 27.1,
+        "grunn": "konsensus STRONG BUY | +27% analytikarm\u00e5l | 11 SB-analytik. | \"Stripe, Visa, Mastercard close to new stablec\"",
         "hald": "1-3 veker (fundamentalt)",
         "score": 8.0,
         "pre_earnings": false
       },
       {
-        "symbol": "AMAT",
+        "symbol": "NU",
         "rec": "STRONG_BUY",
-        "upside_pct": 4.3,
-        "grunn": "konsensus STRONG BUY | 12 SB-analytik. | momentum +7.0% | \"Applied Materials and Photronics Stocks Trade\"",
-        "hald": "1-3 dagar (momentum)",
+        "upside_pct": 66.7,
+        "grunn": "konsensus STRONG BUY | +67% analytikarm\u00e5l | 6 SB-analytik. | \"Is It Too Soon to Call a Bottom on Nu Holding\"",
+        "hald": "1-3 veker (fundamentalt)",
         "score": 8.0,
         "pre_earnings": false
       }
     ],
     "unngaa": [
       {
+        "symbol": "AVGO",
+        "grunn": "Earnings 2026-06-03 \u2014 ikkje nok bullish signal"
+      },
+      {
         "symbol": "CRWD",
         "grunn": "Earnings 2026-06-03 \u2014 ikkje nok bullish signal"
+      },
+      {
+        "symbol": "SMCI",
+        "grunn": "negativ upside -21%, ned -5.5% i dag"
       },
       {
         "symbol": "AI",
@@ -2531,269 +2567,245 @@
     ],
     "momentum": [
       {
-        "symbol": "SMTC",
-        "day_pct": 11.4,
-        "grunn": "Intradag hopp +11.4% \u2014 kortsiktig momentum-handel",
-        "hald": "1-2 dagar"
-      },
-      {
-        "symbol": "LEGN",
-        "day_pct": 42.2,
-        "grunn": "Intradag hopp +42.2% \u2014 kortsiktig momentum-handel",
-        "hald": "1-2 dagar"
-      },
-      {
         "symbol": "UEC",
-        "day_pct": 13.6,
-        "grunn": "Intradag hopp +13.6% \u2014 kortsiktig momentum-handel",
+        "day_pct": -8.9,
+        "grunn": "Intradag hopp -8.9% \u2014 kortsiktig momentum-handel",
         "hald": "1-2 dagar"
       },
       {
-        "symbol": "VIAV",
-        "day_pct": 11.3,
-        "grunn": "Intradag hopp +11.3% \u2014 kortsiktig momentum-handel",
-        "hald": "1-2 dagar"
-      },
-      {
-        "symbol": "SIMO",
-        "day_pct": 12.4,
-        "grunn": "Intradag hopp +12.4% \u2014 kortsiktig momentum-handel",
-        "hald": "1-2 dagar"
-      },
-      {
-        "symbol": "HPE",
-        "day_pct": 19.5,
-        "grunn": "Intradag hopp +19.5% \u2014 kortsiktig momentum-handel",
-        "hald": "1-2 dagar"
-      },
-      {
-        "symbol": "COHR",
-        "day_pct": 17.6,
-        "grunn": "Intradag hopp +17.6% \u2014 kortsiktig momentum-handel",
-        "hald": "1-2 dagar"
-      },
-      {
-        "symbol": "STM",
-        "day_pct": 15.2,
-        "grunn": "Intradag hopp +15.2% \u2014 kortsiktig momentum-handel",
+        "symbol": "FUTU",
+        "day_pct": -5.6,
+        "grunn": "Intradag hopp -5.6% \u2014 kortsiktig momentum-handel",
         "hald": "1-2 dagar"
       },
       {
         "symbol": "XNDU",
-        "day_pct": 5.2,
-        "grunn": "Intradag hopp +5.2% \u2014 kortsiktig momentum-handel",
+        "day_pct": -12.6,
+        "grunn": "Intradag hopp -12.6% \u2014 kortsiktig momentum-handel",
         "hald": "1-2 dagar"
       },
       {
         "symbol": "AMPX",
-        "day_pct": 5.3,
-        "grunn": "Intradag hopp +5.3% \u2014 kortsiktig momentum-handel",
+        "day_pct": -5.2,
+        "grunn": "Intradag hopp -5.2% \u2014 kortsiktig momentum-handel",
         "hald": "1-2 dagar"
       },
       {
         "symbol": "TE",
-        "day_pct": 15.7,
-        "grunn": "Intradag hopp +15.7% \u2014 kortsiktig momentum-handel",
+        "day_pct": -4.4,
+        "grunn": "Intradag hopp -4.4% \u2014 kortsiktig momentum-handel",
         "hald": "1-2 dagar"
       },
       {
-        "symbol": "ACMR",
-        "day_pct": 12.0,
-        "grunn": "Intradag hopp +12.0% \u2014 kortsiktig momentum-handel",
-        "hald": "1-2 dagar"
-      },
-      {
-        "symbol": "MOD",
-        "day_pct": 6.4,
-        "grunn": "Intradag hopp +6.4% \u2014 kortsiktig momentum-handel",
+        "symbol": "QBTS",
+        "day_pct": -8.0,
+        "grunn": "Intradag hopp -8.0% \u2014 kortsiktig momentum-handel",
         "hald": "1-2 dagar"
       },
       {
         "symbol": "INFQ",
-        "day_pct": 12.3,
-        "grunn": "Intradag hopp +12.3% \u2014 kortsiktig momentum-handel",
+        "day_pct": -12.4,
+        "grunn": "Intradag hopp -12.4% \u2014 kortsiktig momentum-handel",
         "hald": "1-2 dagar"
       },
       {
         "symbol": "RGTI",
-        "day_pct": 4.9,
-        "grunn": "Intradag hopp +4.9% \u2014 kortsiktig momentum-handel",
+        "day_pct": -10.4,
+        "grunn": "Intradag hopp -10.4% \u2014 kortsiktig momentum-handel",
         "hald": "1-2 dagar"
       },
       {
-        "symbol": "DELL",
-        "day_pct": -6.6,
-        "grunn": "Intradag hopp -6.6% \u2014 kortsiktig momentum-handel",
+        "symbol": "RDW",
+        "day_pct": -9.5,
+        "grunn": "Intradag hopp -9.5% \u2014 kortsiktig momentum-handel",
         "hald": "1-2 dagar"
       },
       {
         "symbol": "VOYG",
-        "day_pct": 5.2,
-        "grunn": "Intradag hopp +5.2% \u2014 kortsiktig momentum-handel",
+        "day_pct": -10.1,
+        "grunn": "Intradag hopp -10.1% \u2014 kortsiktig momentum-handel",
         "hald": "1-2 dagar"
       },
       {
-        "symbol": "MSFT",
-        "day_pct": -4.2,
-        "grunn": "Intradag hopp -4.2% \u2014 kortsiktig momentum-handel",
+        "symbol": "META",
+        "day_pct": 4.2,
+        "grunn": "Intradag hopp +4.2% \u2014 kortsiktig momentum-handel",
         "hald": "1-2 dagar"
       },
       {
-        "symbol": "CRM",
-        "day_pct": -4.2,
-        "grunn": "Intradag hopp -4.2% \u2014 kortsiktig momentum-handel",
-        "hald": "1-2 dagar"
-      },
-      {
-        "symbol": "ADBE",
-        "day_pct": -4.3,
-        "grunn": "Intradag hopp -4.3% \u2014 kortsiktig momentum-handel",
-        "hald": "1-2 dagar"
-      },
-      {
-        "symbol": "QCOM",
-        "day_pct": 5.2,
-        "grunn": "Intradag hopp +5.2% \u2014 kortsiktig momentum-handel",
-        "hald": "1-2 dagar"
-      },
-      {
-        "symbol": "SMCI",
-        "day_pct": 7.0,
-        "grunn": "Intradag hopp +7.0% \u2014 kortsiktig momentum-handel",
-        "hald": "1-2 dagar"
-      },
-      {
-        "symbol": "AMAT",
-        "day_pct": 7.0,
-        "grunn": "Intradag hopp +7.0% \u2014 kortsiktig momentum-handel",
-        "hald": "1-2 dagar"
-      },
-      {
-        "symbol": "LRCX",
-        "day_pct": 5.5,
-        "grunn": "Intradag hopp +5.5% \u2014 kortsiktig momentum-handel",
-        "hald": "1-2 dagar"
-      },
-      {
-        "symbol": "MRVL",
-        "day_pct": 32.5,
-        "grunn": "Intradag hopp +32.5% \u2014 kortsiktig momentum-handel",
-        "hald": "1-2 dagar"
-      },
-      {
-        "symbol": "ON",
-        "day_pct": 6.4,
-        "grunn": "Intradag hopp +6.4% \u2014 kortsiktig momentum-handel",
-        "hald": "1-2 dagar"
-      },
-      {
-        "symbol": "WOLF",
-        "day_pct": 15.3,
-        "grunn": "Intradag hopp +15.3% \u2014 kortsiktig momentum-handel",
-        "hald": "1-2 dagar"
-      },
-      {
-        "symbol": "PLTR",
-        "day_pct": -5.3,
-        "grunn": "Intradag hopp -5.3% \u2014 kortsiktig momentum-handel",
-        "hald": "1-2 dagar"
-      },
-      {
-        "symbol": "NOW",
-        "day_pct": -6.0,
-        "grunn": "Intradag hopp -6.0% \u2014 kortsiktig momentum-handel",
-        "hald": "1-2 dagar"
-      },
-      {
-        "symbol": "SNOW",
-        "day_pct": -6.8,
-        "grunn": "Intradag hopp -6.8% \u2014 kortsiktig momentum-handel",
-        "hald": "1-2 dagar"
-      },
-      {
-        "symbol": "GTLB",
+        "symbol": "ORCL",
         "day_pct": -5.8,
         "grunn": "Intradag hopp -5.8% \u2014 kortsiktig momentum-handel",
         "hald": "1-2 dagar"
       },
       {
-        "symbol": "PATH",
+        "symbol": "CRM",
+        "day_pct": -5.0,
+        "grunn": "Intradag hopp -5.0% \u2014 kortsiktig momentum-handel",
+        "hald": "1-2 dagar"
+      },
+      {
+        "symbol": "AMD",
+        "day_pct": 4.0,
+        "grunn": "Intradag hopp +4.0% \u2014 kortsiktig momentum-handel",
+        "hald": "1-2 dagar"
+      },
+      {
+        "symbol": "SMCI",
+        "day_pct": -5.5,
+        "grunn": "Intradag hopp -5.5% \u2014 kortsiktig momentum-handel",
+        "hald": "1-2 dagar"
+      },
+      {
+        "symbol": "ON",
+        "day_pct": 4.1,
+        "grunn": "Intradag hopp +4.1% \u2014 kortsiktig momentum-handel",
+        "hald": "1-2 dagar"
+      },
+      {
+        "symbol": "PLTR",
+        "day_pct": -6.6,
+        "grunn": "Intradag hopp -6.6% \u2014 kortsiktig momentum-handel",
+        "hald": "1-2 dagar"
+      },
+      {
+        "symbol": "NOW",
+        "day_pct": -7.6,
+        "grunn": "Intradag hopp -7.6% \u2014 kortsiktig momentum-handel",
+        "hald": "1-2 dagar"
+      },
+      {
+        "symbol": "DDOG",
         "day_pct": -7.0,
         "grunn": "Intradag hopp -7.0% \u2014 kortsiktig momentum-handel",
         "hald": "1-2 dagar"
       },
       {
+        "symbol": "MDB",
+        "day_pct": -7.6,
+        "grunn": "Intradag hopp -7.6% \u2014 kortsiktig momentum-handel",
+        "hald": "1-2 dagar"
+      },
+      {
+        "symbol": "SNOW",
+        "day_pct": -7.6,
+        "grunn": "Intradag hopp -7.6% \u2014 kortsiktig momentum-handel",
+        "hald": "1-2 dagar"
+      },
+      {
+        "symbol": "PATH",
+        "day_pct": -4.2,
+        "grunn": "Intradag hopp -4.2% \u2014 kortsiktig momentum-handel",
+        "hald": "1-2 dagar"
+      },
+      {
+        "symbol": "BILL",
+        "day_pct": -8.6,
+        "grunn": "Intradag hopp -8.6% \u2014 kortsiktig momentum-handel",
+        "hald": "1-2 dagar"
+      },
+      {
+        "symbol": "ZM",
+        "day_pct": -5.1,
+        "grunn": "Intradag hopp -5.1% \u2014 kortsiktig momentum-handel",
+        "hald": "1-2 dagar"
+      },
+      {
+        "symbol": "PANW",
+        "day_pct": -5.6,
+        "grunn": "Intradag hopp -5.6% \u2014 kortsiktig momentum-handel",
+        "hald": "1-2 dagar"
+      },
+      {
         "symbol": "ZS",
-        "day_pct": -7.4,
-        "grunn": "Intradag hopp -7.4% \u2014 kortsiktig momentum-handel",
-        "hald": "1-2 dagar"
-      },
-      {
-        "symbol": "COIN",
-        "day_pct": -4.7,
-        "grunn": "Intradag hopp -4.7% \u2014 kortsiktig momentum-handel",
-        "hald": "1-2 dagar"
-      },
-      {
-        "symbol": "SOFI",
-        "day_pct": -4.5,
-        "grunn": "Intradag hopp -4.5% \u2014 kortsiktig momentum-handel",
-        "hald": "1-2 dagar"
-      },
-      {
-        "symbol": "NU",
-        "day_pct": -8.2,
-        "grunn": "Intradag hopp -8.2% \u2014 kortsiktig momentum-handel",
-        "hald": "1-2 dagar"
-      },
-      {
-        "symbol": "SHOP",
-        "day_pct": -5.7,
-        "grunn": "Intradag hopp -5.7% \u2014 kortsiktig momentum-handel",
-        "hald": "1-2 dagar"
-      },
-      {
-        "symbol": "DUOL",
         "day_pct": -6.8,
         "grunn": "Intradag hopp -6.8% \u2014 kortsiktig momentum-handel",
         "hald": "1-2 dagar"
       },
       {
+        "symbol": "OKTA",
+        "day_pct": -7.9,
+        "grunn": "Intradag hopp -7.9% \u2014 kortsiktig momentum-handel",
+        "hald": "1-2 dagar"
+      },
+      {
+        "symbol": "S",
+        "day_pct": -6.2,
+        "grunn": "Intradag hopp -6.2% \u2014 kortsiktig momentum-handel",
+        "hald": "1-2 dagar"
+      },
+      {
+        "symbol": "PYPL",
+        "day_pct": -4.3,
+        "grunn": "Intradag hopp -4.3% \u2014 kortsiktig momentum-handel",
+        "hald": "1-2 dagar"
+      },
+      {
+        "symbol": "COIN",
+        "day_pct": -6.2,
+        "grunn": "Intradag hopp -6.2% \u2014 kortsiktig momentum-handel",
+        "hald": "1-2 dagar"
+      },
+      {
+        "symbol": "SOFI",
+        "day_pct": -6.0,
+        "grunn": "Intradag hopp -6.0% \u2014 kortsiktig momentum-handel",
+        "hald": "1-2 dagar"
+      },
+      {
+        "symbol": "AFRM",
+        "day_pct": -6.7,
+        "grunn": "Intradag hopp -6.7% \u2014 kortsiktig momentum-handel",
+        "hald": "1-2 dagar"
+      },
+      {
+        "symbol": "HOOD",
+        "day_pct": -6.0,
+        "grunn": "Intradag hopp -6.0% \u2014 kortsiktig momentum-handel",
+        "hald": "1-2 dagar"
+      },
+      {
+        "symbol": "UPST",
+        "day_pct": -6.5,
+        "grunn": "Intradag hopp -6.5% \u2014 kortsiktig momentum-handel",
+        "hald": "1-2 dagar"
+      },
+      {
+        "symbol": "APP",
+        "day_pct": -5.7,
+        "grunn": "Intradag hopp -5.7% \u2014 kortsiktig momentum-handel",
+        "hald": "1-2 dagar"
+      },
+      {
         "symbol": "TOST",
-        "day_pct": -5.0,
-        "grunn": "Intradag hopp -5.0% \u2014 kortsiktig momentum-handel",
+        "day_pct": -4.9,
+        "grunn": "Intradag hopp -4.9% \u2014 kortsiktig momentum-handel",
         "hald": "1-2 dagar"
       },
       {
-        "symbol": "LYFT",
-        "day_pct": -5.0,
-        "grunn": "Intradag hopp -5.0% \u2014 kortsiktig momentum-handel",
-        "hald": "1-2 dagar"
-      },
-      {
-        "symbol": "DASH",
-        "day_pct": -4.8,
-        "grunn": "Intradag hopp -4.8% \u2014 kortsiktig momentum-handel",
+        "symbol": "RIVN",
+        "day_pct": 5.7,
+        "grunn": "Intradag hopp +5.7% \u2014 kortsiktig momentum-handel",
         "hald": "1-2 dagar"
       },
       {
         "symbol": "LCID",
-        "day_pct": -7.2,
-        "grunn": "Intradag hopp -7.2% \u2014 kortsiktig momentum-handel",
+        "day_pct": -7.3,
+        "grunn": "Intradag hopp -7.3% \u2014 kortsiktig momentum-handel",
         "hald": "1-2 dagar"
       }
     ],
     "reddit_radar": [],
     "marknadsnote": "Fed Funds: 3.63%  |  10Y: 4.47%  |  Global fashion retailer closing all stores after 33 years",
-    "er_kveld": false,
+    "er_kveld": true,
     "topp_sektorar": [
       {
         "namn": "Teknologi",
         "etf": "XLK",
-        "score": 19.13,
-        "w1_pct": 7.06,
-        "m1_pct": 22.45,
-        "m3_pct": 44.33,
+        "score": 17.61,
+        "w1_pct": 6.39,
+        "m1_pct": 21.08,
+        "m3_pct": 40.48,
         "aksjar": [
           "NVDA",
           "MSFT",
@@ -2802,56 +2814,56 @@
         ]
       },
       {
-        "namn": "Materialar",
-        "etf": "XLB",
-        "score": 0.55,
-        "w1_pct": 1.04,
-        "m1_pct": 0.33,
-        "m3_pct": -0.37,
-        "aksjar": [
-          "FCX",
-          "NEM",
-          "LIN",
-          "APD"
-        ]
-      },
-      {
         "namn": "Energi (olje/gass)",
         "etf": "XLE",
-        "score": 0.28,
-        "w1_pct": 0.19,
-        "m1_pct": -1.51,
-        "m3_pct": 3.22,
+        "score": 2.26,
+        "w1_pct": 3.08,
+        "m1_pct": -1.09,
+        "m3_pct": 5.23,
         "aksjar": [
           "XOM",
           "CVX",
           "COP",
           "SLB"
         ]
+      },
+      {
+        "namn": "Materialar",
+        "etf": "XLB",
+        "score": 0.97,
+        "w1_pct": 0.85,
+        "m1_pct": 1.91,
+        "m3_pct": -0.15,
+        "aksjar": [
+          "FCX",
+          "NEM",
+          "LIN",
+          "APD"
+        ]
       }
     ],
     "svake_sektorar": [
       {
-        "namn": "Konsum (defensiv)",
-        "etf": "XLP",
-        "score": -3.15,
-        "w1_pct": -2.15,
-        "m1_pct": -2.78,
-        "m3_pct": -6.21,
+        "namn": "Kommunikasjon",
+        "etf": "XLC",
+        "score": -3.88,
+        "w1_pct": -3.57,
+        "m1_pct": -3.44,
+        "m3_pct": -5.32,
         "aksjar": [
-          "WMT",
-          "COST",
-          "PG",
-          "KO"
+          "META",
+          "GOOGL",
+          "NFLX",
+          "SNAP"
         ]
       },
       {
         "namn": "Krypto-relatert",
         "etf": "BITO",
-        "score": -10.49,
-        "w1_pct": -11.45,
-        "m1_pct": -14.5,
-        "m3_pct": -2.1,
+        "score": -14.2,
+        "w1_pct": -12.71,
+        "m1_pct": -18.61,
+        "m3_pct": -11.3,
         "aksjar": [
           "MSTR",
           "COIN",
@@ -2861,50 +2873,38 @@
       }
     ],
     "trending_up": [
-      "QBTS",
-      "INFQ",
-      "RGTI",
-      "EL",
-      "AAPL",
-      "MSFT"
+      "FUTU",
+      "XNDU",
+      "ARXS",
+      "AMPX",
+      "TE",
+      "ACMR"
     ],
     "trending_down": [
+      "GS",
       "MRNA"
     ],
     "sektor_trend": [
       {
         "namn": "Teknologi",
         "retning": "opp",
-        "snitt_score": 17.59
+        "snitt_score": 19.14
+      },
+      {
+        "namn": "Krypto-relatert",
+        "retning": "ned",
+        "snitt_score": -8.5
       },
       {
         "namn": "Konsum (defensiv)",
         "retning": "ned",
-        "snitt_score": -3.16
+        "snitt_score": -3.38
       },
       {
-        "namn": "Kommunikasjon",
+        "namn": "Eigedom",
         "retning": "ned",
-        "snitt_score": -1.26
+        "snitt_score": -2.05
       }
     ]
-  },
-  "ekstra_watchlist": [
-    {
-      "symbol": "COHR",
-      "pris": 426.89,
-      "rec": "BUY",
-      "analytik": 21,
-      "grunn": "Nvidia AI optics-deal annonsert i dag \u2014 Jensen Huang seier bruk optikk i AI-infra. +17.6% men katalysator kan drive vidare oppjustering av analytikarm\u00e5l.",
-      "hald": "3-7 dagar (katalysator-swing)"
-    },
-    {
-      "symbol": "HPE",
-      "pris": 56.15,
-      "rec": "BUY",
-      "analytik": 19,
-      "grunn": "Hewlett Packard Enterprise, +19.5% etter sterk Q2 og omprofilering som AI-infrastruktur-play. Analytikarm\u00e5l utdaterte \u2014 revisjon ventar.",
-      "hald": "1-2 veker (post-earnings re-rating)"
-    }
-  ]
+  }
 }
