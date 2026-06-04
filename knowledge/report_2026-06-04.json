@@ -2974,5 +2974,29 @@
         "snitt_score": -2.23
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "TGTX",
+      "namn": "TG Therapeutics",
+      "pris": 40.11,
+      "upside_pct": 19.7,
+      "rec": "BUY",
+      "pe": 13.97,
+      "day_pct": 9.47,
+      "sektor": "Healthcare",
+      "grunn": "BUY-konsensus | +19.7% analytikarm\u00e5l | +9.5% momentum i dag | Profitabel biotech med MS-legemiddel (Briumvi) | Tidleg kj\u00f8pssignal flagga av IBD"
+    },
+    {
+      "symbol": "TPL",
+      "namn": "Texas Pacific Land Corporation",
+      "pris": 406.76,
+      "upside_pct": 9.4,
+      "rec": "N/A",
+      "pe": 5.56,
+      "day_pct": 9.69,
+      "sektor": "Energy / Land",
+      "grunn": "Sv\u00e6rt l\u00e5g P/E 5.6 | +9.4% til analytikarm\u00e5l | +9.7% momentum i dag | Permian Basin-landrettar med vatn og royalties | Insider-kj\u00f8p rapportert Q1"
+    }
+  ]
 }
