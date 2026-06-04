@@ -2702,5 +2702,27 @@
         "snitt_score": -3.02
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "TEM",
+      "namn": "Tempus AI",
+      "pris": 52.26,
+      "analytikarmaal": 66.53,
+      "upside_pct": 27.3,
+      "rec": "buy",
+      "dag_pct": 9.96,
+      "grunn": "AI-dreven helseteknologi, +10% i dag, analytikarm\u00e5l +27%, 15 analytik."
+    },
+    {
+      "symbol": "CRSP",
+      "namn": "CRISPR Therapeutics",
+      "pris": 56.95,
+      "analytikarmaal": 82.24,
+      "upside_pct": 44.4,
+      "rec": "buy",
+      "dag_pct": 9.35,
+      "grunn": "Genterapi-ledaren, +9% i dag, analytikarm\u00e5l +44%, 21 analytik. \u2014 sterk momentum"
+    }
+  ]
 }
