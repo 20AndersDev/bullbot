@@ -1,6 +1,14 @@
 {
-  "updated": "2026-06-03",
+  "updated": "2026-06-04",
   "symbols": [
+    "BEAM",
+    "ORKA",
+    "CAI",
+    "TEM",
+    "CRSP",
+    "TLX",
+    "RDDT",
+    "NVCR",
     "ABVX",
     "MMED",
     "PRAX",
@@ -92,26 +100,17 @@
     "SPOT",
     "ROKU",
     "DIS",
-    "SHOP",
-    "ETSY",
-    "CHWY",
-    "PINS",
-    "SNAP",
-    "APP",
-    "DUOL",
-    "TOST",
-    "UBER",
-    "LYFT"
+    "SHOP"
   ],
   "removed": [],
   "added": [
-    "ABVX",
-    "MMED",
-    "PRAX",
-    "MDGL",
-    "APGE",
-    "SYRE",
-    "NN",
-    "NBIX"
+    "BEAM",
+    "ORKA",
+    "CAI",
+    "TEM",
+    "CRSP",
+    "TLX",
+    "RDDT",
+    "NVCR"
   ]
 }
