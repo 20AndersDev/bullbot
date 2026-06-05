@@ -3033,5 +3033,25 @@
         "snitt_score": -2.87
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "TXRH",
+      "pris": 170.46,
+      "dag_pct": 5.68,
+      "rec": "BUY",
+      "target": 197.96,
+      "upside_pct": 16.1,
+      "grunn": "Defensiv restaurant-aksje opp +5.7% i bearish marknad | BUY-konsensus | +16% analytikarm\u00e5l | kjelde: Yahoo Gainers"
+    },
+    {
+      "symbol": "ALL",
+      "pris": 220.93,
+      "dag_pct": 4.8,
+      "rec": "BUY",
+      "target": 241.86,
+      "upside_pct": 9.5,
+      "grunn": "Forsikring som trygg hamn opp +4.8% i ned-dag | BUY-konsensus | +9.5% analytikarm\u00e5l | n\u00e6r 52-vekers topp | kjelde: Yahoo Gainers"
+    }
+  ]
 }
