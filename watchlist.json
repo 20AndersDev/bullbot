@@ -1,6 +1,14 @@
 {
-  "updated": "2026-06-04",
+  "updated": "2026-06-05",
   "symbols": [
+    "PODD",
+    "COO",
+    "ARGX",
+    "SBRA",
+    "NP",
+    "TXRH",
+    "PLMR",
+    "EG",
     "BEAM",
     "ORKA",
     "CAI",
@@ -92,25 +100,17 @@
     "NU",
     "UPST",
     "JPM",
-    "GS",
-    "MS",
-    "BAC",
-    "BLK",
-    "NFLX",
-    "SPOT",
-    "ROKU",
-    "DIS",
-    "SHOP"
+    "GS"
   ],
   "removed": [],
   "added": [
-    "BEAM",
-    "ORKA",
-    "CAI",
-    "TEM",
-    "CRSP",
-    "TLX",
-    "RDDT",
-    "NVCR"
+    "PODD",
+    "COO",
+    "ARGX",
+    "SBRA",
+    "NP",
+    "TXRH",
+    "PLMR",
+    "EG"
   ]
 }
