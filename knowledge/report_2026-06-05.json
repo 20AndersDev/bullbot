@@ -2904,5 +2904,35 @@
         "snitt_score": -2.98
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "ACHR",
+      "grunn": "BUY-konsensus | +66% analytikarm\u00e5l | eVTOL/air taxi-sektor i vekst | mest aktive liste Yahoo Finance",
+      "pris": 6.38,
+      "target": 10.61,
+      "upside_pct": 66.3,
+      "rec": "BUY",
+      "mktcap_b": 4.9
+    },
+    {
+      "symbol": "SNAP",
+      "grunn": "HOLD men +25.6% analytikarm\u00e5l | stor sosial media-plattform | aktiv handel i dag | AI-annonse-vekst",
+      "pris": 6.07,
+      "target": 7.63,
+      "upside_pct": 25.6,
+      "rec": "HOLD",
+      "mktcap_b": 10.1
+    },
+    {
+      "symbol": "AAOI",
+      "grunn": "BUY-konsensus | AI-datasentar optikk-spel | +10% i dag p\u00e5 exec-kommentarar | sterk sektor-medvind fr\u00e5 AVGO-resultat",
+      "pris": 202.89,
+      "target": 151.3,
+      "upside_pct": -25.4,
+      "rec": "BUY",
+      "mktcap_b": 16.3,
+      "notat": "Merk: kurs over analytikarm\u00e5l etter dagens hopp \u2014 vurder entry-punkt"
+    }
+  ]
 }
