@@ -1,6 +1,14 @@
 {
-  "updated": "2026-06-05",
+  "updated": "2026-06-08",
   "symbols": [
+    "IDYA",
+    "SRAD",
+    "CIFR",
+    "GLXY",
+    "MARA",
+    "IREN",
+    "AMBA",
+    "TNGX",
     "PODD",
     "COO",
     "ARGX",
@@ -92,25 +100,17 @@
     "V",
     "SQ",
     "PYPL",
-    "COIN",
-    "SOFI",
-    "AFRM",
-    "HOOD",
-    "MELI",
-    "NU",
-    "UPST",
-    "JPM",
-    "GS"
+    "COIN"
   ],
   "removed": [],
   "added": [
-    "PODD",
-    "COO",
-    "ARGX",
-    "SBRA",
-    "NP",
-    "TXRH",
-    "PLMR",
-    "EG"
+    "IDYA",
+    "SRAD",
+    "CIFR",
+    "GLXY",
+    "MARA",
+    "IREN",
+    "AMBA",
+    "TNGX"
   ]
 }
