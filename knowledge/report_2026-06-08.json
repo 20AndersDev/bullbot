@@ -2698,5 +2698,15 @@
         "snitt_score": -2.59
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "IONQ",
+      "grunn": "Quantum computing-momentum (+10.5% i dag) \u2014 konsensus STRONG BUY, m\u00e5l $67.6 (+8% upside), tematisk linje med QBTS/RGTI som alt er i portef\u00f8ljen"
+    },
+    {
+      "symbol": "MARA",
+      "grunn": "Crypto-mining gainer (+11.7% i dag) \u2014 analytikar BUY, m\u00e5l $17.6 (+27% upside), korrelerer med COIN-momentumet i dagens strategi"
+    }
+  ]
 }
