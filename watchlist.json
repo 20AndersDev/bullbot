@@ -1,6 +1,14 @@
 {
   "updated": "2026-06-08",
   "symbols": [
+    "NU",
+    "IONQ",
+    "AAL",
+    "KEEL",
+    "PDFS",
+    "KLAC",
+    "ALAB",
+    "SOFI",
     "IDYA",
     "SRAD",
     "CIFR",
@@ -92,25 +100,17 @@
     "TWLO",
     "AI",
     "CRWD",
-    "PANW",
-    "ZS",
-    "OKTA",
-    "FTNT",
-    "S",
-    "V",
-    "SQ",
-    "PYPL",
-    "COIN"
+    "PANW"
   ],
   "removed": [],
   "added": [
-    "IDYA",
-    "SRAD",
-    "CIFR",
-    "GLXY",
-    "MARA",
-    "IREN",
-    "AMBA",
-    "TNGX"
+    "NU",
+    "IONQ",
+    "AAL",
+    "KEEL",
+    "PDFS",
+    "KLAC",
+    "ALAB",
+    "SOFI"
   ]
 }
