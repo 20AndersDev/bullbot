@@ -2849,5 +2849,29 @@
         "snitt_score": -2.59
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "CBRS",
+      "namn": "Cerebras Systems",
+      "pris": 237.83,
+      "dagsprosent": 18.32,
+      "rec": "STRONG_BUY",
+      "analytikarmaal": 294.0,
+      "oppside_pct": 23.6,
+      "antal_analytikarar": 10,
+      "grunn": "STRONG_BUY fr\u00e5 10 analytikarar | +23.6% til analytikarm\u00e5l | +18% i dag | AI-chip-relatert selskap med sterk momentum p\u00e5 topp-gainers-lista"
+    },
+    {
+      "symbol": "INTC",
+      "namn": "Intel Corporation",
+      "pris": 110.27,
+      "dagsprosent": 11.19,
+      "rec": "hold",
+      "analytikarmaal": 89.32,
+      "oppside_pct": -19.0,
+      "antal_analytikarar": 41,
+      "grunn": "Stor dag-bevegelse +11.2% med h\u00f8gt volum \u2014 kortsiktig momentum, men HOLD-konsensus og negativt oppside til m\u00e5l, b\u00f8r overvakast"
+    }
+  ]
 }
