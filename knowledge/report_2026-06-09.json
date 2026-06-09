@@ -2909,5 +2909,19 @@
         "snitt_score": 3.05
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "NUVL",
+      "grunn": "STRONG_BUY (19 analytikarar), +16.5% analytikarm\u00e5l, +39% i dag \u2014 helseteknologi-biopharma rally"
+    },
+    {
+      "symbol": "ALHC",
+      "grunn": "STRONG_BUY (13 analytikarar), +29.8% analytikarm\u00e5l, +25% i dag \u2014 helseforsikring/verdiaksje"
+    },
+    {
+      "symbol": "DKNG",
+      "grunn": "BUY (35 analytikarar), +26.4% analytikarm\u00e5l, +11% i dag \u2014 sportsbetting med sterk konsensus"
+    }
+  ]
 }
