@@ -1,6 +1,14 @@
 {
-  "updated": "2026-06-08",
+  "updated": "2026-06-09",
   "symbols": [
+    "ALHC",
+    "GPCR",
+    "MH",
+    "NUVL",
+    "DKNG",
+    "SN",
+    "BKD",
+    "PTGX",
     "NU",
     "IONQ",
     "AAL",
@@ -92,25 +100,17 @@
     "DDOG",
     "MDB",
     "SNOW",
-    "NET",
-    "GTLB",
-    "PATH",
-    "BILL",
-    "ZM",
-    "TWLO",
-    "AI",
-    "CRWD",
-    "PANW"
+    "NET"
   ],
   "removed": [],
   "added": [
-    "NU",
-    "IONQ",
-    "AAL",
-    "KEEL",
-    "PDFS",
-    "KLAC",
-    "ALAB",
-    "SOFI"
+    "ALHC",
+    "GPCR",
+    "MH",
+    "NUVL",
+    "DKNG",
+    "SN",
+    "BKD",
+    "PTGX"
   ]
 }
