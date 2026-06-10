@@ -1,6 +1,14 @@
 {
-  "updated": "2026-06-09",
+  "updated": "2026-06-10",
   "symbols": [
+    "DVN",
+    "VG",
+    "SM",
+    "CAVA",
+    "CASY",
+    "AXTI",
+    "PENN",
+    "CRK",
     "ALHC",
     "GPCR",
     "MH",
@@ -92,25 +100,17 @@
     "AMAT",
     "LRCX",
     "MRVL",
-    "ON",
-    "TSM",
-    "WOLF",
-    "PLTR",
-    "NOW",
-    "DDOG",
-    "MDB",
-    "SNOW",
-    "NET"
+    "ON"
   ],
   "removed": [],
   "added": [
-    "ALHC",
-    "GPCR",
-    "MH",
-    "NUVL",
-    "DKNG",
-    "SN",
-    "BKD",
-    "PTGX"
+    "DVN",
+    "VG",
+    "SM",
+    "CAVA",
+    "CASY",
+    "AXTI",
+    "PENN",
+    "CRK"
   ]
 }
