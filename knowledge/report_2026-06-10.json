@@ -2856,5 +2856,19 @@
         "snitt_score": 3.8
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "CAVA",
+      "grunn": "Yahoo gainers +6.9% i dag, BUY-rec fr\u00e5 24 analytikarar, +12.6% til snittm\u00e5l ($91.79)"
+    },
+    {
+      "symbol": "TGTX",
+      "grunn": "Yahoo gainers +7.5% i dag (biotech-momentum), BUY-rec fr\u00e5 7 analytikarar, snittm\u00e5l $48"
+    },
+    {
+      "symbol": "FRMI",
+      "grunn": "Yahoo gainers +22.6% i dag (AI/data center-hype), spekulativt \u2014 analytikarm\u00e5l $20.5 vs $6.89 (+197%), ingen konsensus-rec enno"
+    }
+  ]
 }
