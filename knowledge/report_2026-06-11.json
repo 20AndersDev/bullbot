@@ -3075,5 +3075,19 @@
         "snitt_score": 2.98
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "CPNG",
+      "grunn": "Most active +13.6% i dag, analytikar BUY, kursm\u00e5l +52% ($26.29 vs $17.25)"
+    },
+    {
+      "symbol": "GRAB",
+      "grunn": "Most active +2.6% i dag, analytikar STRONG_BUY, kursm\u00e5l +78% ($5.97 vs $3.35)"
+    },
+    {
+      "symbol": "LUNR",
+      "grunn": "Topp gainer +15.8% i dag (romfartssektor, same tema som RDW/VOYG), kursm\u00e5l +33% ($40.78 vs $30.64)"
+    }
+  ]
 }
