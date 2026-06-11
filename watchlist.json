@@ -1,6 +1,14 @@
 {
-  "updated": "2026-06-10",
+  "updated": "2026-06-11",
   "symbols": [
+    "ALK",
+    "CPNG",
+    "LASR",
+    "VSAT",
+    "FLY",
+    "W",
+    "ONTO",
+    "ENTG",
     "DVN",
     "VG",
     "SM",
@@ -92,25 +100,17 @@
     "CRM",
     "ADBE",
     "AMD",
-    "QCOM",
-    "MU",
-    "SNDK",
-    "SMCI",
-    "ARM",
-    "AMAT",
-    "LRCX",
-    "MRVL",
-    "ON"
+    "QCOM"
   ],
   "removed": [],
   "added": [
-    "DVN",
-    "VG",
-    "SM",
-    "CAVA",
-    "CASY",
-    "AXTI",
-    "PENN",
-    "CRK"
+    "ALK",
+    "CPNG",
+    "LASR",
+    "VSAT",
+    "FLY",
+    "W",
+    "ONTO",
+    "ENTG"
   ]
 }
