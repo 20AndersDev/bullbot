@@ -2755,5 +2755,31 @@
         "snitt_score": 2.77
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "ROKU",
+      "pris": 143.66,
+      "endring_dag_pct": 20.08,
+      "rec": "strong_buy",
+      "m\u00e5l": 146.96,
+      "grunn": "Topp gainer (+20% i dag), konsensus STRONG BUY, analytikarm\u00e5l framleis over kurs"
+    },
+    {
+      "symbol": "TSLA",
+      "pris": 406.43,
+      "endring_dag_pct": 1.82,
+      "rec": "buy",
+      "m\u00e5l": 419.94,
+      "grunn": "Blant mest omsette i dag (+1.8%), analytikar BUY, m\u00e5l ~3% over kurs"
+    },
+    {
+      "symbol": "RKLB",
+      "pris": 102.39,
+      "endring_dag_pct": -10.79,
+      "rec": "buy",
+      "m\u00e5l": 105.28,
+      "grunn": "Stort dagsfall (-10.8%) etter SpaceX-IPO-nyheiter, men analytikar BUY med m\u00e5l over kurs - moglig dip-kj\u00f8p"
+    }
+  ]
 }
