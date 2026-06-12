@@ -64,6 +64,21 @@ def buy(symbol: str, qty: int, stop_loss: float, take_profit: float | None = Non
     _client().submit_order(order)
 
 
+def buy_plain(symbol: str, qty: int) -> None:
+    """Rein market-kjøp — INGEN stop-loss, INGEN bracket.
+
+    For langtids-hald: exit gjerast manuelt, ingen server-side stop som
+    kastar oss ut på vanleg volatilitet.
+    """
+    order = MarketOrderRequest(
+        symbol=symbol,
+        qty=qty,
+        side=OrderSide.BUY,
+        time_in_force=TimeInForce.DAY,
+    )
+    _client().submit_order(order)
+
+
 def sell_all(symbol: str) -> None:
     """Lukk heile posisjonen for eit symbol via Alpaca close_position."""
     _client().close_position(symbol)

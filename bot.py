@@ -103,6 +103,7 @@ from executor.alpaca_broker import (
     get_account,
     get_open_positions,
     buy,
+    buy_plain,
     sell_all,
     sell_partial,
 )
@@ -368,7 +369,8 @@ def run_cycle() -> None:
             already_in = position is not None
 
             # Guardrail 2: sjekk om eksisterande posisjon er for stor (>10%)
-            if already_in:
+            # Langtids-hald er unnateke — får vekse forbi 10% (eige tak handterast i akkumulering)
+            if already_in and symbol not in config.LONG_TERM_HOLDS:
                 pos_pct = float(position.market_value) / equity * 100
                 if _position_too_large(float(position.market_value), equity):
                     log.warning(
@@ -380,7 +382,8 @@ def run_cycle() -> None:
                     open_positions.pop(symbol)
                     already_in = False
 
-            if result.signal == Signal.BUY and not already_in and buys_allowed:
+            if (result.signal == Signal.BUY and not already_in and buys_allowed
+                    and symbol not in config.LONG_TERM_HOLDS):
                 if n_open >= config.MAX_OPEN_POSITIONS:
                     log.info(f"{symbol}: maks posisjoner nådd ({config.MAX_OPEN_POSITIONS})")
                     continue
@@ -430,6 +433,17 @@ def run_cycle() -> None:
                 notifier.send_trade(embeds=[notifier.buy_embed(
                     symbol, qty, price, sl, tp, invest_pct, equity, buy_reason
                 )])
+
+            # Langtids-hald: høg overtyding, manuell exit. Skip ALL auto-exit
+            # (stale/trailing/delsal/teknisk/hard stop). Berre du bestemmer exit.
+            if already_in and symbol in config.LONG_TERM_HOLDS:
+                pl_pct = float(position.unrealized_plpc) * 100
+                pos_pct = float(position.market_value) / equity * 100
+                log.info(
+                    f"{symbol}: LANGTIDS-HALD | P&L={pl_pct:+.2f}% | {pos_pct:.1f}% av portefølje "
+                    f"(mål {config.LONG_TERM_TARGET_PCT*100:.0f}%) — manuell exit, ingen auto-sal"
+                )
+                continue
 
             # Dip-posisjonar: bracket styrer exit (target/stop). Hopp over stale/partial/trailing.
             if already_in and symbol in dips:
@@ -532,18 +546,92 @@ def run_cycle() -> None:
 
     log.info(f"Syklus ferdig. Opne posisjonar: {n_open}/{config.MAX_OPEN_POSITIONS}")
 
+    # ── LANGTIDS-AKKUMULERING ── køyr FØRST: frigjort cash → høg-overtyding-hald mot mål-%
+    if buys_allowed and buying_power > 0:
+        buying_power = _run_longterm_accumulation(equity, open_positions, buying_power)
+
     # ── MOMENTUM-SCAN ──────────────────────────────────────────────────────
+    # Tråd buying_power + n_open vidare så scans ikkje dobbel-deployerer same cash
     if buys_allowed and n_open < config.MAX_OPEN_POSITIONS:
-        _run_momentum_scan(equity, open_positions, n_open, buys_allowed, buying_power)
+        buying_power, n_open = _run_momentum_scan(
+            equity, open_positions, n_open, buys_allowed, buying_power
+        )
 
     # ── DIP-SCAN (mega-cap mean-reversion, hald til target) ─────────────────
     if buys_allowed and n_open < config.MAX_OPEN_POSITIONS:
-        _run_dip_scan(equity, open_positions, n_open, buying_power, dips, cooldown)
+        buying_power, n_open = _run_dip_scan(
+            equity, open_positions, n_open, buying_power, dips, cooldown
+        )
+
+
+def _run_longterm_accumulation(equity: float, open_positions: dict,
+                               buying_power: float) -> float:
+    """Akkumuler langtids-hald gradvis mot mål-prosent med tilgjengeleg cash.
+
+    Køyrer FØR momentum/dip-scan så frigjort cash prioriterast til høg-overtyding-hald.
+    Kjøper rein market (ingen stop) — exit er manuell. Stoppar ved LONG_TERM_MAX_PCT.
+    Returnerer attverande buying_power.
+    """
+    target_pct = config.LONG_TERM_TARGET_PCT
+    max_pct    = config.LONG_TERM_MAX_PCT
+    for symbol in config.LONG_TERM_HOLDS:
+        if buying_power <= 0:
+            break
+        try:
+            pos         = open_positions.get(symbol)
+            current_val = float(pos.market_value) if pos else 0.0
+            current_pct = current_val / equity * 100
+
+            # Absolutt tak — la vinnaren vekse, men ikkje forbi MAX
+            if current_pct >= max_pct * 100:
+                log.info(f"{symbol}: langtids-hald på {current_pct:.1f}% — over maks {max_pct*100:.0f}%, kjøper ikkje meir")
+                continue
+
+            target_val = equity * target_pct
+            gap        = target_val - current_val
+            if gap <= 0:
+                log.info(f"{symbol}: langtids-hald på {current_pct:.1f}% — mål {target_pct*100:.0f}% nådd")
+                continue
+
+            bars = get_bars(symbol)
+            if bars.empty:
+                log.warning(f"{symbol}: ingen data for langtids-kjøp")
+                continue
+            price = float(bars["close"].iloc[-1])
+
+            spend = min(gap, buying_power)
+            qty   = math.floor(spend / price)
+            if qty < 1:
+                log.info(
+                    f"{symbol}: langtids-akkumulering ventar — for lite cash "
+                    f"(${buying_power:,.0f}) for 1 aksje @ ${price:.2f}"
+                )
+                continue
+
+            invest_amount = qty * price
+            new_pct       = (current_val + invest_amount) / equity * 100
+            buy_plain(symbol, qty)
+            buying_power -= invest_amount
+            log.info(
+                f"{symbol}: LANGTIDS-KJØP {qty} aksjar @ ~${price:.2f} "
+                f"({current_pct:.1f}% → {new_pct:.1f}%, mål {target_pct*100:.0f}%)"
+            )
+            notifier.send_trade(embeds=[notifier.longterm_buy_embed(
+                symbol, qty, price, current_pct, new_pct, target_pct * 100, equity
+            )])
+        except Exception as e:
+            log.error(f"Langtids {symbol}: {e}")
+
+    return buying_power
 
 
 def _run_momentum_scan(equity: float, open_positions: dict, n_open: int,
-                       buys_allowed: bool, buying_power: float = 0) -> None:
-    """Skanner watchlisten for store dagleg hopp og kjøper momentum-aksjar."""
+                       buys_allowed: bool, buying_power: float = 0) -> tuple[float, int]:
+    """Skanner watchlisten for store dagleg hopp og kjøper momentum-aksjar.
+
+    Returnerer (buying_power, n_open) etter scan så kallaren kan tråde resten
+    av cash-budsjettet vidare — hindrar at neste scan brukar same pengar.
+    """
     import yfinance as yf
 
     log.info("--- Momentum-scan ---")
@@ -587,13 +675,17 @@ def _run_momentum_scan(equity: float, open_positions: dict, n_open: int,
         except Exception as e:
             log.error(f"Momentum {symbol}: {e}")
 
+    return buying_power, n_open
+
 
 def _run_dip_scan(equity: float, open_positions: dict, n_open: int,
-                  buying_power: float, dips: dict, cooldown: dict) -> None:
+                  buying_power: float, dips: dict, cooldown: dict) -> tuple[float, int]:
     """Skanner mega-cap for oversold dropp og kjøper mean-reversion (hald til target).
 
     Dip-posisjonar får breiare stop + recovery-target via bracket og handterast
     IKKJE av standard exit-logikk (sjå skip i run_cycle).
+
+    Returnerer (buying_power, n_open) etter scan.
     """
     import yfinance as yf
 
@@ -648,6 +740,8 @@ def _run_dip_scan(equity: float, open_positions: dict, n_open: int,
             )])
         except Exception as e:
             log.error(f"Dip {symbol}: {e}")
+
+    return buying_power, n_open
 
 
 def main() -> None:

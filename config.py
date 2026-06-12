@@ -161,3 +161,11 @@ DIPBUY_LOOKBACK_DAYS = 2      # vindauge for fallet (1-2 dagar)
 DIPBUY_RSI_MAX       = 35     # berre om RSI oversold (mean-reversion sannsynleg)
 DIPBUY_STOP_LOSS     = 0.06   # 6% stop — breiare, gjev recovery rom
 DIPBUY_TARGET_PCT    = 0.08   # +8% recovery-target → ut
+
+# Langtids-hald (høg overtyding, manuell exit)
+# Symbol her er UNNATEKE 10%-taket OG all auto-exit (stale/trailing/delsal/teknisk).
+# Berre conviction styrer — exit gjerast manuelt. Akkumulerast gradvis til mål-prosent
+# etter kvart som cash frigjerast, prioritert FØR momentum/dip-scan.
+LONG_TERM_HOLDS      = {"SNDK"}
+LONG_TERM_TARGET_PCT = 0.20   # akkumuler opp til 20% av portefølja
+LONG_TERM_MAX_PCT    = 0.30   # absolutt tryggleikstak — la vinnaren vekse, men ikkje utan grense
