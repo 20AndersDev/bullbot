@@ -1,6 +1,14 @@
 {
-  "updated": "2026-06-11",
+  "updated": "2026-06-12",
   "symbols": [
+    "ELVN",
+    "POET",
+    "ROAD",
+    "AUGO",
+    "ROKU",
+    "STUB",
+    "MOS",
+    "SVM",
     "ALK",
     "CPNG",
     "LASR",
@@ -92,25 +100,17 @@
     "AAPL",
     "MSFT",
     "NVDA",
-    "AMZN",
-    "META",
-    "GOOGL",
-    "ORCL",
-    "AVGO",
-    "CRM",
-    "ADBE",
-    "AMD",
-    "QCOM"
+    "AMZN"
   ],
   "removed": [],
   "added": [
-    "ALK",
-    "CPNG",
-    "LASR",
-    "VSAT",
-    "FLY",
-    "W",
-    "ONTO",
-    "ENTG"
+    "ELVN",
+    "POET",
+    "ROAD",
+    "AUGO",
+    "ROKU",
+    "STUB",
+    "MOS",
+    "SVM"
   ]
 }
