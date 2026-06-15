@@ -1,6 +1,14 @@
 {
-  "updated": "2026-06-12",
+  "updated": "2026-06-15",
   "symbols": [
+    "DASH",
+    "XE",
+    "QUBT",
+    "MU",
+    "MRVL",
+    "WDC",
+    "OUST",
+    "NBIS",
     "ELVN",
     "POET",
     "ROAD",
@@ -92,25 +100,17 @@
     "QBTS",
     "INFQ",
     "RGTI",
-    "DELL",
-    "RDW",
-    "NTAP",
-    "EL",
-    "VOYG",
-    "AAPL",
-    "MSFT",
-    "NVDA",
-    "AMZN"
+    "DELL"
   ],
   "removed": [],
   "added": [
-    "ELVN",
-    "POET",
-    "ROAD",
-    "AUGO",
-    "ROKU",
-    "STUB",
-    "MOS",
-    "SVM"
+    "DASH",
+    "XE",
+    "QUBT",
+    "MU",
+    "MRVL",
+    "WDC",
+    "OUST",
+    "NBIS"
   ]
 }
