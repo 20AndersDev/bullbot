@@ -2787,5 +2787,15 @@
         "snitt_score": 2.92
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "FRO",
+      "grunn": "Frontline (oljetankrederi): +9.8% i dag, BUY-rating, lav P/E ~9.6, analytikarm\u00e5l $41.75 (+6.9%). Sterk shipping-momentum."
+    },
+    {
+      "symbol": "RKLB",
+      "grunn": "Rocket Lab: -10.8% i dag (kraftig dropp blant most-active), STRONG_BUY-rating, analytikarm\u00e5l $107 (+4.5%). Moglegheit for dip-buy."
+    }
+  ]
 }
