@@ -2857,5 +2857,21 @@
         "snitt_score": 2.84
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "ACHR",
+      "grunn": "Archer Aviation eVTOL +9.3% i dag, analytikarm\u00e5l $10.61 (+91% upside), utenfor watchlist men h\u00f8gt vekstpotensial",
+      "rec": "none",
+      "dag_pct": 9.3,
+      "target": 10.61
+    },
+    {
+      "symbol": "SNAP",
+      "grunn": "Snap Inc +8.6% i dag, analytikarm\u00e5l $7.63 (+34% upside), sosiale medium p\u00e5 veg opp",
+      "rec": "hold",
+      "dag_pct": 8.6,
+      "target": 7.63
+    }
+  ]
 }
