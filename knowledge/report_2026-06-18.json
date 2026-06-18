@@ -2751,5 +2751,25 @@
         "snitt_score": 3.13
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "BHVN",
+      "pris": 13.62,
+      "rec": "BUY",
+      "analytikarmaal": 21.71,
+      "upside_pct": 59.4,
+      "dag_pct": 12.66,
+      "grunn": "Biohaven Pharma +12.7% i dag, BUY-konsensus, +59% analytikarmaal - lovaande biotech momentum utanfor watchlist"
+    },
+    {
+      "symbol": "HOOD",
+      "pris": 105.2,
+      "rec": "BUY",
+      "analytikarmaal": 101.15,
+      "upside_pct": -3.8,
+      "dag_pct": 8.78,
+      "grunn": "Robinhood +8.8% i dag, BUY-konsensus, sterk momentumdag i fintech/broker-segmentet"
+    }
+  ]
 }
