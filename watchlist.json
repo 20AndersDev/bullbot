@@ -1,6 +1,14 @@
 {
-  "updated": "2026-06-15",
+  "updated": "2026-06-18",
   "symbols": [
+    "LEU",
+    "BE",
+    "SMR",
+    "SNDK",
+    "MTN",
+    "GLW",
+    "EQPT",
+    "SEZL",
     "DASH",
     "XE",
     "QUBT",
@@ -92,25 +100,17 @@
     "FUTU",
     "XNDU",
     "ARXS",
-    "AMPX",
-    "TE",
-    "ACMR",
-    "JOYY",
-    "MOD",
-    "QBTS",
-    "INFQ",
-    "RGTI",
-    "DELL"
+    "AMPX"
   ],
   "removed": [],
   "added": [
-    "DASH",
-    "XE",
-    "QUBT",
-    "MU",
-    "MRVL",
-    "WDC",
-    "OUST",
-    "NBIS"
+    "LEU",
+    "BE",
+    "SMR",
+    "SNDK",
+    "MTN",
+    "GLW",
+    "EQPT",
+    "SEZL"
   ]
 }
