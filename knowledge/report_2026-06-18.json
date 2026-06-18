@@ -2919,5 +2919,23 @@
         "snitt_score": 3.69
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "GRAB",
+      "grunn": "STRONG_BUY konsensus | +67% analytikarm\u00e5l ($5.97) | 26 analytikarar | S\u00f8raust-Asia superapp, sterk vekst | +3.5% i dag",
+      "pris": 3.57,
+      "m\u00e5l": 5.97,
+      "rec": "STRONG_BUY",
+      "kjelde": "Yahoo Finance gainers / most-active"
+    },
+    {
+      "symbol": "SMR",
+      "grunn": "NuScale Power (kjernekraft) | +31% analytikarm\u00e5l ($15.36) | 14 analytikarar | HOLD konsensus | +13.3% i dag p\u00e5 fornyeleg energi-momentum",
+      "pris": 11.72,
+      "m\u00e5l": 15.36,
+      "rec": "HOLD",
+      "kjelde": "Yahoo Finance gainers"
+    }
+  ]
 }
