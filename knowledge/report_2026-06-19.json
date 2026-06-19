@@ -2957,5 +2957,25 @@
         "snitt_score": 4.88
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "FLEX",
+      "pris": 147.61,
+      "rec": "STRONG_BUY",
+      "maal": 160.4,
+      "upside_pct": 8.7,
+      "analytik": 10,
+      "grunn": "STRONG_BUY konsensus fr\u00e5 10 analytik. | +8.7% til m\u00e5l | +3.1% i dag | Flex Ltd. \u2014 elektronikkproduksjon, AI-infrastruktur-leverandoer med sterk vekst"
+    },
+    {
+      "symbol": "NOK",
+      "pris": 13.49,
+      "rec": "BUY",
+      "maal": 14.89,
+      "upside_pct": 10.4,
+      "analytik": 9,
+      "grunn": "BUY konsensus fr\u00e5 9 analytik. | +10.4% til m\u00e5l | Nokia \u2014 5G-infrastruktur med auka budsjett fr\u00e5 EU og USA telecom-satsing"
+    }
+  ]
 }
