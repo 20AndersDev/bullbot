@@ -1,6 +1,14 @@
 {
-  "updated": "2026-06-18",
+  "updated": "2026-06-19",
   "symbols": [
+    "NVDA",
+    "T",
+    "FLEX",
+    "PFE",
+    "BFLY",
+    "ACMR",
+    "NOK",
+    "SMCI",
     "LEU",
     "BE",
     "SMR",
@@ -92,25 +100,17 @@
     "SMTC",
     "LEGN",
     "UEC",
-    "VIAV",
-    "SIMO",
-    "HPE",
-    "COHR",
-    "STM",
-    "FUTU",
-    "XNDU",
-    "ARXS",
-    "AMPX"
+    "VIAV"
   ],
   "removed": [],
   "added": [
-    "LEU",
-    "BE",
-    "SMR",
-    "SNDK",
-    "MTN",
-    "GLW",
-    "EQPT",
-    "SEZL"
+    "NVDA",
+    "T",
+    "FLEX",
+    "PFE",
+    "BFLY",
+    "ACMR",
+    "NOK",
+    "SMCI"
   ]
 }
