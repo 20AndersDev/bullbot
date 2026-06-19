@@ -2951,5 +2951,27 @@
         "snitt_score": 3.56
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "SMR",
+      "namn": "NuScale Power Corporation",
+      "price": 11.74,
+      "upside_pct": 30.8,
+      "momentum_dag_pct": 13.5,
+      "rec": "HOLD",
+      "mc_mrd": 4.1,
+      "grunn": "Atomkraft SMR (liten reaktor) \u2014 sterk dag +13.5%, analytikarm\u00e5l +31%, AI-datasenterkraft-tema. Ikkje i watchlist men h\u00f8g relevans for energi+tech."
+    },
+    {
+      "symbol": "INTC",
+      "namn": "Intel Corporation",
+      "price": 133.99,
+      "upside_pct": -29.7,
+      "momentum_dag_pct": 10.6,
+      "rec": "HOLD",
+      "mc_mrd": 673.4,
+      "grunn": "Intel mest aktiv aksje i dag (+10.6%, 74M volum). Stor chip-akt\u00f8r som manglar i watchlisten. Negativt analytikarm\u00e5l tyder p\u00e5 at kursen alt prisar inn recovery, men momentum er sterk."
+    }
+  ]
 }
