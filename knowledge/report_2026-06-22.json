@@ -2896,5 +2896,29 @@
         "snitt_score": 5.92
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "KLRA",
+      "pris": 22.88,
+      "dag_pct": 14.97,
+      "analytikarmaal": 42.6,
+      "upside_pct": 86.2,
+      "rec": "STRONG_BUY",
+      "antal_analytik": 5,
+      "sektor": "Healthcare",
+      "grunn": "STRONG_BUY, +86% analytikarm\u00e5l, +15% i dag \u2014 biotech med sterk momentums katalyst"
+    },
+    {
+      "symbol": "BWIN",
+      "pris": 23.52,
+      "dag_pct": 16.21,
+      "analytikarmaal": 29.0,
+      "upside_pct": 23.3,
+      "rec": "BUY",
+      "antal_analytik": 9,
+      "sektor": "Financial Services",
+      "grunn": "BUY, +23% analytikarm\u00e5l, +16% i dag \u2014 forsikring med momentum og brei analytikarst\u00f8tte"
+    }
+  ]
 }
