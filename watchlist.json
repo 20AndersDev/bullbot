@@ -1,6 +1,14 @@
 {
-  "updated": "2026-06-19",
+  "updated": "2026-06-22",
   "symbols": [
+    "RCUS",
+    "PAYP",
+    "VERA",
+    "KLRA",
+    "BHVN",
+    "KYMR",
+    "DFTX",
+    "BWIN",
     "NVDA",
     "T",
     "FLEX",
@@ -92,25 +100,17 @@
     "ABVX",
     "MMED",
     "PRAX",
-    "MDGL",
-    "APGE",
-    "SYRE",
-    "NN",
-    "NBIX",
-    "SMTC",
-    "LEGN",
-    "UEC",
-    "VIAV"
+    "MDGL"
   ],
   "removed": [],
   "added": [
-    "NVDA",
-    "T",
-    "FLEX",
-    "PFE",
-    "BFLY",
-    "ACMR",
-    "NOK",
-    "SMCI"
+    "RCUS",
+    "PAYP",
+    "VERA",
+    "KLRA",
+    "BHVN",
+    "KYMR",
+    "DFTX",
+    "BWIN"
   ]
 }
