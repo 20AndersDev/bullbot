@@ -2947,5 +2947,25 @@
         "snitt_score": 4.71
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "GRAB",
+      "grunn": "STRONG_BUY konsensus, 26 analytik. | +67% til analytikarm\u00e5l ($5.97) | Southeast Asian super-app (ride, mat, fintech) | solid vekst i emerging markets | ikkje i watchlist enno",
+      "price": 3.57,
+      "rec": "strong_buy",
+      "target": 5.97,
+      "upside_pct": 67.2,
+      "analysts": 26
+    },
+    {
+      "symbol": "NFLX",
+      "grunn": "BUY konsensus, 44 analytik. | +47% til analytikarm\u00e5l ($114) | dominerer streaming + sterk vekst i reklameabonnement | globalt brand | ikkje i watchlist enno",
+      "price": 77.38,
+      "rec": "buy",
+      "target": 114.14,
+      "upside_pct": 47.5,
+      "analysts": 44
+    }
+  ]
 }
