@@ -2894,5 +2894,25 @@
         "snitt_score": 5.89
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "APGE",
+      "pris": 132.55,
+      "dag_pct": 46.66,
+      "rec": "STRONG_BUY",
+      "analytikarmaal": 119.5,
+      "SB_analytik": 16,
+      "grunn": "+46.7% i dag p\u00e5 M&A-nyhende (Apogee Therapeutics takeover-deal). STRONG_BUY med 16 analytik., men pris er no over snittm\u00e5l \u2014 vurder om oppgangen er prisett inn."
+    },
+    {
+      "symbol": "VIAV",
+      "pris": 52.94,
+      "dag_pct": 12.23,
+      "rec": "STRONG_BUY",
+      "analytikarmaal": 64.43,
+      "SB_analytik": 7,
+      "grunn": "+12.2% i dag (Viavi Solutions). STRONG_BUY, 7 analytik., +21.7% opp til snittm\u00e5l. Nyhende: Google/Nokia AI-nettverk-samarbeid kan vere positiv for infrastruktur-leverand\u00f8rar."
+    }
+  ]
 }
