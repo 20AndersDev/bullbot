@@ -5,3 +5,6 @@ __pycache__/
 *.pyc
 *.pyo
 venv/
+
+# Claude Code runtime-filer (skal aldri committast)
+.claude/scheduled_tasks.lock
