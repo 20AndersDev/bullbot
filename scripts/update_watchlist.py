@@ -4,8 +4,12 @@ Køyrer kvar kveld etter US-børsstenging.
 
 - Scorar alle aksjar på watchlisten frå knowledge-rapporten
 - Fjernar aksjar med vedvarande svake signal (score < -3)
+- Fjernar døde/utradable ticker (validert mot Alpaca)
 - Legg til nye lovande aksjar frå Reddit, Yahoo Finance gainers/most-active
-- Validerer nye kandidatar med yfinance
+- Validerer nye kandidatar med yfinance + Alpaca-tradability
+- Byggjer sektorkart (mega_cap via market cap, elles yfinance-sektor) og lagrar
+  det i watchlist.json — config.SECTOR_MAP les det derfrå, så dip-scan og
+  sektorvern held seg i takt med watchlista
 - Committar endringar til GitHub og varslar Discord
 """
 import json, os, sys, re
@@ -38,6 +42,34 @@ CORE = {
 SESSION = requests.Session()
 SESSION.headers.update({"User-Agent": "Mozilla/5.0 (compatible; bullbot/1.0)"})
 
+MEGA_CAP_MIN     = 200_000_000_000   # market cap-grense for "mega_cap" (dip-scan)
+SECTOR_FETCH_MAX = 50                # maks yfinance-oppslag for sektorar per køyring
+
+
+# ── ALPACA-VALIDERING ─────────────────────────────────────────────────────
+def _alpaca_client():
+    """TradingClient om API-nøklar finst, elles None (hoppar over validering)."""
+    if not (config.ALPACA_API_KEY and config.ALPACA_SECRET_KEY):
+        return None
+    try:
+        from alpaca.trading.client import TradingClient
+        return TradingClient(config.ALPACA_API_KEY, config.ALPACA_SECRET_KEY, paper=config.PAPER)
+    except Exception as e:
+        print(f"Alpaca-klient utilgjengeleg — hoppar over tradability-sjekk: {e}")
+        return None
+
+
+def alpaca_tradable(sym: str, client) -> bool:
+    """True om symbolet er eit aktivt, tradable asset hos Alpaca."""
+    if client is None:
+        return True
+    try:
+        asset  = client.get_asset(sym)
+        status = getattr(asset.status, "value", asset.status)
+        return bool(asset.tradable) and status == "active"
+    except Exception:
+        return False   # ukjent hos Alpaca = kan ikkje handlast
+
 # ── LAST KNOWLEDGE ────────────────────────────────────────────────────────
 reports = sorted(KNOWLEDGE_DIR.glob("report_*.json"), reverse=True)
 if not reports:
@@ -52,9 +84,11 @@ print(f"=== WATCHLIST OPTIMIZER ===")
 print(f"Brukar knowledge frå: {knowledge_date}")
 
 # ── LAST WATCHLIST ────────────────────────────────────────────────────────
+old_sectors: dict = {}
 if WATCHLIST_FILE.exists():
-    wl_data  = json.loads(WATCHLIST_FILE.read_text())
-    current  = wl_data.get("symbols", [])
+    wl_data     = json.loads(WATCHLIST_FILE.read_text())
+    current     = wl_data.get("symbols", [])
+    old_sectors = wl_data.get("sectors", {})
 else:
     sys.path.insert(0, str(BASE_DIR))
     import config
@@ -62,6 +96,20 @@ else:
 
 current_set = set(current)
 print(f"Nåverande watchlist: {len(current)} aksjar")
+
+# ── FJERN DØDE/UTRADABLE TICKER ──────────────────────────────────────────
+# Ugyldige symbol (avnoterte, feilstava frå research) gjev berre «ingen data»
+# i botten kvar syklus — valider heile lista mot Alpaca og kast dei døde.
+alpaca = _alpaca_client()
+dead: list[str] = []
+if alpaca is not None:
+    dead = [sym for sym in current if not alpaca_tradable(sym, alpaca)]
+    if dead:
+        print(f"\n--- Døde/utradable ticker (fjernast): {dead}")
+        current     = [sym for sym in current if sym not in dead]
+        current_set = set(current)
+else:
+    print("Ingen Alpaca-nøklar — hoppar over tradability-opprydding")
 
 
 # ── SCORINGSFUNKSJON ──────────────────────────────────────────────────────
@@ -175,6 +223,8 @@ def quick_score_new(sym: str):
             return None, "mkt cap for liten"
         if "strong_sell" in rec:
             return None, "STRONG SELL konsensus"
+        if not alpaca_tradable(sym, alpaca):
+            return None, "ikkje tradable hos Alpaca"
 
         s = 0.0
         if "strong_buy" in rec: s += 3
@@ -216,20 +266,55 @@ new_watchlist  = list(dict.fromkeys(new_watchlist))   # fjern duplikat, bevar re
 new_watchlist  = new_watchlist[:MAX_SIZE]             # hardt tak
 
 print(f"\n=== RESULTAT ===")
+print(f"  Døde:     {dead or 'ingen'}")
 print(f"  Fjerna:   {list(remove_set) or 'ingen'}")
 print(f"  Lagt til: {add_syms or 'ingen'}")
 print(f"  Ny storleik: {len(new_watchlist)}")
 
 
+# ── BYGG SEKTORKART ───────────────────────────────────────────────────────
+def fetch_sector(sym: str) -> str | None:
+    """Sektor via yfinance: mega_cap på market cap, elles yf-sektor som slug.
+    None ved feil — då står symbolet utan sektor og blir prøvd att neste natt."""
+    try:
+        info = yf.Ticker(sym).info
+        mkt  = float(info.get("marketCap") or 0)
+        if mkt >= MEGA_CAP_MIN:
+            return "mega_cap"
+        sector = str(info.get("sector") or "").strip().lower().replace(" ", "_")
+        return sector or "other"
+    except Exception:
+        return None
+
+
+sectors: dict[str, str] = {}
+fetched = 0
+for sym in new_watchlist:
+    if sym in old_sectors:
+        sectors[sym] = old_sectors[sym]
+    elif sym in config.SECTOR_MAP:
+        sectors[sym] = config.SECTOR_MAP[sym]
+    elif fetched < SECTOR_FETCH_MAX:
+        s = fetch_sector(sym)
+        fetched += 1
+        if s:
+            sectors[sym] = s
+
+sectors_changed = sectors != old_sectors
+print(f"Sektorkart: {len(sectors)}/{len(new_watchlist)} kartlagt ({fetched} yfinance-oppslag)")
+
+
 # ── LAGRE OG COMMIT ───────────────────────────────────────────────────────
-if not remove_set and not add_syms:
+if not remove_set and not add_syms and not dead and not sectors_changed:
     print("\nIngen endringar — watchlist er optimal i dag")
     sys.exit(0)
 
+removed_all = list(remove_set) + dead
 WATCHLIST_FILE.write_text(json.dumps({
     "updated": str(date.today()),
     "symbols": new_watchlist,
-    "removed": list(remove_set),
+    "sectors": sectors,
+    "removed": removed_all,
     "added":   add_syms,
 }, indent=2))
 print(f"\nwatchlist.json oppdatert: {WATCHLIST_FILE}")
@@ -239,7 +324,7 @@ os.system("git config user.email 'bullbot-routine@noreply'")
 os.system("git config user.name 'Bullbot Routine'")
 os.system("git remote set-url origin https://$GITHUB_TOKEN@github.com/20AndersDev/bullbot.git")
 os.system("git add watchlist.json")
-rc_commit = os.system(f'git commit -m "watchlist: oppdatert {date.today()} (+{len(add_syms)} -{len(remove_set)})"')
+rc_commit = os.system(f'git commit -m "watchlist: oppdatert {date.today()} (+{len(add_syms)} -{len(removed_all)})"')
 rc_push   = os.system("git push")
 if rc_commit == 0 and rc_push == 0:
     print("Committed og push til GitHub OK")
@@ -253,6 +338,12 @@ if not discord_url:
     sys.exit(0)
 
 fields = []
+if dead:
+    fields.append({
+        "name": f"💀 Døde ticker fjerna ({len(dead)})",
+        "value": ", ".join(f"**{sym}**" for sym in dead),
+        "inline": False,
+    })
 if remove_set:
     lines = []
     for sym, sc, rec in to_remove:

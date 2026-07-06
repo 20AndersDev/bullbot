@@ -11,7 +11,6 @@ _SUMMARY_URL = config.DISCORD_WEBHOOK
 _TRADE_URL   = config.DISCORD_TRADE_WEBHOOK
 _GREEN = 0x2ECC71
 _RED   = 0xE74C3C
-_GOLD  = 0xF1C40F
 
 _NAMES: dict[str, str] = {
     # Mega-cap
@@ -126,29 +125,6 @@ def buy_embed(symbol: str, qty: int, price: float, sl: float, tp: float,
             {"name": "Stop loss",     "value": f"${sl:.2f}  (−{config.STOP_LOSS_PCT*100:.0f}%)",    "inline": True},
             {"name": "Take profit",   "value": f"${tp:.2f}  (+{config.TAKE_PROFIT_PCT*100:.0f}%)",  "inline": True},
             {"name": "Grunngjeving",  "value": reason,                          "inline": False},
-            {"name": "Porteføljeverdi", "value": f"${equity:,.2f}",            "inline": True},
-            {"name": "Tidspunkt",     "value": ts,                              "inline": True},
-        ],
-    }
-
-
-def longterm_buy_embed(symbol: str, qty: int, price: float, cur_pct: float,
-                       new_pct: float, target_pct: float, equity: float) -> dict:
-    """Embed for langtids-akkumulering — ingen SL/TP, viser veg mot mål-prosent."""
-    invest_kr = qty * price
-    ts   = datetime.now(timezone.utc).strftime("%d.%m.%Y %H:%M UTC")
-    name = _company_name(symbol)
-    return {
-        "title": f"💎  LANGTIDS-KJØP  {symbol} — {name}",
-        "color": _GOLD,
-        "fields": [
-            {"name": "Aksje",         "value": symbol,                          "inline": True},
-            {"name": "Antal",         "value": f"{qty} aksjar",                 "inline": True},
-            {"name": "Pris",          "value": f"${price:.2f}",                 "inline": True},
-            {"name": "Investert",     "value": f"${invest_kr:,.2f}",            "inline": True},
-            {"name": "Posisjon",      "value": f"{cur_pct:.1f}% → {new_pct:.1f}%", "inline": True},
-            {"name": "Mål",           "value": f"{target_pct:.0f}% av portefølje", "inline": True},
-            {"name": "Strategi",      "value": "Langtids-hald — manuell exit, ingen auto-sal", "inline": False},
             {"name": "Porteføljeverdi", "value": f"${equity:,.2f}",            "inline": True},
             {"name": "Tidspunkt",     "value": ts,                              "inline": True},
         ],

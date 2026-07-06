@@ -112,5 +112,19 @@
     "KYMR",
     "DFTX",
     "BWIN"
-  ]
+  ],
+  "sectors": {
+    "NVDA": "mega_cap",
+    "SMCI": "chips",
+    "SNDK": "memory",
+    "DASH": "transport",
+    "MU": "memory",
+    "MRVL": "chips",
+    "ROKU": "media",
+    "DKNG": "lifestyle",
+    "NU": "fintech",
+    "IONQ": "space",
+    "SOFI": "fintech",
+    "MARA": "crypto"
+  }
 }

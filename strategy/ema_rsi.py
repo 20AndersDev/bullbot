@@ -26,12 +26,18 @@ def analyze(bars: pd.DataFrame) -> StrategyResult:
     """
     Teknisk analyse: EMA-kryss bekrefta av MACD + volumfilter.
 
-    KJØP:  EMA(9) krysser over EMA(21)
+    Krysset treng ikkje skje på akkurat siste bar: eit kryss innanfor dei siste
+    CROSS_LOOKBACK_BARS barane tel, så lenge trenden framleis held (fast over/
+    under slow no). Botten køyrer sjeldnare enn bar-oppløysinga, så eit krav om
+    siste-bar-kryss ville bomma dei aller fleste krysningane.
+
+    KJØP:  EMA(9) kryssa over EMA(21) innanfor vindauget OG er framleis over
            OG RSI < RSI_BUY_MAX
            OG MACD-histogram > 0  (momentum er bullish)
            Volumbekreftelse gir sterkare signal men er ikkje krav.
 
-    SELG:  EMA(9) krysser under EMA(21) (bot.py handterer RSI standalone)
+    SELG:  EMA(9) kryssa under EMA(21) innanfor vindauget OG er framleis under
+           (bot.py handterer RSI standalone)
            MACD-histogram < 0 = bekrefta, ≥ 0 = svakt (loggar men sel likevel)
 
     HALD:  EMA krysser BUY men MACD-histogram < 0 → falsk kryss, ikkje kjøp.
@@ -52,9 +58,7 @@ def analyze(bars: pd.DataFrame) -> StrategyResult:
         return StrategyResult(Signal.HOLD, "indikatorberekning feila", 0, 0, 0)
 
     ef_now  = float(ema_fast.iloc[-1])
-    ef_prev = float(ema_fast.iloc[-2])
     es_now  = float(ema_slow.iloc[-1])
-    es_prev = float(ema_slow.iloc[-2])
     rsi_now = float(rsi.iloc[-1])
 
     # MACD histogram
@@ -70,8 +74,13 @@ def analyze(bars: pd.DataFrame) -> StrategyResult:
         cur_vol = float(volume.iloc[-1])
         vol_ratio = (cur_vol / avg_vol) if avg_vol > 0 else 1.0
 
-    bullish_cross = ef_prev <= es_prev and ef_now > es_now
-    bearish_cross = ef_prev >= es_prev and ef_now < es_now
+    # Kryss innanfor dei siste CROSS_LOOKBACK_BARS barane, og trenden held framleis
+    above    = (ema_fast > ema_slow).tolist()
+    lookback = min(config.CROSS_LOOKBACK_BARS, len(above) - 1)
+    crossed_up_recently   = any(above[-i] and not above[-i - 1] for i in range(1, lookback + 1))
+    crossed_down_recently = any(not above[-i] and above[-i - 1] for i in range(1, lookback + 1))
+    bullish_cross = crossed_up_recently and above[-1]
+    bearish_cross = crossed_down_recently and not above[-1]
     vol_ok        = vol_ratio >= 1.2
 
     # ── KJØP ──────────────────────────────────────────────────────────────────
