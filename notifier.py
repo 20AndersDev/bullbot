@@ -76,13 +76,14 @@ def _company_name(symbol: str) -> str:
         return _NAMES[symbol]
     try:
         import yfinance as yf
-        name = yf.Ticker(symbol).info.get("shortName") or yf.Ticker(symbol).info.get("longName")
-        if name:
-            _NAMES[symbol] = name
-            return name
+        info = yf.Ticker(symbol).info
+        name = info.get("shortName") or info.get("longName")
     except Exception:
-        pass
-    return symbol
+        name = None
+    # Cache også oppslag som feila — Yahoo kan vere blokkert i køyremiljøet,
+    # og då skal vi ikkje vente på timeout for same symbol gong etter gong.
+    _NAMES[symbol] = name or symbol
+    return _NAMES[symbol]
 
 
 def _post(url: str, payload: dict) -> None:

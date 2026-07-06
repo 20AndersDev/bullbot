@@ -94,7 +94,7 @@ def _remove_dip(symbol: str, dips: dict) -> None:
     _save_json(_DIP_FILE, dips)
 
 
-from data.fetcher import get_bars
+from data.fetcher import get_bars, get_daily_bars
 from strategy.ema_rsi import analyze, Signal
 from strategy import momentum as mom_strat
 from strategy import dipbuy as dip_strat
@@ -102,6 +102,7 @@ from risk.manager import position_size, stop_loss_price, take_profit_price
 from executor.alpaca_broker import (
     get_account,
     get_open_positions,
+    get_open_order_symbols,
     buy,
     sell_all,
     sell_partial,
@@ -336,8 +337,9 @@ def run_cycle() -> None:
         )
         buys_allowed = False
 
-    open_positions = get_open_positions()
-    n_open = len(open_positions)
+    open_positions  = get_open_positions()
+    n_open          = len(open_positions)
+    open_order_syms = get_open_order_symbols()
 
     # Rydd dip-register: bracket (target/stop) kan ha lukka posisjonar server-side
     for sym in list(dips):
@@ -432,13 +434,21 @@ def run_cycle() -> None:
                 )])
 
             # Dip-posisjonar: bracket styrer exit (target/stop). Hopp over stale/partial/trailing.
+            # MEN berre om bracketen faktisk lever — utan opne ordrar er posisjonen
+            # utan vern (utløpt bracket) og må tilbake til vanleg exit-styring.
             if already_in and symbol in dips:
                 pl_pct = float(position.unrealized_plpc) * 100
-                log.info(
-                    f"{symbol}: dip-posisjon | P&L={pl_pct:+.2f}% — bracket styrer exit "
-                    f"(target +{config.DIPBUY_TARGET_PCT*100:.0f}% / stop -{config.DIPBUY_STOP_LOSS*100:.0f}%), ingen stale/trailing"
+                if symbol in open_order_syms:
+                    log.info(
+                        f"{symbol}: dip-posisjon | P&L={pl_pct:+.2f}% — bracket styrer exit "
+                        f"(target +{config.DIPBUY_TARGET_PCT*100:.0f}% / stop -{config.DIPBUY_STOP_LOSS*100:.0f}%), ingen stale/trailing"
+                    )
+                    continue
+                log.warning(
+                    f"{symbol}: dip-posisjon UTAN aktive ordrar (bracket utløpt/borte) "
+                    f"| P&L={pl_pct:+.2f}% — tilbake til vanleg exit-styring"
                 )
-                continue
+                _remove_dip(symbol, dips)
 
             if already_in:
                 pl_pct    = float(position.unrealized_plpc) * 100
@@ -553,8 +563,6 @@ def _run_momentum_scan(equity: float, open_positions: dict, n_open: int,
     Returnerer (buying_power, n_open) etter scan så kallaren kan tråde resten
     av cash-budsjettet vidare — hindrar at neste scan brukar same pengar.
     """
-    import yfinance as yf
-
     log.info("--- Momentum-scan ---")
     for symbol in config.WATCHLIST:
         if symbol in open_positions:
@@ -562,9 +570,9 @@ def _run_momentum_scan(equity: float, open_positions: dict, n_open: int,
         if n_open >= config.MAX_OPEN_POSITIONS:
             break
         try:
-            daily = yf.Ticker(symbol).history(period="3d")[["Open","High","Low","Close","Volume"]]
-            daily.columns = [c.lower() for c in daily.columns]
-            daily.index.name = "timestamp"
+            daily = get_daily_bars(symbol, days=3)
+            if len(daily) < 2:
+                continue
 
             intra  = get_bars(symbol, limit=30)
             result = mom_strat.analyze(daily, intra)
@@ -608,8 +616,6 @@ def _run_dip_scan(equity: float, open_positions: dict, n_open: int,
 
     Returnerer (buying_power, n_open) etter scan.
     """
-    import yfinance as yf
-
     log.info("--- Dip-scan (mega-cap mean-reversion) ---")
     for symbol in config.WATCHLIST:
         if config.SECTOR_MAP.get(symbol) != "mega_cap":
@@ -621,9 +627,9 @@ def _run_dip_scan(equity: float, open_positions: dict, n_open: int,
         if n_open >= config.MAX_OPEN_POSITIONS:
             break
         try:
-            daily = yf.Ticker(symbol).history(period="5d")[["Open","High","Low","Close","Volume"]]
-            daily.columns = [c.lower() for c in daily.columns]
-            daily.index.name = "timestamp"
+            daily = get_daily_bars(symbol, days=config.DIPBUY_LOOKBACK_DAYS + 3)
+            if len(daily) < config.DIPBUY_LOOKBACK_DAYS + 1:
+                continue
 
             intra  = get_bars(symbol, limit=30)
             result = dip_strat.analyze(daily, intra)

@@ -1,6 +1,8 @@
 """Bullbot morgonrapport — køyrast av morning-research-rutinen etter analyse."""
 import os, sys, requests
 from datetime import date
+from dotenv import load_dotenv
+load_dotenv()
 
 DISCORD = os.environ["DISCORD_WEBHOOK"]
 

@@ -320,9 +320,11 @@ WATCHLIST_FILE.write_text(json.dumps({
 print(f"\nwatchlist.json oppdatert: {WATCHLIST_FILE}")
 
 # Git commit
-os.system("git config user.email 'bullbot-routine@noreply'")
-os.system("git config user.name 'Bullbot Routine'")
-os.system("git remote set-url origin https://$GITHUB_TOKEN@github.com/20AndersDev/bullbot.git")
+os.system("git config --local user.email 'bullbot-routine@noreply'")
+os.system("git config --local user.name 'Bullbot Routine'")
+token = os.environ.get("GITHUB_TOKEN", "")
+if token:
+    os.system(f"git remote set-url origin https://{token}@github.com/20AndersDev/bullbot.git")
 os.system("git add watchlist.json")
 rc_commit = os.system(f'git commit -m "watchlist: oppdatert {date.today()} (+{len(add_syms)} -{len(removed_all)})"')
 rc_push   = os.system("git push")
