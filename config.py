@@ -14,8 +14,10 @@ DISCORD_WATCHLIST_WEBHOOK = os.getenv("DISCORD_WATCHLIST_WEBHOOK", "")
 
 # Les watchlist frå watchlist.json om han finst, elles bruk hardkoda liste
 _wl_file = Path(__file__).parent / "watchlist.json"
+_wl_data: dict = {}
 if _wl_file.exists():
-    WATCHLIST = json.loads(_wl_file.read_text()).get("symbols", [])
+    _wl_data = json.loads(_wl_file.read_text())
+    WATCHLIST = _wl_data.get("symbols", [])
 else:
     # Fallback — 100 aksjar på tvers av alle sektorar
     WATCHLIST = [
@@ -123,12 +125,19 @@ SECTOR_MAP: dict = {
     "SE": "global", "GRAB": "global", "GLBE": "global", "PTON": "global",
 }
 
+# Sektorar frå watchlist.json (bygde av scripts/update_watchlist.py via yfinance)
+# overstyrer/utvidar den hardkoda lista — held SECTOR_MAP i takt med watchlista.
+SECTOR_MAP.update(_wl_data.get("sectors", {}))
+
 # Strategi-parametere
 EMA_FAST = 9
 EMA_SLOW = 21
 RSI_PERIOD = 14
 RSI_BUY_MAX = 65     # ikke kjøp hvis RSI er over dette
 RSI_SELL_MIN = 68    # selg om EMA-kryss + RSI over dette (senka frå 72)
+CROSS_LOOKBACK_BARS = 4  # godta EMA-kryss opptil så mange barar tilbake (botten
+                         # køyrer kvar time på 15-min barar — eksakt siste-bar-kryss
+                         # blir elles nesten alltid bomma)
 
 # Risikostyring — opptil 15 posisjonar, storleik styrt av overtydingsscore (0-10)
 #   conviction=0  → ~2% per posisjon
@@ -161,11 +170,3 @@ DIPBUY_LOOKBACK_DAYS = 2      # vindauge for fallet (1-2 dagar)
 DIPBUY_RSI_MAX       = 35     # berre om RSI oversold (mean-reversion sannsynleg)
 DIPBUY_STOP_LOSS     = 0.06   # 6% stop — breiare, gjev recovery rom
 DIPBUY_TARGET_PCT    = 0.08   # +8% recovery-target → ut
-
-# Langtids-hald (høg overtyding, manuell exit)
-# Symbol her er UNNATEKE 10%-taket OG all auto-exit (stale/trailing/delsal/teknisk).
-# Berre conviction styrer — exit gjerast manuelt. Akkumulerast gradvis til mål-prosent
-# etter kvart som cash frigjerast, prioritert FØR momentum/dip-scan.
-LONG_TERM_HOLDS      = {"SNDK"}
-LONG_TERM_TARGET_PCT = 0.20   # akkumuler opp til 20% av portefølja
-LONG_TERM_MAX_PCT    = 0.30   # absolutt tryggleikstak — la vinnaren vekse, men ikkje utan grense

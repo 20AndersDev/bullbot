@@ -1,7 +1,8 @@
 alpaca-py>=0.29.0
 pandas>=2.0.0
-pandas-ta>=0.3.14b
+# pandas-ta er MED VILJE ikkje her: pypi-pakken krev Python >= 3.12 og får heile
+# `pip install -r requirements.txt` til å feile på 3.11-miljø. Repoet har sin
+# eigen pandas_ta.py-shim (ema/rsi/macd) som skuggar pakken uansett.
 python-dotenv>=1.0.0
-schedule>=1.2.0
 requests>=2.31.0
 yfinance>=0.2.40

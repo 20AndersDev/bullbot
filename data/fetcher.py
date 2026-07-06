@@ -61,6 +61,35 @@ def get_bars(symbol: str, limit: int = config.BARS_LOOKBACK) -> pd.DataFrame:
     return bars[["open", "high", "low", "close", "volume"]].tail(limit)
 
 
+def get_daily_bars(symbol: str, days: int = 5) -> pd.DataFrame:
+    """Hent daglege OHLCV-bars for siste `days` handelsdagar (IEX-feed).
+
+    Brukast av momentum-/dip-scanna i staden for yfinance — Yahoo er blokkert
+    i køyremiljøet til rutinane, og Alpaca er uansett same kjelde som resten.
+    """
+    client = _make_client()
+    end   = datetime.now(timezone.utc)
+    start = end - timedelta(days=days * 2 + 3)  # buffer for helg/heilagdagar
+
+    request = StockBarsRequest(
+        symbol_or_symbols=symbol,
+        timeframe=TimeFrame(1, TimeFrameUnit.Day),
+        start=start,
+        end=end,
+        feed="iex",
+    )
+    bars = client.get_stock_bars(request).df
+
+    if bars.empty:
+        return pd.DataFrame()
+
+    if isinstance(bars.index, pd.MultiIndex):
+        bars = bars.xs(symbol, level="symbol")
+
+    bars.index = pd.to_datetime(bars.index, utc=True)
+    return bars[["open", "high", "low", "close", "volume"]].tail(days)
+
+
 def get_latest_price(symbol: str) -> float:
     """Hent siste handelskurs for et symbol."""
     bars = get_bars(symbol, limit=1)
