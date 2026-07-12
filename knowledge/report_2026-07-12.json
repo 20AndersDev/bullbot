@@ -1,0 +1,1042 @@
+{
+  "dato": "2026-07-12",
+  "timestamp": "2026-07-12T20:40:05.233525+00:00",
+  "marknad_sentiment": {
+    "fear_greed": 49.4857142857143,
+    "fg_rating": "NEUTRAL",
+    "vix": 15.03,
+    "spy_price": 754.95,
+    "spy_dag_pct": 0.43
+  },
+  "makro": {
+    "fed_funds_rate": 3.63,
+    "treasury_10y": 4.54,
+    "cpi": 333.98,
+    "unemployment": 4.2
+  },
+  "nyhende": {
+    "finnhub": [
+      "As five big U.S. banks report earnings on the same day, Citigroup is the one to watch",
+      "Earnings estimates have been following an unusual pattern this time around",
+      "The stock-market rally now hinges more on AI than oil",
+      "You don't have to be rich to be financially independent",
+      "The No. 1 decision for aging retirees: Stay at home or move into a senior community?"
+    ],
+    "av_sentiment": 0.163,
+    "av_label": "BULLISH"
+  },
+  "reddit": {
+    "status": "blocked (proxy)",
+    "watchlist_hits": []
+  },
+  "ikkje_kjoep": [],
+  "upcoming_dates": {},
+  "momentum_kandidatar": [
+    {
+      "symbol": "BHVN",
+      "day_pct": -7.39
+    },
+    {
+      "symbol": "NVDA",
+      "day_pct": 4.03
+    },
+    {
+      "symbol": "BE",
+      "day_pct": -4.83
+    },
+    {
+      "symbol": "EQPT",
+      "day_pct": 16.56
+    },
+    {
+      "symbol": "QUBT",
+      "day_pct": -5.36
+    },
+    {
+      "symbol": "OUST",
+      "day_pct": -8.94
+    },
+    {
+      "symbol": "POET",
+      "day_pct": -4.48
+    },
+    {
+      "symbol": "AUGO",
+      "day_pct": -4.04
+    },
+    {
+      "symbol": "VSAT",
+      "day_pct": 4.5
+    },
+    {
+      "symbol": "FLY",
+      "day_pct": -4.71
+    },
+    {
+      "symbol": "CAVA",
+      "day_pct": 5.84
+    },
+    {
+      "symbol": "AXTI",
+      "day_pct": -8.54
+    },
+    {
+      "symbol": "CRK",
+      "day_pct": -5.62
+    },
+    {
+      "symbol": "ALHC",
+      "day_pct": -5.71
+    },
+    {
+      "symbol": "BKD",
+      "day_pct": -5.69
+    },
+    {
+      "symbol": "PTGX",
+      "day_pct": -4.52
+    },
+    {
+      "symbol": "IONQ",
+      "day_pct": -4.27
+    },
+    {
+      "symbol": "CIFR",
+      "day_pct": -4.94
+    },
+    {
+      "symbol": "MARA",
+      "day_pct": -4.69
+    },
+    {
+      "symbol": "BEAM",
+      "day_pct": -8.77
+    },
+    {
+      "symbol": "CAI",
+      "day_pct": -4.92
+    },
+    {
+      "symbol": "TEM",
+      "day_pct": -5.32
+    },
+    {
+      "symbol": "CRSP",
+      "day_pct": -5.31
+    },
+    {
+      "symbol": "TLX",
+      "day_pct": -5.43
+    },
+    {
+      "symbol": "NVCR",
+      "day_pct": -5.73
+    },
+    {
+      "symbol": "MDGL",
+      "day_pct": -4.16
+    }
+  ],
+  "per_symbol": {
+    "RCUS": {
+      "price": 28.92,
+      "prev": 29.96,
+      "chg_pct": -3.47,
+      "volume": 648342
+    },
+    "PAYP": {
+      "price": 15.5,
+      "prev": 15.63,
+      "chg_pct": -0.83,
+      "volume": 654803
+    },
+    "VERA": {
+      "price": 42.0,
+      "prev": 42.45,
+      "chg_pct": -1.06,
+      "volume": 3403420
+    },
+    "KLRA": {
+      "price": 20.68,
+      "prev": 21.01,
+      "chg_pct": -1.57,
+      "volume": 558317
+    },
+    "BHVN": {
+      "price": 15.55,
+      "prev": 16.79,
+      "chg_pct": -7.39,
+      "volume": 2128412
+    },
+    "KYMR": {
+      "price": 119.35,
+      "prev": 119.0,
+      "chg_pct": 0.29,
+      "volume": 665910
+    },
+    "DFTX": {
+      "price": 47.07,
+      "prev": 48.45,
+      "chg_pct": -2.85,
+      "volume": 2556088
+    },
+    "BWIN": {
+      "price": 26.5,
+      "prev": 26.45,
+      "chg_pct": 0.19,
+      "volume": 884680
+    },
+    "NVDA": {
+      "price": 210.96,
+      "prev": 202.78,
+      "chg_pct": 4.03,
+      "volume": 148421001
+    },
+    "T": {
+      "price": 21.13,
+      "prev": 20.76,
+      "chg_pct": 1.77,
+      "volume": 46772070
+    },
+    "FLEX": {
+      "price": 135.8,
+      "prev": 139.94,
+      "chg_pct": -2.96,
+      "volume": 2723707
+    },
+    "PFE": {
+      "price": 24.17,
+      "prev": 24.25,
+      "chg_pct": -0.33,
+      "volume": 26810606
+    },
+    "BFLY": {
+      "price": 7.98,
+      "prev": 8.02,
+      "chg_pct": -0.5,
+      "volume": 5369828
+    },
+    "ACMR": {
+      "price": 103.0,
+      "prev": 106.04,
+      "chg_pct": -2.87,
+      "volume": 915350
+    },
+    "NOK": {
+      "price": 12.44,
+      "prev": 12.9,
+      "chg_pct": -3.57,
+      "volume": 50035214
+    },
+    "SMCI": {
+      "price": 28.31,
+      "prev": 28.24,
+      "chg_pct": 0.25,
+      "volume": 25067110
+    },
+    "LEU": {
+      "price": 171.05,
+      "prev": 173.56,
+      "chg_pct": -1.45,
+      "volume": 637424
+    },
+    "BE": {
+      "price": 244.61,
+      "prev": 257.02,
+      "chg_pct": -4.83,
+      "volume": 14713773
+    },
+    "SMR": {
+      "price": 9.04,
+      "prev": 9.03,
+      "chg_pct": 0.11,
+      "volume": 23696496
+    },
+    "SNDK": {
+      "price": 1915.92,
+      "prev": 1858.27,
+      "chg_pct": 3.1,
+      "volume": 11022652
+    },
+    "MTN": {
+      "price": 150.14,
+      "prev": 147.49,
+      "chg_pct": 1.8,
+      "volume": 1033891
+    },
+    "GLW": {
+      "price": 190.89,
+      "prev": 192.38,
+      "chg_pct": -0.77,
+      "volume": 4826139
+    },
+    "EQPT": {
+      "price": 18.65,
+      "prev": 16.0,
+      "chg_pct": 16.56,
+      "volume": 7223766
+    },
+    "SEZL": {
+      "price": 179.38,
+      "prev": 177.08,
+      "chg_pct": 1.3,
+      "volume": 322293
+    },
+    "DASH": {
+      "price": 191.82,
+      "prev": 192.35,
+      "chg_pct": -0.28,
+      "volume": 2652442
+    },
+    "XE": {
+      "price": 15.96,
+      "prev": 16.6,
+      "chg_pct": -3.86,
+      "volume": 6310403
+    },
+    "QUBT": {
+      "price": 8.66,
+      "prev": 9.15,
+      "chg_pct": -5.36,
+      "volume": 8458704
+    },
+    "MU": {
+      "price": 979.3,
+      "prev": 991.64,
+      "chg_pct": -1.24,
+      "volume": 31768093
+    },
+    "MRVL": {
+      "price": 235.81,
+      "prev": 243.27,
+      "chg_pct": -3.07,
+      "volume": 15105972
+    },
+    "WDC": {
+      "price": 582.59,
+      "prev": 578.05,
+      "chg_pct": 0.78,
+      "volume": 4814144
+    },
+    "OUST": {
+      "price": 43.28,
+      "prev": 47.53,
+      "chg_pct": -8.94,
+      "volume": 3254560
+    },
+    "NBIS": {
+      "price": 219.65,
+      "prev": 216.2,
+      "chg_pct": 1.6,
+      "volume": 11490535
+    },
+    "ELVN": {
+      "price": 51.09,
+      "prev": 52.18,
+      "chg_pct": -2.09,
+      "volume": 623681
+    },
+    "POET": {
+      "price": 8.31,
+      "prev": 8.7,
+      "chg_pct": -4.48,
+      "volume": 8477131
+    },
+    "ROAD": {
+      "price": 94.89,
+      "prev": 95.5,
+      "chg_pct": -0.64,
+      "volume": 1112105
+    },
+    "AUGO": {
+      "price": 60.81,
+      "prev": 63.37,
+      "chg_pct": -4.04,
+      "volume": 786050
+    },
+    "ROKU": {
+      "price": 140.69,
+      "prev": 140.26,
+      "chg_pct": 0.31,
+      "volume": 1882969
+    },
+    "STUB": {
+      "price": 11.1,
+      "prev": 11.52,
+      "chg_pct": -3.65,
+      "volume": 7870830
+    },
+    "MOS": {
+      "price": 21.51,
+      "prev": 20.75,
+      "chg_pct": 3.66,
+      "volume": 6476908
+    },
+    "SVM": {
+      "price": 9.52,
+      "prev": 9.59,
+      "chg_pct": -0.73,
+      "volume": 1419321
+    },
+    "ALK": {
+      "price": 49.42,
+      "prev": 50.14,
+      "chg_pct": -1.44,
+      "volume": 1662863
+    },
+    "CPNG": {
+      "price": 18.8,
+      "prev": 19.16,
+      "chg_pct": -1.88,
+      "volume": 12734324
+    },
+    "LASR": {
+      "price": 72.05,
+      "prev": 74.71,
+      "chg_pct": -3.56,
+      "volume": 1591877
+    },
+    "VSAT": {
+      "price": 73.56,
+      "prev": 70.39,
+      "chg_pct": 4.5,
+      "volume": 2437746
+    },
+    "FLY": {
+      "price": 24.09,
+      "prev": 25.28,
+      "chg_pct": -4.71,
+      "volume": 2445350
+    },
+    "W": {
+      "price": 89.23,
+      "prev": 90.29,
+      "chg_pct": -1.17,
+      "volume": 1819287
+    },
+    "ONTO": {
+      "price": 321.44,
+      "prev": 317.02,
+      "chg_pct": 1.39,
+      "volume": 763604
+    },
+    "ENTG": {
+      "price": 145.35,
+      "prev": 146.1,
+      "chg_pct": -0.51,
+      "volume": 1442227
+    },
+    "DVN": {
+      "price": 42.23,
+      "prev": 42.02,
+      "chg_pct": 0.5,
+      "volume": 6859757
+    },
+    "VG": {
+      "price": 12.24,
+      "prev": 12.53,
+      "chg_pct": -2.31,
+      "volume": 10511080
+    },
+    "SM": {
+      "price": 27.81,
+      "prev": 28.34,
+      "chg_pct": -1.87,
+      "volume": 1744573
+    },
+    "CAVA": {
+      "price": 72.18,
+      "prev": 68.2,
+      "chg_pct": 5.84,
+      "volume": 2287236
+    },
+    "CASY": {
+      "price": 819.83,
+      "prev": 822.0,
+      "chg_pct": -0.26,
+      "volume": 272140
+    },
+    "AXTI": {
+      "price": 57.21,
+      "prev": 62.55,
+      "chg_pct": -8.54,
+      "volume": 7632586
+    },
+    "PENN": {
+      "price": 20.36,
+      "prev": 20.69,
+      "chg_pct": -1.59,
+      "volume": 1899558
+    },
+    "CRK": {
+      "price": 12.92,
+      "prev": 13.69,
+      "chg_pct": -5.62,
+      "volume": 3280436
+    },
+    "ALHC": {
+      "price": 19.83,
+      "prev": 21.03,
+      "chg_pct": -5.71,
+      "volume": 3947572
+    },
+    "GPCR": {
+      "price": 53.36,
+      "prev": 55.14,
+      "chg_pct": -3.23,
+      "volume": 736852
+    },
+    "MH": {
+      "price": 9.82,
+      "prev": 9.89,
+      "chg_pct": -0.71,
+      "volume": 300457
+    },
+    "NUVL": {
+      "price": 123.9,
+      "prev": 123.83,
+      "chg_pct": 0.06,
+      "volume": 2057861
+    },
+    "DKNG": {
+      "price": 26.48,
+      "prev": 26.29,
+      "chg_pct": 0.7,
+      "volume": 7721582
+    },
+    "SN": {
+      "price": 152.65,
+      "prev": 148.81,
+      "chg_pct": 2.58,
+      "volume": 973996
+    },
+    "BKD": {
+      "price": 14.41,
+      "prev": 15.28,
+      "chg_pct": -5.69,
+      "volume": 11735265
+    },
+    "PTGX": {
+      "price": 131.42,
+      "prev": 137.64,
+      "chg_pct": -4.52,
+      "volume": 1060849
+    },
+    "NU": {
+      "price": 13.76,
+      "prev": 13.67,
+      "chg_pct": 0.66,
+      "volume": 115373910
+    },
+    "IONQ": {
+      "price": 42.86,
+      "prev": 44.77,
+      "chg_pct": -4.27,
+      "volume": 14434112
+    },
+    "AAL": {
+      "price": 16.95,
+      "prev": 17.06,
+      "chg_pct": -0.64,
+      "volume": 82065302
+    },
+    "KEEL": {
+      "price": 4.65,
+      "prev": 4.84,
+      "chg_pct": -3.93,
+      "volume": 22891842
+    },
+    "PDFS": {
+      "price": 55.52,
+      "prev": 55.93,
+      "chg_pct": -0.73,
+      "volume": 272603
+    },
+    "KLAC": {
+      "price": 231.52,
+      "prev": 229.49,
+      "chg_pct": 0.88,
+      "volume": 7447781
+    },
+    "ALAB": {
+      "price": 412.97,
+      "prev": 417.45,
+      "chg_pct": -1.07,
+      "volume": 2161516
+    },
+    "SOFI": {
+      "price": 18.78,
+      "prev": 18.62,
+      "chg_pct": 0.86,
+      "volume": 91658692
+    },
+    "IDYA": {
+      "price": 36.99,
+      "prev": 37.28,
+      "chg_pct": -0.78,
+      "volume": 677503
+    },
+    "SRAD": {
+      "price": 15.45,
+      "prev": 15.45,
+      "chg_pct": 0.0,
+      "volume": 1269994
+    },
+    "CIFR": {
+      "price": 22.11,
+      "prev": 23.26,
+      "chg_pct": -4.94,
+      "volume": 16487876
+    },
+    "GLXY": {
+      "price": 24.88,
+      "prev": 25.1,
+      "chg_pct": -0.88,
+      "volume": 4849176
+    },
+    "MARA": {
+      "price": 12.6,
+      "prev": 13.22,
+      "chg_pct": -4.69,
+      "volume": 45811789
+    },
+    "IREN": {
+      "price": 41.14,
+      "prev": 41.72,
+      "chg_pct": -1.39,
+      "volume": 30169833
+    },
+    "AMBA": {
+      "price": 77.3,
+      "prev": 78.38,
+      "chg_pct": -1.38,
+      "volume": 853041
+    },
+    "TNGX": {
+      "price": 31.06,
+      "prev": 30.52,
+      "chg_pct": 1.77,
+      "volume": 3372791
+    },
+    "PODD": {
+      "price": 161.28,
+      "prev": 158.29,
+      "chg_pct": 1.89,
+      "volume": 723320
+    },
+    "COO": {
+      "price": 70.7,
+      "prev": 71.02,
+      "chg_pct": -0.45,
+      "volume": 1413145
+    },
+    "ARGX": {
+      "price": 877.62,
+      "prev": 909.49,
+      "chg_pct": -3.5,
+      "volume": 325036
+    },
+    "SBRA": {
+      "price": 19.62,
+      "prev": 19.88,
+      "chg_pct": -1.31,
+      "volume": 2267446
+    },
+    "NP": {
+      "price": 31.92,
+      "prev": 32.32,
+      "chg_pct": -1.24,
+      "volume": 272730
+    },
+    "TXRH": {
+      "price": 189.5,
+      "prev": 187.04,
+      "chg_pct": 1.32,
+      "volume": 808852
+    },
+    "PLMR": {
+      "price": 136.07,
+      "prev": 139.18,
+      "chg_pct": -2.23,
+      "volume": 338480
+    },
+    "EG": {
+      "price": 370.58,
+      "prev": 371.0,
+      "chg_pct": -0.11,
+      "volume": 178937
+    },
+    "BEAM": {
+      "price": 32.68,
+      "prev": 35.82,
+      "chg_pct": -8.77,
+      "volume": 2834086
+    },
+    "ORKA": {
+      "price": 86.79,
+      "prev": 88.27,
+      "chg_pct": -1.68,
+      "volume": 503020
+    },
+    "CAI": {
+      "price": 16.99,
+      "prev": 17.87,
+      "chg_pct": -4.92,
+      "volume": 2258712
+    },
+    "TEM": {
+      "price": 58.23,
+      "prev": 61.5,
+      "chg_pct": -5.32,
+      "volume": 4387217
+    },
+    "CRSP": {
+      "price": 53.35,
+      "prev": 56.34,
+      "chg_pct": -5.31,
+      "volume": 2074867
+    },
+    "TLX": {
+      "price": 11.14,
+      "prev": 11.78,
+      "chg_pct": -5.43,
+      "volume": 186392
+    },
+    "RDDT": {
+      "price": 195.34,
+      "prev": 200.31,
+      "chg_pct": -2.48,
+      "volume": 3424716
+    },
+    "NVCR": {
+      "price": 16.3,
+      "prev": 17.29,
+      "chg_pct": -5.73,
+      "volume": 1948450
+    },
+    "ABVX": {
+      "price": 139.9,
+      "prev": 140.74,
+      "chg_pct": -0.6,
+      "volume": 837743
+    },
+    "MMED": {
+      "price": 15.29,
+      "prev": 15.05,
+      "chg_pct": 1.59,
+      "volume": 833150
+    },
+    "PRAX": {
+      "price": 324.99,
+      "prev": 333.12,
+      "chg_pct": -2.44,
+      "volume": 398571
+    },
+    "MDGL": {
+      "price": 536.7,
+      "prev": 560.01,
+      "chg_pct": -4.16,
+      "volume": 294015
+    }
+  },
+  "strategi": {
+    "marknad": "NOEYTRAL",
+    "fear_greed": 49.4857142857143,
+    "vix": 15.03,
+    "portfolio": [],
+    "kjoep": [
+      {
+        "symbol": "NVDA",
+        "rec": "momentum",
+        "upside_pct": 0,
+        "grunn": "Opp +4.0% i dag \u2014 momentum-signal",
+        "hald": "1-3 dagar"
+      },
+      {
+        "symbol": "EQPT",
+        "rec": "momentum",
+        "upside_pct": 0,
+        "grunn": "Opp +16.6% i dag \u2014 momentum-signal",
+        "hald": "1-3 dagar"
+      },
+      {
+        "symbol": "VSAT",
+        "rec": "momentum",
+        "upside_pct": 0,
+        "grunn": "Opp +4.5% i dag \u2014 momentum-signal",
+        "hald": "1-3 dagar"
+      },
+      {
+        "symbol": "CAVA",
+        "rec": "momentum",
+        "upside_pct": 0,
+        "grunn": "Opp +5.8% i dag \u2014 momentum-signal",
+        "hald": "1-3 dagar"
+      }
+    ],
+    "unngaa": [
+      {
+        "symbol": "BHVN",
+        "grunn": "Ned -7.4% \u2014 unng\u00e5 i dag"
+      },
+      {
+        "symbol": "BE",
+        "grunn": "Ned -4.8% \u2014 unng\u00e5 i dag"
+      },
+      {
+        "symbol": "QUBT",
+        "grunn": "Ned -5.4% \u2014 unng\u00e5 i dag"
+      },
+      {
+        "symbol": "OUST",
+        "grunn": "Ned -8.9% \u2014 unng\u00e5 i dag"
+      },
+      {
+        "symbol": "POET",
+        "grunn": "Ned -4.5% \u2014 unng\u00e5 i dag"
+      },
+      {
+        "symbol": "AUGO",
+        "grunn": "Ned -4.0% \u2014 unng\u00e5 i dag"
+      },
+      {
+        "symbol": "FLY",
+        "grunn": "Ned -4.7% \u2014 unng\u00e5 i dag"
+      },
+      {
+        "symbol": "AXTI",
+        "grunn": "Ned -8.5% \u2014 unng\u00e5 i dag"
+      },
+      {
+        "symbol": "CRK",
+        "grunn": "Ned -5.6% \u2014 unng\u00e5 i dag"
+      },
+      {
+        "symbol": "ALHC",
+        "grunn": "Ned -5.7% \u2014 unng\u00e5 i dag"
+      },
+      {
+        "symbol": "BKD",
+        "grunn": "Ned -5.7% \u2014 unng\u00e5 i dag"
+      },
+      {
+        "symbol": "PTGX",
+        "grunn": "Ned -4.5% \u2014 unng\u00e5 i dag"
+      },
+      {
+        "symbol": "IONQ",
+        "grunn": "Ned -4.3% \u2014 unng\u00e5 i dag"
+      },
+      {
+        "symbol": "CIFR",
+        "grunn": "Ned -4.9% \u2014 unng\u00e5 i dag"
+      },
+      {
+        "symbol": "MARA",
+        "grunn": "Ned -4.7% \u2014 unng\u00e5 i dag"
+      },
+      {
+        "symbol": "BEAM",
+        "grunn": "Ned -8.8% \u2014 unng\u00e5 i dag"
+      },
+      {
+        "symbol": "CAI",
+        "grunn": "Ned -4.9% \u2014 unng\u00e5 i dag"
+      },
+      {
+        "symbol": "TEM",
+        "grunn": "Ned -5.3% \u2014 unng\u00e5 i dag"
+      },
+      {
+        "symbol": "CRSP",
+        "grunn": "Ned -5.3% \u2014 unng\u00e5 i dag"
+      },
+      {
+        "symbol": "TLX",
+        "grunn": "Ned -5.4% \u2014 unng\u00e5 i dag"
+      },
+      {
+        "symbol": "NVCR",
+        "grunn": "Ned -5.7% \u2014 unng\u00e5 i dag"
+      },
+      {
+        "symbol": "MDGL",
+        "grunn": "Ned -4.2% \u2014 unng\u00e5 i dag"
+      }
+    ],
+    "momentum": [
+      {
+        "symbol": "BHVN",
+        "day_pct": -7.39,
+        "hald": "1-3 dagar"
+      },
+      {
+        "symbol": "NVDA",
+        "day_pct": 4.03,
+        "hald": "1-3 dagar"
+      },
+      {
+        "symbol": "BE",
+        "day_pct": -4.83,
+        "hald": "1-3 dagar"
+      },
+      {
+        "symbol": "EQPT",
+        "day_pct": 16.56,
+        "hald": "1-3 dagar"
+      },
+      {
+        "symbol": "QUBT",
+        "day_pct": -5.36,
+        "hald": "1-3 dagar"
+      },
+      {
+        "symbol": "OUST",
+        "day_pct": -8.94,
+        "hald": "1-3 dagar"
+      },
+      {
+        "symbol": "POET",
+        "day_pct": -4.48,
+        "hald": "1-3 dagar"
+      },
+      {
+        "symbol": "AUGO",
+        "day_pct": -4.04,
+        "hald": "1-3 dagar"
+      },
+      {
+        "symbol": "VSAT",
+        "day_pct": 4.5,
+        "hald": "1-3 dagar"
+      },
+      {
+        "symbol": "FLY",
+        "day_pct": -4.71,
+        "hald": "1-3 dagar"
+      },
+      {
+        "symbol": "CAVA",
+        "day_pct": 5.84,
+        "hald": "1-3 dagar"
+      },
+      {
+        "symbol": "AXTI",
+        "day_pct": -8.54,
+        "hald": "1-3 dagar"
+      },
+      {
+        "symbol": "CRK",
+        "day_pct": -5.62,
+        "hald": "1-3 dagar"
+      },
+      {
+        "symbol": "ALHC",
+        "day_pct": -5.71,
+        "hald": "1-3 dagar"
+      },
+      {
+        "symbol": "BKD",
+        "day_pct": -5.69,
+        "hald": "1-3 dagar"
+      },
+      {
+        "symbol": "PTGX",
+        "day_pct": -4.52,
+        "hald": "1-3 dagar"
+      },
+      {
+        "symbol": "IONQ",
+        "day_pct": -4.27,
+        "hald": "1-3 dagar"
+      },
+      {
+        "symbol": "CIFR",
+        "day_pct": -4.94,
+        "hald": "1-3 dagar"
+      },
+      {
+        "symbol": "MARA",
+        "day_pct": -4.69,
+        "hald": "1-3 dagar"
+      },
+      {
+        "symbol": "BEAM",
+        "day_pct": -8.77,
+        "hald": "1-3 dagar"
+      },
+      {
+        "symbol": "CAI",
+        "day_pct": -4.92,
+        "hald": "1-3 dagar"
+      },
+      {
+        "symbol": "TEM",
+        "day_pct": -5.32,
+        "hald": "1-3 dagar"
+      },
+      {
+        "symbol": "CRSP",
+        "day_pct": -5.31,
+        "hald": "1-3 dagar"
+      },
+      {
+        "symbol": "TLX",
+        "day_pct": -5.43,
+        "hald": "1-3 dagar"
+      },
+      {
+        "symbol": "NVCR",
+        "day_pct": -5.73,
+        "hald": "1-3 dagar"
+      },
+      {
+        "symbol": "MDGL",
+        "day_pct": -4.16,
+        "hald": "1-3 dagar"
+      }
+    ],
+    "reddit_radar": [],
+    "marknadsnote": "Alpha Vantage sentiment BULLISH (0.163). SPY +0.4%. VIX 15.0. Fed Funds Rate: 3.63%  |  10yr Treasury: 4.54%  |  Arbeidsl\u00f8yse: 4.2%. Finansaksjar i fokus \u2014 Citigroup leiande bankrapporteringsdag.",
+    "er_kveld": false,
+    "topp_sektorar": [],
+    "svake_sektorar": [],
+    "trending_up": [
+      "NVDA",
+      "EQPT",
+      "VSAT"
+    ],
+    "trending_down": [
+      "BHVN",
+      "BE",
+      "QUBT"
+    ],
+    "sektor_trend": []
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "CBRS",
+      "namn": "Cerebras Systems Inc.",
+      "pris": 215.08,
+      "dag_pct": 8.34,
+      "volum": 5289091,
+      "grunn": "AI inference chip-selskap med wafer-scale engine. Direkte konkurrent til NVDA i inference-segmentet. Sterk dag (+8.3%) i eit marknad der \"AI-rallyet er viktigare enn olje\" (Finnhub-nyhende i dag). IPO 2024, raskt veksande."
+    },
+    {
+      "symbol": "META",
+      "namn": "Meta Platforms Inc.",
+      "pris": 669.21,
+      "dag_pct": 5.97,
+      "volum": 40608860,
+      "grunn": "Sterk +6% dag p\u00e5 sv\u00e6rt h\u00f8gt volum (40.6M aksjar). Alpha Vantage sentiment BULLISH. H\u00f8g AI-infrastruktur-investering, sterke annonse-inntekter. Institusjonell akkumulering sannsynleg."
+    },
+    {
+      "symbol": "ALM",
+      "namn": "Almonty Industries Inc.",
+      "pris": 16.61,
+      "dag_pct": 12.99,
+      "volum": 8413000,
+      "grunn": "Tungsten-gruveselskap +13% i dag p\u00e5 h\u00f8gt volum (8.4M). Tungsten er kritisk mineral for forsvar (NATO-opprustning), halvleiarar og energiomstilling. Auka globale forsvarsbudsjett driv etterspurnaden."
+    }
+  ]
+}
