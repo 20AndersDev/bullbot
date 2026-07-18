@@ -261,5 +261,40 @@
         "snitt_score": 5.99
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "TRV",
+      "grunn": "+9.22% i dag p\u00e5 2x normalvolum (3.8M vs 1.7M snitt). P/E=10 er billig for ein Dow-komponent. Finnhub: 3 strongBuy, 8 buy, 20 hold. N\u00e6r 52V-topp ($370.43). Kjelde: Yahoo Finance gainers 2026-07-18.",
+      "pris": 368.98,
+      "dag_endring_pct": 9.22,
+      "mkt_cap_B": 78.5,
+      "pe": 10.05,
+      "finnhub_strong_buy": 3,
+      "finnhub_buy": 8,
+      "52v_endring_pct": 40.2
+    },
+    {
+      "symbol": "VG",
+      "grunn": "+8.92% i dag p\u00e5 godt volum (20.4M vs 16.5M snitt). LNG-eksport\u00f8r med reell inntening (P/E=14). Finnhub: 6 strongBuy, 12 buy \u2014 sterkaste konsensus av dei tre. Energisektor med makrovind. Kjelde: Yahoo Finance gainers 2026-07-18.",
+      "pris": 13.8,
+      "dag_endring_pct": 8.92,
+      "mkt_cap_B": 34.3,
+      "pe": 14.07,
+      "finnhub_strong_buy": 6,
+      "finnhub_buy": 12,
+      "52v_endring_pct": -9.0
+    },
+    {
+      "symbol": "INTC",
+      "grunn": "-2% i dag \u2014 mogleg kj\u00f8pspunkt. 308% p\u00e5 52V = turnaround-narrativ. Volum 112.5M (vs 134M snitt) \u2014 vedvarande institusjonell interesse. Finnhub: 5 strongBuy, 13 buy, 34 hold. Kjelde: Yahoo Finance most-active 2026-07-18.",
+      "pris": 95.04,
+      "dag_endring_pct": -2.0,
+      "mkt_cap_B": 477.7,
+      "pe": null,
+      "finnhub_strong_buy": 5,
+      "finnhub_buy": 13,
+      "52v_endring_pct": 308.6
+    }
+  ]
 }
