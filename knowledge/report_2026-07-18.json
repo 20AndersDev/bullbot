@@ -1,0 +1,265 @@
+{
+  "dato": "2026-07-18",
+  "timestamp": "2026-07-18T12:11:39.192743+00:00",
+  "fear_greed": {
+    "score": 37.0571428571429,
+    "rating": "fear"
+  },
+  "macro": {
+    "fedfunds": 3.63,
+    "dgs10": 4.57,
+    "cpiaucsl": 332.568,
+    "unrate": 4.2
+  },
+  "market_news": [
+    "How a homegrown Chinese chip maker became the memory industry\u2019s biggest wild card",
+    "Forget gasoline: Why the price surge in this under-the-radar fuel is the real threat to the U.S. economy",
+    "This may be the real reason USDA made a huge revision to its beef-export sales data",
+    "Will the Fed hike interest rates this month?",
+    "Meet Kimi K3, the newest Chinese AI model haunting Silicon Valley",
+    "The S&P 500 is breaking the earnings playbook: Chart of the Day",
+    "Big banks' record Wall Street profits are increasingly tied to AI",
+    "Autoliv shares decline after second-quarter earnings miss despite higher revenue (ALV)",
+    "Japan's LNG Giant Weighs U.S. IPO to Accelerate Global Expansion",
+    "Nasdaq Futures Plunge as Chip Selloff Deepens; Netflix Sinks on Disappointing Forecast",
+    "Korean beauty products are becoming mainstream in the U.S. Why there may be even more growth ahead",
+    "Iran renews attacks on Gulf states after another night of US strikes - Reuters"
+  ],
+  "av_sentiment": {
+    "score": 0.3065,
+    "direction": "BULLISH"
+  },
+  "reddit": {},
+  "ikke_kjoep": [
+    "AAL",
+    "NVCR",
+    "T",
+    "ALK",
+    "NP"
+  ],
+  "upcoming_dates": {
+    "AAL": "2026-07-23",
+    "NVCR": "2026-07-23",
+    "T": "2026-07-22",
+    "ALK": "2026-07-21",
+    "NP": "2026-07-21"
+  },
+  "momentum_kandidatar": [],
+  "per_symbol": {},
+  "sektorar": [],
+  "trendar": {
+    "trending_up": [
+      "APGE",
+      "SYRE",
+      "NBIX",
+      "SMTC",
+      "LEGN",
+      "UEC",
+      "VIAV",
+      "SIMO",
+      "HPE",
+      "COHR",
+      "FUTU",
+      "ARXS",
+      "AMPX"
+    ],
+    "trending_down": [],
+    "sektor_trend": [
+      {
+        "namn": "Teknologi",
+        "retning": "opp",
+        "snitt_score": 10.95
+      },
+      {
+        "namn": "Krypto-relatert",
+        "retning": "ned",
+        "snitt_score": -8.77
+      },
+      {
+        "namn": "Energi (olje/gass)",
+        "retning": "ned",
+        "snitt_score": -6.36
+      },
+      {
+        "namn": "Industri",
+        "retning": "opp",
+        "snitt_score": 5.99
+      },
+      {
+        "namn": "Kommunikasjon",
+        "retning": "ned",
+        "snitt_score": -5.16
+      },
+      {
+        "namn": "Finans",
+        "retning": "opp",
+        "snitt_score": 3.16
+      },
+      {
+        "namn": "Materialar",
+        "retning": "opp",
+        "snitt_score": 2.28
+      },
+      {
+        "namn": "Helse",
+        "retning": "opp",
+        "snitt_score": 1.85
+      },
+      {
+        "namn": "Konsum (syklisk)",
+        "retning": "ned",
+        "snitt_score": -0.82
+      }
+    ],
+    "streak": {
+      "APGE": 4,
+      "SYRE": 4,
+      "NBIX": 4,
+      "SMTC": 4,
+      "LEGN": 4,
+      "UEC": 4,
+      "VIAV": 4,
+      "SIMO": 3,
+      "HPE": 3,
+      "COHR": 3,
+      "FUTU": 3,
+      "ARXS": 3,
+      "AMPX": 3
+    }
+  },
+  "politikar_handler": {},
+  "strategi": {
+    "marknad": "NOEYTRAL",
+    "fear_greed": 37.0571428571429,
+    "vix": 20,
+    "portfolio": [
+      {
+        "symbol": "JPM",
+        "qty": 33,
+        "pl_pct": 13.91,
+        "pl_usd": 1374.51,
+        "action": "HALD",
+        "grunn": "Stabil posisjon \u2014 ingen klart exit-signal"
+      },
+      {
+        "symbol": "S",
+        "qty": 448,
+        "pl_pct": 11.38,
+        "pl_usd": 896.0,
+        "action": "HALD",
+        "grunn": "Stabil posisjon \u2014 ingen klart exit-signal"
+      },
+      {
+        "symbol": "ABNB",
+        "qty": 76,
+        "pl_pct": 9.24,
+        "pl_usd": 938.6,
+        "action": "HALD",
+        "grunn": "Stabil posisjon \u2014 ingen klart exit-signal"
+      },
+      {
+        "symbol": "META",
+        "qty": 14,
+        "pl_pct": 9.23,
+        "pl_usd": 763.98,
+        "action": "HALD",
+        "grunn": "Stabil posisjon \u2014 ingen klart exit-signal"
+      },
+      {
+        "symbol": "PINS",
+        "qty": 419,
+        "pl_pct": 7.49,
+        "pl_usd": 677.28,
+        "action": "HALD",
+        "grunn": "Stabil posisjon \u2014 ingen klart exit-signal"
+      },
+      {
+        "symbol": "ROAD",
+        "qty": 75,
+        "pl_pct": 7.24,
+        "pl_usd": 528.75,
+        "action": "HALD",
+        "grunn": "Stabil posisjon \u2014 ingen klart exit-signal"
+      },
+      {
+        "symbol": "T",
+        "qty": 347,
+        "pl_pct": 2.15,
+        "pl_usd": 159.62,
+        "action": "SELG",
+        "grunn": "Earnings snart \u2014 unng\u00e5 kvartalssurprise-risiko"
+      },
+      {
+        "symbol": "LEU",
+        "qty": 54,
+        "pl_pct": 0.7,
+        "pl_usd": 58.86,
+        "action": "HALD",
+        "grunn": "Stabil posisjon \u2014 ingen klart exit-signal"
+      },
+      {
+        "symbol": "BNTX",
+        "qty": 113,
+        "pl_pct": -0.03,
+        "pl_usd": -3.39,
+        "action": "HALD",
+        "grunn": "Ventar p\u00e5 betring eller stop-loss-utl\u00f8ysing"
+      },
+      {
+        "symbol": "PENN",
+        "qty": 356,
+        "pl_pct": -1.63,
+        "pl_usd": -121.04,
+        "action": "MONITOR",
+        "grunn": "N\u00e6rmar seg stop-loss \u2014 f\u00f8lg n\u00f8ye"
+      },
+      {
+        "symbol": "ORCL",
+        "qty": 41,
+        "pl_pct": -40.93,
+        "pl_usd": -3590.78,
+        "action": "MONITOR",
+        "grunn": "N\u00e6rmar seg stop-loss \u2014 f\u00f8lg n\u00f8ye"
+      }
+    ],
+    "kjoep": [],
+    "unngaa": [],
+    "momentum": [],
+    "reddit_radar": [],
+    "marknadsnote": "Fed Funds: 3.63%  |  10Y: 4.57%  |  How a homegrown Chinese chip maker became the memory industry\u2019s biggest wild car",
+    "er_kveld": false,
+    "topp_sektorar": [],
+    "svake_sektorar": [],
+    "trending_up": [
+      "APGE",
+      "SYRE",
+      "NBIX",
+      "SMTC",
+      "LEGN",
+      "UEC"
+    ],
+    "trending_down": [],
+    "sektor_trend": [
+      {
+        "namn": "Teknologi",
+        "retning": "opp",
+        "snitt_score": 10.95
+      },
+      {
+        "namn": "Krypto-relatert",
+        "retning": "ned",
+        "snitt_score": -8.77
+      },
+      {
+        "namn": "Energi (olje/gass)",
+        "retning": "ned",
+        "snitt_score": -6.36
+      },
+      {
+        "namn": "Industri",
+        "retning": "opp",
+        "snitt_score": 5.99
+      }
+    ]
+  }
+}
