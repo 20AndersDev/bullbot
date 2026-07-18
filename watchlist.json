@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-22",
+  "updated": "2026-07-18",
   "symbols": [
     "RCUS",
     "PAYP",
@@ -60,7 +60,6 @@
     "ALHC",
     "GPCR",
     "MH",
-    "NUVL",
     "DKNG",
     "SN",
     "BKD",
@@ -102,17 +101,6 @@
     "PRAX",
     "MDGL"
   ],
-  "removed": [],
-  "added": [
-    "RCUS",
-    "PAYP",
-    "VERA",
-    "KLRA",
-    "BHVN",
-    "KYMR",
-    "DFTX",
-    "BWIN"
-  ],
   "sectors": {
     "NVDA": "mega_cap",
     "SMCI": "chips",
@@ -126,5 +114,9 @@
     "IONQ": "space",
     "SOFI": "fintech",
     "MARA": "crypto"
-  }
+  },
+  "removed": [
+    "NUVL"
+  ],
+  "added": []
 }
