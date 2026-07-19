@@ -2483,5 +2483,23 @@
         "snitt_score": 5.99
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "NFLX",
+      "grunn": "Dip -7.3% p\u00e5 h\u00f8gt volum \u2014 16 SB-analytikarar, 29 buy. Kvalitetsaksje som er oversold etter sterk korreksjon. Vurder inn om kursen stabiliserer seg.",
+      "dag_pct": -7.3,
+      "pris": 68.95,
+      "strong_buy": 16,
+      "buy": 29
+    },
+    {
+      "symbol": "TRV",
+      "grunn": "Travelers Companies (Dow-komponent): +9.2% i dag \u2014 truleg earnings-beat i forsikring. 8 buy-analytikarar. Defensiv/stabil sektor, h\u00f8g kvalitet.",
+      "dag_pct": 9.2,
+      "pris": 368.98,
+      "strong_buy": 3,
+      "buy": 8
+    }
+  ]
 }
