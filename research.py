@@ -19,6 +19,12 @@ import yfinance as yf
 import requests
 import config
 
+# Proxy-aware session for yfinance (bypasses curl_cffi connection issues)
+_YF_SESSION = requests.Session()
+_YF_SESSION.proxies = {"https": os.environ.get("HTTPS_PROXY", "")}
+_YF_SESSION.verify = os.environ.get("REQUESTS_CA_BUNDLE", True)
+_YF_SESSION.headers.update({"User-Agent": "Mozilla/5.0 (compatible; bullbot/1.0)"})
+
 FINNHUB_KEY = os.getenv("FINNHUB_API_KEY", "")
 FRED_KEY    = os.getenv("FRED_API_KEY", "")
 AV_KEY      = os.getenv("ALPHAVANTAGE_API_KEY", "")
@@ -482,7 +488,7 @@ def _scan_sectors() -> list:
     results = []
     etfs = list(_SEKTOR_ETF.values())
     try:
-        data = yf.download(etfs, period="3mo", auto_adjust=True, progress=False)["Close"]
+        data = yf.download(etfs, period="3mo", auto_adjust=True, progress=False, session=_YF_SESSION)["Close"]
     except Exception as e:
         print(f"  Sektordata: N/A ({e})")
         return []
@@ -864,14 +870,14 @@ except Exception as e:
     print(f"CNN Fear & Greed: N/A ({e})")
 
 try:
-    vix_val = float(yf.Ticker("^VIX").history(period="2d")["Close"].iloc[-1])
+    vix_val = float(yf.Ticker("^VIX", session=_YF_SESSION).history(period="2d")["Close"].iloc[-1])
     print(f"VIX: {vix_val:.2f}")
     knowledge["vix"] = vix_val
 except Exception as e:
     print(f"VIX: N/A ({e})")
 
 try:
-    spy_hist = yf.Ticker("SPY").history(period="5d")["Close"].dropna()
+    spy_hist = yf.Ticker("SPY", session=_YF_SESSION).history(period="5d")["Close"].dropna()
     spy_chg  = (float(spy_hist.iloc[-1]) / float(spy_hist.iloc[-2]) - 1) * 100
     spy_w    = (float(spy_hist.iloc[-1]) / float(spy_hist.iloc[0])  - 1) * 100
     print(f"SPY: ${float(spy_hist.iloc[-1]):.2f}  dag={spy_chg:+.2f}%  veke={spy_w:+.2f}%")
@@ -984,7 +990,7 @@ for sym in config.WATCHLIST:
     if sym in upcoming_dates:
         continue
     try:
-        cal = yf.Ticker(sym).calendar
+        cal = yf.Ticker(sym, session=_YF_SESSION).calendar
         if cal is not None and hasattr(cal, "columns") and "Earnings Date" in cal.columns:
             ed = cal["Earnings Date"].iloc[0]
             if hasattr(ed, "date"):
@@ -1008,7 +1014,7 @@ momentum_candidates: list = []
 
 for sym in config.WATCHLIST:
     try:
-        hist = yf.Ticker(sym).history(period="3d")["Close"].dropna()
+        hist = yf.Ticker(sym, session=_YF_SESSION).history(period="3d")["Close"].dropna()
         if len(hist) >= 2:
             chg = (float(hist.iloc[-1]) / float(hist.iloc[-2]) - 1) * 100
             if abs(chg) >= config.MOMENTUM_MIN_DAY_PCT:
@@ -1029,7 +1035,7 @@ per_symbol: dict = {}
 
 for sym in config.WATCHLIST:
     try:
-        t    = yf.Ticker(sym)
+        t    = yf.Ticker(sym, session=_YF_SESSION)
         info = t.info
         price  = float(info.get("currentPrice") or info.get("regularMarketPrice") or 0)
         target = float(info.get("targetMeanPrice") or 0)
