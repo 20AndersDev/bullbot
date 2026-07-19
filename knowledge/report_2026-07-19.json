@@ -2445,5 +2445,25 @@
         "snitt_score": 3.07
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "TRVI",
+      "grunn": "STRONG_BUY konsensus | +30.6% analytikarm\u00e5l | +9.85% i dag (biotech katalysator) | ikkje i watchlist",
+      "price": 19.07,
+      "target": 24.9,
+      "upside_pct": 30.6,
+      "rec": "STRONG_BUY",
+      "mktcap_B": 2.7
+    },
+    {
+      "symbol": "NFLX",
+      "grunn": "BUY konsensus | +42% analytikarm\u00e5l | -7.26% i dag (overreaksjon-dip mogleg inngong) | mega-cap 290B",
+      "price": 68.95,
+      "target": 97.91,
+      "upside_pct": 42.0,
+      "rec": "BUY",
+      "mktcap_B": 290.3
+    }
+  ]
 }
