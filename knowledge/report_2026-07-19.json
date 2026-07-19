@@ -1,6 +1,6 @@
 {
   "dato": "2026-07-19",
-  "timestamp": "2026-07-19T12:28:09.440141+00:00",
+  "timestamp": "2026-07-19T20:12:14.580160+00:00",
   "fear_greed": {
     "score": 37.0571428571429,
     "rating": "fear"
@@ -19,20 +19,20 @@
   },
   "market_news": [
     "Can the \u2018Magnificent Seven\u2019 save a stock market that might be doomed without them?",
+    "Is there a deadline to claim the $1,000 \u2018Trump account\u2019 contribution for my kid?",
+    "Can former employers withhold money from your 401(k) when you\u2019re laid off?",
+    "I racked up $35,000 in credit-card debt. Should I file for bankruptcy?",
     "\u2018I am at a loss\u2019: My brother is dying. We are not close. What responsibility do I have to help him?",
-    "My husband and I are retired. Our financial adviser, who is in his 30s, called us \u2018you guyses.\u2019 Is that unprofessional?",
-    "\u2018Respect is important\u2019: If my financial adviser said, \u2018Hey,\u2019 my wife and I would walk out. Where do you draw the line?",
-    "\u2018They are relentless\u2019: A scammer is trying to change the email on my empty Robinhood account. What do they have to gain?",
-    "MarketBeat Week in Review \u2013 07/13- 07/17",
-    "Half of workers say they rely on AI more than they should \u2014 here are 3 habits that can help you stay ahead of AI",
-    "AI can now access your credit cards \u2014 how to protect yourself from being scammed",
-    "Anthropic is offering $600,000 to someone to shape its Wall Street story as it gears up for a blockbuster IPO",
-    "I left my husband with $3 in my account after he racked up $40K in debt on Pokemon cards. How can I protect my finances?",
-    "American Airlines CEO lays out his vision to close a more than $3 billion profit gap",
-    "Lebanon's Aoun to meet Trump at White House, hoping to generate pressure on Israel - Reuters"
+    "IBM\u2019s 25% crash reveals AI\u2019s hidden corporate casualty",
+    "What Are Mineral Rights? The Complete Guide to Owning, Leasing and Selling Them",
+    "Dow Jones Futures Loom As U.S.-Iran Attacks Escalate; Google, Tesla, AMD Ahead",
+    "A couple with $6.1 million can't agree on when to retire \u2014 Ramit Sethi says 'it's not the numbers' holding them back",
+    "Nearly half of retirees leave work earlier than planned \u2014 the 3 reasons Americans are retiring at 62 instead of 65",
+    "Stop asking 'How was work today?' Successful, mentally strong couples ask these 7 questions instead",
+    "Gulf bourses retreat as US\u2013Iran hostilities intensify - Reuters"
   ],
   "av_sentiment": {
-    "score": 0.2447,
+    "score": 0.1959,
     "direction": "BULLISH"
   },
   "reddit": {},
@@ -134,8 +134,8 @@
     "PAYP": {
       "price": 15.63,
       "pe": 20.703487,
-      "target": 24.547537,
-      "upside_pct": 57.1,
+      "target": 24.538317,
+      "upside_pct": 57.0,
       "pct_from_52h": -37.2,
       "rec": "buy",
       "news": [
@@ -266,10 +266,10 @@
       "rec": "strong_buy",
       "news": [
         "'Earnings need to be strong': Wall Street assesses next catalyst for AI trade",
-        "This week's AI winners and losers",
-        "5 \"Magnificent Seven\" Stocks I'm Buying and 2 That I'm Selling",
-        "SpaceX Stock Is Now Well Below Its IPO Price. Here's Why I Still Wouldn't Buy Shares.",
-        "Meet the (Almost) Dividend King with a 49-Year Streak That Wall Street Is Sleeping On"
+        "There's a Push to Ban Elected Officials From Launching Meme Coins. Is Meme Coin Mania Finally Over?",
+        "Jensen Huang's $4 Trillion Artificial Intelligence (AI) Projection Could Propel Nvidia's Market Cap to $20 Trillion",
+        "Elon Musk's Tesla Remains One of the Last Great Founder-Led Tech Giants. Is the Stock a Buy Before July 22?",
+        "Analysts Project the Oklo Stock Price Will Reach $87 in 2027 -- Is the Risk-to-Reward Scenario Worth It?"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 24,
@@ -283,11 +283,11 @@
       "pct_from_52h": -26.8,
       "rec": "buy",
       "news": [
+        "Jobs, GM, Tesla, Alphabet, Intel, Verizon, and More to Watch This Week",
         "A $1 Billion Reason to Sell AST SpaceMobile Stock Here",
         "Verizon (VZ) Joins AT&T And T Mobile To Launch New Mobile Fraud Defense",
         "Verizon Extends Cutbacks With Another Store Sale",
-        "Does T Stock Deserve a Spot in Your Portfolio Ahead of Q2 Earnings?",
-        "VZ Earns Its Premium Over Peers. Now What?"
+        "Does T Stock Deserve a Spot in Your Portfolio Ahead of Q2 Earnings?"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 8,
@@ -427,11 +427,11 @@
       "pct_from_52h": -38.8,
       "rec": "buy",
       "news": [
+        "I'm Calling It: Bloom Energy Will Be a Very Different Stock After 2026 for 1 Reason",
+        "A $1.7 Billion Reason to Buy Bloom Energy Stock Now",
         "Bloom Energy vs. Constellation Energy: Which Industrials Stock Is a Better Buy in 2026?",
         "The 3 Energy Stocks I'd Buy With My Next $1,000",
-        "Bloom Energy\u2019s AI Data Center Growth Story Is Starting to Crack",
-        "Oracle Data Center Plan Hits New Setback",
-        "Bloom Energy (BE): 3 Reasons We Love This Stock"
+        "Bloom Energy\u2019s AI Data Center Growth Story Is Starting to Crack"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 6,
@@ -463,11 +463,11 @@
       "pct_from_52h": -42.5,
       "rec": "buy",
       "news": [
+        "What IBM, Micron, and Sandisk all have in common",
         "'Earnings need to be strong': Wall Street assesses next catalyst for AI trade",
-        "Jensen Huang Told CES 2026 That Memory Is Now the Biggest Bottleneck in AI. Micron and Sandisk Have Outperformed Nvidia's Stock Ever Since.",
-        "Stock Market Week Ahead: Navigating Uncertainty",
-        "MarketBeat Week in Review \u2013 07/13- 07/17",
-        "Missed Out on Sandisk's 580% Rally? Here Are 3 Chip Stocks You Can Buy Now."
+        "Sandisk: Even After a 580% Rise in 2026, It's Still a Screaming Buy (NASDAQ: SNDK)",
+        "Micron Has Strong Q3 Earnings and Rising Guidance. Is It a Buy?",
+        "SanDisk vs Seagate: Two Divergent Paths Through the AI Storage Boom, One Winner"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 9,
@@ -607,11 +607,11 @@
       "pct_from_52h": -32.4,
       "rec": "strong_buy",
       "news": [
+        "What IBM, Micron, and Sandisk all have in common",
         "'Earnings need to be strong': Wall Street assesses next catalyst for AI trade",
-        "The 1 AI Chip Stock I'd Buy Hand Over Fist in This Sell-Off -- and It Isn't Nvidia.",
-        "Jensen Huang Told CES 2026 That Memory Is Now the Biggest Bottleneck in AI. Micron and Sandisk Have Outperformed Nvidia's Stock Ever Since.",
-        "Investing Legend John Templeton Has a Warning for Micron and SK Hynix Investors",
-        "Micron\u2019s Long-Term AI Memory Pact With Visteon Might Change The Case For Investing In Visteon (VC)"
+        "A Hidden Threat for Micron? Apple Is Eyeing a Fix for AI Memory Demands",
+        "Here Are My Top 3 Artificial Intelligence Stocks to Buy Right Now",
+        "AI Is Keeping DRAM Prices High \u2014 Here\u2019s Exactly When the Market Finally Loosens Up"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 18,
@@ -625,11 +625,11 @@
       "pct_from_52h": -42.8,
       "rec": "strong_buy",
       "news": [
+        "Wall Street Is Warming to Marvell After Its XConn Acquisition. Here\u2019s The Price Target",
+        "The AI \u2018Memory Wall\u2019 Is About to Get a Lot Taller: These 3 Stocks Will Win Big",
         "AI Investors Are Becoming Pickier. 2 Stocks Still Stand Out.",
         "Stock Market Week Ahead: Navigating Uncertainty",
-        "Rambus Gains Momentum on Rising AI Memory Bandwidth Needs",
-        "'Wrong Picks or Just Bad Timing?' A Newbie Investor Wonders Why Their Stock Portfolio Fell 9%. Here Are the Stocks They Bought",
-        "Stocks to Watch Recap: Intel, Netflix, SpaceX, Burberry"
+        "Rambus Gains Momentum on Rising AI Memory Bandwidth Needs"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 13,
@@ -643,11 +643,11 @@
       "pct_from_52h": -40.3,
       "rec": "strong_buy",
       "news": [
+        "Micron Has Strong Q3 Earnings and Rising Guidance. Is It a Buy?",
         "Does Sandisk pay dividends? Will it split its stock?",
         "Micron, Nvidia, Netflix, SK Hynix, Alphabet, Intuitive Surgical, and More Stocks That Explain Today\u2019s Market",
         "Nvidia, AMD, Mircon, TSMC Shares Sink as China Unveils Powerful New AI Model",
-        "Wall Street plunges in AI \u2018bloodbath\u2019",
-        "Can You Stomach A Real Micron Stock Crash?"
+        "Wall Street plunges in AI \u2018bloodbath\u2019"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 7,
@@ -679,11 +679,11 @@
       "pct_from_52h": -40.7,
       "rec": "buy",
       "news": [
+        "Can Nebius Group Really 10X by 2030? The Math Says Yes",
+        "A $1.7 Billion Reason to Buy Bloom Energy Stock Now",
         "Jim Cramer says it's not the time to buy surging AI stock",
         "Meta and Anthropic Discuss $10B AI Infrastructure Agreement",
-        "Jim Cramer Says Semiconductor Stocks Are \u201cGoing Down.\u201d Buy These 2 Dividend Stocks Instead",
-        "Nebius Raises $775 Million in First Secured Debt Deal",
-        "What's Going On With Nebius Stock Friday"
+        "Jim Cramer Says Semiconductor Stocks Are \u201cGoing Down.\u201d Buy These 2 Dividend Stocks Instead"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 6,
@@ -769,11 +769,11 @@
       "pct_from_52h": -3.0,
       "rec": "buy",
       "news": [
+        "Netflix's Post-Earnings Sell-Off Just Revealed Why It Was Bidding to Acquire Warner Bros. and Roku",
         "Roku CFO Dan Jedda Sells 7,000 Shares for $993,300",
         "Citi says buy the dip in this media stock",
         "Investors Heavily Search Roku, Inc. (ROKU): Here is What You Need to Know",
-        "Is Fox (FOXA) Still Worth A Look As Its $22b Roku Deal Reshapes Valuation?",
-        "Roku (ROKU) Ascends While Market Falls: Some Facts to Note"
+        "Is Fox (FOXA) Still Worth A Look As Its $22b Roku Deal Reshapes Valuation?"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 4,
@@ -1183,11 +1183,11 @@
       "pct_from_52h": -48.9,
       "rec": "buy",
       "news": [
+        "Prediction Markets Swell to 27% of Sports Bets During World Cup",
         "Michael Burry Is Skeptical Of NVDA, ORCL And NFLX \u2014 But Bullish On This Sports Betting Stock",
         "Goldman Sachs Will Continue to Beat Targets, Analyst Says. Plus, DraftKings and 4 More Stocks.",
         "Here's Why DraftKings (DKNG) Fell More Than Broader Market",
-        "Should DraftKings\u2019 Alberta Sportsbook Expansion Shape How DKNG Investors View Its North American Strategy?",
-        "Facing Digital Threats, MGM Resorts Trades Higher On Reported Takeover Talks With Barry Diller's People Inc."
+        "Should DraftKings\u2019 Alberta Sportsbook Expansion Shape How DKNG Investors View Its North American Strategy?"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 10,
@@ -1339,7 +1339,7 @@
     },
     "KLAC": {
       "price": 212.75,
-      "pe": 41.513813,
+      "pe": 41.456944,
       "target": 234.57143,
       "upside_pct": 10.3,
       "pct_from_52h": -30.8,
@@ -1363,11 +1363,11 @@
       "pct_from_52h": -39.2,
       "rec": "buy",
       "news": [
+        "Astera Labs vs. Navitas Semiconductor: What the Revenue Trajectories of These Artificial Intelligence Companies Reveal to Investors.",
         "Stock Market Week Ahead: Navigating Uncertainty",
         "Rambus Gains Momentum on Rising AI Memory Bandwidth Needs",
         "Seagate (STX) Lands BNP Paribas AI Supply Chain Backing Through 2027",
-        "Chip Stocks Enter Bear Market. Astera Labs Continues Slump.",
-        "Chip Stocks Pummeled. SK Hynix Dives. SOX Socked Again."
+        "Chip Stocks Enter Bear Market. Astera Labs Continues Slump."
       ],
       "momentum_dag_pct": -5.0,
       "finnhub_strong_buy": 7,
@@ -1412,8 +1412,8 @@
     "SRAD": {
       "price": 14.38,
       "pe": 18.04603,
-      "target": 21.321747,
-      "upside_pct": 48.3,
+      "target": 21.294935,
+      "upside_pct": 48.1,
       "pct_from_52h": -55.4,
       "rec": "strong_buy",
       "news": [
@@ -1573,9 +1573,9 @@
     },
     "ARGX": {
       "price": 860.55,
-      "pe": 23.309708,
-      "target": 1053.6592,
-      "upside_pct": 22.4,
+      "pe": 23.32214,
+      "target": 1055.1304,
+      "upside_pct": 22.6,
       "pct_from_52h": -9.8,
       "rec": "buy",
       "news": [
@@ -1748,7 +1748,7 @@
         "Tempus AI (TEM) Launches Next-Gen Agentic Platform to Accelerate Oncology Research"
       ],
       "momentum_dag_pct": 0.0,
-      "finnhub_strong_buy": 6,
+      "finnhub_strong_buy": 0,
       "reddit": {}
     },
     "CRSP": {
@@ -1766,14 +1766,14 @@
         "Here's Why CRISPR Therapeutics AG (CRSP) Fell More Than Broader Market"
       ],
       "momentum_dag_pct": 0.0,
-      "finnhub_strong_buy": 7,
+      "finnhub_strong_buy": 0,
       "reddit": {}
     },
     "TLX": {
       "price": 10.46,
-      "pe": 45.880684,
-      "target": 21.015575,
-      "upside_pct": 100.9,
+      "pe": 46.003605,
+      "target": 20.967247,
+      "upside_pct": 100.5,
       "pct_from_52h": -38.3,
       "rec": "strong_buy",
       "news": [
@@ -1795,11 +1795,11 @@
       "pct_from_52h": -36.0,
       "rec": "buy",
       "news": [
+        "A Trader Asks Why Making 10% a Month Is Considered Almost Impossible. Should a Good Trader Be Aiming for Just 1%?",
+        "Here's What Reddit CEO Steve Huffman's Sale of Company Shares for $3.6 Million Means for Investors",
         "He Has Accounting Degree but Spent Years Working Fast Food Jobs. At 53, He's Asking, 'Probably Not Gonna Be Able to Retire, Am I?'",
         "'Getting Started Is Much Easier Than It Used to Be,' Says an Investor Making $2,500 a Month From an Overlooked Stock Market Strategy",
-        "I\u2019m Moving To Escape My Daughter's Lazy Boyfriend, 36, Who Won't Work Or Support Their Baby \u2014 He Has 3 Cars And Complains About Free Rent. I'm Done",
-        "Reddit's AI Initiative Gains Momentum: A Sign for More Upside?",
-        "As Wedbush Turns Bullish on Reddit Stock, Here's Why You Should Too"
+        "I\u2019m Moving To Escape My Daughter's Lazy Boyfriend, 36, Who Won't Work Or Support Their Baby \u2014 He Has 3 Cars And Complains About Free Rent. I'm Done"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 8,
@@ -2053,72 +2053,41 @@
     }
   ],
   "trendar": {
-    "trending_up": [
-      "APGE",
-      "SYRE",
-      "NBIX",
-      "SMTC",
-      "LEGN",
-      "UEC",
-      "VIAV"
-    ],
+    "trending_up": [],
     "trending_down": [],
     "sektor_trend": [
       {
-        "namn": "Teknologi",
-        "retning": "opp",
-        "snitt_score": 10.95
-      },
-      {
         "namn": "Krypto-relatert",
         "retning": "ned",
-        "snitt_score": -8.77
-      },
-      {
-        "namn": "Energi (olje/gass)",
-        "retning": "ned",
-        "snitt_score": -6.36
-      },
-      {
-        "namn": "Industri",
-        "retning": "opp",
-        "snitt_score": 5.99
+        "snitt_score": -7.9
       },
       {
         "namn": "Kommunikasjon",
         "retning": "ned",
-        "snitt_score": -5.16
+        "snitt_score": -4.02
       },
       {
         "namn": "Finans",
         "retning": "opp",
-        "snitt_score": 3.16
-      },
-      {
-        "namn": "Materialar",
-        "retning": "opp",
-        "snitt_score": 2.28
+        "snitt_score": 3.1
       },
       {
         "namn": "Helse",
         "retning": "opp",
-        "snitt_score": 1.85
+        "snitt_score": 3.07
+      },
+      {
+        "namn": "Eigedom",
+        "retning": "opp",
+        "snitt_score": 2.19
       },
       {
         "namn": "Konsum (syklisk)",
         "retning": "ned",
-        "snitt_score": -0.82
+        "snitt_score": -1.33
       }
     ],
-    "streak": {
-      "APGE": 3,
-      "SYRE": 3,
-      "NBIX": 3,
-      "SMTC": 3,
-      "LEGN": 3,
-      "UEC": 3,
-      "VIAV": 3
-    }
+    "streak": {}
   },
   "politikar_handler": {},
   "strategi": {
@@ -2377,7 +2346,7 @@
     ],
     "reddit_radar": [],
     "marknadsnote": "Fed Funds: 3.63%  |  10Y: 4.57%  |  Can the \u2018Magnificent Seven\u2019 save a stock market that might be doomed without the",
-    "er_kveld": false,
+    "er_kveld": true,
     "topp_sektorar": [
       {
         "namn": "Energi (olje/gass)",
@@ -2452,54 +2421,29 @@
         ]
       }
     ],
-    "trending_up": [
-      "APGE",
-      "SYRE",
-      "NBIX",
-      "SMTC",
-      "LEGN",
-      "UEC"
-    ],
+    "trending_up": [],
     "trending_down": [],
     "sektor_trend": [
       {
-        "namn": "Teknologi",
-        "retning": "opp",
-        "snitt_score": 10.95
-      },
-      {
         "namn": "Krypto-relatert",
         "retning": "ned",
-        "snitt_score": -8.77
+        "snitt_score": -7.9
       },
       {
-        "namn": "Energi (olje/gass)",
+        "namn": "Kommunikasjon",
         "retning": "ned",
-        "snitt_score": -6.36
+        "snitt_score": -4.02
       },
       {
-        "namn": "Industri",
+        "namn": "Finans",
         "retning": "opp",
-        "snitt_score": 5.99
+        "snitt_score": 3.1
+      },
+      {
+        "namn": "Helse",
+        "retning": "opp",
+        "snitt_score": 3.07
       }
     ]
-  },
-  "ekstra_watchlist": [
-    {
-      "symbol": "NFLX",
-      "grunn": "Dip -7.3% p\u00e5 h\u00f8gt volum \u2014 16 SB-analytikarar, 29 buy. Kvalitetsaksje som er oversold etter sterk korreksjon. Vurder inn om kursen stabiliserer seg.",
-      "dag_pct": -7.3,
-      "pris": 68.95,
-      "strong_buy": 16,
-      "buy": 29
-    },
-    {
-      "symbol": "TRV",
-      "grunn": "Travelers Companies (Dow-komponent): +9.2% i dag \u2014 truleg earnings-beat i forsikring. 8 buy-analytikarar. Defensiv/stabil sektor, h\u00f8g kvalitet.",
-      "dag_pct": 9.2,
-      "pris": 368.98,
-      "strong_buy": 3,
-      "buy": 8
-    }
-  ]
+  }
 }
