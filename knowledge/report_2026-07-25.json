@@ -2659,5 +2659,31 @@
         "snitt_score": 3.07
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "THC",
+      "grunn": "+17.2% i dag, 22 analytikar-kj\u00f8p (SB=6, B=16), helse-sektor trending opp (score +5.0). Ikkje p\u00e5 watchlisten.",
+      "sektor": "Healthcare",
+      "dag_pct": 17.2,
+      "analyst_buy": 22,
+      "kilde": "Yahoo Finance gainers 2026-07-25"
+    },
+    {
+      "symbol": "SLB",
+      "grunn": "+11% i dag, 27 analytikar-kj\u00f8p (SB=8, B=19), energi-sektor beste sektor i dag (score +6.2, 1M +11.3%). Ikkje p\u00e5 watchlisten.",
+      "sektor": "Energy",
+      "dag_pct": 11.0,
+      "analyst_buy": 27,
+      "kilde": "Yahoo Finance gainers 2026-07-25"
+    },
+    {
+      "symbol": "RNG",
+      "grunn": "+25% i dag (stor hopp), 10 analytikar-kj\u00f8p (SB=3, B=7). Kan vere nyhets-drive \u2014 h\u00f8g risiko. Ikkje p\u00e5 watchlisten.",
+      "sektor": "Technology",
+      "dag_pct": 25.1,
+      "analyst_buy": 10,
+      "kilde": "Yahoo Finance most-active 2026-07-25"
+    }
+  ]
 }
