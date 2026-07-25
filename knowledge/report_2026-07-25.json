@@ -2659,5 +2659,37 @@
         "snitt_score": -3.03
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "UNH",
+      "pris": 420.74,
+      "rec": "buy",
+      "analytikarmaal": 475.23,
+      "upside_pct": 13.0,
+      "strong_buy_analytikerar": 8,
+      "sektor": "Healthcare",
+      "grunn": "Helsesektoren er sterkast trending sektor (+5.0 score, 3 veker opp). UNH: BUY med 13% analytikarm\u00e5l og 8 strong-buy-analytikerar. Defensiv eksponering mot sterk sektor."
+    },
+    {
+      "symbol": "CVX",
+      "pris": 194.79,
+      "rec": "buy",
+      "analytikarmaal": 213.83,
+      "upside_pct": 9.8,
+      "strong_buy_analytikerar": 7,
+      "sektor": "Energy",
+      "grunn": "Energisektoren er dagens sterkaste sektor (score=+6.2, 1M=+11.3%). CVX: BUY med +10% upside og 7 strong-buy-analytikerar. Solid utbyte og lav P/E."
+    },
+    {
+      "symbol": "XOM",
+      "pris": 156.94,
+      "rec": "buy",
+      "analytikarmaal": 166.73,
+      "upside_pct": 6.2,
+      "strong_buy_analytikerar": 7,
+      "sektor": "Energy",
+      "grunn": "Energi-medvind. XOM: solid grunnmur med 7 SB-analytikerar og +6% oppside. Dividentvekst-track-record."
+    }
+  ]
 }
