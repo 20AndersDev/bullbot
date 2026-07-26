@@ -2853,5 +2853,34 @@
         "snitt_score": 3.24
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "SLB",
+      "pris": 52.42,
+      "dag_pct": 11.01,
+      "upside_pct": 17.0,
+      "rec": "BUY",
+      "strong_buy_analytik": 8,
+      "grunn": "Energi-sektor trending opp (XLE score +6.2, siste 3 dagar) | +11% i dag | 17% analytikarm\u00e5l | 8 SB-analytikarar | passar sektorbias"
+    },
+    {
+      "symbol": "DLR",
+      "pris": 199.08,
+      "dag_pct": 11.01,
+      "upside_pct": 10.8,
+      "rec": "BUY",
+      "strong_buy_analytik": 9,
+      "grunn": "Data center REIT \u2014 AI/sky-infrastruktur-etterspurnad | +11% i dag | 9 SB-analytikarar (h\u00f8gast av kandidatane) | defensiv vekst"
+    },
+    {
+      "symbol": "THC",
+      "pris": 233.2,
+      "dag_pct": 17.17,
+      "upside_pct": 7.2,
+      "rec": "STRONG_BUY",
+      "strong_buy_analytik": 6,
+      "grunn": "Helse-sektor trending opp (XLV score +5.0, siste 3 dagar) | +17% i dag | STRONG BUY konsensus | hospital-operator med sterk resultat"
+    }
+  ]
 }
