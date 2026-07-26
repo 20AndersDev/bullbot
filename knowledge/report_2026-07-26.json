@@ -2659,5 +2659,25 @@
         "snitt_score": -3.03
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "THC",
+      "grunn": "Tenet Healthcare +17% i dag, STRONG_BUY konsensus, helsesektoren trending opp (snitt +4.6). Sterkt momentum + fundamentalt",
+      "price": 233.2,
+      "day_pct": 17.17,
+      "rec": "STRONG_BUY",
+      "upside_pct": 7.2,
+      "kjelde": "Yahoo Finance Gainers"
+    },
+    {
+      "symbol": "SLB",
+      "grunn": "SLB (Schlumberger) +11% i dag, BUY, +16.2% til analytikarm\u00e5l. Energisektoren (XLE) er beste sektor i dag med score +6.2",
+      "price": 52.42,
+      "day_pct": 11.01,
+      "rec": "BUY",
+      "upside_pct": 16.2,
+      "kjelde": "Yahoo Finance Gainers"
+    }
+  ]
 }
