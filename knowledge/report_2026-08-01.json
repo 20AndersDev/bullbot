@@ -2692,5 +2692,27 @@
         "snitt_score": -2.72
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "AMZN",
+      "grunn": "Earnings-beat katalysator: +15.3% i dag. STRONG BUY fr\u00e5 61 analytikarar. P/E 21.8. M\u00e5l 13 (+15% opp). AWS AI-vekst og eCommerce slo forventingane klart.",
+      "rec": "strong_buy",
+      "price": 271.58,
+      "target": 313.07,
+      "upside_pct": 15.3,
+      "analysts": 61,
+      "sector": "Consumer Cyclical / Cloud"
+    },
+    {
+      "symbol": "GOOGL",
+      "grunn": "Earnings-beat katalysator: +6.7% i dag. STRONG BUY fr\u00e5 55 analytikarar. P/E 17.9 (attraktiv for mega-cap). M\u00e5l 27 (+20% opp). AI-integrering og cloud-vekst driv resultat.",
+      "rec": "strong_buy",
+      "price": 356.13,
+      "target": 426.95,
+      "upside_pct": 19.9,
+      "analysts": 55,
+      "sector": "Communication Services / Cloud"
+    }
+  ]
 }
