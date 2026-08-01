@@ -2697,5 +2697,27 @@
         "snitt_score": 3.24
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "AMZN",
+      "pris": 271.58,
+      "dag_pst": 15.32,
+      "analytikarmaal": 313.07,
+      "upside_pst": 15.3,
+      "rec": "STRONG_BUY",
+      "SB_analytik": 61,
+      "grunn": "Sterk Q2-resultat, +15% i dag. 61 analytik. med konsensus STRONG BUY. AWS-vekst og AI-infrastruktur. N\u00e6r 52V-topp."
+    },
+    {
+      "symbol": "MPWR",
+      "pris": 1426.03,
+      "dag_pst": 8.35,
+      "analytikarmaal": 1776.92,
+      "upside_pst": 24.6,
+      "rec": "STRONG_BUY",
+      "SB_analytik": 13,
+      "grunn": "AI-kraftstyringsbrikker, +8.4% i dag. STRONG BUY, 13 analytik. 25% oppsidepotensial til maal. Sterk posisjon i AI-datasentervekst."
+    }
+  ]
 }
