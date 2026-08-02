@@ -1,6 +1,6 @@
 {
   "dato": "2026-08-02",
-  "timestamp": "2026-08-02T12:12:14.604744+00:00",
+  "timestamp": "2026-08-02T20:11:41.174638+00:00",
   "fear_greed": {
     "score": 42.4571428571429,
     "rating": "fear"
@@ -18,22 +18,22 @@
     "unrate": 4.2
   },
   "market_news": [
-    "Investors are rotating into financial stocks. The Fed\u2019s next move could determine how far the rally runs.",
-    "Financial stocks are crushing it. These charts show why the \u2018breakout\u2019 rally may have just begun.",
-    "Why every tech giant wants to look like a cybersecurity company in the AI era",
-    "Tim Cook\u2019s lasting legacy: Keeping Apple\u2019s eye on the ball",
+    "We\u2019re in our 60s with $1.5 million. Would a trust be more effective than a will to prevent conflict among our heirs?",
     "My girlfriend is 62. Can she claim her late husband\u2019s full Social Security benefit \u2014 or does she have to wait?",
-    "J.P. Morgan drops Fed rate bombshell over Warsh, inflation",
-    "Jersey Mike\u2019s employees may see a 200% bonus post-IPO \u2014 how majority shareholder Blackstone is sharing profits",
-    "76% of American retirees have big savings regrets \u2014 and younger workers now plan to put off retirement to avoid them",
-    "Americans lost billions to fraud in 2025 \u2014 these free bank alerts most people never activate could help protect you",
-    "Gold crashes from $5,500 to $4,160 since the Iran conflict began, but experts see a massive buying opportunity",
-    "Looking at just the odds isn\u2019t enough. How traders gain an edge on prediction markets",
-    "OpenAI's Hugging Face hack confirmed months of AI cyber warnings: 'Pandora's box is open'"
+    "Here\u2019s what\u2019s worth streaming in August 2026 on Netflix, Hulu, HBO Max and more",
+    "My ex-husband\u2019s sister died \u2014 so why is Fidelity asking me for her death certificate?",
+    "S&P 500 profit growth is getting even wilder as Amazon makes its mark",
+    "Warren Buffett keeps pointing at the same ETF for a reason",
+    "Dow Jones Futures Due As Trump Shifts On Iran; SpaceX, AMD, Sandisk, Eli Lilly Earnings Loom",
+    "Shoppers made 158 million chargeback disputes in 2025 as 'friendly fraud' surged 29% \u2014 and businesses pay the price",
+    "Tesla Rival BYD Ramping Up Sales On Overseas Demand, Flash Charging",
+    "US retirees blow nearly $1 of every $3 on a single expense \u2014 here's what it costs you each year",
+    "Here are the 2 big things we're watching in the stock market in the week ahead",
+    "Why people are dropping out of the workforce and not looking for new jobs: 'The market wore me down'"
   ],
   "av_sentiment": {
-    "score": 0.1568,
-    "direction": "BULLISH"
+    "score": 0.0996,
+    "direction": "NOEYTRAL"
   },
   "reddit": {},
   "ikke_kjoep": [
@@ -210,8 +210,8 @@
     "PAYP": {
       "price": 15.13,
       "pe": 20.041187,
-      "target": 24.38656,
-      "upside_pct": 61.2,
+      "target": 24.432972,
+      "upside_pct": 61.5,
       "pct_from_52h": -39.2,
       "rec": "strong_buy",
       "news": [
@@ -323,11 +323,11 @@
       "pct_from_52h": -24.6,
       "rec": "buy",
       "news": [
+        "Baldwin Insurance Group (BWIN) Stock Looks Above Fair Value Despite 21% Fall",
         "Baldwin Insurance Group (BWIN) Q2 Growth Story Raises The Question Of Whether It Is Fully Valued",
         "BWIN Q2 Deep Dive: Integration Progress and AI Initiatives Offset Mixed Organic Growth",
         "1 Unpopular Stock That Deserves a Second Chance and 2 Facing Challenges",
-        "The Baldwin Insurance Group, Inc. Q2 2026 Earnings Call Summary",
-        "The Baldwin Insurance Group Inc (BWIN) (Q2 2026) Earnings Call Highlights: Record EBITDA and ..."
+        "The Baldwin Insurance Group, Inc. Q2 2026 Earnings Call Summary"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 5,
@@ -341,11 +341,11 @@
       "pct_from_52h": -15.1,
       "rec": "strong_buy",
       "news": [
-        "Hyperliquid Is Ramping Up Its Move Into Prediction Markets. Here's What That Means for HYPE Investors.",
-        "Warren Buffett Passed on This Stock for Over 7 Years. Greg Abel May Not Wait Any Longer.",
-        "Jensen Huang Predicted Nvidia Would Collect $1 Trillion in Chip Sales Through 2027. Is Nvidia Still on Pace?",
-        "Blue Owl's BDC Already Cut Its Base Dividend to $0.31. Here's What to Watch as the Rest Report.",
-        "Nvidia Has $500 Billion in AI Chip Bookings Covering 2025 and 2026, a Backlog Investors Can Track for Future Revenue"
+        "Why Billionaire Stanley Druckenmiller and Wall Street Analysts Love This Biotech Stock",
+        "Is Green Thumb the Safest Cannabis Stock to Own Right Now?",
+        "Is Arm Holdings Stock a Buy on the Bullish CPU Outlook?",
+        "3 Dividend Stocks That Are No-Brainer Buys for the Second Half of 2026",
+        "If You'd Invested $10,000 in the S&P 500 at the Absolute Top of the Dot-Com Bubble, Here's What You'd Have Today"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 24,
@@ -503,11 +503,11 @@
       "pct_from_52h": -41.4,
       "rec": "buy",
       "news": [
+        "Bloom Energy vs. Oklo: Which Power Stock Is a Better Buy in 2026?",
+        "Bloom Energy (BE) Faces Class Action Over Chinese Scandium Supply Claims",
+        "Is It Too Late to Buy Bloom Energy? My Honest Take.",
         "Is Bloom Energy in Its Nvidia Moment?",
-        "Bloom Energy Is Soaring: Is There a Better Way To Play The AI Power Boom?",
-        "Prediction: Bloom Energy Doubles Its Revenue Again by 2029. Here's the Math.",
-        "Brookfield Infrastructure Partners Q2 Earnings Call Highlights",
-        "Bloom Energy or Plug Power: Which Hot Fuel Cell Stock Is a Better Buy in 2026?"
+        "Bloom Energy Is Soaring: Is There a Better Way To Play The AI Power Boom?"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 6,
@@ -539,11 +539,11 @@
       "pct_from_52h": -48.4,
       "rec": "buy",
       "news": [
-        "Dow Jones Futures: Trump Calls Off Iran Attacks; SpaceX, AMD, Sandisk, Eli Lilly Earnings Loom",
+        "Dow Jones Futures Due As Trump Shifts On Iran; SpaceX, AMD, Sandisk, Eli Lilly Earnings Loom",
+        "The Best-Performing S&P 500 Stocks Of 2026 So Far",
+        "Prediction: Western Digital Gets Back to Its High Before Sandisk Gets Back to Its Own.",
         "Banks Offload Risk from Leveraged ETFs With Exotic \u2018Crash Puts\u2019",
-        "The AI Memory Boom Just Got a Reality Check\u2014And a Better Entry Point",
-        "Why the Best May Be Yet to Come for NVIDIA, Micron, and SanDisk",
-        "AI Isn\u2019t a Catch-All Trade for Stocks in This Earnings Season"
+        "The AI Memory Boom Just Got a Reality Check\u2014And a Better Entry Point"
       ],
       "momentum_dag_pct": -5.1,
       "finnhub_strong_buy": 9,
@@ -575,11 +575,11 @@
       "pct_from_52h": -49.1,
       "rec": "buy",
       "news": [
+        "After a More Than 20% Sell-Off on Earnings, Corning Stock Is Still a \u2018Buy\u2019 for the AI Infrastructure Trade",
         "These Were the Best and Worst S&P 500 Stocks in July",
         "Corning (GLW) Stock May Be 34% Undervalued Following Soft Q3 Guidance",
         "Corning Rides AI Data Center Growth as Optical Demand Accelerates",
-        "Is GLW Stock Attractive After Its AI Rally and Earnings Momentum?",
-        "Corning Growth Outlook Hinges on AI Optics and Solar Profitability"
+        "Is GLW Stock Attractive After Its AI Rally and Earnings Momentum?"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 6,
@@ -647,11 +647,11 @@
       "pct_from_52h": -56.0,
       "rec": "none",
       "news": [
+        "SpaceX Stock May Be Down 51%, But It's Still Outperforming These 2 Other Recent IPOs",
         "SpaceX Vs. HawkEye, Cerebrus: Comparing 2026 IPOs",
         "The Trump Administration Just Gave X-Energy Stock a Boost. Wall Street Sees 137% Upside Ahead.",
         "X Energy (XE) Stock Still Looks Fully Priced On Cash Flow And Sales",
-        "X-Energy (XE) Is Up 9.2% After Joining DOE-Backed Prometheus AI Nuclear Design Initiative",
-        "XE Vs SMR: Analysts See One Small Nuclear Stock With Nearly Double The Upside"
+        "X-Energy (XE) Is Up 9.2% After Joining DOE-Backed Prometheus AI Nuclear Design Initiative"
       ],
       "momentum_dag_pct": -4.3,
       "finnhub_strong_buy": 4,
@@ -677,17 +677,17 @@
     },
     "MU": {
       "price": 823.03,
-      "pe": 5.3534055,
+      "pe": 5.290652,
       "target": 1522.2618,
       "upside_pct": 85.0,
       "pct_from_52h": -34.4,
       "rec": "strong_buy",
       "news": [
+        "Micron Technology Stock Is Plummeting, but Here's Why I'm Not Buying the Dip",
+        "The Best-Performing S&P 500 Stocks Of 2026 So Far",
         "Micron Stock Is Down 39% From Its High. History Suggests a $5,000 Investment Now Will Be Worth This Much by Mid-2028.",
-        "Here Are My 3 Top Artificial Intelligence (AI) Stocks to Buy in August",
-        "If the $1.3 Trillion Chip Stock Sell-Off Was a Warning for the S&P 500, History Repeatedly Suggests 1 Move to Avoid",
-        "Silicon Motion Crushed Earnings and Surprised Memory Chip Bears",
-        "Where Will Micron Stock Be in 2030?"
+        "Banks Offload Risk from Leveraged ETFs With Exotic \u2018Crash Puts\u2019",
+        "Here Are My 3 Top Artificial Intelligence (AI) Stocks to Buy in August"
       ],
       "momentum_dag_pct": -5.9,
       "finnhub_strong_buy": 18,
@@ -719,11 +719,11 @@
       "pct_from_52h": -31.9,
       "rec": "strong_buy",
       "news": [
+        "Jobs Report, Palantir, AMD, SpaceX, Eli Lilly, and More to Watch This Week",
+        "Prediction: Western Digital Gets Back to Its High Before Sandisk Gets Back to Its Own.",
+        "Seagate Rallies on Strong Q4 Results and Guidance. What Does This Mean for STX Stock Here.",
         "The AI Memory Boom Just Got a Reality Check\u2014And a Better Entry Point",
-        "MarketBeat Week in Review \u2013 07/27- 07/31",
-        "SanDisk Is Down 45% in a Month. Should Memory Investors Switch to Micron or SK Hynix Now?",
-        "Down 45%, is SanDisk stock a bargain buy or value trap?",
-        "Buy 5 AI Infrastructure Stocks as Big Techs Assure Lasting AI Frenzy"
+        "MarketBeat Week in Review \u2013 07/27- 07/31"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 7,
@@ -755,11 +755,11 @@
       "pct_from_52h": -36.5,
       "rec": "buy",
       "news": [
+        "Bloom Energy vs. Oklo: Which Power Stock Is a Better Buy in 2026?",
         "Nebius and CoreWeave Stocks are Plummeting. Is It Time to Buy the Dip?",
         "Bloom Energy vs. NextEra Energy: Is a Fuel Cell Upstart or Renewable Energy Titan the Better Buy in 2026?",
         "Leopold Aschenbrenner's AI hedge fund collapses after margin calls",
-        "Why Nebius Stock Popped Today",
-        "Strength Seen in Nebius Group (NBIS): Can Its 27.1% Jump Turn into More Strength?"
+        "Why Nebius Stock Popped Today"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 6,
@@ -1115,11 +1115,11 @@
       "pct_from_52h": -34.0,
       "rec": "buy",
       "news": [
+        "CAVA Group (CAVA) On Same Store Sales Growth And Expansion Plans Looks Fully Valued",
         "Even With SpaceX Down 50% From Its High, I'd Still Rather Buy This Unstoppable Growth Stock Before the End of August",
         "McDonald's Gears Up for Q2 Earnings: Key Factors to Watch",
         "1 Restaurant Stock to Consider Right Now and 2 We Avoid",
-        "Jersey Mike\u2019s Stock Slides Below IPO Price in Market Debut",
-        "Cava Group (CAVA) Increases Yet Falls Behind Market: What Investors Need to Know"
+        "Jersey Mike\u2019s Stock Slides Below IPO Price in Market Debut"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 10,
@@ -1349,11 +1349,11 @@
       "pct_from_52h": -56.9,
       "rec": "strong_buy",
       "news": [
-        "FTC approves IonQ acquisition of SkyWater semiconductor \u200dfoundry",
-        "2 Quantum Stocks Expected to Deliver 50%+ Earnings Growth Next Week",
-        "IonQ (IONQ) Wins Approval To Buy SkyWater And Secure A U.S. Chip Foundry",
-        "Delivering Measurable AI Strategies: ICR CEO Anton Nicholas, Live at Nasdaq",
-        "Investors Heavily Search IonQ, Inc. (IONQ): Here is What You Need to Know"
+        "IonQ vs. Rigetti: Which Quantum Computing Stock Is a Better Buy in 2026?",
+        "3 Quantum Computing Stocks a Top Analyst Says Can Soar",
+        "IonQ vs. D-Wave Quantum: Which Quantum Computing Stock Is a Better Buy in 2026?",
+        "IonQ vs. Alphabet:  What Revenue Trends Reveal About the Quantum Computing Chipmaker and the Artificial Intelligence Giant",
+        "FTC approves IonQ acquisition of SkyWater semiconductor \u200dfoundry"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 4,
@@ -1488,8 +1488,8 @@
     "SRAD": {
       "price": 14.54,
       "pe": 18.268282,
-      "target": 21.550594,
-      "upside_pct": 48.2,
+      "target": 21.58543,
+      "upside_pct": 48.5,
       "pct_from_52h": -54.9,
       "rec": "strong_buy",
       "news": [
@@ -1529,11 +1529,11 @@
       "pct_from_52h": -54.2,
       "rec": "buy",
       "news": [
+        "Is the Quantum Threat to Bitcoin Real or Not? Galaxy Digital Just Pledged $5 Million to Boost Bitcoin's Quantum Resistance.",
         "Galaxy Digital (NasdaqGS:GLXY) Buys 500 Acre Texas Site For AI Data Center Campus",
         "Why Google, Microsoft, And Meta Are Building In West Texas? According To Galaxy Digital Executive",
         "Weekly Wrap: Crypto Stays Rangebound Amid Market Volatility",
-        "Why Morgan Stanley expects Galaxy Digital, Cipher Digital to win big in ERCOT\u2019s Batch Zero",
-        "Morgan Stanley Sees CIFR, GLXY Upside From ERCOT\u2019s 65 GW Batch Zero"
+        "Why Morgan Stanley expects Galaxy Digital, Cipher Digital to win big in ERCOT\u2019s Batch Zero"
       ],
       "momentum_dag_pct": 0.0,
       "finnhub_strong_buy": 5,
@@ -1649,7 +1649,7 @@
     },
     "ARGX": {
       "price": 853.82,
-      "pe": 21.82494,
+      "pe": 21.776196,
       "target": 1079.5454,
       "upside_pct": 26.4,
       "pct_from_52h": -10.5,
@@ -1848,8 +1848,8 @@
     "TLX": {
       "price": 9.89,
       "pe": 54.365833,
-      "target": 20.985142,
-      "upside_pct": 112.2,
+      "target": 21.076948,
+      "upside_pct": 113.1,
       "pct_from_52h": -30.7,
       "rec": "strong_buy",
       "news": [
@@ -1865,17 +1865,17 @@
     },
     "RDDT": {
       "price": 140.67,
-      "pe": 14.8741455,
+      "pe": 14.607719,
       "target": 218.16667,
       "upside_pct": 55.1,
       "pct_from_52h": -50.3,
       "rec": "buy",
       "news": [
+        "\u2018Was It Going to Come Crashing Down Eventually?\u2019 Man, 43, Asks If 1950s-90s \u2018American Dream\u2019 Was Sustainable Or \u2018Always Going To Be A Losing Battle\u2019",
+        "Wife Wants Husband In His 60s To Retire But He Refuses Since He\u2019s Supporting Kids, 28 and 25, And They Need New Cars \u2014 \u2018Both Still Need A Lot of Help\u2019",
+        "3 Reasons to Buy Reddit Stock in August",
         "Roblox and Reddit Stocks Just Both Crashed More Than 20%, but Only One Is a Buy",
-        "The Super-Rich Once Bought Teams as an \u2018Ego Play.\u2019 Now They See Dollar Signs.",
-        "Reddit Stock Tumbles as CEO Says Google Search Referrals Were 'Choppy,' Pushes Users to Its App",
-        "I Paid Off Nearly $7K in Credit Card Debt and Felt Amazing. Almost Immediately, I Started Panicking And Questioning That Decision",
-        "Google traffic wobble sends major signal for sinking Reddit stock"
+        "The Super-Rich Once Bought Teams as an \u2018Ego Play.\u2019 Now They See Dollar Signs."
       ],
       "momentum_dag_pct": -21.0,
       "finnhub_strong_buy": 8,
@@ -1896,7 +1896,7 @@
         "NovoCure Limited Q2 2026 Earnings Call Summary"
       ],
       "momentum_dag_pct": 0.0,
-      "finnhub_strong_buy": 0,
+      "finnhub_strong_buy": 4,
       "reddit": {}
     },
     "ABVX": {
@@ -1914,7 +1914,7 @@
         "Abivax CEO says $920M raise funds U.S. drug launch without Big Pharma"
       ],
       "momentum_dag_pct": 0.0,
-      "finnhub_strong_buy": 0,
+      "finnhub_strong_buy": 6,
       "reddit": {}
     },
     "MMED": {
@@ -2195,7 +2195,6 @@
       "SRAD",
       "CIFR",
       "GLXY",
-      "MARA",
       "IREN",
       "AMBA",
       "TNGX",
@@ -2225,32 +2224,32 @@
       {
         "namn": "Energi (olje/gass)",
         "retning": "opp",
-        "snitt_score": 5.54
+        "snitt_score": 4.84
       },
       {
         "namn": "Helse",
         "retning": "opp",
-        "snitt_score": 4.37
+        "snitt_score": 3.71
       },
       {
         "namn": "Finans",
         "retning": "opp",
-        "snitt_score": 3.45
-      },
-      {
-        "namn": "Kommunikasjon",
-        "retning": "ned",
-        "snitt_score": -2.72
+        "snitt_score": 3.6
       },
       {
         "namn": "Krypto-relatert",
         "retning": "ned",
-        "snitt_score": -2.1
+        "snitt_score": -2.89
+      },
+      {
+        "namn": "Kommunikasjon",
+        "retning": "ned",
+        "snitt_score": -1.81
       },
       {
         "namn": "Eigedom",
         "retning": "opp",
-        "snitt_score": 1.97
+        "snitt_score": 1.06
       }
     ],
     "streak": {
@@ -2269,7 +2268,7 @@
       "NOK": 5,
       "SMCI": 5,
       "LEU": 5,
-      "BE": 4,
+      "BE": 5,
       "SNDK": 5,
       "GLW": 5,
       "EQPT": 5,
@@ -2292,7 +2291,7 @@
       "FLY": 5,
       "W": 5,
       "ONTO": 5,
-      "ENTG": 4,
+      "ENTG": 5,
       "DVN": 5,
       "VG": 5,
       "SM": 5,
@@ -2310,7 +2309,7 @@
       "PTGX": 5,
       "NU": 5,
       "IONQ": 5,
-      "AAL": 4,
+      "AAL": 5,
       "KEEL": 5,
       "PDFS": 5,
       "KLAC": 5,
@@ -2319,7 +2318,6 @@
       "SRAD": 5,
       "CIFR": 5,
       "GLXY": 5,
-      "MARA": 5,
       "IREN": 5,
       "AMBA": 5,
       "TNGX": 5,
@@ -2327,7 +2325,7 @@
       "COO": 5,
       "ARGX": 5,
       "SBRA": 5,
-      "NP": 4,
+      "NP": 5,
       "TXRH": 5,
       "PLMR": 5,
       "EG": 5,
@@ -2397,7 +2395,7 @@
         "pl_pct": 1.95,
         "pl_usd": 145.92,
         "action": "HALD",
-        "grunn": "STRONG BUY | +51% analytikarm\u00e5l | \"Hyperliquid Is Ramping Up Its Move Into \""
+        "grunn": "STRONG BUY | +51% analytikarm\u00e5l | \"Why Billionaire Stanley Druckenmiller an\""
       },
       {
         "symbol": "ALK",
@@ -2454,7 +2452,7 @@
         "symbol": "NVDA",
         "rec": "STRONG_BUY",
         "upside_pct": 50.8,
-        "grunn": "konsensus STRONG BUY | +51% analytikarm\u00e5l | 24 SB-analytik. | \"Hyperliquid Is Ramping Up Its Move Into Predi\"",
+        "grunn": "konsensus STRONG BUY | +51% analytikarm\u00e5l | 24 SB-analytik. | \"Why Billionaire Stanley Druckenmiller and Wal\"",
         "hald": "1-3 veker (fundamentalt)",
         "score": 8.0,
         "pre_earnings": false
@@ -2585,8 +2583,8 @@
       }
     ],
     "reddit_radar": [],
-    "marknadsnote": "Fed Funds: 3.63%  |  10Y: 4.68%  |  Investors are rotating into financial stocks. The Fed\u2019s next move could determin",
-    "er_kveld": false,
+    "marknadsnote": "Fed Funds: 3.63%  |  10Y: 4.68%  |  We\u2019re in our 60s with $1.5 million. Would a trust be more effective than a will ",
+    "er_kveld": true,
     "topp_sektorar": [
       {
         "namn": "Energi (olje/gass)",
@@ -2674,49 +2672,23 @@
       {
         "namn": "Energi (olje/gass)",
         "retning": "opp",
-        "snitt_score": 5.54
+        "snitt_score": 4.84
       },
       {
         "namn": "Helse",
         "retning": "opp",
-        "snitt_score": 4.37
+        "snitt_score": 3.71
       },
       {
         "namn": "Finans",
         "retning": "opp",
-        "snitt_score": 3.45
+        "snitt_score": 3.6
       },
       {
-        "namn": "Kommunikasjon",
+        "namn": "Krypto-relatert",
         "retning": "ned",
-        "snitt_score": -2.72
+        "snitt_score": -2.89
       }
     ]
-  },
-  "ekstra_watchlist": [
-    {
-      "symbol": "AMZN",
-      "grunn": "Q2-inntekter slo estimat kraftig \u2014 +15% i dag, strong_buy, 61 analytik., 18.5% oppside til m\u00e5l $321",
-      "pris": 271.58,
-      "upside_pct": 18.5,
-      "rec": "strong_buy",
-      "kilde": "Yahoo Finance most-active + gainers"
-    },
-    {
-      "symbol": "DXCM",
-      "grunn": "DexCom +11.95% i dag, strong_buy, 11.2% oppside, helsesektoren er i trending-opp-modus",
-      "pris": 83.45,
-      "upside_pct": 11.2,
-      "rec": "strong_buy",
-      "kilde": "Yahoo Finance gainers"
-    },
-    {
-      "symbol": "MSFT",
-      "grunn": "Microsoft strong_buy, 21.2% oppside til m\u00e5l $563, 54 analytik., AI-infrastruktur-medvind",
-      "pris": 464.72,
-      "upside_pct": 21.2,
-      "rec": "strong_buy",
-      "kilde": "Yahoo Finance most-active"
-    }
-  ]
+  }
 }
