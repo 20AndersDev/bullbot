@@ -2690,5 +2690,25 @@
         "snitt_score": -2.89
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "AMZN",
+      "grunn": "Earnings-beat +15% i dag (Q2 2026), STRONG BUY konsensus, 21 SB-analytik., +18.5% til analytikarm\u00e5l $321.95 \u2014 mest aktiv p\u00e5 b\u00f8rsen i dag",
+      "rec": "STRONG_BUY",
+      "upside_pct": 18.5,
+      "finnhub_strong_buy": 21,
+      "price": 271.58,
+      "target": 321.95
+    },
+    {
+      "symbol": "DXCM",
+      "grunn": "DexCom +11.9% i dag, STRONG BUY, 15 SB-analytik., +11.2% til m\u00e5l $92.80 \u2014 sterk helse/meditech-gainer",
+      "rec": "STRONG_BUY",
+      "upside_pct": 11.2,
+      "finnhub_strong_buy": 15,
+      "price": 83.45,
+      "target": 92.8
+    }
+  ]
 }
