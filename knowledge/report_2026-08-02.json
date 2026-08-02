@@ -2692,5 +2692,31 @@
         "snitt_score": -2.72
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "AMZN",
+      "grunn": "Q2-inntekter slo estimat kraftig \u2014 +15% i dag, strong_buy, 61 analytik., 18.5% oppside til m\u00e5l $321",
+      "pris": 271.58,
+      "upside_pct": 18.5,
+      "rec": "strong_buy",
+      "kilde": "Yahoo Finance most-active + gainers"
+    },
+    {
+      "symbol": "DXCM",
+      "grunn": "DexCom +11.95% i dag, strong_buy, 11.2% oppside, helsesektoren er i trending-opp-modus",
+      "pris": 83.45,
+      "upside_pct": 11.2,
+      "rec": "strong_buy",
+      "kilde": "Yahoo Finance gainers"
+    },
+    {
+      "symbol": "MSFT",
+      "grunn": "Microsoft strong_buy, 21.2% oppside til m\u00e5l $563, 54 analytik., AI-infrastruktur-medvind",
+      "pris": 464.72,
+      "upside_pct": 21.2,
+      "rec": "strong_buy",
+      "kilde": "Yahoo Finance most-active"
+    }
+  ]
 }
