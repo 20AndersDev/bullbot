@@ -2862,5 +2862,25 @@
         "snitt_score": -2.89
       }
     ]
-  }
+  },
+  "ekstra_watchlist": [
+    {
+      "symbol": "ESTC",
+      "pris": 99.91,
+      "dag_pst": 19.31,
+      "grunn": "Elastic NV hopper +19% \u2014 truleg resultatslag. Enterprise s\u00f8k/AI-data plattform med sterk momentum i ein ellers ned marknad."
+    },
+    {
+      "symbol": "AMZN",
+      "pris": 266.43,
+      "dag_pst": 3.97,
+      "grunn": "Amazon +4% i ein ned marknad (SPY -0.23%) \u2014 relativ styrke. AWS AI-vekst og Prime momentum."
+    },
+    {
+      "symbol": "WDAY",
+      "pris": 204.72,
+      "dag_pst": 5.76,
+      "grunn": "Workday +5.8% \u2014 HCM SaaS med sterk momentum. Truleg positiv katalysator eller analytikar-oppdatering."
+    }
+  ]
 }
